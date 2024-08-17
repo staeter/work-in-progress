@@ -10,13 +10,16 @@
 
 This creates a whole new dimension for you to think about and work on your codebase.
 
-### **Introduction**
+## **Introduction**
 
-#### **What is it?**
+### **What is it?**
 
-It’s an Elm package thought out to work with **elm-platform**. It helps you read, parse and watch your code then define your code generation and analysis.
+It is both a CLI program and an Elm package:
 
-#### **How does it compare to other tools?**
+- **A CLI Program** that reads, parses, and monitors your code for changes, applying rules across your codebase. It is built into **elm-platforms** and it integrates as a platform capability.
+- **An Elm Package** that is the interface for you to define rules on how your code should be generated, analyzed, or transformed.
+
+### **How does it compare to other tools?**
 
 **elm-codebase** was inspired by the great work done by **Jeroen Engels** and **Matthew Griffith** on [**elm-review**](https://github.com/jfmengels/elm-review) and [**elm-codegen**](https://github.com/mdgriffith/elm-codegen/tree/4.2.2) respectively.
 
@@ -25,9 +28,9 @@ It’s an Elm package thought out to work with **elm-platform**. It helps you re
 
 The main benefit of **elm-codegen** is that it uses the same data types both for going through existing code and for generating new one. This makes the metaprogramming code simpler and more flexible.
 
-Also since it is built on **elm-platform** it is easy to build your own program or application with it.
+Also since it is built as a **elm-platforms** platform capability it is easy to build your own program or application with it.
 
-#### **Who is it for?**
+### **Who is it for?**
 
 **elm-codebase** is designed for anyone working with Elm:
 
@@ -37,73 +40,59 @@ Also since it is built on **elm-platform** it is easy to build your own program 
 
 Whether you’re working on a small project or a large one, **elm-codebase** can help you manage and evolve your Elm projects more efficiently and with fewer headaches.
 
-### **Functional Requirements**
+## **Requirements**
 
-#### 1. **Code Generation**
+### 1 | **Functional Requirements**
 
-##### 1.1 **Rule Definition**
+#### 1.1 **Rule Definition**
 
-- **1.1.1**: Users can define rules using **elm-codegen** that gives them the ability to throw errors on specific pieces of code and provide eventual automated fixes which can include modifications to user code and the generation of new declarations. They also make it possible to gather data about the codebase through a variable `data` type which will be passed through every visited file, module, definition, type and expression.
-- **1.1.2**: They are two kinds of fixes: Single step ones that need to make a modification as they encounter a specific case and two step ones that will trigger a codebase wide modification based on a data point it finds in the codebase. An example of a single step fix would be for a rule that detects `.json` files in a specific folder and from this single information can generate the corresponding decoder. An example of a two step fix would be for a rule that first detects declarations with a `-- rename to <the_new_val_name>` and then needs to go through the whole codebase a second time to find and modify every place it finds that value being used in order to change its name.
-- **1.1.3**: Rule authors can explicitly ask for no tag to be put in front of some of their generated declarations if they want to immediately give the responsibility to the user. This should be discouraged in **elm-codebase** documentation but it does have use cases.
+- **1.1.1**: **elm-codebase** visits every module, declaration, type from type declarations, expression from value declarations and non elm files from rule specified directories and formats. On every visited element it will run the rules that apply.
+- **1.1.2**: Non elm file's content when visited will be provided as `String` to the rule where as parts of the codebase will be provided as **elm-codebase** AST types.
+- **1.1.3**: Rules have the ability to throw errors on the visited elements and provide eventual automated fixes which can include modifications to user code and the generation of new declarations.
+- **1.1.4**: Rules also make it possible to gather data about the codebase through a variable `data` type which will be passed through every visited element.
+- **1.1.5**: They are two kinds of fixes: Single step ones that need to make a modification as they encounter a specific case and two step ones that will trigger a codebase wide modification based on a data point it finds in the codebase. An example of a single step fix would be for a rule that detects `.json` files in a specific folder and from this single information can generate the corresponding decoders. An example of a two step fix would be for a rule that first detects declarations with a `-- rename to <the_new_val_name>` and then needs to go through the whole codebase a second time to find and modify every place it finds that value being used in order to change its name.
+- **1.1.6**: Rules that visit expressions and value declaration must indicate which type those should match. From this information **elm-codebase** is able to ensure the type safety of the code it generates and refactor at cli compile time.
 
 ##### 1.2 **Code Insertion and Ordering**
 
 - **1.2.1**: Users recognize generated definitions thanks to the line comment placed right above it containing a rule tag. The tag is formatted as `@<rule-author>/<rule-pkg-name>:<trigger>` indicating which rule is responsible for generating the given declaration as well as the file, module or declaration that triggered the rule to generate it.
-- **1.2.2**: Users can modify the generated code by adding the "silent" keyword before the rule tag, taking control of the declaration and preventing future overwrites by **elm-codebase**.
-- **1.2.3**: Generated code declarations are always inserted at the bottom of the module, ordered alphabetically by tag then declaration name if they have identical tags.
-- **1.2.4**: If a declaration get generated in a module that does not yet exist, **elm-codebase** creates a new one in the `codebase/codegen` folder. This module will be removed if empty. If users want to write their own code in this module, they can move it to their `src/` directory.
-- **1.2.5**: Using a specific flag, **elm-codegen** can automatically commit changes done by each rule one after the other. This allows users to review changes through diffs and manage the modifications post-generation if they prefer that workflow.
+- **1.2.2**: Rule authors can explicitly ask for no tag to be put in front of some of their generated declarations. This is needed in cases where the fix also removes what triggered the generation as **elm-codegen** cleans the generated code before rerunning the rules.
+- **1.2.3**: Users can modify the generated code by adding the "silent" keyword before the rule tag, taking control of the declaration and preventing future overwrites by **elm-codebase**.
+- **1.2.4**: Generated code declarations are always inserted at the bottom of the module, ordered alphabetically by tag then declaration name if they have identical tags.
+- **1.2.5**: If a declaration get generated in a module that does not yet exist, **elm-codebase** creates a new one in the `codebase/codegen` folder. This module will be removed if empty. If users want to write their own code in this module, they can move it to their `src/` directory.
 
-##### 1.3 **Guarantees**
+##### 1.3 **Changes Traceability**
 
-- **1.3.1**: **elm-codebase** cleans unused imports, and adds the missing ones when it finds them in the project's scope. The module aliases and exposes are left untouched unless the whole import is not used.
-- **1.3.2**: **elm-codebase** won't generate code using modules that are out of project scope. The cli will throw an error if the user tries to run a rule that requires some dependencies that aren't found in the project installed packages.
-- **1.3.3**: **elm-codebase** ensures that the generated code always stays synchronized with the data that triggered its generation. To do this it will need to figure out what source (a file, a module or a declaration) triggered the generation of any given declarations so that it can remove it the next time this rule goes through the same source. The source might be different and may or may not trigger that same generation the next time around.
-- **1.3.4**: **elm-codebase** enforces a standardized formatting for the entire codebase. A rigid version of the **elm-format** is available but users can also define their own custom formatting function which turns **elm-codebase**'s AST back into Elm code.
+- **1.3.1**: Users can review code changes one by one or set a flag to automatically accept fixes from a given set of rules.
+- **1.3.2**: Using a specific flag, **elm-codegen** can commit changes done by each rule one after the other. This allows users to review changes through diffs and manage the modifications post-generation if they prefer that workflow.
 
-#### 2. **Code Analysis and Refactoring**
+##### 1.4 **Error Reporting**
 
-##### 2.1 **Codebase Analysis**
+- **1.4.1**: Errors are reported directly in the terminal as they occur, unless an automatic fix is applied. These errors must meet the readability, friendliness, and actionability standards set by the Elm compiler.
+- **1.4.2**: The **elm-codebase** documentation will guide rule authors to write high-quality error messages that adhere to these standards. The **elm-codebase** package will provide features that make this task as simple as possible for authors.
+- **1.4.3**: **elm-codebase** does not support warnings that can be ignored by the user. All detected issues are treated as errors that require either an automated fix or manual action.
 
-- **2.1.1**: **elm-codebase** allows users to analyze the entire project AST, including every expression, type, module import, and export. Users can also read from non-Elm files using **elm-platform**, though they must provide their own parsers for these files.
-- **2.1.2**: Users can interact with **elm-codebase** through the rules they write, the code that triggers these rules, and the CLI that runs the rules and applies the modifications. Specific workflows are provided for rule writing, testing, and normal code development.
+##### 1.5 **Guarantees**
 
-##### 2.2 **Refactoring Support**
+- **1.5.1**: **elm-codebase** cleans unused imports, and adds the missing ones when it finds them in the project's scope. The module aliases and exposes are left untouched unless the whole import is not used.
+- **1.5.2**: **elm-codebase** won't generate code using modules that are out of project scope. The cli will throw an error if the user tries to run a rule that requires some dependencies that aren't found in the project installed packages.
+- **1.5.3**: **elm-codebase** ensures that the generated code always stays synchronized with the data that triggered its generation. To do this it will need to figure out what source (a file, a module or a declaration) triggered the generation of any given declarations so that it can remove it the next time this rule goes through the same source. The source might have changed and may or may not trigger that same generation the next time around.
+- **1.5.4**: **elm-codebase** enforces a standardized formatting for the entire codebase. A rigid version of the **elm-format** is available but users can also define their own custom formatting function which turns **elm-codebase**'s AST back into Elm code.
+- **1.5.5**: **elm-codebase** will manage conflicts between rule fixes the best it can by rerunning the rules on top of other's fixes until no more show up. However, if two or more rules battle to modify the same piece of code in different ways or generate conflicting definitions **elm-codebase** will throw an error, and it will be up to the user to ensure their rules are compatible.
 
-- **2.2.1**: Users can review code changes one by one or set a flag to accept all fixes from a specific set of rules automatically. There is no mandatory review for fixes, allowing users to streamline their workflow.
-- **2.2.2**: **elm-codebase** strives to manage conflicts between rules, allowing them to function alongside one another. However, if a conflict cannot be resolved, **elm-codebase** will throw an error, and it will be up to the user to ensure their rules are compatible.
+##### 1.6 **Efficiency and Scalability**
 
-#### 3. **Performance and Scalability**
+- **1.6.1**: **elm-codebase** watches the codebase for changes, ensuring that only modified files are reloaded instead of the entire codebase. For changes made to rules themselves, the CLI must recompile, but this process can be streamlined by enabling a flag that caches the state for a quick reload.
+- **1.6.2**: Changes to the rest of the codebase (non-rule files) will not trigger a recompile of the CLI. This ensures that normal development work is not interrupted by unnecessary recompilations.
+- **1.6.3**: **elm-codebase** operates on a single Elm project at a time. Users needing to run it on multiple projects must launch separate instances.
+- **1.6.4**: As the codebase grows, **elm-codebase** may slow down due to increased code parsing and traversal. Users can mitigate this by optimizing rule efficiency or restructuring their project to reduce the scope of each **elm-codebase** run.
 
-##### 3.1 **Efficiency and Caching**
+##### 1.7 **Integration and Compatibility**
 
-- **3.1.1**: **elm-codebase** watches the codebase for changes, ensuring that only modified files are reloaded instead of the entire codebase. For changes made to rules themselves, the CLI must recompile, but this process can be streamlined by enabling a flag that caches the state for a quick reload.
-- **3.1.2**: Changes to the rest of the codebase (non-rule files) will not trigger a recompile of the CLI. This ensures that normal development work is not interrupted by unnecessary recompilations.
+- **1.7.1**: **elm-codebase** can handle any Elm package.
+- **1.7.2**: **elm-codebase** can function in parallel to **elm-review**, **elm-codegen** and **elm-format**.
+- **1.7.3**: **elm-codebase** works as an **elm-platforms** platform capability which means that it can be integrated into any larger apps running on platforms having the file system capability (e.g., Deno, Node and Tauri).
 
-##### 3.2 **Scalability**
+## 2 | **External Interface Requirements**
 
-- **3.2.1**: **elm-codebase** operates on a single Elm project at a time. Users needing to run it on multiple projects must launch separate instances.
-- **3.2.2**: As the codebase grows, **elm-codebase** may slow down due to increased code parsing and traversal. Users can mitigate this by optimizing rule efficiency or restructuring their project to reduce the scope of each **elm-codebase** run.
-
-#### 4. **Error Handling and Compliance**
-
-##### 4.1 **Error Reporting**
-
-- **4.1.1**: Errors are reported directly in the terminal as they occur, unless an automatic fix is applied. These errors must meet the readability, friendliness, and actionability standards set by the Elm compiler.
-- **4.1.2**: The **elm-codebase** documentation will guide rule authors to write high-quality error messages that adhere to these standards. The **elm-codebase** package will provide features that make this task as simple as possible for authors.
-
-##### 4.2 **Error Severity**
-
-- **4.2.1**: **elm-codebase** does not support warnings that can be ignored by the user. All detected issues are treated as errors that require action, following the philosophy that all code should be correct and compliant.
-
-#### 5. **Integration and Compatibility**
-
-##### 5.1 **Integration with Elm-Platform**
-
-- **5.1.1**: **elm-codebase** integrates with **elm-platform**, leveraging its ability to run Elm code on various platforms (e.g., CLI, browser, Tauri app). This ensures that code generated by **elm-codebase** is compatible with the target platform's capabilities.
-
-
-## 3. External Interface Requirements
-
-## 4. Non-Functional requirements
+## 3 | **Non-Functional Requirements**
