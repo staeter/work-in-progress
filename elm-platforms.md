@@ -1,6 +1,6 @@
 # **elm-platforms**
 
-**elm-platforms** is a standardized interface for running elm code on various platforms with different capabilities. It aims to simplify the portability of code between different platforms and ease the storage and passing of cashed data in the model and through the codebase.
+**elm-platforms** is a standardized interface for running Elm code on various platforms with different capabilities. It aims to simplify the portability of code between different platforms and ease the storage and passing of cashed data in the model and through the codebase.
 
 ## **Platforms Capabilities**
 
@@ -21,7 +21,8 @@ A partial record containing the needed capabilities can be taken as parameter by
 
 ## **Platforms Implementations**
 
-Finally users can write **elm-platforms** program implementations by providing the various non-Elm files that will wrap and build the **elm-platforms** program into an app running on any given support.
+Finally users can write **elm-platforms** program implementations by providing the various files that will wrap and build the **elm-platforms** program into an app running on the support the implementation has been made for.
+Here also the build process is standardized to make it very intuitive and simple for the users to go from one platform to the other.
 
 ## **Code Samples**
 
@@ -63,15 +64,15 @@ type alias Capability sub cmd msg =
   , cmd :
       { delay : Float -> msg -> cmd }
   }
+
+type alias Capable capabilities sub cmd msg =
+  { capabilities | time : Capability sub cmd msg }
 ```
 
 ```elm
 module Platforms.Time.Internals exposing (..)
 
 import Time
-
-type alias Capable capabilities sub cmd msg =
-  { capabilities | time : Capability sub cmd msg }
 
 type Sub msg
   = Every Float (Time.Posix -> msg)
@@ -80,11 +81,6 @@ type Cmd msg
   = Delay Float msg
 
 type alias Cache =
-  { current : Time.Posix
-  , zone : Time.Zone
-  }
-
-type alias Flags =
   { current : Time.Posix
   , zone : Time.Zone
   }
@@ -121,13 +117,12 @@ type alias Cmd msg =
 type alias Sub msg =
   Union (Time.Sub msg) (Fs.Sub msg) (Terminal.Sub msg)
 
-type alias Flags =
-  Record Time.Flags Fs.Flags Terminal.Flags
-
 type alias Model model =
   { model : model
   , cache : Record Time.Cache Fs.Cache Terminal.Cache
   }
+
+---- UTILS ----
 
 type alias Record time fs term =
   { time : time
