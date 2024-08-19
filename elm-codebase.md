@@ -40,8 +40,6 @@ Also since it is built as a **elm-platforms** platform capability it is easy to 
 
 Whether you’re working on a small project or a large one, **elm-codebase** can help you manage and evolve your Elm projects more efficiently and with fewer headaches.
 
-## **Requirements**
-
 ## **Example Use Cases**
 
 - **Rename a Declaration**: Search for `-- rename to <new-declaration-name>` as the first line of any declaration. Then provide an automated fix that would traverse the whole codebase to change the name everywhere it finds it.
@@ -51,6 +49,8 @@ Whether you’re working on a small project or a large one, **elm-codebase** can
 - **Generate Codecs**: Generate codecs for every non ghost type within project scope.
 - **Load any Json into Elm**: You could turn any json into an Elm record.
 - **Multimodal Programming**: **elm-codebase** can be used as a base to build various GUIs that provide new ways to interact with your codebase.
+
+## **Requirements**
 
 ### 1. **Rule Definition**
 
