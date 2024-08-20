@@ -1,28 +1,32 @@
 # **elm-platforms**
 
 **elm-platforms** is a standardized interface for running Elm code on various platforms with different capabilities. It aims to simplify the portability of code between different platforms and ease the storage and passing of cashed data in the model and through the codebase.
+It also is a CLI that handles platforms and capabilities install and setup.
 
 ## **Platforms Capabilities**
 
 Platform capabilities group together commands, subscriptions and the caching of external data. Here are some examples of possible capabilities:
 
-- Time capability which would provide a subscription to time updates, a command for delaying messages and would cache the current posix time.
-- File system capability which would provide a subscription to file changes, a command to request dirs and files reads and writes and would cache the file system tree as well as the content of files that have been read. This second example would not be available in the Browser or in Lamdera but might be on Node, Deno or Tauri.
-- View capability that provides a bunch of subscriptions mostly linked to user inputs and would cache the environment values like screen size or light/dark mode. It would be available on Browser, Lamdera frontend and Tauri while be missing on Node and Deno.
-- Terminal capability which could provide stdin, stdout, stderr but also input prompts, access to Env values or running bash commands.
-- Url capability for tracking the Url bar.
+- Time capability provides a subscription to time updates, a command for delaying messages and caches the current posix time.
+- File system capability provides a subscription to file changes, a command to request dirs and files reads and writes and caches the file system tree as well as the content of files that have been read. This capability won't be available on the Browser nor in Lamdera's implementations of **elm-platforms** but might be on Node, Deno or Tauri implementations.
+- View capability that provides a bunch of subscriptions mostly linked to user inputs and caches the environment values like screen size or light/dark mode. It could be available on Browser, Lamdera frontend and Tauri implementations while the Node and Deno ones won't be able to.
+- Terminal capability which provides stdin, stdout, stderr but also input prompts, access to Env values or running bash commands.
+- Url capability for tracking the Url bar only available in Browser implementation.
 - HTTP capability.
 - Libp2p capability for peer to peer communication through the libp2p protocol.
+- Email capability to send, receive and cache emails.
 - etc.
 
 Each capability is presented to the user as records containing the functions returning the commands and subscriptions that it handles as well as its cashed data.
-To build an **elm-platforms** program, the user has to provide the usual record containing `init`, `update`, `subscribe` and maybe `view`. The only difference with `Browser.document` or `Platform.worker` being that each of these functions will take the platform's capabilities as their first parameter.
-A partial record containing the needed capabilities can be taken as parameter by any function so that it can run on any platform handling those capabilities.
+To build an **elm-platforms** program, the user has to write a `main` of type `Platforms.Application` or `Platforms.Program`. The only difference with using `Browser.document` or `Platform.worker` being that the `init`, `update`, `subscriptions` and eventual `view` functions will take the platform's capabilities as their first parameter.
+A partial record containing the needed capabilities can be taken as parameter by any function so that it can run on any platform having those capabilities.
 
 ## **Platforms Implementations**
 
 Finally users can write **elm-platforms** program implementations by providing the various files that will wrap and build the **elm-platforms** program into an app running on the support the implementation has been made for.
-Here also the build process is standardized to make it very intuitive and simple for the users to go from one platform to the other.
+It will be able to integrate different capability implementations separately and will keep track of the installed ones in the `elm-platforms.json`.
+The **elm-platforms** CLI will make the installation of a platform's implementation as well as the capabilities the user wants to integrate seamless and uniform between platforms.
+Provide a live reload feature that will reboot the program when their code is modified.
 
 ## **Code Samples**
 
@@ -134,4 +138,42 @@ type Union time fs term
   = Time time
   | FileSystem fs
   | Terminal term
+```
+
+The setup of platforms and their capabilities is handled by **elm-platforms** CLI which keeps track of everything in the `elm-platforms.json` file.
+
+```json
+{
+  "elm-platforms-version": "1.0.0",
+  "type": "programs", // could also be platform or capability
+  "programs": [
+    { "main": "src/Cli.elm"
+    , "platform": {
+        "staeter/elm-platforms-deno": "1.1.0" // loaded from github in the same way that Elm packages are
+      }
+    , "capabilities": {
+        "direct": {
+          "staeter/elm-platforms-deno-time": "1.0.0",
+          "staeter/elm-platforms-deno-fileSystem": "3.0.0",
+          "staeter/elm-platforms-deno-terminal": "1.0.2"
+        },
+        "indirect": {}
+      }
+    , "build": "build/cli/"
+    }
+  , { "main": "src/Web.elm"
+    , "platform": {
+        "staeter/elm-platforms-browser": "1.3.0"
+      }
+    , "capabilities": {
+        "direct": {
+          "staeter/elm-platforms-deno-time": "1.0.0",
+          "staeter/elm-platforms-deno-view": "1.0.0"
+        },
+        "indirect": {}
+      }
+    , "build": "build/web/"
+    }
+  ]
+}
 ```
