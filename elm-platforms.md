@@ -1,7 +1,7 @@
 # **elm-platforms**
 
 **elm-platforms** is a standardized interface for running Elm code on various platforms with different capabilities. It aims to simplify the portability of code between different platforms and ease the storage and passing of cashed data in the model and through the codebase.
-It also is a CLI that handles platforms and capabilities install and setup.
+It also is a CLI that handles platforms and capabilities install, setup, build and live reload.
 
 ## **Platforms Capabilities**
 

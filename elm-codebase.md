@@ -14,9 +14,10 @@ This creates a whole new dimension for you to think about and work on your codeb
 
 ### **What is it?**
 
-It is both a CLI program and an Elm package:
+It is both a CLI program, a elm-platforms capability and an Elm package:
 
-- **A CLI Program** that reads, parses, and monitors your code for changes, applying rules across your codebase. It is built into **elm-platforms** and it integrates as a platform capability.
+- **A CLI Program** that reads, parses, and monitors your code for changes, applying rules across your codebase.
+- **An elm-platform capability** that can easily be integrated in larger programs.
 - **An Elm Package** that is the interface for you to define rules on how your code should be generated, analyzed, or transformed.
 
 ### **How does it compare to other tools?**
