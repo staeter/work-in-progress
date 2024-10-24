@@ -1,6 +1,6 @@
 # **elm-platforms**
 
-**elm-platforms** is a standardized interface for running Elm code on various platforms with different capabilities. It aims to simplify the portability of code between different platforms and ease the storage and passing of cashed data in the model and through the codebase.
+**elm-platforms** is a standardized interface for running Elm code on any platforms with different capabilities. It aims to simplify the portability of code between different platforms and ease the storage and passing of cashed data in the model and through the codebase.
 It also is a CLI that handles platforms and capabilities install, setup, build and live reload.
 
 ## **Platforms Capabilities**
@@ -18,7 +18,7 @@ Platform capabilities group together commands, subscriptions and the caching of 
 - etc.
 
 Each capability is presented to the user as records containing the functions returning the commands and subscriptions that it handles as well as its cashed data.
-To build an **elm-platforms** program, the user has to write a `main` of type `Platforms.Application` or `Platforms.Program`. The only difference with using `Browser.document` or `Platform.worker` being that the `init`, `update`, `subscriptions` and eventual `view` functions will take the platform's capabilities as their first parameter.
+To build an **elm-platforms** program, the user has to write a `main` of type `Platforms.Application` or `Platforms.Program`. The only difference with using `Browser.document` or `Platform.worker` being that the `init`, `update`, `subscriptions` and eventual `view` functions take the platform's capabilities as their first parameter.
 A partial record containing the needed capabilities can be taken as parameter by any function so that it can run on any platform having those capabilities.
 
 ## **Platforms Implementations**
@@ -66,7 +66,9 @@ type alias Capability sub cmd msg =
   , sub :
       { every : Float -> (Time.Posix -> msg) -> sub }
   , cmd :
-      { delay : Float -> msg -> cmd }
+      { delay : Float -> msg -> cmd
+      , at : Time.Posix -> msg -> cmd
+      }
   }
 
 type alias Capable capabilities sub cmd msg =
@@ -83,6 +85,7 @@ type Sub msg
 
 type Cmd msg
   = Delay Float msg
+  | At Time.Posix msg
 
 type alias Cache =
   { current : Time.Posix
