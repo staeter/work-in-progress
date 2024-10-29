@@ -157,6 +157,29 @@ The shopping list is long and we will need a lot of resources to get there.
 
 > I want to review a lot more existing social media in order to pull inspiration. Here is a set that will be interesting to review:
 >
+> Platforms to review:
+> - Mastodon
+> - Matrix
+> - Secure Scuttlebutt (SSB)
+> - Aether
+> - Lemmy
+> - Discord
+> - Signal
+> - Telegram
+> - Slack
+> - WhatsApp
+> - Reddit
+> - YouTube
+> - Instagram 
+> - Facebook
+> - Snapchat
+> - TikTok
+> - LinkedIn
+> - Twitter/X
+> - WeChat
+> - Twitch
+> - Medium
+>
 
 ### Nebula
 
