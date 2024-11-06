@@ -10,11 +10,12 @@ This document is a first attempt at defining the requirements of an Inter Planet
 4. **Collaborative**: Facilitate collective organization and decision-making.
 5. **Empowering**: Entrust people with control over their digital environment and support them with appropriate tools.
 6. **Private**: Guarantee personal data sovereignty and communication confidentiality.
-7. **Resilient**: Maintain platform availability even under state-level repression.
-8. **Distributed**: Share computing and storage resources across each node to minimize environmental impact and ensure network independence.
-9. **Accessible**: Ensure accessibility no matter the technical knowledge, the economical status, the cultural background, the physical disabilities or the language.
-10. **Transparent**: Actively expose and explain all platform mechanisms, algorithmic systems, and community processes, enabling informed user participation and control.
-11. **Governance**: Place platform governance in the hands of users through democratic decision-making.
+7. **Resilient**: Maintain platform availability even under state-level interdiction.
+8. **Safe**: Ensure users can communicate without fear of identification or retribution, particularly in repressive environments.
+9. **Distributed**: Share computing and storage resources across each node to minimize environmental impact and ensure network independence.
+10. **Accessible**: Ensure accessibility no matter the technical knowledge, the economical status, the cultural background, the physical disabilities or the language.
+11. **Transparent**: Actively expose and explain all platform mechanisms, algorithmic systems, and community processes, enabling informed user participation and control.
+12. **Governance**: Place platform governance in the hands of users through democratic decision-making.
 
 ## Features
 
