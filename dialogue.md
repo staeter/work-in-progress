@@ -1,71 +1,60 @@
-# Dialogue
+# Inter Planetary Social Network (IPSN)
 
-Dialogue is a tool for people to constructively discuss, debate and organize despite bad actors trying to cause descent and state level repression. It defends freedom of speech while creating safe spaces for people to group together.
+This document is a first attempt at defining the requirements of an Inter Planetary Social Network. It analyzes the benefits and limitations of existing social networks to build toward an extensive list of requirements and features.
 
-## Encourage Pro-Social Behavior
+## Core Principles
 
-The platform should favor as much as possible thoughtful and constructive behavior.
-It is extremely easy to spread short and misinformed messaging. To counter it we usually need a lot of moderation, but as we want to keep the data under user's control we need users to make their own content moderation. Dialogue has to provide tooling to make this task as easy and accessible as possible so that it becomes a place that fosters fulfilling interactions.
+1. **Respectful**: Foster goodwill, empathy and constructive communication.
+2. **Purposeful**: Encourage mindful and intentional technology use, prioritizing meaningful activities over passive consumption.
+3. **Expressive**: Enable creative expression and knowledge sharing.
+4. **Collaborative**: Facilitate collective organization and decision-making.
+5. **Empowering**: Entrust people with control over their digital environment and support them with appropriate tools.
+6. **Private**: Guarantee personal data sovereignty and communication confidentiality.
+7. **Resilient**: Maintain platform availability even under state-level repression.
+8. **Distributed**: Share computing and storage resources across each node to minimize environmental impact and ensure network independence.
+9. **Accessible**: Ensure accessibility no matter the technical knowledge, the economical status, the cultural background, the physical disabilities or the language.
+10. **Transparent**: Actively expose and explain all platform mechanisms, algorithmic systems, and community processes, enabling informed user participation and control.
+11. **Governance**: Place platform governance in the hands of users through democratic decision-making.
 
-**Principles**:
+## Features
 
-- The platform encourages users to be empathic with one an other.
-- The platform pushes the users to take responsibility over their experience.
-- Good behavior has to be nudged instead of forcibly imposed.
-- The platform provides tooling for content moderation to be handled collectively by the users.
+### Pro-Social Behavior
 
-**Design Ideas**:
+- Users can make one to one or group chats.
+- Users can post content and decide who gets access to it.
 
-- Detect aggressive or hurtful writing in a post or comment and prompt the user to think about the people that message might hurt before posting it online.
-- Users can setup custom content flagging systems and share their flags with one an other.
-- Users can code their own recommender systems.
+### Organization Tools
 
-## Tools to Organize
+- Users form organizations and set rules for their functioning.
+- Debate and messaging systems encourage constructive dialogue.
+- Voting systems are modular and transparent to every member.
+- Texts and rules can be collaboratively edited, reviewed and voted.
+- Inclusion and expulsion mechanisms are set up as rules.
+- Roles can be attributed and revoked via votes.
+- Debate surrounding every rule and text is made available and structured in an accessible fashion.
 
-Many tasks inside and outside the platform need users to organize with one an other.
+### Content Moderation
 
-**Principles**:
+- Content moderation is managed by the users.
+- Individuals and organizations can provide custom algorithms and metrics as extensions.
 
-- Users can make organizations and set rules for their functioning.
-- Various debate and messaging systems are provided and encourage constructive dialogue.
-- Decision making methods are extremely modular and can go from a single person deciding everything to any convoluted voting, electing and revoking systems.
-- Any organization can provide a specific content moderation for other users to use.
-- The platform provides tooling for collaborative editing of documents.
+### Accessible
 
-## Accessible
+- Low technical and cultural barriers.
+- [Accessible](https://en.wikipedia.org/wiki/Computer_accessibility) to people with disabilities.
 
-This software is aimed at the largest audience possible.
-
-**Principles**:
-
-- The technical and cultural barrier to access and use the app must be as low as possible.
-- The interfaces should be [accessible](https://en.wikipedia.org/wiki/Computer_accessibility) to people with disabilities.
-
-## International
-
-People from any country and cultural environment should be able to use the platform and to potentially communicate and organize with anyone else on the platform.
-
-**Principles**:
+### International
 
 - People should be able to communicate and organize across linguistic and national barriers.
 - The design of the interface must be adaptable for various cultural and linguistic environments.
 
-**Implementation Ideas**:
-
-- Different versions of the interface can be provided as extensions.
-- Translation algorithms can be provided as extensions and hosted on the user's devices.
-
-## Data Privacy
-
-User's privacy has to be guaranteed.
-
-**Principles**:
+### Data Privacy
 
 - Data has to be fully encrypted and under user's informed control.
 - Defaults always protects user's privacy.
 - Users have control over where they store their data.
 
-## Local First and Fully Distributed
+### Local First and Fully Distributed
 
 The app has to function as [local first software](https://www.inkandswitch.com/local-first/) so that it stays up even under heavy network partitioning.
 
@@ -86,7 +75,7 @@ The app has to function as [local first software](https://www.inkandswitch.com/l
 - [ipns](https://docs.ipfs.tech/concepts/ipns/) for content addressing.
 - [socket-runtime](https://github.com/socketsupply/socket) for network buffering.
 
-## Payment System
+### Payment System
 
 A payment solution has to be provided as many services required for the platform to function need money to be exchanged.
 
@@ -103,7 +92,7 @@ A payment solution has to be provided as many services required for the platform
 
 - [filecoin](https://filecoin.io/) as a cooperative storage cloud with a reward model, it also doubles as a crypto currency.
 
-## Easy to Customize
+### Easy to Customize
 
 Essentially everything in Dialogue has to be customizable for it to match all of its constraints.
 
@@ -117,7 +106,7 @@ Essentially everything in Dialogue has to be customizable for it to match all of
 
 - [Elm](https://elm-lang.org/)
 
-## Hard to Track
+### Hard to Track
 
 The software should withstand state level interdiction and make its users as innocuous as possible.
 
@@ -132,7 +121,7 @@ The software should withstand state level interdiction and make its users as inn
 
 - [Metamorphic code](https://en.wikipedia.org/wiki/Metamorphic_code) can be used to make the app unrecognizable.
 
-## Development Financing
+### Development Financing
 
 The shopping list is long and we will need a lot of resources to get there.
 
@@ -152,6 +141,17 @@ The shopping list is long and we will need a lot of resources to get there.
 - Providing a market for easily exchanging the platform's currency with circulating ones.
 - Consulting for companies and non profits that would like to function in a democratic fashion and would benefit by integrating Dialogue into their organization.
 - User's donations under a set threshold to avoid large donators getting leverage.
+
+
+## Design Ideas
+
+- Detect aggressive or hurtful writing in a post or comment and prompt the user to think about the people that message might hurt before posting it online.
+- Users can setup custom content flagging systems and share their flags with one an other.
+- Users can code their own recommender systems.
+
+- Different versions of the interface can be provided as extensions.
+- Translation algorithms can be provided as extensions and hosted on the user's devices.
+
 
 ## Existing Propositions
 
