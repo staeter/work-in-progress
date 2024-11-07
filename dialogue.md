@@ -4,7 +4,7 @@ This document is a first attempt at defining the requirements of an Inter Planet
 
 ## Core Principles
 
-1. **Respectful**: Foster goodwill, empathy and constructive communication.
+1. **Respectful**: Foster goodwill, empathy and constructive communication while celebrating diversity and ensuring inclusive participation.
 2. **Purposeful**: Encourage mindful and intentional technology use, prioritizing meaningful activities over passive consumption.
 3. **Expressive**: Enable creative expression and knowledge sharing.
 4. **Collaborative**: Facilitate collective organization and decision-making.
@@ -14,8 +14,10 @@ This document is a first attempt at defining the requirements of an Inter Planet
 8. **Safe**: Ensure users can communicate without fear of identification or retribution, particularly in repressive environments.
 9. **Distributed**: Share computing and storage resources across each node to minimize environmental impact and ensure network independence.
 10. **Accessible**: Ensure accessibility no matter the technical knowledge, the economical status, the cultural background, the physical disabilities or the language.
-11. **Transparent**: Actively expose and explain all platform mechanisms, algorithmic systems, and community processes, enabling informed user participation and control.
-12. **Governance**: Place platform governance in the hands of users through democratic decision-making.
+11. **Modular**: Support community-driven development with a secure framework making every interface and algorithm customizable.
+12. **Transparent**: Actively expose and explain all platform mechanisms, algorithmic systems, and community processes, enabling informed user participation and control.
+13. **Governance**: Place platform governance in the hands of users through democratic decision-making.
+
 
 ## Features
 
