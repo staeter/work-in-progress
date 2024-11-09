@@ -2,9 +2,17 @@
 
 This document is a first attempt at defining the requirements of an Inter Planetary Social Network. It analyzes the benefits and limitations of existing social networks to build toward an extensive list of requirements and features.
 
-## Guiding Principles
+## Index
 
-These guiding principles are idealistic and unreachable but they serve as a north star. Every design requirement and every feature has to be justified and can be debated relative to these principles.
+- Core Principles
+- Tensions
+- Success Metrics
+- Requirements and Justifications
+- Tooling
+
+## Core Principles
+
+These core principles are idealistic and unreachable but they serve as a north star. Every requirement and every feature has to be justified and can be debated relative to these principles.
 
 1. **Respectful**: Foster goodwill, empathy and constructive communication while celebrating diversity and ensuring inclusive participation.
 2. **Purposeful**: Encourage mindful and intentional technology use, prioritizing meaningful activities over passive consumption.
@@ -18,16 +26,26 @@ These guiding principles are idealistic and unreachable but they serve as a nort
 10. **Accessible**: Ensure accessibility no matter the technical knowledge, the economical status, the cultural background, the physical disabilities or the language.
 11. **Modular**: Support community-driven development with a secure framework making every interface and algorithm customizable.
 12. **Transparent**: Actively expose and explain all platform mechanisms, algorithmic systems, and community processes, enabling informed user participation and control.
-13. **Empirical**: Justify every feature and study its concrete impact to ensure alignment with the guiding principles.
-14. **Governance**: Organize platform governance in a way that ensures consistent adherence to these guiding principles.
+13. **Empirical**: Justify every feature and study its concrete impact to ensure alignment with the core principles.
+14. **Governance**: Organize platform governance in a way that ensures consistent adherence to these core principles while involving as many people as possible.
 
 ## Tensions
 
-Here we describe the various conditions under which principles might be conflicting and the ways we want to resolve those tensions.
+Here we describe the various conditions under which some principles might be conflicting and the ways we want to resolve those tensions.
 
 ## Success Metrics
 
-## Design Requirements
+Here we describe the metrics we will use to measure how well the platform follows each of its core principles.
+
+## Requirements and Justifications
+
+Here we describe a set of requirements that we justify in regards to the platform's core principles.
+
+## Tooling
+
+Here we discuss which tools are needed to complete the requirements and weather potential candidates already exist.
+
+## Legacy Text
 
 ### Pro-Social Behavior
 
