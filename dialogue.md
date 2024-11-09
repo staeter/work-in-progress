@@ -2,7 +2,9 @@
 
 This document is a first attempt at defining the requirements of an Inter Planetary Social Network. It analyzes the benefits and limitations of existing social networks to build toward an extensive list of requirements and features.
 
-## Core Principles
+## Guiding Principles
+
+These guiding principles are idealistic and unreachable but they serve as a north star. Every design requirement and every feature has to be justified and can be debated relative to these principles.
 
 1. **Respectful**: Foster goodwill, empathy and constructive communication while celebrating diversity and ensuring inclusive participation.
 2. **Purposeful**: Encourage mindful and intentional technology use, prioritizing meaningful activities over passive consumption.
@@ -16,10 +18,16 @@ This document is a first attempt at defining the requirements of an Inter Planet
 10. **Accessible**: Ensure accessibility no matter the technical knowledge, the economical status, the cultural background, the physical disabilities or the language.
 11. **Modular**: Support community-driven development with a secure framework making every interface and algorithm customizable.
 12. **Transparent**: Actively expose and explain all platform mechanisms, algorithmic systems, and community processes, enabling informed user participation and control.
-13. **Governance**: Place platform governance in the hands of users through democratic decision-making.
+13. **Empirical**: Justify every feature and study its concrete impact to ensure alignment with the guiding principles.
+14. **Governance**: Organize platform governance in a way that ensures consistent adherence to these guiding principles.
 
+## Tensions
 
-## Features
+Here we describe the various conditions under which principles might be conflicting and the ways we want to resolve those tensions.
+
+## Success Metrics
+
+## Design Requirements
 
 ### Pro-Social Behavior
 
