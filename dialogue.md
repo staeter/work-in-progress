@@ -14,20 +14,20 @@ This document is a first attempt at defining the requirements of an Inter Planet
 
 These core principles are idealistic and unreachable but they serve as a north star. Every requirement and every feature has to be justified and can be debated relative to these principles.
 
-1. **Respectful**: Foster goodwill, empathy and constructive communication while celebrating diversity and ensuring inclusive participation.
+1. **Respectful**: Foster goodwill, empathy and constructive communication.
 2. **Purposeful**: Encourage mindful and intentional technology use, prioritizing meaningful activities over passive consumption.
 3. **Expressive**: Enable creative expression and knowledge sharing.
 4. **Collaborative**: Facilitate collective organization and decision-making.
 5. **Empowering**: Entrust people with control over their digital environment and support them with appropriate tools.
 6. **Private**: Guarantee personal data sovereignty and communication confidentiality.
 7. **Resilient**: Maintain platform availability even under state-level interdiction.
-8. **Safe**: Ensure users can communicate without fear of identification or retribution, particularly in repressive environments.
-9. **Distributed**: Share computing and storage resources across each node to minimize environmental impact and ensure network independence.
-10. **Accessible**: Ensure accessibility no matter the technical knowledge, the economical status, the cultural background, the physical disabilities or the language.
+8. **Safe**: Ensure users can communicate without fear of identification or retribution even in repressive environments.
+9. **Distributed**: Share computing and storage resources across nodes to minimize environmental impact and ensure network independence.
+10. **Accessible**: Ensure accessibility no matter the technical knowledge, the economical status, the cultural background, the physical disabilities, the language or the literacy.
 11. **Modular**: Support community-driven development with a secure framework making every interface and algorithm customizable.
 12. **Transparent**: Actively expose and explain all platform mechanisms, algorithmic systems, and community processes, enabling informed user participation and control.
 13. **Empirical**: Justify every feature and study its concrete impact to ensure alignment with the core principles.
-14. **Governance**: Organize platform governance in a way that ensures consistent adherence to these core principles while involving as many people as possible.
+14. **Governance**: Organize platform governance in a way that ensures consistent adherence to the core principles while involving as many people as possible.
 
 ## Tensions
 
