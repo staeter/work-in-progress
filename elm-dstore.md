@@ -5,37 +5,67 @@ Distributed store pattern built using ORDT and libp2p as an elm-platforms capabi
 The following design comes from this [blog post](http://archagon.net/blog/2018/03/24/data-laced-with-history/).
 
 ```elm
-type alias AtomUID =
+type alias AtomUid =
     { lamportTimestamp : LamportTimestamp
-    , site : Site -- UUID of the copy of the data
+    , site : Site
     }
 
-{-| Atomic change to the data structure. Immutable and has a globally unique id (AtomUID). -}
+{-| The site the data is stored and edited from. It contains the identity's pubKey as well as a short uid of its device. The same device has a different uid for each identity it hosts.
+-}
+type Site
+    = Site ...
+
+{-| Atomic change to the data structure. Immutable and has a globally unique id (AtomUid). -}
 type alias Atom op =
-    { cause : AtomUID -- atom onto which this operation builds upon
+    { cause : AtomUid -- atom onto which this operation builds upon
     , operation : op
     }
 
 type alias StructureLog op =
     { weave : Weave op
-    , yarn : Dict Site (Dict LamportTimestamp (Atom op))
     , here : Site
     , highestLamportTimestamp : LamportTimestamp
     }
 
 type alias Weave op =
-    { root : AtomUID
-    , causalTree : Dict AtomUID (Dict AtomUID op)
+    { root : AtomUid
+    , causalTree : Dict AtomUid (Dict AtomUid op)
     }
 
 type LamportTimestamp
     = LamportTimestamp Int
 
-type alias Packet =
-    { atomUID : AtomUID
-    , atom : Atom
-    , structure : Id StructureLog
+toYarn : Weave op -> Dict Site (Dict LamportTimestamp (Atom op))
+
+type WeaveOp op
+    = Root AtomUid
+    | CausalTree (DictOp AtomUid (DictOp AtomUid op))
+```
+
+Attempt at synchronization:
+
+```elm
+type alias Sync data =
+    { accessControl : AccessControl
+    , identity : Identity
+    , feed : Feed
+    , data : data
     }
+
+type SyncOp data = ...
+
+type alias AccessControl =
+    { admin : NeDict User (Maybe Signature)
+    , writer : Dict User (Maybe Signature)
+    , reader : Set User
+    }
+
+type Feed
+    = Feed String
+
+makePacket : Set (AtomUid, Atom (SyncOp data)) -> Packet data
+send : Feed -> Packet data -> Cmd msg
+subscribe : Feed -> Sub (SyncOp data)
 ```
 
 ```elm
