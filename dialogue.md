@@ -1,6 +1,6 @@
-# Inter Planetary Social Network (IPSN)
+# Dialogue
 
-This document is a first attempt at defining the requirements of an Inter Planetary Social Network. It analyzes the benefits and limitations of existing social networks to build toward an extensive list of requirements and features.
+This document is a first attempt at defining the requirements of Dialogue, an Inter Planetary Social Network. It analyzes the benefits and limitations of existing social networks to build toward an extensive list of requirements and features.
 
 ## Index
 
@@ -12,10 +12,10 @@ This document is a first attempt at defining the requirements of an Inter Planet
 
 ## Core Principles
 
-These core principles are idealistic and unreachable but they serve as a north star. Every requirement and every feature has to be justified and can be debated relative to these principles.
+These core principles might be idealistic and unreachable but they serve as a north star. Every requirement and every feature has to be justified and can be debated relative to these principles.
 
 1. **Respectful**: Foster goodwill, empathy and constructive communication.
-2. **Purposeful**: Encourage mindful and intentional technology use, prioritizing meaningful activities over passive consumption.
+2. **Purposeful**: Avoid addictive patterns to encourage mindful and intentional technology use.
 3. **Expressive**: Enable creative expression and knowledge sharing.
 4. **Collaborative**: Facilitate collective organization and decision-making.
 5. **Empowering**: Entrust people with control over their digital environment and support them with appropriate tools.
@@ -33,6 +33,10 @@ These core principles are idealistic and unreachable but they serve as a north s
 
 Here we describe the various conditions under which some principles might be conflicting and the ways we want to resolve those tensions.
 
+### Safety, Privacy, Distributed, Modular vs Accessibility
+
+Strong safety often require technical complexity. Privacy oriented software often  management, distributed systems features . Managing who gets to access which data
+
 ## Success Metrics
 
 Here we describe the metrics we will use to measure how well the platform follows each of its core principles.
@@ -40,6 +44,58 @@ Here we describe the metrics we will use to measure how well the platform follow
 ## Requirements and Justifications
 
 Here we describe a set of requirements that we justify in regards to the platform's core principles.
+
+### Platform's Name
+
+The platform's name has to:
+
+- Emphasize the social aspect of the platform
+- Have a meaning that mirrors the platform's *core principles*
+- Be readable and pronounceable in a large amount of languages (*accessibility* principle)
+- Be memorable
+
+Some interesting names include:
+
+- **Dialogue**
+  - This is the current chosen name
+  - Pros:
+    - Reflects the *respectful*, *expressive* and *collaborative* principles
+    - Is easy to pronounce and has the same meaning in many languages
+    - There is a clear social aspect making it sensible to label a social network
+- **Inter Planetary Social Network (IPSN)**
+  - Pros:
+    - Reflects the *distributed* and *resilient* principles
+    - Emphasize the future proof aspect of the platform
+    - The fact that it is a social network is explicitly stated
+  - Cons:
+    - Quite long and difficult to pronounce for non english speakers
+    - Might be considered as piggy backing on the IPFS ecosystem even if it might not be built on top of it
+
+### Programming Language
+
+The choice of programming language is crucial as it must comply with tree principles
+
+- Easy to learn and master
+  - Enforces good practice through language design
+  - Human readable and helpful error messages
+  - Single threaded code
+- Built for distributed and parallel architecture
+  - CRDT as first class citizen
+  - Computation complexity evaluation at compile time for automated parallelization and distribution of computations
+- Must be easy to read and maintain
+  - When it compiles it works
+  - No implicit behavior
+  - Strongly typed
+- Must be easy to create sandboxes for users to code extensions while controlling which data it reads and writes (*modularity* principle)
+  - Has no side effects
+
+### Integrated Development Environment
+
+We need a bunch of graphical tools for making the programming experience as smooth as possible
+
+- Layout editor
+
+The Elm architecture (time machine, ...).
 
 ## Tooling
 
@@ -185,7 +241,7 @@ The shopping list is long and we will need a lot of resources to get there.
 ## Existing Propositions
 
 > I want to review a lot more existing social media in order to pull inspiration. Here is a set that will be interesting to review:
-> Mastodon, Matrix, Secure Scuttlebutt (SSB), Aether, Lemmy, Discord, Signal, Telegram, Slack, WhatsApp, Reddit, YouTube, Instagram, Facebook, Snapchat, TikTok, LinkedIn, Twitter/X, WeChat, Twitch, Medium
+> Mastodon, Matrix, Secure Scuttlebutt (SSB), Aether, Lemmy, Discord, Signal, Telegram, Slack, WhatsApp, Reddit, YouTube, Instagram, Facebook, Snapchat, TikTok, LinkedIn, Twitter/X, WeChat, Twitch, Medium, BeReal, Clubhluse
 
 ### Nebula
 
