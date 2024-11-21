@@ -3,17 +3,23 @@
 Distributed store pattern built using ORDT and libp2p as an elm-platforms capability.
 
 The following design comes from this [blog post](http://archagon.net/blog/2018/03/24/data-laced-with-history/).
+This architecture is thought to work on top of a p2p protocol like [socket runtime](https://socketsupply.co).
 
 ```elm
 type alias AtomUid =
-    { lamportTimestamp : LamportTimestamp
-    , site : Site
+    { logicalTime : LogicalTime
+    , site : Uuid Site
     }
 
-{-| The site the data is stored and edited from. It contains the identity's pubKey as well as a short uid of its device. The same device has a different uid for each identity it hosts.
--}
-type Site
-    = Site ...
+{-| increase by one for every Atom emitted by the Site -}
+type LogicalTime
+    = LogicalTime Int
+
+type alias Site =
+    -- { auth : PubKey Identity -- public key of the identity that made the modif
+    -- , copy : Uuid Copy
+    -- }
+    Uuid
 
 {-| Atomic change to the data structure. Immutable and has a globally unique id (AtomUid). -}
 type alias Atom op =
@@ -21,59 +27,74 @@ type alias Atom op =
     , operation : op
     }
 
-type alias StructureLog op =
-    { weave : Weave op
-    , here : Site
-    , highestLamportTimestamp : LamportTimestamp
-    }
-
-type alias Weave op =
-    { root : AtomUid
+{-| Operational Replicated Data Type
+combines both Weave and Yarn to get their mutual strengths but takes twice as much memory
+-}
+type alias Ordt op =
+    { site : Site
+    , now : LogicalTime
+    -- Weave : retrieve data in O(n) but retrieve specific Atom in O(n)
+    , root : AtomUid
     , causalTree : Dict AtomUid (Dict AtomUid op)
+    -- Yarn : retrieve specific Atom in O(1) but data in O(n^2)
+    , atoms : Dict Site (Dict LogicalTime (Atom op))
     }
 
-type LamportTimestamp
-    = LamportTimestamp Int
+-- Yarn, Weave and ORDT are equivalent ways of organizing the same data
+-- weaveToYarn : Weave op -> Yarn op
+-- yarnToWeave : Yarn op -> Weave op
+-- weaveToORDT, yarnToORDT, ...
 
-toYarn : Weave op -> Dict Site (Dict LamportTimestamp (Atom op))
-
-type WeaveOp op
-    = Root AtomUid
-    | CausalTree (DictOp AtomUid (DictOp AtomUid op))
+{-| unique version vector -}
+type Weft
+    = Weft (Dict Site LogicalTime)
 ```
 
 Attempt at synchronization:
 
 ```elm
-type alias Sync data =
+type alias Sync op =
     { accessControl : AccessControl
+    -- identity of edits
     , identity : Identity
-    , feed : Feed
-    , data : data
+    -- chanel through which to share the data
+    , chanel : Chanel
+    , data : Ordt op
     }
 
-type SyncOp data = ...
+type SyncOp op
+    = Update (List op)
+    | GiveReadAccess User
+    | GiveWriteAccess User
+    | GiveAdminAccess User
+    | RevokeReadAccess User
+    | RevokeWriteAccess User
+    | RevokeAdminAccess User
 
 type alias AccessControl =
-    { admin : NeDict User (Maybe Signature)
-    , writer : Dict User (Maybe Signature)
-    , reader : Set User
+    { admins : NeList User (Maybe Signature)
+    , writers : Dict User (Maybe Signature)
+    , revokedWriters : Set User
+    , readers : Set User
     }
 
-type Feed
-    = Feed String
+{-| Reference to the p2p chanel dedicated to sharing packets acting on this data  -}
+type Chanel
+    = Chanel String
 
 makePacket : Set (AtomUid, Atom (SyncOp data)) -> Packet data
-send : Feed -> Packet data -> Cmd msg
-subscribe : Feed -> Sub (SyncOp data)
+send : Chanel -> Packet data -> Cmd msg
+subscribe : Chanel -> Sub (SyncOp data)
 ```
 
 ```elm
-weaveString : Weave StringOp -> String
-weaveList : (Weave subOp -> data) -> Weave (ListOp subOp) -> List data
-weaveLww : Weave (LwwOp data) -> data
-weaveAddOnly : Weave (AddOnlyOp number) -> number
-weaveDict : (Weave subOp -> data) -> Weave (DictOp key subOp) -> Dict key data
+module Ordt.Weave exposing (..)
+
+string : Ordt StringOp -> String
+list : (Ordt subOp -> data) -> Ordt (ListOp subOp) -> List data
+lww : Ordt (LwwOp data) -> data
+number : Ordt (NumberOp number) -> number
+dict : (Ordt subOp -> data) -> Ordt (DictOp key subOp) -> Dict key data
 
 type StringOp
     = Insert Char
@@ -89,14 +110,15 @@ type DictOp key subOp
     | Update key subOp
     | Tombstone key
 
-type AddOnlyOp number
+type NumberOp number
     = Add number
+    | Push number
 
 type LwwOp a
     = Push a
 
 
-weaveData : Weave DataOp -> Data
+weaveData : Ordt DataOp -> Data
 
 type alias Data =
     { stringField : String
@@ -112,7 +134,7 @@ type DataOp
     | FloatListField (ListOp Float)
 
 
-weaveStringInput : Weave StringInputOp -> StringInput
+weaveStringInput : Ordt StringInputOp -> StringInput
 
 type alias StringInput =
     { cursors : Dict Site Selection
@@ -125,6 +147,11 @@ type alias Selection =
 type StringInputOp
     = Cursors (DictOp Site (LwwOp Selection))
     | String StringOp
+
+weaveOrdt : (OrdtOp subOp -> data) -> Ordt (OrdtOp subOp) -> data
+
+type OrdtOp op
+    = Add AtomUid (Atom op)
 ```
 
 Previous attempts:
