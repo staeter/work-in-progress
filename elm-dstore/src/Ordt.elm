@@ -8,6 +8,8 @@ This implementation comes from [this blogpost](http://archagon.net/blog/2018/03/
 
 import Dict exposing (Dict)
 import LogicalTime exposing (LogicalTime)
+import Random exposing (Generator)
+import UUID exposing (UUID)
 
 
 {-| Atomic change to the data structure. Immutable and has a globally unique id (AtomUid).
@@ -27,7 +29,7 @@ type alias AtomUid =
 {-| Unique identifier for a copy of the data structure
 -}
 type CopyUid
-    = CopyUid String
+    = CopyUid UUID
 
 
 {-| Operational Replicated Data Type
@@ -51,22 +53,31 @@ type Weft
     = Weft (Dict CopyUid LogicalTime)
 
 
-empty : CopyUid -> Ordt op
-empty copyUid =
-    { copyUid = copyUid
-    , now = LogicalTime.zero
-    , root =
-        { logicalTime = LogicalTime.zero
-        , copyUid = copyUid
-        }
-    , causalTree = Dict.empty
-    , atoms = Dict.empty
-    }
+empty : Generator (Ordt op)
+empty =
+    Random.map
+        (\copyUid ->
+            { copyUid = copyUid
+            , now = LogicalTime.zero
+            , root =
+                { logicalTime = LogicalTime.zero
+                , copyUid = copyUid
+                }
+            , causalTree = Dict.empty
+            , atoms = Dict.empty
+            }
+        )
+        UUID.generator
 
 
 isEmpty : Ordt op -> Bool
 isEmpty { causalTree } =
     Dict.isEmpty causalTree
+
+
+root : Ordt op -> AtomUid
+root =
+    .root
 
 
 {-| Merge two ORDTs having the same root.
