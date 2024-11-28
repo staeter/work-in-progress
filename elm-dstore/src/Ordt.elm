@@ -6,7 +6,7 @@ This implementation comes from [this blogpost](http://archagon.net/blog/2018/03/
 
 -}
 
-import Dict exposing (Dict)
+import GDict
 import LogicalTime exposing (LogicalTime)
 import Random exposing (Generator)
 import UUID exposing (UUID)
@@ -20,10 +20,11 @@ type alias Atom op =
     }
 
 
-type alias AtomUid =
-    { logicalTime : LogicalTime
-    , copyUid : CopyUid
-    }
+type AtomUid
+    = AtomUid
+        { logicalTime : LogicalTime
+        , copyUid : CopyUid
+        }
 
 
 {-| Unique identifier for a copy of the data structure
@@ -34,50 +35,56 @@ type CopyUid
 
 {-| Operational Replicated Data Type
 -}
-type alias Ordt op =
-    { copyUid : CopyUid
-    , now : LogicalTime
+type Ordt op
+    = Ordt
+        { copyUid : CopyUid
+        , now : LogicalTime
 
-    -- Weave : retrieve data in O(n) but retrieve specific Atom in O(n)
-    , root : AtomUid
-    , causalTree : Dict AtomUid (Dict AtomUid op)
+        -- Weave : retrieve data in O(n) but retrieve specific Atom in O(n)
+        , root : AtomUid
+        , causalTree : GDict AtomUid (GDict AtomUid op)
 
-    -- Yarn : retrieve specific Atom in O(1) but data in O(n^2)
-    , atoms : Dict CopyUid (Dict LogicalTime (Atom op))
-    }
+        -- Yarn : retrieve specific Atom in O(1) but data in O(n^2)
+        , atoms : GDict CopyUid (GDict LogicalTime (Atom op))
+
+        -- Cache : lazy evaluation
+        -- , cache : Maybe data
+        }
 
 
 {-| unique version vector
 -}
 type Weft
-    = Weft (Dict CopyUid LogicalTime)
+    = Weft (GDict CopyUid LogicalTime)
 
 
 empty : Generator (Ordt op)
 empty =
     Random.map
         (\copyUid ->
-            { copyUid = copyUid
+            { copyUid = CopyUid copyUid
             , now = LogicalTime.zero
             , root =
                 { logicalTime = LogicalTime.zero
-                , copyUid = copyUid
+                , copyUid = CopyUid copyUid
                 }
-            , causalTree = Dict.empty
-            , atoms = Dict.empty
+                    |> AtomUid
+            , causalTree = GDict.empty
+            , atoms = GDict.empty
             }
+                |> Ordt
         )
         UUID.generator
 
 
 isEmpty : Ordt op -> Bool
-isEmpty { causalTree } =
-    Dict.isEmpty causalTree
+isEmpty (Ordt { causalTree }) =
+    GDict.isEmpty causalTree
 
 
 root : Ordt op -> AtomUid
-root =
-    .root
+root (Ordt ordt) =
+    ordt.root
 
 
 {-| Merge two ORDTs having the same root.
@@ -85,7 +92,7 @@ Keep the copyUid of the second.
 Return Nothing if the roots are different.
 -}
 merge : Ordt op -> Ordt op -> Maybe (Ordt op)
-merge a b =
+merge (Ordt a) (Ordt b) =
     if a.root /= b.root then
         Nothing
 
@@ -96,60 +103,71 @@ merge a b =
         , causalTree =
             List.foldl
                 (\( id, ops ) ->
-                    Dict.update id
-                        (Maybe.map (Dict.union ops)
-                            |> Maybe.withDefault ops
+                    GDict.update atomUidToComparable
+                        id
+                        (Maybe.map (GDict.union ops)
+                            >> Maybe.withDefault ops
+                            >> Just
                         )
                 )
                 a.causalTree
-                (Dict.toList b.causalTree)
+                (GDict.toList b.causalTree)
         , atoms =
             List.foldl
                 (\( copyUid, atoms ) ->
-                    Dict.update copyUid
-                        (Maybe.map (Dict.union atoms)
-                            |> Maybe.withDefault atoms
+                    GDict.update copyUidToComparable
+                        copyUid
+                        (Maybe.map (GDict.union atoms)
+                            >> Maybe.withDefault atoms
+                            >> Just
                         )
                 )
                 a.atoms
-                (Dict.toList b.atoms)
+                (GDict.toList b.atoms)
         }
+            |> Ordt
+            |> Just
 
 
 {-| Insert an operation after its causal atom and returns its uid
 -}
 insertAfter : AtomUid -> op -> Ordt op -> ( AtomUid, Ordt op )
-insertAfter cause op { copyUid, now, root, causalTree, atoms } =
+insertAfter cause op (Ordt ordt) =
     let
         logicalTime =
-            LogicalTime.increment now
+            LogicalTime.increment ordt.now
 
         atomUid =
             { logicalTime = logicalTime
-            , copyUid = copyUid
+            , copyUid = ordt.copyUid
             }
+                |> AtomUid
 
         atom =
             { cause = cause
             , operation = op
             }
     in
-    { copyUid = copyUid
-    , now = logicalTime
-    , root = root
-    , causalTree =
-        Dict.update root
-            (Maybe.map (Dict.insert atomUid atom)
-                |> Maybe.withDefault (Dict.singleton atomUid atom)
-            )
-            causalTree
-    , atoms =
-        Dict.update copyUid
-            (Maybe.map (Dict.insert logicalTime atom)
-                |> Maybe.withDefault (Dict.singleton logicalTime atom)
-            )
-            atoms
+    { ordt
+        | now = logicalTime
+        , causalTree =
+            GDict.update atomUidToComparable
+                ordt.root
+                (Maybe.map (GDict.insert atomUidToComparable atomUid op)
+                    >> Maybe.withDefault (GDict.singleton atomUidToComparable atomUid op)
+                    >> Just
+                )
+                ordt.causalTree
+        , atoms =
+            GDict.update copyUidToComparable
+                ordt.copyUid
+                (Maybe.map (GDict.insert logicalTimeToComparable logicalTime atom)
+                    >> Maybe.withDefault (GDict.singleton logicalTimeToComparable logicalTime atom)
+                    >> Just
+                )
+                ordt.atoms
     }
+        |> Ordt
         |> Tuple.pair atomUid
 
 
@@ -164,3 +182,26 @@ insertSeriesAfter cause ops ordt =
         ( cause, ordt )
         ops
         |> Tuple.second
+
+
+
+-- To Comparable --
+
+
+type alias GDict k v =
+    GDict.GDict (List Int) k v
+
+
+atomUidToComparable : AtomUid -> List Int
+atomUidToComparable (AtomUid { logicalTime, copyUid }) =
+    LogicalTime.toComparable logicalTime :: copyUidToComparable copyUid
+
+
+copyUidToComparable : CopyUid -> List Int
+copyUidToComparable (CopyUid uuid) =
+    UUID.toComparable uuid
+
+
+logicalTimeToComparable : LogicalTime -> List Int
+logicalTimeToComparable =
+    LogicalTime.toComparable >> List.singleton

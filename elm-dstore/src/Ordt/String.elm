@@ -1,18 +1,24 @@
 module Ordt.String exposing (..)
 
-import Dict exposing (Dict)
 import DiffBy
-import Ordt exposing (Ordt)
+import GDict
+import Ordt exposing (Atom, AtomUid, GDict, Ordt(..))
 import Random exposing (Generator)
 
 
+{-| Operations that build up the ORDT String
+
+The causal link is made with the character to the right to avoid String.reverse and List.reverse on weave.
+Therefore the root atom represents the end of the string.
+
+-}
 type Op
     = InsertLeft Char
     | Tombstone
 
 
 weave : Ordt Op -> String
-weave { root, causalTree } =
+weave (Ordt { root, causalTree }) =
     let
         findAndFilterTombstones : List ( AtomUid, Op ) -> ( Bool, List ( AtomUid, Op ) )
         findAndFilterTombstones ops =
@@ -32,19 +38,19 @@ weave { root, causalTree } =
         traverseTree id str =
             let
                 ( isTombstone, branches ) =
-                    Dict.get id causalTree
-                        |> Maybe.map Dict.toList
+                    GDict.get Ordt.atomUidToComparable id causalTree
+                        |> Maybe.map GDict.toList
                         |> Maybe.withDefault []
                         |> findAndFilterTombstones
             in
             List.foldl
-                (\subId op ->
+                (\( subId, op ) acc ->
                     case op of
                         InsertLeft c ->
-                            traverseTree subId (String.cons c str)
+                            traverseTree subId (String.cons c acc)
 
                         Tombstone ->
-                            str
+                            acc
                 )
                 (if isTombstone then
                     String.dropLeft 1 str
@@ -54,7 +60,7 @@ weave { root, causalTree } =
                 )
                 branches
     in
-    traverseTree root
+    traverseTree root ""
 
 
 fromString : String -> Generator (Ordt Op)
@@ -70,9 +76,9 @@ fromString str =
 
 
 length : Ordt Op -> Int
-length { causalTree } =
+length (Ordt { causalTree }) =
     let
-        countChars : Dict AtomUid Op -> Int
+        countChars : GDict AtomUid Op -> Int
         countChars branches =
             List.foldl
                 (\( _, op ) acc ->
@@ -84,7 +90,7 @@ length { causalTree } =
                             { acc | count = acc.count + 1 }
                 )
                 { tombstone = False, count = 0 }
-                (Dict.toList ops)
+                (GDict.toList branches)
                 |> (\{ tombstone, count } ->
                         count
                             - (if tombstone then
@@ -96,11 +102,11 @@ length { causalTree } =
                    )
     in
     List.foldl
-        (\( _, ops ) acc ->
-            acc + countChars ops
+        (\( _, branches ) acc ->
+            acc + countChars branches
         )
         0
-        (Dict.toList causalTree)
+        (GDict.toList causalTree)
 
 
 {-| make the diff between the string and the ordt and insert changes into the ordt
@@ -125,6 +131,7 @@ insertDiff str ordt =
                                 -- reverse and map to InsertLeft
                                 InsertLeft a :: acc
                             )
+                            []
                             addedList
                         )
             in
@@ -149,7 +156,7 @@ insertDiff str ordt =
 
 
 toList : Ordt Op -> List ( AtomUid, Char )
-toList ordt =
+toList (Ordt ordt) =
     let
         findAndFilterTombstones : List ( AtomUid, Op ) -> ( Bool, List ( AtomUid, Op ) )
         findAndFilterTombstones ops =
@@ -169,19 +176,19 @@ toList ordt =
         traverseTree id list =
             let
                 ( isTombstone, branches ) =
-                    Dict.get id causalTree
-                        |> Maybe.map Dict.toList
+                    GDict.get Ordt.atomUidToComparable id ordt.causalTree
+                        |> Maybe.map GDict.toList
                         |> Maybe.withDefault []
                         |> findAndFilterTombstones
             in
             List.foldl
-                (\subId op ->
+                (\( subId, op ) acc ->
                     case op of
                         InsertLeft c ->
-                            traverseTree subId (( subId, op ) :: list)
+                            traverseTree subId (( subId, c ) :: acc)
 
                         Tombstone ->
-                            list
+                            acc
                 )
                 (if isTombstone then
                     List.drop 1 list

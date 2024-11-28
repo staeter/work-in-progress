@@ -1,4 +1,4 @@
-module Main exposing (LogicalTime, increment, max, zero)
+module LogicalTime exposing (LogicalTime, increment, max, toComparable, zero)
 
 {-| increase by one for every Atom emitted by the Site
 -}
@@ -21,3 +21,8 @@ increment (LogicalTime n) =
 max : LogicalTime -> LogicalTime -> LogicalTime
 max (LogicalTime n) (LogicalTime m) =
     LogicalTime (Basics.max n m)
+
+
+toComparable : LogicalTime -> Int
+toComparable (LogicalTime n) =
+    n
