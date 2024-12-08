@@ -16,7 +16,7 @@ These core principles might be idealistic and unreachable but they serve as a no
 
 1. **Respectful**: Foster goodwill, empathy, openness and constructive communication.
 2. **Purposeful**: Encourage mindful and intentional technology use.
-3. **Expressive**: Enable creative expression and knowledge sharing regardless of economical background.
+3. **Expressive**: Enable creative expression and knowledge sharing regardless of socio-economical background.
 4. **Collective**: Make collective and democratic organizing and decision-making more efficient than centralized systems.
 5. **Empowering**: Entrust people with control over their digital environment and support them with appropriate tools.
 6. **Private**: Guarantee personal data sovereignty and communication confidentiality.
@@ -25,9 +25,11 @@ These core principles might be idealistic and unreachable but they serve as a no
 9. **Distributed**: Share computing and storage resources across devices to minimize environmental impact and ensure network independence.
 10. **Accessible**: Ensure accessibility no matter the technical knowledge, the economical status, the cultural background, the physical disabilities, the language or the literacy.
 11. **Modular**: Support community-driven development with a secure framework making every interface and algorithm customizable.
-12. **Transparent**: Actively expose and explain all platform mechanisms, algorithmic systems, and community processes, enabling informed user participation and control.
-13. **Empirical**: Justify every feature and study its concrete impact to ensure alignment with the *core principles*.
-14. **Governance**: Organize platform governance in a way that ensures consistent adherence to the *core principles*.
+12. **Sustainable**: Ensure the platform's social and technical foundations remain viable
+and relevant across generational timescales.
+13. **Transparent**: Actively expose and explain all platform mechanisms, algorithmic systems, and community processes, enabling informed user participation and control.
+14. **Empirical**: Justify every feature and study its concrete impact to ensure alignment with the *core principles*.
+15. **Governance**: Organize platform governance and development in a way that ensures consistent adherence to the *core principles*.
 
 ## Tensions
 
@@ -43,7 +45,7 @@ Here we describe the metrics we will use to measure how well the platform follow
 
 ## Requirements and Justifications
 
-Here we describe a set of requirements that we justify in regards to the platform's core principles.
+Here we describe a set of requirements that we justify in regards to the platform's core principles. We start every section with a wish list of features that would ideally be present. We then provide a list of possible solutions, their pros and cons.
 
 ### Platform's Name
 
@@ -62,6 +64,9 @@ Some interesting names include:
     - Reflects the *respectful*, *expressive* and *collective* principles
     - Is easy to pronounce and has the same meaning in many languages
     - There is a clear social aspect making it sensible to label a social network
+  - Cons:
+    - Probably won't get `dialogue.net`
+    - SEO might be complicated
 - **Inter Planetary Social Network (IPSN)**
   - Pros:
     - Reflects the *distributed* and *resilient* principles
@@ -75,19 +80,27 @@ Some interesting names include:
 
 The choice of programming language is crucial as it must comply with tree principles
 
-- Easy to learn and master
+- Easy to learn and master (*accessible* principle)
+  - Great beginner resources
   - Enforces good practice through language design
   - Human readable and helpful error messages
   - Single threaded code
-- Built for distributed and parallel architecture
-  - CRDT as first class citizen
-  - Computation complexity evaluation at compile time for automated parallelization and distribution of computations
-- Must be easy to read and maintain
+- Built for distributed and parallel architecture (*distributed* principle)
+  - [ORDT](http://archagon.net/blog/2018/03/24/data-laced-with-history/) as first class citizen
+  - Parallelize program at compile time
+  - Evaluate time complexity at compile time (might not be possible)
+  - Functions are values that can be stored and sent
+- Must be easy to maintain
   - When it compiles it works
   - No implicit behavior
   - Strongly typed
-- Must be easy to create sandboxes for users to code extensions while controlling which data it reads and writes (*modularity* principle)
-  - Has no side effects
+  - Enforce good documentation practices
+  - Has clear and uniform naming conventions
+- Sandboxed (*modularity* principle)
+  - Functions have no side effects
+  - A single datatype represents all possible side effects
+    - It can be extended or shrunk based on the access we want to give to the sub program
+- Can be translated in various languages (*accessible* principle)
 
 ### Integrated Development Environment
 
