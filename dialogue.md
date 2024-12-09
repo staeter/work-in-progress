@@ -1,47 +1,28 @@
 # Dialogue
 
-This document is a first attempt at defining the requirements of Dialogue, an Inter Planetary Social Network. It analyzes the benefits and limitations of existing social networks to build toward an extensive list of requirements and features.
-
-## Index
-
-- Core Principles
-- Tensions
-- Success Metrics
-- Requirements and Justifications
-- Tooling
+This document is a first attempt at defining the requirements of Dialogue, an Inter Planetary Social Network. It analyzes the benefits and limitations of existing social networks to build toward an extensive list of requirements.
 
 ## Core Principles
 
-These core principles might be idealistic and unreachable but they serve as a north star. Every requirement and every feature has to be justified and can be debated relative to these principles.
+Some of these core principles might be idealistic and unreachable but they serve as a north star. Every requirement and every feature has to be justified and can be debated relative to these principles.
 
 1. **Respectful**: Foster goodwill, empathy, openness and constructive communication.
 2. **Purposeful**: Encourage mindful and intentional technology use.
-3. **Expressive**: Enable creative expression and knowledge sharing regardless of socio-economical background.
-4. **Collective**: Make collective and democratic organizing and decision-making more efficient than centralized systems.
-5. **Empowering**: Entrust people with control over their digital environment and support them with appropriate tools.
-6. **Private**: Guarantee personal data sovereignty and communication confidentiality.
-7. **Resilient**: Maintain platform availability even under state-level interdiction.
-8. **Safe**: Ensure users can communicate without fear of identification or retribution even in repressive environments.
-9. **Distributed**: Share computing and storage resources across devices to minimize environmental impact and ensure network independence.
-10. **Accessible**: Ensure accessibility no matter the technical knowledge, the economical status, the cultural background, the physical disabilities, the language or the literacy.
-11. **Modular**: Support community-driven development with a secure framework making every interface and algorithm customizable.
-12. **Sustainable**: Ensure the platform's social and technical foundations remain viable
-and relevant across generational timescales.
-13. **Transparent**: Actively expose and explain all platform mechanisms, algorithmic systems, and community processes, enabling informed user participation and control.
-14. **Empirical**: Justify every feature and study its concrete impact to ensure alignment with the *core principles*.
-15. **Governance**: Organize platform governance and development in a way that ensures consistent adherence to the *core principles*.
-
-## Tensions
-
-Here we describe the various conditions under which some principles might be conflicting and the ways we want to resolve those tensions.
-
-### Safety, Privacy, Distributed, Modular vs Accessibility
-
-Strong safety often require technical complexity. Privacy oriented software often  management, distributed systems features . Managing who gets to access which data
-
-## Success Metrics
-
-Here we describe the metrics we will use to measure how well the platform follows each of its core principles.
+3. **Progressive**: Foster optimistic visions and enable concrete actions toward humanity's collective future.
+4. **Expressive**: Enable creative expression and knowledge sharing regardless of socio-economical background.
+5. **Democratic**: Make collective and democratic organizing and decision-making more efficient than centralized systems.
+6. **Empowering**: Entrust people with control over their digital environment and support them with appropriate tools.
+7. **Private**: Guarantee personal data sovereignty and communication confidentiality.
+8. **Resilient**: Maintain platform availability even under state-level interdiction.
+9. **Safe**: Ensure users can communicate without fear of identification or retribution even in repressive environments.
+10. **Distributed**: Share computing and storage resources across devices to minimize environmental impact and ensure network independence.
+11. **Accessible**: Ensure accessibility no matter the technical knowledge, the economical status, the cultural background, the physical disabilities, the language or the literacy.
+12. **Modular**: Support community-driven development with a secure framework making every interface and algorithm customizable.
+13. **Sustainable**: Ensure the platform's social and technical foundations remain viable and relevant across generational timescales.
+14. **Attractive**: Has compelling reasons for people and communities to join, stay and grow with the platform enabling [network effects](https://en.wikipedia.org/wiki/Network_effect).
+15. **Transparent**: Actively expose and explain all platform mechanisms, algorithmic systems, and community processes, enabling informed user participation and control.
+16. **Empirical**: Rigorously justify, study and stress test every feature to ensure alignment with the *core principles*.
+17. **Governance**: Organize platform governance and development in a way that ensures consistent adherence to the *core principles*.
 
 ## Requirements and Justifications
 
@@ -51,56 +32,67 @@ Here we describe a set of requirements that we justify in regards to the platfor
 
 The platform's name has to:
 
-- Emphasize the social aspect of the platform
+- Correspond to what it is: a social network
 - Have a meaning that mirrors the platform's *core principles*
-- Be readable and pronounceable in a large amount of languages (*accessibility* principle)
-- Be memorable
+- Be readable and pronounceable in a large amount of languages (*accessible*)
+- Be memorable (*attractive*)
 
-Some interesting names include:
+#### Dialogue
 
-- **Dialogue**
-  - This is the current chosen name
-  - Pros:
-    - Reflects the *respectful*, *expressive* and *collective* principles
-    - Is easy to pronounce and has the same meaning in many languages
-    - There is a clear social aspect making it sensible to label a social network
-  - Cons:
-    - Probably won't get `dialogue.net`
-    - SEO might be complicated
-- **Inter Planetary Social Network (IPSN)**
-  - Pros:
-    - Reflects the *distributed* and *resilient* principles
-    - Emphasize the future proof aspect of the platform
-    - The fact that it is a social network is explicitly stated
-  - Cons:
-    - Quite long and difficult to pronounce for non english speakers
-    - Might be considered as piggy backing on the IPFS ecosystem even if it might not be built on top of it
+- This is the current chosen name
+- Pros:
+  - Reflects the *respectful*, *expressive* and *democratic* principles
+  - Is easy to pronounce and has the same meaning in many languages
+  - There is a clear social aspect making it sensible to label a social network
+- Cons:
+  - Probably won't get `dialogue.net`
+  - SEO might be complicated
+
+#### Inter Planetary Social Network (IPSN)
+
+- Pros:
+  - Reflects the *distributed* and *resilient* principles
+  - Emphasize the future proof aspect of the platform
+  - The fact that it is a social network is explicitly stated
+  - Is enthusiastic about the future
+- Cons:
+  - Quite long and difficult to pronounce for non english speakers
+  - Might be considered as piggy backing on the IPFS ecosystem even if it might not be built on top of it
 
 ### Programming Language
 
 The choice of programming language is crucial as it must comply with tree principles
 
-- Easy to learn and master (*accessible* principle)
+- Easy to learn and master (*accessible*)
   - Great beginner resources
-  - Enforces good practice through language design
-  - Human readable and helpful error messages
+  - Minimize the amount of core concepts
+  - Easy to read and to express
+    - This is successful when [syntactic sugar](https://en.wikipedia.org/wiki/Syntactic_sugar) becomes redundant
   - Single threaded code
-- Built for distributed and parallel architecture (*distributed* principle)
-  - [ORDT](http://archagon.net/blog/2018/03/24/data-laced-with-history/) as first class citizen
-  - Parallelize program at compile time
-  - Evaluate time complexity at compile time (might not be possible)
-  - Functions are values that can be stored and sent
-- Must be easy to maintain
-  - When it compiles it works
+  - Compiler written in its own language
+- Easy to review and maintain (*sustainable*)
+  - Enforces good practice through language design and compiler errors
+  - Human readable and helpful compilation error messages
+  - Compiler enforce good documentation practices
+  - When it compiles it works except for mathematically untraceable issues
   - No implicit behavior
   - Strongly typed
-  - Enforce good documentation practices
   - Has clear and uniform naming conventions
-- Sandboxed (*modularity* principle)
+  - Standard formatting enforced by the compiler
+  - Standard formatting avoids indentation pyramids
+- Built for distributed architecture (*distributed*)
+  - [ORDT](http://archagon.net/blog/2018/03/24/data-laced-with-history/) as first class citizen
+  - Enable distributed computations for heavy algorithms
+- Run and compile on most devices with low network availability (*accessible*)
+  - Parallelize program at compile time
+  - Tiny bundle size
+  - Be [local first](https://www.inkandswitch.com/local-first/)
+  - Fast compilation
+- Sandboxed (*modular*)
   - Functions have no side effects
   - A single datatype represents all possible side effects
     - It can be extended or shrunk based on the access we want to give to the sub program
-- Can be translated in various languages (*accessible* principle)
+- Can be translated in various languages (*accessible*)
 
 ### Integrated Development Environment
 
@@ -109,6 +101,24 @@ We need a bunch of graphical tools for making the programming experience as smoo
 - Layout editor
 
 The Elm architecture (time machine, ...).
+
+### Identity verification
+
+Online group decision-making often requires some level of identity verification to avoid [Sybil attacks](https://en.wikipedia.org/wiki/Sybil_attack).
+
+#### The social graph of trust
+
+One solution is to build a physical proof of personhood network where users meet in person and establish verified connections by scanning QR codes on each other's devices. This creates a social graph of trust that maintains privacy while making bot accounts detectable through network analysis.
+
+Real human social networks tend to be densely interconnected, whereas bot accounts typically show suspicious patterns: few connections to verified humans, clustering through single gateway users, and unnatural network growth. While bad actors could attempt to verify bot accounts, their suspicious connection patterns would make them identifiable. The system becomes more robust as legitimate human connections accumulate, making it increasingly difficult to fake human-like network patterns at scale.
+
+An organization can then use this network to validate identity. It could only consider votes entered by accounts with multiple trust connections to other members for instance.
+
+-- Look at [web of trust](https://en.wikipedia.org/wiki/Web_of_trust).
+
+## Success Metrics
+
+Here we describe the metrics we will use to measure how well the platform follows each of its core principles.
 
 ## Tooling
 
