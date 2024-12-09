@@ -6,6 +6,8 @@ This document is a first attempt at defining the requirements of Dialogue, an In
 
 Some of these core principles might be idealistic and unreachable but they serve as a north star. Every requirement and every feature has to be justified and can be debated relative to these principles.
 
+The 1-3 are philosophical, 4-9 social, 10-14 technical and 15-18 methodological.
+
 1. **Respectful**: Foster goodwill, empathy, openness and constructive communication.
 2. **Purposeful**: Encourage mindful and intentional technology use.
 3. **Progressive**: Foster optimistic visions and enable concrete actions toward humanity's collective future.
@@ -13,16 +15,16 @@ Some of these core principles might be idealistic and unreachable but they serve
 5. **Collaborative**: Make working together on shared content as natural as working alone.
 6. **Democratic**: Make collective and democratic organizing and decision-making more efficient than centralized systems.
 7. **Empowering**: Entrust people with control over their digital environment and support them with appropriate tools.
-8. **Private**: Guarantee personal data sovereignty and communication confidentiality.
-9. **Resilient**: Maintain platform availability even under state-level interdiction.
-10. **Safe**: Ensure users can communicate without fear of identification or retribution even in repressive environments.
-11. **Distributed**: Share computing and storage resources across devices to minimize environmental impact and ensure network independence.
-12. **Accessible**: Ensure accessibility no matter the technical knowledge, the economical status, the cultural background, the physical disabilities, the language or the literacy.
-13. **Modular**: Support community-driven development with a secure framework making every interface and algorithm customizable.
-14. **Sustainable**: Ensure the platform's social and technical foundations remain viable and relevant across generational timescales.
-15. **Attractive**: Has compelling reasons for people and communities to join, stay and grow with the platform enabling [network effects](https://en.wikipedia.org/wiki/Network_effect).
-16. **Transparent**: Actively expose and explain all platform mechanisms, algorithmic systems, and community processes, enabling informed user participation and control.
-17. **Empirical**: Rigorously justify, study and stress test every feature to ensure alignment with the *core principles*.
+8. **Accessible**: Ensure accessibility no matter the technical knowledge, the economical status, the cultural background, the physical disabilities, the language or the literacy.
+9. **Attractive**: Has compelling reasons for people and communities to join, stay and grow with the platform enabling [network effects](https://en.wikipedia.org/wiki/Network_effect).
+10. **Private**: Guarantee personal data sovereignty and communication confidentiality.
+11. **Resilient**: Maintain platform availability even under state-level interdiction.
+12. **Safe**: Ensure users can communicate without fear of identification or retribution even in repressive environments.
+13. **Distributed**: Share computing and storage resources across devices to minimize environmental impact and ensure network independence.
+14. **Modular**: Support community-driven development with a secure framework making every interface and algorithm customizable.
+15. **Sustainable**: Ensure the platform's social and technical foundations remain viable and relevant across generational timescales.
+16. **Empirical**: Rigorously justify, study and stress test every feature to ensure alignment with the *core principles*.
+17. **Transparent**: Actively expose and explain all platform mechanisms, algorithmic systems, and community processes, enabling informed user participation and control.
 18. **Governance**: Organize platform governance and development in a way that ensures consistent adherence to the *core principles*.
 
 ## Requirements and Justifications
