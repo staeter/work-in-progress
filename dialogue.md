@@ -4,13 +4,13 @@ This document is a first attempt at defining the requirements of Dialogue, the s
 
 ## Core Principles
 
-Some of these core principles might be idealistic, unreachable or vague but they serve as a north star. Every requirement and every feature has to be justified and can be debated relative to these principles.
+Some of these core principles might be idealistic, unreachable or even a bit vague but they serve as a north star. Every requirement and every feature has to be justified and can be debated relative to these principles.
 
 Each principle correspond to a specific idea and should not overlap with others. The 1-2 are philosophical, 3-9 social, 10-14 technical and 15-18 methodological. Apart from these groupings, they are sorted in no particular order. The numbers are only there for referencing sake.
 
 1. **Respectful**: Foster goodwill, empathy, openness and constructive communication.
 2. **Progressive**: Foster optimistic visions and enable concrete actions toward humanity's collective future.
-3. **Purposeful**: Encourage mindful and intentional technology use.
+3. **Purposeful**: Support mindful and intentional technology use.
 4. **Expressive**: Provide spaces for creative expression and knowledge sharing and embrace diverse voices and experiences.
 5. **Collaborative**: Make working together on shared content as natural as working alone.
 6. **Democratic**: Make collective and democratic organizing and decision-making more efficient than centralized systems.
@@ -29,25 +29,31 @@ Each principle correspond to a specific idea and should not overlap with others.
 
 ## Rationale
 
-In this section we detail every principle, we explain what it is and isn't and we express the rationale behind each of them.
+In this section we detail every principle, we explain what it is, what it isn't and we express the rationale behind each of them.
 
 ### 1. Respectful
 
-Being respectful means fostering an environment where people feel safe to express themselves and engage with others constructively. This goes beyond basic politeness - it requires actively designing features that encourage empathy, understanding, and good faith communication.
+Divide an conquer is an infamous method of ruling and the individualism that is built in the heart of our society helps enormously with that task. Its easy to make people fight one an other based on whichever difference exist between them. We want to build bridges and have spaces for people to dialogue with one an other.
 
-This principle guides both the technical design (like prompting users to reconsider potentially harmful messages) and community norms (like emphasizing constructive feedback over negative reactions).
+Being respectful means fostering an environment where people feel safe to express themselves and engage with others constructively. This goes beyond basic politeness - it requires actively designing systems that encourage empathy, understanding, and good faith communication.
+
+This doesn't mean avoiding hard or violent topics, nor does it mean abolishing debate or disagreement. It simply means to make ones best effort to reach the other, try to understand their point of view and progress from there.
+
+This principle not only guides community norms but also technical design as some design patterns can be used to encourage respectful behaviors. Possible patterns might be to prompt users to reconsider potentially harmful messages before sending them or ask users to emphasize constructive feedback over negative reactions in the comment box placeholder.
+
+Finally this principle guides the behavior of the dev team toward the rest of the community as they have to initiate that open, empathic and respectful culture.
 
 ### 2. Progressive
 
-Progress requires both vision and action. This principle ensures the platform actively supports positive change rather than just discussing it. It means providing tools for organizing initiatives, highlighting successful projects, and connecting people who want to build a better future.
+-- incomplete
 
-This optimistic stance must be balanced with realism - the goal is to enable concrete steps forward, not just idealistic discussion.
+Progress requires both vision and action. This principle ensures the platform actively supports positive change rather than just discussing it. It means providing tools for organizing initiatives, highlighting successful projects, and connecting people who want to build a better future.
 
 ### 3. Purposeful
 
-Technology should serve human needs rather than creating addictive patterns. This principle guides us to design features that help people use the platform intentionally and productively.
+In the recent decades we saw the rise of the [attention economy](https://en.wikipedia.org/wiki/Attention_economy) where corporations compete to grab users attention at all costs. This provokes a profound disregard for users wants and needs with invasive and addictive design practices. This also has the effect of harming the public discourse by filling front pages with attention grabbing, anger and fear mongering content.
 
-This means avoiding dark patterns, engagement tricks, and infinite scrolling in favor of tools that help users achieve their goals efficiently.
+For a platform to be purposeful means it empowers users to shape their platform experience according to their own goals and values. This involves providing tools for self-reflection and usage insights. It means giving the users ways to turn on or off potentially addictive patterns and help them maintain an healthy relationship with the online world.
 
 ### 4. Expressive
 
