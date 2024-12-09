@@ -33,7 +33,109 @@ In this section we detail every principle, we explain what it is and isn't and w
 
 ### 1. Respectful
 
-...
+Being respectful means fostering an environment where people feel safe to express themselves and engage with others constructively. This goes beyond basic politeness - it requires actively designing features that encourage empathy, understanding, and good faith communication.
+
+This principle guides both the technical design (like prompting users to reconsider potentially harmful messages) and community norms (like emphasizing constructive feedback over negative reactions).
+
+### 2. Progressive
+
+Progress requires both vision and action. This principle ensures the platform actively supports positive change rather than just discussing it. It means providing tools for organizing initiatives, highlighting successful projects, and connecting people who want to build a better future.
+
+This optimistic stance must be balanced with realism - the goal is to enable concrete steps forward, not just idealistic discussion.
+
+### 3. Purposeful
+
+Technology should serve human needs rather than creating addictive patterns. This principle guides us to design features that help people use the platform intentionally and productively.
+
+This means avoiding dark patterns, engagement tricks, and infinite scrolling in favor of tools that help users achieve their goals efficiently.
+
+### 4. Expressive
+
+Providing spaces for expression means building the infrastructure people need to share their creativity and knowledge. This goes beyond just allowing content posting - it requires tools for different forms of expression, from text to multimedia.
+
+Embracing diverse voices means actively considering different perspectives in the design process and ensuring the platform works well for people from all backgrounds.
+
+### 5. Collaborative
+
+Making collaboration as natural as working alone requires careful attention to user experience. Features must handle the complexity of group work while keeping interfaces simple and intuitive.
+
+This enables both lightweight cooperation (like quick feedback on a draft) and complex projects (like maintaining shared documentation).
+
+### 6. Democratic
+
+Democratic organization means more than just voting - it requires tools for discussion, deliberation, and transparent decision-making. The platform must support various forms of governance while keeping processes clear and accessible.
+
+This principle guides features like proposal systems, discussion tools, and voting mechanisms.
+
+### 7. Empowering
+
+Control over one's digital environment means having both the tools and the knowledge to use them effectively. This requires careful documentation, intuitive interfaces, and progressive disclosure of advanced features.
+
+Users should understand what's happening with their data and have meaningful choices about how to manage it.
+
+### 8. Accessible
+
+Accessibility covers many dimensions - technical, economic, cultural, physical, linguistic, and educational. Each feature must be evaluated across all these aspects to ensure no one is unnecessarily excluded.
+
+This often means providing multiple ways to accomplish tasks and careful attention to progressive enhancement.
+
+### 9. Attractive
+
+Network effects are crucial for social platforms - they become more valuable as more people join. This means designing features that give people compelling reasons to join, stay engaged, and bring their communities.
+
+This must be balanced with other principles - growth should come from genuine value, not dark patterns or artificial virality.
+
+### 10. Private
+
+Privacy means giving users real control over their data and communications. This requires both technical measures (like encryption) and clear interfaces that help users understand and manage their privacy.
+
+Defaults should protect privacy while making it easy to safely share when desired.
+
+### 11. Resilient
+
+Resilience means the platform keeps working even under adverse conditions - from network issues to active attempts at censorship. This requires careful distributed systems design and robust fallback mechanisms.
+
+### 12. Safe
+
+Safety requires protecting users from both technical and social threats. This means secure systems, clear community standards, and tools for managing unwanted contact or content.
+
+This is especially crucial for users in repressive environments who need protection from surveillance and retaliation.
+
+### 13. Distributed
+
+Distribution of resources helps ensure both technical resilience and environmental sustainability. This means designing systems that efficiently share computing and storage loads across the network.
+
+This principle guides both technical architecture and governance structures.
+
+### 14. Modular
+
+Modularity enables community-driven development while maintaining security. This requires careful API design and sandboxing to allow customization without compromising the platform's integrity.
+
+This principle supports both technical extensibility and social adaptability.
+
+### 15. Sustainable
+
+Long-term sustainability requires attention to both technical and social foundations. This means choosing stable technologies, building maintainable systems, and creating governance structures that can evolve.
+
+This principle helps evaluate every decision's long-term implications.
+
+### 16. Empirical
+
+Rigorous testing helps ensure features actually serve their intended purposes. This means gathering data (while respecting privacy), studying outcomes, and adjusting based on evidence.
+
+This principle keeps development grounded in reality rather than assumptions.
+
+### 17. Transparent
+
+Transparency means users can understand how the platform works, from algorithms to governance. This requires clear documentation, open source code, and explicit explanation of automated systems.
+
+This understanding enables meaningful user participation and control.
+
+### 18. Governance
+
+Consistent governance ensures the platform stays true to its principles over time. This requires clear processes for decision-making, conflict resolution, and adaptation to new challenges.
+
+This principle guides both technical and community management structures.
 
 ## Requirements and Justifications
 
