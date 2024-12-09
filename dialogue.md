@@ -1,17 +1,17 @@
 # Dialogue
 
-This document is a first attempt at defining the requirements of Dialogue, an Inter Planetary Social Network. It analyzes the benefits and limitations of existing social networks to build toward an extensive list of requirements.
+This document is a first attempt at defining the requirements of Dialogue, the social network of the future. It analyzes the benefits and limitations of existing social networks to build toward an extensive list of requirements.
 
 ## Core Principles
 
-Some of these core principles might be idealistic and unreachable but they serve as a north star. Every requirement and every feature has to be justified and can be debated relative to these principles.
+Some of these core principles might be idealistic, unreachable or vague but they serve as a north star. Every requirement and every feature has to be justified and can be debated relative to these principles.
 
-The 1-3 are philosophical, 4-9 social, 10-14 technical and 15-18 methodological.
+Each principle correspond to a specific idea and should not overlap with others. The 1-2 are philosophical, 3-9 social, 10-14 technical and 15-18 methodological. Apart from these groupings, they are sorted in no particular order. The numbers are only there for referencing sake.
 
 1. **Respectful**: Foster goodwill, empathy, openness and constructive communication.
-2. **Purposeful**: Encourage mindful and intentional technology use.
-3. **Progressive**: Foster optimistic visions and enable concrete actions toward humanity's collective future.
-4. **Expressive**: Enable creative expression and knowledge sharing regardless of socio-economical background.
+2. **Progressive**: Foster optimistic visions and enable concrete actions toward humanity's collective future.
+3. **Purposeful**: Encourage mindful and intentional technology use.
+4. **Expressive**: Provide spaces for creative expression and knowledge sharing and embrace diverse voices and experiences.
 5. **Collaborative**: Make working together on shared content as natural as working alone.
 6. **Democratic**: Make collective and democratic organizing and decision-making more efficient than centralized systems.
 7. **Empowering**: Entrust people with control over their digital environment and support them with appropriate tools.
@@ -27,9 +27,17 @@ The 1-3 are philosophical, 4-9 social, 10-14 technical and 15-18 methodological.
 17. **Transparent**: Actively expose and explain all platform mechanisms, algorithmic systems, and community processes, enabling informed user participation and control.
 18. **Governance**: Organize platform governance and development in a way that ensures consistent adherence to the *core principles*.
 
+## Rationale
+
+In this section we detail every principle, we explain what it is and isn't and we express the rationale behind each of them.
+
+### 1. Respectful
+
+...
+
 ## Requirements and Justifications
 
-Here we describe a set of requirements that we justify in regards to the platform's core principles. We start every section with a wish list of features that would ideally be present. We then provide a list of possible solutions, their pros and cons.
+Here we propose a set of requirements that we justify in regards to the platform's core principles. We start every section with a wish list of features that would ideally be present. We then provide a list of possible solutions, their pros and cons.
 
 ### Platform's Name
 
@@ -44,7 +52,7 @@ The platform's name has to:
 
 - This is the current chosen name
 - Pros:
-  - Reflects the *respectful*, *expressive* and *democratic* principles
+  - Reflects the *respectful*, *expressive*, *collaborative* and *democratic* principles
   - Is easy to pronounce and has the same meaning in many languages
   - There is a clear social aspect making it sensible to label a social network
 - Cons:
@@ -54,24 +62,26 @@ The platform's name has to:
 #### Inter Planetary Social Network (IPSN)
 
 - Pros:
-  - Reflects the *distributed* and *resilient* principles
-  - Emphasize the future proof aspect of the platform
+  - Reflects the *distributed*, *resilient*, *distributed* and *sustainable* principles
   - The fact that it is a social network is explicitly stated
-  - Is enthusiastic about the future
+  - Is enthusiastic about the future (*progressive*)
 - Cons:
   - Quite long and difficult to pronounce for non english speakers
-  - Might be considered as piggy backing on the IPFS ecosystem even if it might not be built on top of it
+  - Its acronym isn't natural to read
+  - Might be seen as piggy backing on the [IPFS](https://ipfs.tech/) ecosystem especially as it might not be built on top of it
 
 ### Programming Language
 
-The choice of programming language is crucial as it must comply with tree principles
+A programming language is an user interface as well as a model for thinking
 
 - Easy to learn and master (*accessible*)
   - Great beginner resources
+  - Serve as a great introduction to programming
   - Minimize the amount of core concepts
   - Easy to read and to express
     - This is successful when [syntactic sugar](https://en.wikipedia.org/wiki/Syntactic_sugar) becomes redundant
   - Single threaded code
+  - Consistent interfaces across devices
 - Easy to review and maintain (*sustainable*)
   - Enforces good practice through language design and compiler errors
   - Human readable and helpful compilation error messages
@@ -84,6 +94,9 @@ The choice of programming language is crucial as it must comply with tree princi
   - Has clear and uniform naming conventions
   - Standard formatting enforced by the compiler
   - Standard formatting avoids indentation pyramids
+- Joins developer and designer's work
+  - The code is the single source of truth
+  - GUI enables designers to edit view code
 - Built for distributed architecture (*distributed*)
   - [ORDT](http://archagon.net/blog/2018/03/24/data-laced-with-history/) as first class citizen
   - Enable distributed computations for heavy algorithms
@@ -98,6 +111,14 @@ The choice of programming language is crucial as it must comply with tree princi
     - It can be extended or shrunk based on the access we want to give to the sub program
 - Can be translated in various languages (*accessible*)
 - Has collaborative editing tools (*collaborative*)
+
+#### Elm
+
+[Elm](https://elm-lang.org/) is
+
+#### Bend
+
+[Bend](https://higherorderco.com/) seems great at compile time parallelization.
 
 ### Integrated Development Environment
 
