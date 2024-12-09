@@ -10,19 +10,20 @@ Some of these core principles might be idealistic and unreachable but they serve
 2. **Purposeful**: Encourage mindful and intentional technology use.
 3. **Progressive**: Foster optimistic visions and enable concrete actions toward humanity's collective future.
 4. **Expressive**: Enable creative expression and knowledge sharing regardless of socio-economical background.
-5. **Democratic**: Make collective and democratic organizing and decision-making more efficient than centralized systems.
-6. **Empowering**: Entrust people with control over their digital environment and support them with appropriate tools.
-7. **Private**: Guarantee personal data sovereignty and communication confidentiality.
-8. **Resilient**: Maintain platform availability even under state-level interdiction.
-9. **Safe**: Ensure users can communicate without fear of identification or retribution even in repressive environments.
-10. **Distributed**: Share computing and storage resources across devices to minimize environmental impact and ensure network independence.
-11. **Accessible**: Ensure accessibility no matter the technical knowledge, the economical status, the cultural background, the physical disabilities, the language or the literacy.
-12. **Modular**: Support community-driven development with a secure framework making every interface and algorithm customizable.
-13. **Sustainable**: Ensure the platform's social and technical foundations remain viable and relevant across generational timescales.
-14. **Attractive**: Has compelling reasons for people and communities to join, stay and grow with the platform enabling [network effects](https://en.wikipedia.org/wiki/Network_effect).
-15. **Transparent**: Actively expose and explain all platform mechanisms, algorithmic systems, and community processes, enabling informed user participation and control.
-16. **Empirical**: Rigorously justify, study and stress test every feature to ensure alignment with the *core principles*.
-17. **Governance**: Organize platform governance and development in a way that ensures consistent adherence to the *core principles*.
+5. **Collaborative**: Make working together on shared content as natural as working alone.
+6. **Democratic**: Make collective and democratic organizing and decision-making more efficient than centralized systems.
+7. **Empowering**: Entrust people with control over their digital environment and support them with appropriate tools.
+8. **Private**: Guarantee personal data sovereignty and communication confidentiality.
+9. **Resilient**: Maintain platform availability even under state-level interdiction.
+10. **Safe**: Ensure users can communicate without fear of identification or retribution even in repressive environments.
+11. **Distributed**: Share computing and storage resources across devices to minimize environmental impact and ensure network independence.
+12. **Accessible**: Ensure accessibility no matter the technical knowledge, the economical status, the cultural background, the physical disabilities, the language or the literacy.
+13. **Modular**: Support community-driven development with a secure framework making every interface and algorithm customizable.
+14. **Sustainable**: Ensure the platform's social and technical foundations remain viable and relevant across generational timescales.
+15. **Attractive**: Has compelling reasons for people and communities to join, stay and grow with the platform enabling [network effects](https://en.wikipedia.org/wiki/Network_effect).
+16. **Transparent**: Actively expose and explain all platform mechanisms, algorithmic systems, and community processes, enabling informed user participation and control.
+17. **Empirical**: Rigorously justify, study and stress test every feature to ensure alignment with the *core principles*.
+18. **Governance**: Organize platform governance and development in a way that ensures consistent adherence to the *core principles*.
 
 ## Requirements and Justifications
 
@@ -69,7 +70,6 @@ The choice of programming language is crucial as it must comply with tree princi
   - Easy to read and to express
     - This is successful when [syntactic sugar](https://en.wikipedia.org/wiki/Syntactic_sugar) becomes redundant
   - Single threaded code
-  - Compiler written in its own language
 - Easy to review and maintain (*sustainable*)
   - Enforces good practice through language design and compiler errors
   - Human readable and helpful compilation error messages
@@ -77,6 +77,8 @@ The choice of programming language is crucial as it must comply with tree princi
   - When it compiles it works except for mathematically untraceable issues
   - No implicit behavior
   - Strongly typed
+  - Enables metaprograming for analysis and automated review
+  - Compiler and tooling written in its own language
   - Has clear and uniform naming conventions
   - Standard formatting enforced by the compiler
   - Standard formatting avoids indentation pyramids
@@ -93,6 +95,7 @@ The choice of programming language is crucial as it must comply with tree princi
   - A single datatype represents all possible side effects
     - It can be extended or shrunk based on the access we want to give to the sub program
 - Can be translated in various languages (*accessible*)
+- Has collaborative editing tools (*collaborative*)
 
 ### Integrated Development Environment
 
