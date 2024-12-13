@@ -1,0 +1,435 @@
+
+# 2024-10-28 21:04:11.933516
++y
+
+# 2024-10-28 21:04:28.689583
++/add dia
+
+# 2024-10-28 21:04:31.161226
++n
+
+# 2024-10-28 21:04:36.866303
++/add dialogue.md
+
+# 2024-10-28 21:04:57.290802
++/ask what is Nebula
+
+# 2024-10-28 22:25:10.319725
++/add dialogue.md
+
+# 2024-10-28 22:26:13.683667
++/ask which other existing platforms would you list in Existing proposition section?
+
+# 2024-10-28 22:28:38.278324
++/ask which private platforms should also be listed?
+
+# 2024-10-28 22:29:37.680809
++/ask youtube, instagram, facebook and snapshat are relevant, list some more
+
+# 2024-10-29 02:24:15.578177
++in the "Existing Propositions" section, at the end of the quotation block, list the names of all the social media you cited above in this conversation
+
+# 2024-10-29 02:25:15.604004
++exit
+
+# 2024-10-29 02:25:23.552731
++/exit
+
+# 2024-11-05 19:40:45.804324
++y
+
+# 2024-11-05 19:41:12.284914
++/add dialogue.md
+
+# 2024-11-05 22:41:26.429335
++/ask what are the core principles of this project
+
+# 2024-11-05 22:48:45.940996
++/ask if you could sythesize each core priciple in a single word
+
+# 2024-11-05 22:52:10.478448
++/ask I dont like the fact that Sharing is the only word in "ing" of the list. Propose a few alternative that better match
+
+# 2024-11-05 22:54:17.676868
++/ask I dont like the formulation of Utility nor the "utility" word. Propose some alternative formulations
+
+# 2024-11-05 22:55:30.913621
++/ask "in service of real life" is the main aspect. Propose some different formulations
+
+# 2024-11-05 22:57:54.023605
++/ask some alternatives for Pro-Social
+
+# 2024-11-05 23:03:40.941061
++/ask the different words do not have the same gramatical meaning. Some are adjectives, other are actions or names. Explain the reason they seem not to match and propose some alternative list
+
+# 2024-11-05 23:04:28.443790
++/ask Here is the current list 1. **Respect**: Foster goodwill, empathy and constructive communication.
++2. **Autonomy**: Make people in control and responsible over their corner of the platform.
++3. **Purposeful**: Serve life beyond the digital and empower real-world connections.
++4. **Expression**: Provide spaces to creatively express, to share knowledge and to inform.
++5. **Collaboration**: Provide tooling to organize, share information, debate and take decisions collectively.
++6. **Accessibility**: Be accessible no matter the technical knowledge, the economical status, the cultural background, the physical disabilities or the language.
++7. **Resilience**: Stay available, secure and safe for everyone even facing state level repression.
+
+# 2024-11-05 23:07:07.355742
++What about this new list: 1. **Respectful**: Foster goodwill, empathy and constructive communication.
++2. **Autotomizing**: Make people in control and responsible over their corner of the platform.
++3. **Purposeful**: Serve life beyond the digital and empower real-world connections.
++4. **Expressive**: Provide spaces to creatively express, to share knowledge and to inform.
++5. **Collaborative**: Provide tooling to organize, share information, debate and take decisions collectively.
++6. **Accessible**: Be accessible no matter the technical knowledge, the economical status, the cultural background, the physical disabilities or the language.
++7. **Resilient**: Stay available, secure and safe for everyone even facing state level repression.
+
+# 2024-11-05 23:07:19.866917
++/undo
+
+# 2024-11-05 23:08:03.235391
++/ask What about this new list: 1. **Respectful**: Foster goodwill, empathy and constructive communication.
++2. **Autotomizing**: Make people in control and responsible over their corner of the platform.
++3. **Purposeful**: Serve life beyond the digital and empower real-world connections.
++4. **Expressive**: Provide spaces to creatively express, to share knowledge and to inform.
++5. **Collaborative**: Provide tooling to organize, share information, debate and take decisions collectively.
++6. **Accessible**: Be accessible no matter the technical knowledge, the economical status, the cultural background, the physical disabilities or the language.
++7. **Resilient**: Stay available, secure and safe for everyone even facing state level repression.
+
+# 2024-11-05 23:09:19.950466
++/ask yes propose ways this list could be improved
+
+# 2024-11-05 23:15:23.719165
++/ask what would you write for "Transparent"
+
+# 2024-11-05 23:17:58.059213
++/ask I'd like to add a principle for "Private"
+
+# 2024-11-05 23:21:16.559506
++/ask ## Core Principles
++
++1. **Respectful**: Foster goodwill, empathy and constructive communication.
++2. **Purposeful**: Serve life beyond the digital and center around human connections.
++3. **Expressive**: Provide spaces to creatively express, to share knowledge and to inform.
++4. **Collaborative**: Provide tooling to organize, share information, debate and take decisions collectively.
++5. **Private**: Guarantee data sovereignty and communication privacy by design.
++6. **Empowering**: Make people in control and responsible over their corner of the platform.
++7. **Accessible**: Be accessible no matter the technical knowledge, the economical status, the cultural background, the physical disabilities or the language.
++8. **Resilient**: Stay available, secure and safe for everyone even facing state level repression.
++9. **Transparent**: Make all platform mechanics and community processes visible and understandable. How could I improve this list
+
+# 2024-11-05 23:33:54.228943
++/ask "Private" and "Resilient" have some overlap in security aspects, how could we make them more distinct
+
+# 2024-11-05 23:37:32.684915
++/ask propose some alternative formulations of resilient as I would like to find a reference to a state level repression/interdiction of the platform
+
+# 2024-11-05 23:39:53.420413
++/ask "Empowering" and "Collaborative" share aspects of user     
++   control Could consider merging some principles or making   
++   their distinctions clearer. How could we make them more distinct
+
+# 2024-11-05 23:44:20.440557
++/ask the empowering should be centered around the fact that users are in control over their content moderation. Contrary to platforms like youtube where the recomender algorithm and its consequences are imposed to the users
+
+# 2024-11-05 23:45:45.348870
++/ask I would say that empowering is about user getting control over what they want to see and find online
+
+# 2024-11-05 23:46:43.325153
++/ask provide a few alternative formulations for empowering
+
+# 2024-11-05 23:48:39.796135
++/ask add a responsability aspect as users then become responsible of their own experience and environment and start the sentense with a strong verb.
+
+# 2024-11-05 23:52:39.879632
++/ask Here is the current version: 1. **Respectful**: Foster goodwill, empathy and constructive communication.
++2. **Purposeful**: Serve life beyond the digital and center around human connections.
++3. **Expressive**: Enable creative expression and knowledge sharing.
++4. **Collaborative**: Facilitate collective organization and decision-making.
++5. **Empowering**: Entrust people with control over their digital environment.
++6. **Private**: Guarantee personal data sovereignty and communication confidentiality.
++7. **Resilient**: Maintain platform availability even under state-level repression.
++8. **Accessible**: Ensure accessibility no matter the technical knowledge, the economical status, the cultural background, the physical disabilities or the language.
++9. **Transparent**: Make all platform mechanics and community processes visible and understandable. What can be improved
+
+# 2024-11-05 23:53:11.089312
++/add dialogue.md
+
+# 2024-11-05 23:53:30.195870
++/ask how can the core principles be improved
+
+# 2024-11-05 23:57:50.641475
++/ask propose various furmulation of Transparent integrating the transparent use of algorithms
+
+# 2024-11-06 00:02:23.524283
++/ask I took Actively expose and explain all platform mechanisms, algorithmic systems, and community processes, enabling informed user participation and control. but I would like it to start with a string verb
+
+# 2024-11-06 00:04:25.253162
++More Specific Definitions: While the 9 principles are good,
++   some could be more specifically defined. For example,      
++   "Purposeful" could be clearer about what exactly "life     
++   beyond digital" means.                                     expand on this and provide alternative formulations
+
+# 2024-11-06 00:04:39.871629
++/ask More Specific Definitions: While the 9 principles are good,
++   some could be more specifically defined. For example,      
++   "Purposeful" could be clearer about what exactly "life     
++   beyond digital" means.                                     expand on this and provide alternative formulations
+
+# 2024-11-06 00:10:06.081081
++/ask it should be conseptualy distinct to the other principles. Here your propositions seem to collide with Collaborative
+
+# 2024-11-06 00:14:27.902757
++Add Sustainability: There's no explicit mention of         
++   environmental or long-term sustainability in the core      
++   principles. Given the "Inter Planetary" scope, this seems  
++   important.                                                 
++ 3 Decentralization: While it's implied in "Resilient", having
++   an explicit principle about decentralization could be      
++   valuable since it's a fundamental aspect of the system     
++   described later in the document These two principles could be writen as one. Avoid it colliding with the Resilient and the private principles
+
+# 2024-11-06 00:14:40.744594
++/ask Add Sustainability: There's no explicit mention of         
++   environmental or long-term sustainability in the core      
++   principles. Given the "Inter Planetary" scope, this seems  
++   important.                                                 
++ 3 Decentralization: While it's implied in "Resilient", having
++   an explicit principle about decentralization could be      
++   valuable since it's a fundamental aspect of the system     
++   described later in the document These two principles could be writen as one. Avoid it colliding with the Resilient and the private principles
+
+# 2024-11-06 00:18:44.220599
++/ask Security: While "Private" touches on this, having a        
++   distinct security principle might be valuable given the    
++   sensitive nature of social communications. Can be grouped with an extensible/customizable principle as it has to stay secure even in that context
+
+# 2024-11-06 00:19:57.847370
++/ask This formulation is good "Build security into the foundation   
++   while enabling safe customization through sandboxed        
++   extensions and verifiable components." could you propose some alternatives
+
+# 2024-11-06 00:20:45.168148
++/ask I'm looking for a shorter formulation of the same idea
+
+# 2024-11-06 00:26:29.310755
++/ask "Build security into the foundation   
++   while enabling safe customization through sandboxed        
++   extensions and verifiable components." for the Extensible prinsiple. Find a more elegent formulation that starts with a strong verb
+
+# 2024-11-06 00:28:54.927178
++/ask the extensions are secure not because they are verified but because they are built in a sandboxed environment that makes them unable to do malintentioned things
+
+# 2024-11-06 00:35:54.987053
++/ask I wrote: "Provides contained spaces for users to build and share safe extensions" what can be improved
+
+# 2024-11-06 00:39:16.489087
++Self-Governance: Given the focus on organizational tools  
++    and collective decision-making later in the document, a   
++    principle about democratic self-governance could be       
++    valuable.
+
+# 2024-11-06 00:39:25.035855
++/ask Self-Governance: Given the focus on organizational tools  
++    and collective decision-making later in the document, a   
++    principle about democratic self-governance could be       
++    valuable.
+
+# 2024-11-06 00:40:30.226350
++/ask it should cover the governance of the platform itself
+
+# 2024-11-06 00:51:04.919942
++/ask Would like to add a Local First principle
+
+# 2024-11-06 00:51:58.395509
++/ask would this principle overlap with any other?
+
+# 2024-11-06 00:54:30.727906
++/ask how would you reformulate distributed to include this local first idea? "Share computing and storage resources across each node to minimize environmental impact and ensure network independence.?
+
+# 2024-11-06 01:05:20.429290
++/ask I would like to add an element to "**Empowering**: Entrust people with control over their digital environment." which is that the platform provides tooling to help with that task
+
+# 2024-11-06 01:08:42.658420
++/ask Ilike that it starts with entrust people as it means the platform trusts its users will handle that responsability
+
+# 2024-11-06 01:17:29.249890
++/ask are there better names for collaborative
+
+# 2024-11-06 14:17:43.001427
++/add dialogue.md
+
+# 2024-11-06 14:20:18.533876
++/ask propose some new formulations of the Safe core principle. It should not collide espetially with the resilient principle. It should start with a strong verb and focus on being safe to use even by people that are repressed and that will potentially be under survaillance
+
+# 2024-11-06 14:22:15.042378
++/ask what can be improved in those core principles?
+
+# 2024-11-06 14:31:01.001669
++"Respectful" could include mention of diversity and        
++   inclusion. How would you formulate this idea?
+
+# 2024-11-06 14:31:28.362726
++/undo
+
+# 2024-11-06 14:31:35.051595
++/ask "Respectful" could include mention of diversity and        
++   inclusion. How would you formulate this idea?
+
+# 2024-11-06 19:51:48.521874
++/ask I've added a "**Modular**: Alternative interfaces and algorithms can be built and used as extensions." principle. Propose improvements
+
+# 2024-11-07 10:53:26.609727
++/ask rephrase purposeful principle and replace meaningfull activities with users wellbeing considerations
+
+# 2024-11-07 11:01:32.386176
++/ask what can be improved about thes core principles
+
+# 2024-11-09 17:07:57.549778
++/ask list some potential tensions. Only explain the tension but do not get into a solution
+
+# 2024-11-15 16:54:12.354299
++/add dialogue.md
+
+# 2024-11-15 16:55:12.069807
++/ask Propose various meanings of the  "Future-Proof" principle
+
+# 2024-11-27 07:57:26.374182
++y
+
+# 2024-11-27 08:02:15.397051
++/read-only
+
+# 2024-11-27 08:02:20.928143
++/read-only elm-dstore/src/Ordt.elm
+
+# 2024-11-27 08:02:34.293893
++/add elm-dstore/src/Ordt/String.elm
+
+# 2024-11-27 08:02:49.847557
++Implement th weave function
+
+# 2024-12-08 20:25:11.601022
++y
+
+# 2024-12-08 20:25:56.454146
++n
+
+# 2024-12-08 20:25:59.276314
++/read-only
+
+# 2024-12-08 20:26:04.763197
++/read-only dialogue.md
+
+# 2024-12-08 20:27:04.975623
++/ask rephrase the following principle: "**Future-Proof**: Be built with future generations in mind." It must not overlap other principles.
+
+# 2024-12-08 20:29:37.724838
++/ask yes detail your resoning
+
+# 2024-12-08 20:32:49.892386
++/add dialogue.md
+
+# 2024-12-08 20:33:16.644262
++/read-only dialogue.md
+
+# 2024-12-08 20:33:41.110150
++what tensions would you consider in the Tensions section?
+
+# 2024-12-08 20:35:07.548079
++n
+
+# 2024-12-08 20:35:42.507358
++/ask simply list various tensions not necessarily related to sustainability
+
+# 2024-12-08 20:45:13.899775
++/ask lets go one by one. On "Strong privacy makes it harder to build collective knowledge and shared spaces" Private means that each person decides who accesses which part of their data. People can decide to share parts of it whithin a certain circle of users or even post it publicly if they wish so. The crucial aspect of private is the user's control. Rephrase this point in a simple and concise sentence or two
+
+# 2024-12-08 20:49:25.695979
++/ask there are different spaces. It is like a city, you have your home for private discutions and the city hall for public discource. It is not a question of privacy settings. This point is made in contrast with platforms like Facebook where even you private discutions are used as data for targeted advertisement or are shared with secret services if requested. 
+
+# 2024-12-08 20:56:16.933191
++/ask no because as you said "Group decision-making often requires some level of identity verification and anonymous participation can complicate democratic processes". Try listing some solutions to this issue.
+
+# 2024-12-08 21:00:43.541360
++/ask all of these are really interesting and correct though there is one issue. How do you prove its not a bot?
+
+# 2024-12-08 21:18:21.675795
++/ask the solution will depend on the context. I prefer the proof of personhood as it is the most reliable. The idea is for people to scan qr codes on one another's devices in order to show they have a physical human connection. Based on that they can form networks of people that have been proved to one an other. Though there is a bysantine attack possible by getting someone included in the network verifying bot accounts but this can be tracked down by analyzing the network and seeing that those bots have few edges connecting them to the rest of the network. Try to rephrase this idea 
+
+# 2024-12-08 21:21:36.513516
++/ask Phrase this exact content in a paragraph following: "Nevertheless, online group decision-making often requires some level of identity verification to avoid Sybil attacks...
+
+# 2024-12-08 21:22:44.204267
++/ask make it more succint
+
+# 2024-12-09 08:22:12.109742
++/read-only dialogue.md
+
+# 2024-12-09 08:24:18.204335
++/ask there is a principle missing on the fact that it has to be built for growth as social networks only make sence when you find your friends on there there are strong network effects
+
+# 2024-12-09 08:26:02.564065
++/ask propose different formulations of the principles
+
+# 2024-12-09 08:29:13.845385
++/ask I believe "Attractive" would be the word
+
+# 2024-12-09 08:30:05.460307
++/ask propose a few formulations
+
+# 2024-12-09 08:35:43.889500
++/ask I took "**Attractive**: Has compelling reasons for people to join their communities on the platform." Find ways to improve it. Does it overlap other principles? Are there important aspects missing?
+
+# 2024-12-09 08:43:55.381638
++/ask I like the first as this principle focuses on user aquisition and retention. The other principles might be commpelling reasons as they might match users values but its not enough as other open source social media show. You still need ways to attract new users
+
+# 2024-12-09 08:46:33.262894
++/ask "**Attractive**: Has compelling reasons for people and communities to join, stay and grow with the platform for it to harness network effects" is there something missing from this formulation?
+
+# 2024-12-09 08:48:48.906075
++/ask what could be stronger than "has compelling"?
+
+# 2024-12-09 08:56:54.049369
++/ask there is an other aspect missing from the principles. Something like "Enthousiastic" as it wants to be enthousiastic about the future of humanity. Houw could we make this more concrete?
+
+# 2024-12-09 09:01:17.364844
++/ask yes constructive is nice but it might overlap too much with other principles
+
+# 2024-12-09 09:05:34.263220
++/ask There is an optimism aspect that is missing from this formulation
+
+# 2024-12-09 09:57:38.152338
++/ask there is a collaborative aspect missing from the core principles. It sits in between expressive and democratic as collaborative editing of text or other content can be used to help organise democraticaly as well as to help with creative expression by making team work easier
+
+# 2024-12-09 13:36:09.661677
++/ask I'd like to replace the "regardless of socio-economical background" in Expressive principle with somthing including everyone instead of ignoring differences
+
+# 2024-12-09 13:38:21.001996
++/ask I like the second but it misses the aspect that the platform provides the space for expression
+
+# 2024-12-09 13:53:34.087038
++/add dialogue.md
+
+# 2024-12-09 13:53:57.010992
++make a first draft of the rationale section
+
+# 2024-12-09 14:02:15.783749
++/ask the purposeful rationale isn't exact. Its not about avoiding addictive patterns, any *attractive* design is somewhat addictive. Purposeful is about detecting unhealthy usage and help users align their usage with their personal goals
+
+# 2024-12-09 14:09:49.379763
++/ask the content is correct but I don't like the formulation. can you rewrite it in different manners
+
+# 2024-12-09 14:14:19.136907
++/ask I really like the focus on user agency and on support. Combine them
+
+# 2024-12-12 17:50:16.153825
++/ask I realised that the progressibe principle is too vague. It doesn't indicate what the positive goal is. Its up to interpretation and could be misused relative to my actual intentions. What I consider to be positive change is things that move toward the abolition exploitation, the developement of sciences. Things that improve humanity's control over its future.
+
+# 2024-12-12 18:04:04.520539
++/ask I like the 3 and 4 but they lack an optimistic aspect. Also they overlap slightly the democratic principle
+
+# 2024-12-13 12:09:16.075215
++/ask what if we replace progressive with optimistic. I believe it would be more neutral politicaly and would imply something more akin to a general optimism with that humanity will figure out solutions to its current systemic issues
+
+# 2024-12-13 12:13:12.537775
++/ask I agree the fourth is the better one. Make a new draft for its rationale. Imspire yourself with the structure of the respectful rationale.
+
+# 2024-12-13 12:26:56.310000
++/ask decompose your text and explain for each sentence which idea it adds to the text
