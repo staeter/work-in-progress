@@ -9,7 +9,7 @@ Some of these core principles might be idealistic, unreachable or even a bit vag
 Each principle correspond to a specific idea and should not overlap with others. The 1-2 are philosophical, 3-9 social, 10-14 technical and 15-18 methodological. Apart from these groupings, they are sorted in no particular order. The numbers are only there for referencing sake.
 
 1. **Respectful**: Foster goodwill, empathy, openness and constructive communication.
-2. **Progressive**: Foster optimistic visions and enable concrete actions toward humanity's collective future.
+2. **Optimistic**: Build confidence in our collective ability to overcome current challenges and shape better futures through human ingenuity.
 3. **Purposeful**: Support mindful and intentional technology use.
 4. **Expressive**: Provide spaces for creative expression and knowledge sharing and embrace diverse voices and experiences.
 5. **Collaborative**: Make working together on shared content as natural as working alone.
@@ -43,11 +43,17 @@ This principle not only guides community norms but also technical design as some
 
 Finally this principle guides the behavior of the dev team toward the rest of the community as they have to initiate that open, empathic and respectful culture.
 
-### 2. Progressive
+### 2. Optimistic
 
--- incomplete
+In times of global challenges and systemic crises, it's easy to fall into doomerism and cynicism. While these reactions are understandable, they can lead to paralysis and self-fulfilling prophecies of decline. We believe in our capacity to address those challenges and want to build spaces that foster constructive engagement with them.
 
-Progress requires both vision and action. This principle ensures the platform actively supports positive change rather than just discussing it. It means providing tools for organizing initiatives, highlighting successful projects, and connecting people who want to build a better future.
+It doesn't mean ignoring problems or promoting blind optimism. It simply means maintaining faith in human ingenuity while working on concrete solutions.
+
+It's about having the spark of hope that makes engagement possible. When people see no examples of positive change in their life, taking that first step toward action becomes nearly impossible. By highlighting where progress has been happening or is being fought for, we can help break through initial paralysis and enable meaningful engagement with challenges.
+
+Optimism is also about sharing and developing that hopefulness. This comes by building confidence in our collective ability to overcome current challenges. It means creating environments where solutions can be imagined, discussed, shared and implemented.
+
+This principle guides both community norms and technical design as some features can help maintain constructive engagement with difficult topics. Possible patterns might include highlighting solution-focused discussions, connecting people working on similar challenges, or providing ways to balance awareness of issues with examples of successful interventions.
 
 ### 3. Purposeful
 
@@ -114,6 +120,8 @@ Distribution of resources helps ensure both technical resilience and environment
 This principle guides both technical architecture and governance structures.
 
 ### 14. Modular
+
+No platform is neutral. Its design constrains what gets expressed and its algorithms serves as an editorial line. Every medium has implicitly or explicitly stated goals and philosophies. We stated those in the *respectful*, *optimistic*, *purposeful* and *democratic* principles. As much as the dev team strives for those goals we also do not believe they will always get it right nor adapted to every single specific case.
 
 Modularity enables community-driven development while maintaining security. This requires careful API design and sandboxing to allow customization without compromising the platform's integrity.
 
