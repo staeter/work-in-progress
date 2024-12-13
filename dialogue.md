@@ -33,7 +33,7 @@ In this section we detail every principle, we explain what it is, what it isn't 
 
 ### 1. Respectful
 
-Divide an conquer is an infamous method of ruling and the individualism that is built in the heart of our society helps enormously with that task. Its easy to make people fight one an other based on whichever difference exist between them. We want to build bridges and have spaces for people to dialogue with one an other.
+Divide and conquer is an infamous method of ruling and the individualism that is built in the heart of our society helps enormously with that task. Its easy to make people fight one an other based on whichever difference exist between them. We want to build bridges and have spaces for people to dialogue with one an other.
 
 Being respectful means fostering an environment where people feel safe to express themselves and engage with others constructively. This goes beyond basic politeness - it requires actively designing systems that encourage empathy, understanding, and good faith communication.
 
@@ -41,19 +41,15 @@ This doesn't mean avoiding hard or violent topics, nor does it mean abolishing d
 
 This principle not only guides community norms but also technical design as some design patterns can be used to encourage respectful behaviors. Possible patterns might be to prompt users to reconsider potentially harmful messages before sending them or ask users to emphasize constructive feedback over negative reactions in the comment box placeholder.
 
-Finally this principle guides the behavior of the dev team toward the rest of the community as they have to initiate that open, empathic and respectful culture.
-
 ### 2. Optimistic
 
-In times of global challenges and systemic crises, it's easy to fall into doomerism and cynicism. While these reactions are understandable, they can lead to paralysis and self-fulfilling prophecies of decline. We believe in our capacity to address those challenges and want to build spaces that foster constructive engagement with them.
+In times of global challenges and systemic crises, it's easy to fall into doom scrolling and cynicism. This constant exposure to problems without solutions creates a paralyzing feedback loop: seeing no examples of positive change makes it harder to believe in or work toward solutions, which in turn means fewer positive examples for others.
 
-It doesn't mean ignoring problems or promoting blind optimism. It simply means maintaining faith in human ingenuity while working on concrete solutions.
+Building confidence in our collective ability to overcome current challenges means breaking this cycle. This comes by sharing and developing that hopefulness. When people see concrete examples of progress being made or being fought for, taking that first step toward engagement becomes possible.
 
-It's about having the spark of hope that makes engagement possible. When people see no examples of positive change in their life, taking that first step toward action becomes nearly impossible. By highlighting where progress has been happening or is being fought for, we can help break through initial paralysis and enable meaningful engagement with challenges.
+This doesn't mean ignoring problems or promoting blind optimism. It simply means maintaining faith in human ingenuity and working towards concrete solutions. The platform should help users stay informed about challenges while emphasizing where positive change is happening or being fought for.
 
-Optimism is also about sharing and developing that hopefulness. This comes by building confidence in our collective ability to overcome current challenges. It means creating environments where solutions can be imagined, discussed, shared and implemented.
-
-This principle guides both community norms and technical design as some features can help maintain constructive engagement with difficult topics. Possible patterns might include highlighting solution-focused discussions, connecting people working on similar challenges, or providing ways to balance awareness of issues with examples of successful interventions.
+This principle enables other aspects of the platform by providing the initial spark of hope needed for meaningful engagement. When people believe solutions are possible, they're more likely to participate in democratic processes, contribute to collaborative projects, and share their own successes pulling people out of the doomerism loop.
 
 ### 3. Purposeful
 
@@ -150,6 +146,8 @@ This understanding enables meaningful user participation and control.
 Consistent governance ensures the platform stays true to its principles over time. This requires clear processes for decision-making, conflict resolution, and adaptation to new challenges.
 
 This principle guides both technical and community management structures.
+
+The dev team are the initiators of the platform's culture. They have to be the prime examples of its principles and their behavior towards the rest of the community has to reflect that.
 
 ## Requirements and Justifications
 
