@@ -29,7 +29,7 @@ Each principle correspond to a specific idea and should not overlap with others.
 
 ## Rationale
 
-In this section we detail every principle, we explain what it is, what it isn't and we express the rationale behind each of them.
+In this section we detail every principle, we express its underlying rationale, what it is, what it isn't and possible implementation methods.
 
 ### 1. Respectful
 
@@ -53,9 +53,13 @@ This principle guides platform design through multiple channels: community guide
 
 ### 3. Purposeful
 
-In the recent decades we saw the rise of the [attention economy](https://en.wikipedia.org/wiki/Attention_economy) where corporations compete to grab users attention at all costs. This provokes a profound disregard for users wants and needs with invasive and addictive design practices. This also has the effect of harming the public discourse by filling front pages with attention grabbing, anger and fear mongering content.
+In recent decades we saw the rise of the attention economy where corporations compete to grab users attention at all costs. This provokes a profound disregard for users wants and needs with invasive and addictive design practices. This also has the effect of harming the public discourse by filling front pages with attention grabbing, anger and fear mongering content.
 
-For a platform to be purposeful means it empowers users to shape their platform experience according to their own goals and values. This involves providing tools for self-reflection and usage insights. It means giving the users ways to turn on or off potentially addictive patterns and help them maintain an healthy relationship with the online world.
+Purposeful means empowering users to shape their platform experience according to their own goals and values. This involves providing tools for self-reflection and usage insights. It means giving users ways to turn on or off potentially addictive patterns and help them maintain a healthy relationship with the online world.
+
+This doesn't mean making the platform less engaging or removing features users enjoy. It means helping users understand their usage patterns and providing support when these patterns don't align with their intended purposes. The platform should remain attractive while giving users agency over how they engage with it.
+
+This principle guides both community norms and platform design: usage dashboards can help users understand their patterns, community guidelines can encourage mindful engagement, platform metrics can track alignment with personal and community goals rather than raw engagement, and potentially addictive features like infinite scroll can be swapped with voluntarily less satisfying options. These mechanisms help shape a culture where conscious technology use becomes as natural as casual browsing.
 
 ### 4. Expressive
 
