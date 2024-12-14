@@ -39,7 +39,7 @@ Being respectful means fostering an environment where people feel safe to expres
 
 This doesn't mean avoiding hard or violent topics, nor does it mean abolishing debate or disagreement. It simply means to make ones best effort to reach the other, try to understand their point of view and progress from there.
 
-This principle guides platform design through multiple channels: community guidelines and content creation tutorials can encourage empathetic communication, platform metrics can track and highlight constructive interactions rather than inflammatory ones, and interface design can promote understanding through features like prompts to reconsider harmful messages. These mechanisms help shape a culture where seeking to understand others becomes as natural as expressing oneself.
+This principle guides platform design through multiple channels: community guidelines and content creation tutorials can encourage empathetic communication, default platform metrics can track and highlight constructive interactions rather than inflammatory ones, and interface default design can promote understanding through features like prompts to reconsider harmful messages. These mechanisms help shape a culture where seeking to understand others becomes as natural as expressing oneself.
 
 ### 2. Optimistic
 
@@ -49,7 +49,7 @@ Building confidence in our collective ability to overcome current challenges mea
 
 This doesn't mean ignoring problems or promoting blind optimism. It simply means maintaining faith in human ingenuity and working towards concrete solutions. The platform should encourage content creators users stay informed about challenges while emphasizing where action can be taken and positive change happens or is being fought for.
 
-This principle guides platform design through multiple channels: community guidelines and content creation tutorials can encourage solution-focused storytelling, platform metrics can track and highlight constructive engagement rather than just reach, and recommendation systems can be designed to balance problem awareness with solution-finding initiatives. These mechanisms help shape a culture where sharing progress and celebrating small wins becomes as natural as identifying challenges.
+This principle guides platform design through multiple channels: community guidelines and content creation tutorials can encourage solution-focused storytelling, default platform metrics can track and highlight constructive engagement rather than just reach, and default recommendation systems can be designed to balance problem awareness with solution-finding initiatives. These mechanisms help shape a culture where sharing progress and celebrating small wins becomes as natural as identifying challenges.
 
 ### 3. Purposeful
 
@@ -59,7 +59,7 @@ Purposeful means empowering users to shape their platform experience according t
 
 This doesn't mean making the platform less engaging or removing features users enjoy. It means helping users understand their usage patterns and providing support when these patterns don't align with their intended purposes. The platform should remain attractive while giving users agency over how they engage with it.
 
-This principle guides both community norms and platform design: usage dashboards can help users understand their patterns, community guidelines can encourage mindful engagement, platform metrics can track alignment with personal and community goals rather than raw engagement, and potentially addictive features like infinite scroll can be swapped with voluntarily less satisfying options. These mechanisms help shape a culture where conscious technology use becomes as natural as casual browsing.
+This principle guides platform design through: default usage dashboards can help users understand their patterns, community guidelines can encourage mindful engagement, default platform metrics can track alignment with personal and community goals rather than raw engagement, and potentially addictive features like infinite scroll can be swapped with voluntarily less satisfying options. These mechanisms help shape a culture where conscious technology use becomes as natural as casual browsing.
 
 ### 4. Expressive
 
