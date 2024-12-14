@@ -39,7 +39,7 @@ Being respectful means fostering an environment where people feel safe to expres
 
 This doesn't mean avoiding hard or violent topics, nor does it mean abolishing debate or disagreement. It simply means to make ones best effort to reach the other, try to understand their point of view and progress from there.
 
-This principle not only guides community norms but also technical design as some design patterns can be used to encourage respectful behaviors. Possible patterns might be to prompt users to reconsider potentially harmful messages before sending them or ask users to emphasize constructive feedback over negative reactions in the comment box placeholder.
+This principle guides platform design through multiple channels: community guidelines and content creation tutorials can encourage empathetic communication, platform metrics can track and highlight constructive interactions rather than inflammatory ones, and interface design can promote understanding through features like prompts to reconsider harmful messages. These mechanisms help shape a culture where seeking to understand others becomes as natural as expressing oneself.
 
 ### 2. Optimistic
 
@@ -47,9 +47,9 @@ In times of global challenges and systemic crises, it's easy to fall into doom s
 
 Building confidence in our collective ability to overcome current challenges means breaking this cycle. This comes by sharing and developing that hopefulness. When people see concrete examples of progress being made or being fought for, taking that first step toward engagement becomes possible.
 
-This doesn't mean ignoring problems or promoting blind optimism. It simply means maintaining faith in human ingenuity and working towards concrete solutions. The platform should help users stay informed about challenges while emphasizing where positive change is happening or being fought for.
+This doesn't mean ignoring problems or promoting blind optimism. It simply means maintaining faith in human ingenuity and working towards concrete solutions. The platform should encourage content creators users stay informed about challenges while emphasizing where action can be taken and positive change happens or is being fought for.
 
-This principle enables other aspects of the platform by providing the initial spark of hope needed for meaningful engagement. When people believe solutions are possible, they're more likely to participate in democratic processes, contribute to collaborative projects, and share their own successes pulling people out of the doomerism loop.
+This principle guides platform design through multiple channels: community guidelines and content creation tutorials can encourage solution-focused storytelling, platform metrics can track and highlight constructive engagement rather than just reach, and recommendation systems can be designed to balance problem awareness with solution-finding initiatives. These mechanisms help shape a culture where sharing progress and celebrating small wins becomes as natural as identifying challenges.
 
 ### 3. Purposeful
 

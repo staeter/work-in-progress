@@ -445,3 +445,15 @@
 
 # 2024-12-13 13:45:51.135709
 +/ask The only thing that changed is the responsability of the dev team. I moved it into the governance rationale. We'll come back to that later. Propose a new version of the optimistic rationale taking your previous criticisms into accout
+
+# 2024-12-14 10:39:01.116310
++/ask the implementation part isn't clear in this verion. There are different ways to shape this up and it mostly revolves around the platforms culture and the insentives that content creators are encouraged to follow
+
+# 2024-12-14 10:45:57.319780
++/ask only rewrite the last paragraph. Ways to implement might be to encourage content creators to do this through content creation tips and tutorials. It can also be slightly influenced via the kinds of metricks that are tracked down and valorised in the statistics menu or even via algorithmic design.
+
+# 2024-12-14 10:49:04.231925
++/ask rewrite this paragraph from the respecful rationale as the methods of acting will essentially the same as for optimism. "This principle not only guides community norms but also technical design as some design patterns can be used to encourage respectful behaviors. Possible patterns might be to prompt users to reconsider potentially harmful messages before sending them or ask users to emphasize constructive feedback over negative reactions in the comment box placeholder."
+
+# 2024-12-14 10:50:17.918079
++/ask you fergot the community norms
