@@ -35,17 +35,17 @@ In this section we detail every principle, we express its underlying rationale, 
 
 Divide and conquer is an infamous method of ruling and the individualism that is built in the heart of our society helps enormously with that task. Its easy to make people fight one an other based on whichever difference exist between them. We want to build bridges and have spaces for people to dialogue with one an other.
 
-Being respectful means fostering an environment where people feel safe to express themselves and engage with others constructively. This goes beyond basic politeness - it requires actively designing systems that encourage empathy, understanding, and good faith communication.
+Being respectful means fostering an environment where people feel safe to express themselves and engage with others constructively. This goes beyond basic politeness - it requires actively designing systems that encourage empathy, mutual understanding, and good faith communication.
 
 This doesn't mean avoiding hard or violent topics, nor does it mean abolishing debate or disagreement. It simply means to make ones best effort to reach the other, try to understand their point of view and progress from there.
 
-This principle guides platform design through multiple channels: community guidelines and content creation tutorials can encourage empathetic communication, default platform metrics can track and highlight constructive interactions rather than inflammatory ones, and interface default design can promote understanding through features like prompts to reconsider harmful messages. These mechanisms help shape a culture where seeking to understand others becomes as natural as expressing oneself.
+This principle guides platform design through multiple channels: community guidelines and content creation tutorials can encourage empathetic communication, default platform metrics can track and highlight constructive interactions rather than inflammatory ones, default recommender systems can show diverse perspectives and default interface can prompt users to reconsider harmful messages before publishing. These mechanisms help shape a culture where seeking to understand others becomes as natural as expressing oneself.
 
 ### 2. Optimistic
 
 In times of global challenges and systemic crises, it's easy to fall into doom scrolling and cynicism. This constant exposure to problems without solutions creates a paralyzing feedback loop: seeing no examples of positive change makes it harder to believe in or work toward solutions, which in turn means fewer positive examples for others.
 
-Building confidence in our collective ability to overcome current challenges means breaking this cycle. This comes by sharing and developing that hopefulness. When people see concrete examples of progress being made or being fought for, taking that first step toward engagement becomes possible.
+Building confidence in our collective ability to overcome current challenges means breaking this cycle. This comes by sharing practical experiences and organizing to create new ones. When people see concrete examples of progress being made or being fought for, taking that first step toward engagement becomes possible.
 
 This doesn't mean ignoring problems or promoting blind optimism. It simply means maintaining faith in human ingenuity and working towards concrete solutions. The platform should encourage content creators users stay informed about challenges while emphasizing where action can be taken and positive change happens or is being fought for.
 
@@ -53,7 +53,7 @@ This principle guides platform design through multiple channels: community guide
 
 ### 3. Purposeful
 
-In recent decades we saw the rise of the attention economy where corporations compete to grab users attention at all costs. This provokes a profound disregard for users wants and needs with invasive and addictive design practices. This also has the effect of harming the public discourse by filling front pages with attention grabbing, anger and fear mongering content.
+In recent decades we saw the rise of the [attention economy](https://en.wikipedia.org/wiki/Attention_economy) where corporations compete to grab users attention at all costs. This provokes a profound disregard for users wants and needs with invasive and addictive design practices. This also has the effect of harming the public discourse by filling front pages with attention grabbing, anger and fear mongering content.
 
 Purposeful means empowering users to shape their platform experience according to their own goals and values. This involves providing tools for self-reflection and usage insights. It means giving users ways to turn on or off potentially addictive patterns and help them maintain a healthy relationship with the online world.
 
@@ -63,9 +63,13 @@ This principle guides platform design through: default usage dashboards can help
 
 ### 4. Expressive
 
-Providing spaces for expression means building the infrastructure people need to share their creativity and knowledge. This goes beyond just allowing content posting - it requires tools for different forms of expression, from text to multimedia.
+The world wide web brought an unprecedented ability for people to share ideas and knowledge across the world but - as the [platform economy](https://en.wikipedia.org/wiki/Platform_economy) grew - private corporation took control over our means of communication and entertainment. Moreover, these platforms tend to amplify already-popular voices while making it increasingly difficult for new or niche creators to reach and grow their audience, creating a self-reinforcing cycle of visibility inequality.
 
-Embracing diverse voices means actively considering different perspectives in the design process and ensuring the platform works well for people from all backgrounds.
+To follow the expressive principle means to provide diverse peoples ways to express, publish, share and sustain creative work. This involves supporting creators, making tools and resources that help them initiate their creative work, find their core audience and opening multiple paths to sustainable content creation. We recognize that different creators serve different valuable purposes - from specialized knowledge sharing to mass entertainment - and all deserve fair opportunities to find and grow their audience.
+
+This isn't about limiting successful creators or forcing equality of outcomes. Rather, it means ensuring that success comes from genuine audience connection and content quality rather than algorithmic bias. The goal is to create multiple viable paths to sustainable content creation, where both niche creators serving specific communities and broadly popular voices can thrive.
+
+In practice this comes down to handling various content formats (from text articles to long-form video passing by digital comics), having discovery pages for each of them recommending content based on a variety of metrics and algorithms. To make content production sustainable the platform may integrate crowd funding systems and a page to connect creators and advertisers.
 
 ### 5. Collaborative
 
