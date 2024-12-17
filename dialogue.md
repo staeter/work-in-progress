@@ -75,7 +75,7 @@ In practice this comes down to handling various content formats (from text artic
 
 Most collaborative content editing tools are owned by private companies and stored on their servers granting them access to user's private data. There is a famously bad track record with the way this data gets used for targeted advertisement, machine learning model training and state surveillance.
 
-The collaborative principle is about providing tools for peer creation.
+The collaborative principle is about providing tools for peer creation .
 
 Making collaboration as natural as working alone requires careful attention to user experience. Features must handle the complexity of group work while keeping interfaces simple and intuitive.
 
