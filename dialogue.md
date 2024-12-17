@@ -12,11 +12,10 @@ Each principle correspond to a specific idea and should not overlap with others.
 2. **Optimistic**: Build confidence in our collective ability to overcome current challenges and shape better futures through human ingenuity.
 3. **Purposeful**: Support mindful and intentional technology use.
 4. **Expressive**: Provide spaces for creative expression and knowledge sharing and embrace diverse voices and experiences.
-5. **Collaborative**: Make working together on shared content as natural as working alone.
-6. **Democratic**: Make collective and democratic organizing and decision-making more efficient than centralized systems.
-7. **Empowering**: Entrust people with control over their digital environment and support them with appropriate tools.
-8. **Accessible**: Ensure accessibility no matter the technical knowledge, the economical status, the cultural background, the physical disabilities, the language or the literacy.
-9. **Attractive**: Has compelling reasons for people and communities to join, stay and grow with the platform enabling [network effects](https://en.wikipedia.org/wiki/Network_effect).
+5. **Democratic**: Make collective and democratic organizing and decision-making more efficient than centralized systems.
+6. **Empowering**: Entrust people with control over their digital environment and support them with appropriate tools.
+7. **Accessible**: Ensure accessibility no matter the technical knowledge, the economical status, the cultural background, the physical disabilities, the language or the literacy.
+8. **Attractive**: Has compelling reasons for people and communities to join, stay and grow with the platform enabling [network effects](https://en.wikipedia.org/wiki/Network_effect).
 10. **Private**: Guarantee personal data sovereignty and communication confidentiality.
 11. **Resilient**: Maintain platform availability even under state-level interdiction.
 12. **Safe**: Ensure users can communicate without fear of identification or retribution even in repressive environments.
@@ -71,35 +70,25 @@ This isn't about limiting successful creators or forcing equality of outcomes. R
 
 In practice this comes down to handling various content formats (from text articles to long-form video passing by digital comics), having discovery pages for each of them recommending content based on a variety of metrics and algorithms. To make content production sustainable the platform may integrate crowd funding systems and a page to connect creators and advertisers.
 
-### 5. Collaborative
-
-Most collaborative content editing tools are owned by private companies and stored on their servers granting them access to user's private data. There is a famously bad track record with the way this data gets used for targeted advertisement, machine learning model training and state surveillance.
-
-The collaborative principle is about providing tools for peer creation .
-
-Making collaboration as natural as working alone requires careful attention to user experience. Features must handle the complexity of group work while keeping interfaces simple and intuitive.
-
-This enables both lightweight cooperation (like quick feedback on a draft) and complex projects (like maintaining shared documentation).
-
-### 6. Democratic
+### 5. Democratic
 
 Democratic organization means more than just voting - it requires tools for discussion, deliberation, and transparent decision-making. The platform must support various forms of governance while keeping processes clear and accessible.
 
 This principle guides features like proposal systems, discussion tools, and voting mechanisms.
 
-### 7. Empowering
+### 6. Empowering
 
 Control over one's digital environment means having both the tools and the knowledge to use them effectively. This requires careful documentation, intuitive interfaces, and progressive disclosure of advanced features.
 
 Users should understand what's happening with their data and have meaningful choices about how to manage it.
 
-### 8. Accessible
+### 7. Accessible
 
 Accessibility covers many dimensions - technical, economic, cultural, physical, linguistic, and educational. Each feature must be evaluated across all these aspects to ensure no one is unnecessarily excluded.
 
 This often means providing multiple ways to accomplish tasks and careful attention to progressive enhancement.
 
-### 9. Attractive
+### 8. Attractive
 
 Network effects are crucial for social platforms - they become more valuable as more people join. This means designing features that give people compelling reasons to join, stay engaged, and bring their communities.
 
