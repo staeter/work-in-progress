@@ -64,7 +64,7 @@ This principle guides platform design through: default usage dashboards can help
 
 The world wide web brought an unprecedented ability for people to share ideas and knowledge across the world but - as the [platform economy](https://en.wikipedia.org/wiki/Platform_economy) grew - private corporation took control over our means of communication and entertainment. Moreover, these platforms and tend to amplify already-popular voices while making it increasingly difficult for new or niche creators to reach and grow their audience, creating a self-reinforcing cycle of visibility inequality. Even worse, they cooperate with states and implement their censorship.
 
-To follow the expressive principle means to provide diverse peoples ways to express, publish, share and sustain creative work. This involves supporting creators, making tools and resources that help them initiate their creative work, find their core audience and opening multiple paths to sustainable content creation. We recognize that different creators serve different valuable purposes - from specialized knowledge sharing to mass entertainment - and all deserve fair opportunities to find and grow their audience.
+To follow the expressive principle means to provide diverse peoples ways to express, publish, share and sustain creative work. It includes hosting dissident voices. This involves supporting creators, making tools and resources that help them initiate their creative work, find their core audience and opening multiple paths to sustainable content creation. We recognize that different creators serve different valuable purposes - from specialized knowledge sharing to mass entertainment - and all deserve fair opportunities to find and grow their audience.
 
 This isn't about limiting successful creators or forcing equality of outcomes. Rather, it means ensuring that success comes from genuine audience connection and content quality rather than algorithmic bias. The goal is to create multiple viable paths to sustainable content creation, where both niche creators serving specific communities and broadly popular voices can thrive.
 
@@ -72,9 +72,13 @@ In practice this comes down to handling various content formats (from text artic
 
 ### 5. Democratic
 
-Democratic organization means more than just voting - it requires tools for discussion, deliberation, and transparent decision-making. The platform must support various forms of governance while keeping processes clear and accessible.
+Traditional social platforms tend to concentrate power in the hands of platform owners and algorithms, leaving users and communities with little say in how their spaces are governed. Even when platforms offer community moderation tools, these are often limited and can be overridden by corporate decisions driven by profit motives rather than community needs.
 
-This principle guides features like proposal systems, discussion tools, and voting mechanisms.
+Democratic organization means creating spaces where communities can effectively self-govern and make collective decisions. This requires not just voting mechanisms, but comprehensive tools for discussion, deliberation, consensus-building, and transparent decision-making. The platform must support various forms of democratic governance - from direct democracy to representative systems - while keeping processes clear and accessible to all participants.
+
+This isn't about forcing every group to use the same democratic model. Rather, it's about making democratic organization more efficient and accessible than centralized control. Communities should be able to choose and evolve their governance structures while maintaining transparency and accountability to their members.
+
+This principle guides platform design through multiple channels: built-in tools for proposals and voting, structured discussion spaces for deliberation, transparent record-keeping of decisions and their rationales, and flexible permission systems that communities can adapt to their needs. These mechanisms help make collective decision-making as natural and efficient as individual action.
 
 ### 6. Empowering
 
