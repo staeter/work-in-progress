@@ -4,6 +4,8 @@ module Ordt exposing (..)
 
 This implementation comes from [this blogpost](http://archagon.net/blog/2018/03/24/data-laced-with-history/).
 
+You will need this module only if you want to implement your own custom ORDT.
+
 -}
 
 import GDict

@@ -277,7 +277,7 @@ We recognize the way these algorithms have been trained in problematic ways usin
 
 In terms of content originality, we do not attempt to be especially original or novel. Our main aim is to express ideas and develop techniques to bring them to life. No matter who or what expresses those ideas as long as they match our thoughts and needs.
 
-We have made the writing process transparent by sharing the dialogue's history. They can be found in the `.aider.chat.history.md` file.
+We have made the writing process transparent by sharing the dialogue's history. It can be found in the `.aider.chat.history.md` file.
 
 ## Legacy Text
 
