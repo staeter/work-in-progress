@@ -273,9 +273,9 @@ Here we discuss which tools are needed to complete the requirements and weather 
 
 Parts of this document have been written in cooperation with a LLM.
 
-We recognize the way these algorithms have been trained in problematic ways using data without author's acknowledgement and poorly paid labor for data labeling. Though we also believe LLMs are useful tools that can be used for human emancipation. A hammer can break a skull but it mey also serve to build bridges, houses and hospitals. In other words, deleterious conditions that produced that hammer may be changed with the help of that very hammer. This reasoning works as much for LLMs as for textile factories and petroleum industry.
+We recognize the way these algorithms have been trained in problematic ways using data without author's acknowledgement and poorly paid labor for data labeling. Though we also believe LLMs are useful tools that can be used for human emancipation. A hammer can break a skull but it mey also serve to build bridges, houses and hospitals. In other words, deleterious conditions that produced that hammer may be changed with the help of that very hammer. This reasoning works as much for LLMs as for textile factories and mining industries.
 
-In terms of content originality, we do not attempt to be especially original or novel. Our main aim is to express those ideas and develop techniques to bring them to life. No matter who or what expresses those ideas as long as they match our thought and needs.
+In terms of content originality, we do not attempt to be especially original or novel. Our main aim is to express ideas and develop techniques to bring them to life. No matter who or what expresses those ideas as long as they match our thoughts and needs.
 
 We have made the writing process transparent by sharing the dialogue's history. They can be found in the `.aider.chat.history.md` file.
 
