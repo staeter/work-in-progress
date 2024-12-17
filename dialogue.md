@@ -6,7 +6,7 @@ This document is a first attempt at defining the requirements of Dialogue, the s
 
 Some of these core principles might be idealistic, unreachable or even a bit vague but they serve as a north star. Every requirement and every feature has to be justified and can be debated relative to these principles.
 
-Each principle correspond to a specific idea and should not overlap with others. The 1-2 are philosophical, 3-9 social, 10-14 technical and 15-18 methodological. Apart from these groupings, they are sorted in no particular order. The numbers are only there for referencing sake.
+Each principle corresponds to a specific idea and should not overlap with others. The principles 1-2 are philosophical, 3-8 social, 9-13 technical and 14-17 methodological. Apart from these groupings, they are sorted in no particular order. The numbers are only there for referencing sake.
 
 1. **Respectful**: Foster goodwill, empathy, openness and constructive communication.
 2. **Optimistic**: Build confidence in our collective ability to overcome current challenges and shape better futures through human ingenuity.
@@ -16,15 +16,15 @@ Each principle correspond to a specific idea and should not overlap with others.
 6. **Empowering**: Entrust people with control over their digital environment and support them with appropriate tools.
 7. **Accessible**: Ensure accessibility no matter the technical knowledge, the economical status, the cultural background, the physical disabilities, the language or the literacy.
 8. **Attractive**: Has compelling reasons for people and communities to join, stay and grow with the platform enabling [network effects](https://en.wikipedia.org/wiki/Network_effect).
-10. **Private**: Guarantee personal data sovereignty and communication confidentiality.
-11. **Resilient**: Maintain platform availability even under state-level interdiction.
-12. **Safe**: Ensure users can communicate without fear of identification or retribution even in repressive environments.
-13. **Distributed**: Share computing and storage resources across devices to minimize environmental impact and ensure network independence.
-14. **Modular**: Support community-driven development with a secure framework making every interface and algorithm customizable.
-15. **Sustainable**: Ensure the platform's social and technical foundations remain viable and relevant across generational timescales.
-16. **Empirical**: Rigorously justify, study and stress test every feature to ensure alignment with the *core principles*.
-17. **Transparent**: Actively expose and explain all platform mechanisms, algorithmic systems, and community processes, enabling informed user participation and control.
-18. **Governance**: Organize platform governance and development in a way that ensures consistent adherence to the *core principles*.
+9. **Private**: Guarantee personal data sovereignty and communication confidentiality.
+10. **Resilient**: Maintain platform availability even under state-level interdiction.
+11. **Safe**: Ensure users can communicate without fear of identification or retribution even in repressive environments.
+12. **Distributed**: Share computing and storage resources across devices to minimize environmental impact and ensure network independence.
+13. **Modular**: Support community-driven development with a secure framework making every interface and algorithm customizable.
+14. **Sustainable**: Ensure the platform's social and technical foundations remain viable and relevant across generational timescales.
+15. **Empirical**: Rigorously justify, study and stress test every feature to ensure alignment with the *core principles*.
+16. **Transparent**: Actively expose and explain all platform mechanisms, algorithmic systems, and community processes, enabling informed user participation and control.
+17. **Governance**: Organize platform governance and development in a way that ensures consistent adherence to the *core principles*.
 
 ## Rationale
 
@@ -94,29 +94,29 @@ Network effects are crucial for social platforms - they become more valuable as 
 
 This must be balanced with other principles - growth should come from genuine value, not dark patterns or artificial virality.
 
-### 10. Private
+### 9. Private
 
 Privacy means giving users real control over their data and communications. This requires both technical measures (like encryption) and clear interfaces that help users understand and manage their privacy.
 
 Defaults should protect privacy while making it easy to safely share when desired.
 
-### 11. Resilient
+### 10. Resilient
 
 Resilience means the platform keeps working even under adverse conditions - from network issues to active attempts at censorship. This requires careful distributed systems design and robust fallback mechanisms.
 
-### 12. Safe
+### 11. Safe
 
 Safety requires protecting users from both technical and social threats. This means secure systems, clear community standards, and tools for managing unwanted contact or content.
 
 This is especially crucial for users in repressive environments who need protection from surveillance and retaliation.
 
-### 13. Distributed
+### 12. Distributed
 
 Distribution of resources helps ensure both technical resilience and environmental sustainability. This means designing systems that efficiently share computing and storage loads across the network.
 
 This principle guides both technical architecture and governance structures.
 
-### 14. Modular
+### 13. Modular
 
 No platform is neutral. Its design constrains what gets expressed and its algorithms serves as an editorial line. Every medium has implicitly or explicitly stated goals and philosophies. We stated those in the *respectful*, *optimistic*, *purposeful* and *democratic* principles. As much as the dev team strives for those goals we also do not believe they will always get it right nor adapted to every single specific case.
 
@@ -124,25 +124,25 @@ Modularity enables community-driven development while maintaining security. This
 
 This principle supports both technical extensibility and social adaptability.
 
-### 15. Sustainable
+### 14. Sustainable
 
 Long-term sustainability requires attention to both technical and social foundations. This means choosing stable technologies, building maintainable systems, and creating governance structures that can evolve.
 
 This principle helps evaluate every decision's long-term implications.
 
-### 16. Empirical
+### 15. Empirical
 
 Rigorous testing helps ensure features actually serve their intended purposes. This means gathering data (while respecting privacy), studying outcomes, and adjusting based on evidence.
 
 This principle keeps development grounded in reality rather than assumptions.
 
-### 17. Transparent
+### 16. Transparent
 
 Transparency means users can understand how the platform works, from algorithms to governance. This requires clear documentation, open source code, and explicit explanation of automated systems.
 
 This understanding enables meaningful user participation and control.
 
-### 18. Governance
+### 17. Governance
 
 Consistent governance ensures the platform stays true to its principles over time. This requires clear processes for decision-making, conflict resolution, and adaptation to new challenges.
 
