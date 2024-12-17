@@ -63,7 +63,7 @@ This principle guides platform design through: default usage dashboards can help
 
 ### 4. Expressive
 
-The world wide web brought an unprecedented ability for people to share ideas and knowledge across the world but - as the [platform economy](https://en.wikipedia.org/wiki/Platform_economy) grew - private corporation took control over our means of communication and entertainment. Moreover, these platforms tend to amplify already-popular voices while making it increasingly difficult for new or niche creators to reach and grow their audience, creating a self-reinforcing cycle of visibility inequality.
+The world wide web brought an unprecedented ability for people to share ideas and knowledge across the world but - as the [platform economy](https://en.wikipedia.org/wiki/Platform_economy) grew - private corporation took control over our means of communication and entertainment. Moreover, these platforms and tend to amplify already-popular voices while making it increasingly difficult for new or niche creators to reach and grow their audience, creating a self-reinforcing cycle of visibility inequality. Even worse, they cooperate with states and implement their censorship.
 
 To follow the expressive principle means to provide diverse peoples ways to express, publish, share and sustain creative work. This involves supporting creators, making tools and resources that help them initiate their creative work, find their core audience and opening multiple paths to sustainable content creation. We recognize that different creators serve different valuable purposes - from specialized knowledge sharing to mass entertainment - and all deserve fair opportunities to find and grow their audience.
 
@@ -72,6 +72,10 @@ This isn't about limiting successful creators or forcing equality of outcomes. R
 In practice this comes down to handling various content formats (from text articles to long-form video passing by digital comics), having discovery pages for each of them recommending content based on a variety of metrics and algorithms. To make content production sustainable the platform may integrate crowd funding systems and a page to connect creators and advertisers.
 
 ### 5. Collaborative
+
+Most collaborative content editing tools are owned by private companies and stored on their servers granting them access to user's private data. There is a famously bad track record with the way this data gets used for targeted advertisement, machine learning model training and state surveillance.
+
+The collaborative principle is about providing tools for peer creation.
 
 Making collaboration as natural as working alone requires careful attention to user experience. Features must handle the complexity of group work while keeping interfaces simple and intuitive.
 
