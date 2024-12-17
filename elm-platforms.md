@@ -1,6 +1,9 @@
 # **elm-platforms**
 
-**elm-platforms** is a standardized interface for running Elm code on any platforms with different capabilities. It aims to simplify the portability of code between different platforms and ease the storage and passing of cashed data in the model and through the codebase.
+**elm-platforms** is a standardized interface for running Elm code on any platforms with different capabilities. It is a layer on top of elm runtime replacing `Cmd`, `Sub` and `Program`.
+
+It aims to simplify the portability of code between different platforms and ease the storage and passing of cashed data in the model and through the codebase.
+
 It also is a CLI that handles platforms and capabilities install, setup, build and live reload.
 
 ## **Platforms Capabilities**
@@ -13,7 +16,7 @@ Platform capabilities group together commands, subscriptions and the caching of 
 - Terminal capability which provides stdin, stdout, stderr but also input prompts, access to Env values or running bash commands.
 - Url capability for tracking the Url bar only available in Browser implementation.
 - HTTP capability.
-- Libp2p capability for peer to peer communication through the libp2p protocol.
+- Libp2p capability for peer to peer communication with the libp2p protocol.
 - Email capability to send, receive and cache emails.
 - etc.
 
