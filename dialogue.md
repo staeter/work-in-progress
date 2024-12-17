@@ -79,41 +79,41 @@ This isn't about forcing every group to use the same democratic model. Rather, i
 
 This principle guides platform design through multiple channels: built-in tools for proposals and voting, structured discussion spaces for deliberation, transparent record-keeping of decisions and their rationales, and flexible permission systems that communities can adapt to their needs. These mechanisms help make collective decision-making as natural and efficient as individual action.
 
-### 7. Accessible
+### 6. Accessible
 
 Accessibility covers many dimensions - technical, economic, cultural, physical, linguistic, and educational. Each feature must be evaluated across all these aspects to ensure no one is unnecessarily excluded.
 
 This often means providing multiple ways to accomplish tasks and careful attention to progressive enhancement.
 
-### 8. Attractive
+### 7. Attractive
 
 Network effects are crucial for social platforms - they become more valuable as more people join. This means designing features that give people compelling reasons to join, stay engaged, and bring their communities.
 
 This must be balanced with other principles - growth should come from genuine value, not dark patterns or artificial virality.
 
-### 9. Private
+### 8. Private
 
 Privacy means giving users real control over their data and communications. This requires both technical measures (like encryption) and clear interfaces that help users understand and manage their privacy.
 
 Defaults should protect privacy while making it easy to safely share when desired.
 
-### 10. Resilient
+### 9. Resilient
 
 Resilience means the platform keeps working even under adverse conditions - from network issues to active attempts at censorship. This requires careful distributed systems design and robust fallback mechanisms.
 
-### 11. Safe
+### 10. Safe
 
 Safety requires protecting users from both technical and social threats. This means secure systems, clear community standards, and tools for managing unwanted contact or content.
 
 This is especially crucial for users in repressive environments who need protection from surveillance and retaliation.
 
-### 12. Distributed
+### 11. Distributed
 
 Distribution of resources helps ensure both technical resilience and environmental sustainability. This means designing systems that efficiently share computing and storage loads across the network.
 
 This principle guides both technical architecture and governance structures.
 
-### 13. Modular
+### 12. Modular
 
 No platform is neutral. Its design constrains what gets expressed and its algorithms serves as an editorial line. Every medium has implicitly or explicitly stated goals and philosophies. We stated those in the *respectful*, *optimistic*, *purposeful* and *democratic* principles. As much as the dev team strives for those goals we also do not believe they will always get it right nor adapted to every single specific case.
 
@@ -121,25 +121,25 @@ Modularity enables community-driven development while maintaining security. This
 
 This principle supports both technical extensibility and social adaptability.
 
-### 14. Sustainable
+### 13. Sustainable
 
 Long-term sustainability requires attention to both technical and social foundations. This means choosing stable technologies, building maintainable systems, and creating governance structures that can evolve.
 
 This principle helps evaluate every decision's long-term implications.
 
-### 15. Empirical
+### 14. Empirical
 
 Rigorous testing helps ensure features actually serve their intended purposes. This means gathering data (while respecting privacy), studying outcomes, and adjusting based on evidence.
 
 This principle keeps development grounded in reality rather than assumptions.
 
-### 16. Transparent
+### 15. Transparent
 
 Transparency means users can understand how the platform works, from algorithms to governance. This requires clear documentation, open source code, and explicit explanation of automated systems.
 
 This understanding enables meaningful user participation and control.
 
-### 17. Governance
+### 16. Governance
 
 Consistent governance ensures the platform stays true to its principles over time. This requires clear processes for decision-making, conflict resolution, and adaptation to new challenges.
 
