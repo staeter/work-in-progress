@@ -27,7 +27,7 @@ Each principle corresponds to a specific idea and should not overlap with others
 
 ## Rationale
 
-In this section we detail every principle, we express its underlying rationale, what it is, what it isn't and possible implementation methods.
+In this section we detail every principle, we express its underlying rationale, what it is, what it isn't and some practical implications.
 
 ### 1. Respectful
 
@@ -71,7 +71,7 @@ In practice this comes down to handling various content formats (from text artic
 
 ### 5. Democratic
 
-Traditional social platforms tend to concentrate power in the hands of platform owners and algorithms, leaving users and communities with little say in how their spaces are governed. Even when platforms offer community moderation tools, these are often limited and can be overridden by corporate decisions driven by profit motives rather than community needs.
+Traditional social platforms tend to concentrate power in the hands of platform owners and their algorithms, leaving users and communities with little say in how their spaces are governed. Even when platforms offer community moderation tools, these are often limited and can be overridden by corporate decisions driven by profit motives rather than community needs.
 
 Democratic organization means creating spaces where communities can effectively self-govern and make collective decisions. This requires not just voting mechanisms, but comprehensive tools for discussion, deliberation, consensus-building, and transparent decision-making. The platform must support various forms of democratic governance - from direct democracy to representative systems - while keeping processes clear and accessible to all participants.
 
