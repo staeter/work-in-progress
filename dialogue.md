@@ -81,9 +81,22 @@ This principle guides platform design through multiple channels: built-in tools 
 
 ### 6. Accessible
 
-Accessibility covers many dimensions - technical, economic, cultural, physical, linguistic, and educational. Each feature must be evaluated across all these aspects to ensure no one is unnecessarily excluded.
+-- todo: improve writing style but the content is there
 
-This often means providing multiple ways to accomplish tasks and careful attention to progressive enhancement.
+Traditional digital platforms often exclude large segments of the population through various barriers: expensive devices or data plans, complex interfaces that assume technical literacy, designs that don't work with assistive technologies, content available only in majority languages, or features that require high-speed internet connections. This creates digital divides that reinforce existing social inequalities and limit the platform's potential for inclusive dialogue and collective action.
+
+Making a platform truly accessible means considering every feature through multiple lenses:
+
+- Technical: Works on low-end devices and slow/intermittent connections
+- Economic: Free to use with minimal hardware requirements
+- Cultural: Respects and accommodates different cultural norms and practices
+- Physical: Compatible with assistive technologies and follows accessibility standards
+- Linguistic: Available in multiple languages with clear paths for community translation
+- Educational: Usable regardless of technical literacy or formal education level
+
+This isn't about dumbing down features or limiting capabilities for advanced users. Rather, it's about thoughtful progressive enhancement where core functionality remains available to everyone while additional features gracefully adapt to available resources and capabilities. The platform should provide multiple ways to accomplish tasks, with clear documentation and help systems that accommodate different learning styles and backgrounds.
+
+This principle guides platform design through multiple channels: responsive interfaces that work across device types, offline-first architecture that handles poor connectivity, built-in translation tools, context-sensitive help systems, and careful attention to accessibility standards. These mechanisms ensure that no one is unnecessarily excluded from participating in the platform's community and benefits.
 
 ### 7. Attractive
 
@@ -260,7 +273,7 @@ Various notes and precisions about this document.
 
 ### On our use of LLMs
 
-Parts of this document have been written in cooperation with a LLM.
+Parts of this document have been written in cooperation with a LLM and similar tools will likely be used to implement the platform.
 
 We recognize the way these algorithms have been trained in problematic ways using data without author's acknowledgement and poorly paid labor for data labeling. Though we also believe LLMs are useful tools that can be used for human emancipation. A hammer can break a skull but it mey also serve to build bridges, houses and hospitals. In other words, deleterious conditions that produced that hammer may be changed with the help of that very hammer. This reasoning works as much for LLMs as for textile factories and mining industries.
 
