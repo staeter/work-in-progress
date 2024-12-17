@@ -1,12 +1,12 @@
 # Dialogue
 
-This document is a first attempt at defining the requirements of Dialogue, the social network of the future. It analyzes the benefits and limitations of existing social networks to build toward an extensive list of requirements.
+This document is a first attempt at defining the requirements of Dialogue, a social network for the future of humanity. We states our goals and build toward an extensive list of requirements.
 
 ## Core Principles
 
 Some of these core principles might be idealistic, unreachable or even a bit vague but they serve as a north star. Every requirement and every feature has to be justified and can be debated relative to these principles.
 
-Each principle corresponds to a specific idea and should not overlap with others. The principles 1-2 are philosophical, 3-7 social, 8-12 technical and 13-16 methodological. Apart from these groupings, they are sorted in no particular order. The numbers are only there for referencing sake.
+Each principle corresponds to a specific idea and are thought not to overlap with others. The principles 1-2 are philosophical, 3-7 social, 8-12 technical and 13-16 methodological. Apart from these groupings, they are sorted in no particular order. The numbers are only there for referencing sake.
 
 1. **Respectful**: Foster goodwill, empathy, openness and constructive communication.
 2. **Optimistic**: Build confidence in our collective ability to overcome current challenges and shape better futures through human ingenuity.
@@ -16,7 +16,7 @@ Each principle corresponds to a specific idea and should not overlap with others
 6. **Accessible**: Ensure accessibility no matter the technical knowledge, the economical status, the cultural background, the physical disabilities, the language or the literacy.
 7. **Attractive**: Has compelling reasons for people and communities to join, stay and grow with the platform enabling [network effects](https://en.wikipedia.org/wiki/Network_effect).
 8. **Private**: Guarantee personal data sovereignty and communication confidentiality.
-9.  **Resilient**: Maintain platform availability even under state-level interdiction.
+9. **Resilient**: Maintain platform availability even under state-level interdiction.
 10. **Safe**: Ensure users can communicate without fear of identification or retribution even in repressive environments.
 11. **Distributed**: Share computing and storage resources across devices to minimize environmental impact and ensure network independence.
 12. **Modular**: Support community-driven development with a secure framework making every interface and algorithm customizable.
@@ -53,7 +53,7 @@ This principle guides platform design through multiple channels: community guide
 
 Traditional platforms treat users as passive consumers of content and features, offering little control over their digital environment beyond superficial customization options. This creates learned helplessness where users accept whatever changes platforms impose, even when these changes work against their interests or needs. This problem is particularly visible in the [attention economy](https://en.wikipedia.org/wiki/Attention_economy) where corporations compete to grab users' attention at all costs, using invasive and addictive design practices with profound disregard for users' wants and needs.
 
-Empowering means trusting users' capacity to make informed choices about their digital lives. This is about interface customization , recommendation algorithms, content filtering, interaction metrics, and information presentation. Users should understand how these systems affect their behavior and have meaningful ways to adjust or replace them to align with their own purposes and values.
+Empowering means trusting users' capacity to make informed choices about their digital lives. This is about interface customization, recommendation algorithms, content filtering, interaction metrics, and information presentation. Users should understand how these systems affect their behavior and have meaningful ways to adjust or replace them to align with their own purposes and values.
 
 This isn't about overwhelming users with technical complexity, nor about removing helpful defaults or making the platform less engaging. Rather, it's about respecting users' autonomy and supporting their growth from passive consumers to active participants who understand and control their digital environment. The platform should make visible the mechanisms that guide behavior and provide tools to modify them according to personal values and goals.
 
@@ -254,15 +254,11 @@ An organization can then use this network to validate identity. It could only co
 
 -- Look at [web of trust](https://en.wikipedia.org/wiki/Web_of_trust).
 
-## Success Metrics
+## Notes
 
-Here we describe the metrics we will use to measure how well the platform follows each of its core principles.
+Various notes and precisions about this document.
 
-## Tooling
-
-Here we discuss which tools are needed to complete the requirements and weather potential candidates already exist.
-
-## On our use of LLMs
+### On our use of LLMs
 
 Parts of this document have been written in cooperation with a LLM.
 
@@ -272,7 +268,7 @@ In terms of content originality, we do not attempt to be especially original or 
 
 We have made the writing process transparent by sharing the dialogue's history. It can be found in the `.aider.chat.history.md` file.
 
-## Legacy Text
+## Legacy and wip Text
 
 ### Pro-Social Behavior
 
@@ -431,3 +427,18 @@ Nebula is a video-on-demand streaming service provider. Launched by the Standard
 - The creators generally come from a specific socioeconomic background and mostly from the US or the UK as it only is english speaking.
 - Creators can hardly have dissenting stances to the collective. Second thought leaving the platform might be an example of this.
 - The profitability of the company also is a constraint on creators political stances as the sponsors and partners could pressure Nebula.
+
+## Notes
+
+Various notes and precisions about this document.
+
+### About interoperability
+
+interoperable but in very specific ways /
+transparent also means interoperable /
+evergreen design architecture /
+possible breaking changes /
+useful for attractive /
+but might break secure, safe and/or private /
+keep control within Dialogue /
+might be needed for governance
