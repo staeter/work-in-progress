@@ -6,25 +6,24 @@ This document is a first attempt at defining the requirements of Dialogue, the s
 
 Some of these core principles might be idealistic, unreachable or even a bit vague but they serve as a north star. Every requirement and every feature has to be justified and can be debated relative to these principles.
 
-Each principle corresponds to a specific idea and should not overlap with others. The principles 1-2 are philosophical, 3-8 social, 9-13 technical and 14-17 methodological. Apart from these groupings, they are sorted in no particular order. The numbers are only there for referencing sake.
+Each principle corresponds to a specific idea and should not overlap with others. The principles 1-2 are philosophical, 3-7 social, 8-12 technical and 13-16 methodological. Apart from these groupings, they are sorted in no particular order. The numbers are only there for referencing sake.
 
 1. **Respectful**: Foster goodwill, empathy, openness and constructive communication.
 2. **Optimistic**: Build confidence in our collective ability to overcome current challenges and shape better futures through human ingenuity.
-3. **Purposeful**: Support mindful and intentional technology use.
+3. **Empowering**: Entrust people with control over their digital environment and support them with appropriate tools.
 4. **Expressive**: Provide spaces for creative expression and knowledge sharing and embrace diverse voices and experiences.
 5. **Democratic**: Make collective and democratic organizing and decision-making more efficient than centralized systems.
-6. **Empowering**: Entrust people with control over their digital environment and support them with appropriate tools.
-7. **Accessible**: Ensure accessibility no matter the technical knowledge, the economical status, the cultural background, the physical disabilities, the language or the literacy.
-8. **Attractive**: Has compelling reasons for people and communities to join, stay and grow with the platform enabling [network effects](https://en.wikipedia.org/wiki/Network_effect).
-9. **Private**: Guarantee personal data sovereignty and communication confidentiality.
-10. **Resilient**: Maintain platform availability even under state-level interdiction.
-11. **Safe**: Ensure users can communicate without fear of identification or retribution even in repressive environments.
-12. **Distributed**: Share computing and storage resources across devices to minimize environmental impact and ensure network independence.
-13. **Modular**: Support community-driven development with a secure framework making every interface and algorithm customizable.
-14. **Sustainable**: Ensure the platform's social and technical foundations remain viable and relevant across generational timescales.
-15. **Empirical**: Rigorously justify, study and stress test every feature to ensure alignment with the *core principles*.
-16. **Transparent**: Actively expose and explain all platform mechanisms, algorithmic systems, and community processes, enabling informed user participation and control.
-17. **Governance**: Organize platform governance and development in a way that ensures consistent adherence to the *core principles*.
+6. **Accessible**: Ensure accessibility no matter the technical knowledge, the economical status, the cultural background, the physical disabilities, the language or the literacy.
+7. **Attractive**: Has compelling reasons for people and communities to join, stay and grow with the platform enabling [network effects](https://en.wikipedia.org/wiki/Network_effect).
+8. **Private**: Guarantee personal data sovereignty and communication confidentiality.
+9.  **Resilient**: Maintain platform availability even under state-level interdiction.
+10. **Safe**: Ensure users can communicate without fear of identification or retribution even in repressive environments.
+11. **Distributed**: Share computing and storage resources across devices to minimize environmental impact and ensure network independence.
+12. **Modular**: Support community-driven development with a secure framework making every interface and algorithm customizable.
+13. **Sustainable**: Ensure the platform's social and technical foundations remain viable and relevant across generational timescales.
+14. **Empirical**: Rigorously justify, study and stress test every feature to ensure alignment with the *core principles*.
+15. **Transparent**: Actively expose and explain all platform mechanisms, algorithmic systems, and community processes, enabling informed user participation and control.
+16. **Governance**: Organize platform governance and development in a way that ensures consistent adherence to the *core principles*.
 
 ## Rationale
 
@@ -50,15 +49,15 @@ This doesn't mean ignoring problems or promoting blind optimism. It simply means
 
 This principle guides platform design through multiple channels: community guidelines and content creation tutorials can encourage solution-focused storytelling, default platform metrics can track and highlight constructive engagement rather than just reach, and default recommendation systems can be designed to balance problem awareness with solution-finding initiatives. These mechanisms help shape a culture where sharing progress and celebrating small wins becomes as natural as identifying challenges.
 
-### 3. Purposeful
+### 3. Empowering
 
-In recent decades we saw the rise of the [attention economy](https://en.wikipedia.org/wiki/Attention_economy) where corporations compete to grab users attention at all costs. This provokes a profound disregard for users wants and needs with invasive and addictive design practices. This also has the effect of harming the public discourse by filling front pages with attention grabbing, anger and fear mongering content.
+Traditional platforms treat users as passive consumers of content and features, offering little control over their digital environment beyond superficial customization options. This creates learned helplessness where users accept whatever changes platforms impose, even when these changes work against their interests or needs. This problem is particularly visible in the [attention economy](https://en.wikipedia.org/wiki/Attention_economy) where corporations compete to grab users' attention at all costs, using invasive and addictive design practices with profound disregard for users' wants and needs.
 
-Purposeful means empowering users to shape their platform experience according to their own goals and values. This involves providing tools for self-reflection and usage insights. It means giving users ways to turn on or off potentially addictive patterns and help them maintain a healthy relationship with the online world.
+Empowering means trusting users' capacity to make informed choices about their digital lives. This is about interface customization , recommendation algorithms, content filtering, interaction metrics, and information presentation. Users should understand how these systems affect their behavior and have meaningful ways to adjust or replace them to align with their own purposes and values.
 
-This doesn't mean making the platform less engaging or removing features users enjoy. It means helping users understand their usage patterns and providing support when these patterns don't align with their intended purposes. The platform should remain attractive while giving users agency over how they engage with it.
+This isn't about overwhelming users with technical complexity, nor about removing helpful defaults or making the platform less engaging. Rather, it's about respecting users' autonomy and supporting their growth from passive consumers to active participants who understand and control their digital environment. The platform should make visible the mechanisms that guide behavior and provide tools to modify them according to personal values and goals.
 
-This principle guides platform design through: default usage dashboards can help users understand their patterns, community guidelines can encourage mindful engagement, default platform metrics can track alignment with personal and community goals rather than raw engagement, and potentially addictive features like infinite scroll can be swapped with voluntarily less satisfying options. These mechanisms help shape a culture where conscious technology use becomes as natural as casual browsing.
+This principle guides platform design through: transparent algorithms that users can understand and modify, usage dashboards that help users self-reflect, customizable metrics that align with personal values rather than engagement maximization, and settings to modify or disable potentially addictive features. These mechanisms help users reclaim agency over their online experience and maintain a healthy relationship with technology.
 
 ### 4. Expressive
 
@@ -79,12 +78,6 @@ Democratic organization means creating spaces where communities can effectively 
 This isn't about forcing every group to use the same democratic model. Rather, it's about making democratic organization more efficient and accessible than centralized control. Communities should be able to choose and evolve their governance structures while maintaining transparency and accountability to their members.
 
 This principle guides platform design through multiple channels: built-in tools for proposals and voting, structured discussion spaces for deliberation, transparent record-keeping of decisions and their rationales, and flexible permission systems that communities can adapt to their needs. These mechanisms help make collective decision-making as natural and efficient as individual action.
-
-### 6. Empowering
-
-Control over one's digital environment means having both the tools and the knowledge to use them effectively. This requires careful documentation, intuitive interfaces, and progressive disclosure of advanced features.
-
-Users should understand what's happening with their data and have meaningful choices about how to manage it.
 
 ### 7. Accessible
 
