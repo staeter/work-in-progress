@@ -108,9 +108,13 @@ Building trust through genuine collaboration with creators and users is key to e
 
 ### 8. Private
 
-Privacy means giving users real control over their data and communications. This requires both technical measures (like encryption) and clear interfaces that help users understand and manage their privacy.
+Traditional social platforms treat user data as a commodity to be exploited - selling it to advertisers, training AI models without consent, sharing it with third parties, and readily handing it over to state surveillance. This creates a situation where every interaction, every connection, and every piece of content becomes potential leverage against users, whether for commercial manipulation or state control. Even "private" messages and closed groups are ultimately accessible to platform owners and their partners.
 
-Defaults should protect privacy while making it easy to safely share when desired.
+Privacy means giving users genuine control over their data and communications. This extends beyond basic settings to fundamental control over where data is stored, who can access it, and how it's used. Users should understand what data they're generating, have meaningful choices about its storage and sharing, and trust that their private communications remain truly private through strong encryption and transparent security measures.
+
+This isn't about making all content completely private or preventing any form of sharing. Rather, it's about ensuring users have real control and understanding of their privacy choices. The platform should make it easy to share safely when desired while maintaining strong privacy by default and protecting users from accidental exposure.
+
+Strong encryption protects all communications by default, clear interfaces help users understand and control their privacy settings, they get to decide where to store their data, transparent documentation explains how data is stored and processed and granular sharing controls let users decide exactly what to share with whom. These mechanisms ensure users maintain genuine sovereignty over their data while making safe sharing straightforward when desired.
 
 ### 9. Resilient
 
