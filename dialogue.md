@@ -37,7 +37,7 @@ Being respectful means fostering an environment where people feel safe to expres
 
 This doesn't mean avoiding hard or violent topics, nor does it mean abolishing debate or disagreement. It simply means to make ones best effort to reach the other, try to understand their point of view and progress from there.
 
-This principle guides platform design through multiple channels: community guidelines and content creation tutorials can encourage empathetic communication, default platform metrics can track and highlight constructive interactions rather than inflammatory ones, default recommender systems can show diverse perspectives and default interface can prompt users to reconsider harmful messages before publishing. These mechanisms help shape a culture where seeking to understand others becomes as natural as expressing oneself.
+Community guidelines and content creation tutorials can encourage empathetic communication, default platform metrics can track and highlight constructive interactions rather than inflammatory ones, default recommender systems can show diverse perspectives and default interface can prompt users to reconsider harmful messages before publishing. These mechanisms help shape a culture where seeking to understand others becomes as natural as expressing oneself.
 
 ### 2. Optimistic
 
@@ -47,7 +47,7 @@ Building confidence in our collective ability to overcome current challenges mea
 
 This doesn't mean ignoring problems or promoting blind optimism. It simply means maintaining faith in human ingenuity and working towards concrete solutions. The platform should encourage content creators users stay informed about challenges while emphasizing where action can be taken and positive change happens or is being fought for.
 
-This principle guides platform design through multiple channels: community guidelines and content creation tutorials can encourage solution-focused storytelling, default platform metrics can track and highlight constructive engagement rather than just reach, and default recommendation systems can be designed to balance problem awareness with solution-finding initiatives. These mechanisms help shape a culture where sharing progress and celebrating small wins becomes as natural as identifying challenges.
+Community guidelines and content creation tutorials can encourage solution-focused storytelling, default platform metrics can track and highlight constructive engagement rather than just reach, and default recommendation systems can be designed to balance problem awareness with solution-finding initiatives. These mechanisms help shape a culture where sharing progress and celebrating small wins becomes as natural as identifying challenges.
 
 ### 3. Empowering
 
@@ -57,7 +57,7 @@ Empowering means trusting users' capacity to make informed choices about their d
 
 This isn't about overwhelming users with technical complexity, nor about removing helpful defaults or making the platform less engaging. Rather, it's about respecting users' autonomy and supporting their growth from passive consumers to active participants who understand and control their digital environment. The platform should make visible the mechanisms that guide behavior and provide tools to modify them according to personal values and goals.
 
-This principle guides platform design through: transparent algorithms that users can understand and modify, usage dashboards that help users self-reflect, customizable metrics that align with personal values rather than engagement maximization, and settings to modify or disable potentially addictive features. These mechanisms help users reclaim agency over their online experience and maintain a healthy relationship with technology.
+Transparent algorithms that users can understand and modify, usage dashboards that help users self-reflect, customizable metrics that align with personal values rather than engagement maximization, and settings to modify or disable potentially addictive features. These mechanisms help users reclaim agency over their online experience and maintain a healthy relationship with technology.
 
 ### 4. Expressive
 
@@ -77,7 +77,7 @@ Democratic organization means creating spaces where communities can effectively 
 
 This isn't about forcing every group to use the same democratic model. Rather, it's about making democratic organization more efficient and accessible than centralized control. Communities should be able to choose and evolve their governance structures while maintaining transparency and accountability to their members.
 
-This principle guides platform design through multiple channels: built-in tools for proposals and voting, structured discussion spaces for investigation and deliberation, transparent record-keeping of decisions and their rationales, and flexible permission systems that communities can adapt to their needs. These mechanisms help make collective decision-making as natural and efficient as individual action.
+Built-in tools for proposals and voting, structured discussion spaces for investigation and deliberation, transparent record-keeping of decisions and their rationales, and flexible permission systems that communities can adapt to their needs. These mechanisms help make collective decision-making as natural and efficient as individual action.
 
 ### 6. Accessible
 
@@ -94,7 +94,7 @@ Making a social platform truly accessible means considering every feature throug
 
 This isn't about dumbing down features or limiting capabilities. Rather, it's about thoughtful development thinking every functionality from the start to be nice to use for everyone.
 
-This principle guides platform design through multiple channels: responsive interfaces that work across device types, offline-first architecture that handles poor connectivity, built-in translation tools, context-sensitive help systems, and careful attention to accessibility standards. These mechanisms ensure that no one is excluded from participating in the platform's community.
+Responsive interfaces that work across device types, offline-first architecture that handles poor connectivity, built-in translation tools, context-sensitive help systems, and careful attention to accessibility standards. These mechanisms ensure that no one is excluded from participating in the platform's community.
 
 ### 7. Attractive
 
@@ -158,7 +158,7 @@ Transparency means users can understand how the platform works, from algorithms 
 
 This understanding enables meaningful user participation and control.
 
-### 16. Independence
+### 16. Independent
 
 Consistent governance ensures the platform stays true to its principles over time. This requires clear processes for decision-making, conflict resolution, and adaptation to new challenges.
 
