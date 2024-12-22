@@ -98,9 +98,13 @@ This principle guides platform design through multiple channels: responsive inte
 
 ### 7. Attractive
 
-Network effects are crucial for social platforms - they become more valuable as more people join. This means designing features that give people compelling reasons to join, stay engaged, and bring their communities.
+One of the internet's greatest achievements has been helping people maintain meaningful connections across time and distance - old friends finding each other again and families staying close despite living continents apart. But this only works when people can actually find each other. A social network needs to attract and retain enough users to make these connections possible, otherwise even the best features become meaningless in an empty space.
 
-This must be balanced with other principles - growth should come from genuine value, not dark patterns or artificial virality.
+Being attractive means designing features and mechanisms that give people genuine reasons to join and stay on the platform. This requires both understanding what brings real value to users' lives - whether that's reconnecting with old friends, finding communities that share their interests, or discovering new perspectives - and creating sustainable growth mechanisms that benefit both users and creators. The platform should grow through authentic utility, meaningful interactions, and positive feedback loops that align everyone's interests.
+
+This isn't about using dark patterns, artificial virality, or manipulative engagement tactics to drive growth. Rather, it's about creating genuine value that makes people want to join and stay. The platform should grow through word-of-mouth and demonstrated utility, not through exploiting psychological vulnerabilities or creating artificial urgency.
+
+Building trust through genuine collaboration with creators and users is key to enable the best advertisement there is: word of mouth. In order to get there we need to support creators and users success through community building tools and sustainable revenue models, and to foster a co-building relationship where their feedback shapes the platform's evolution. To reach new user bases platform-funded and crowdfunded exclusive content can attract new audiences and creators can introduce their communities to the platform through cross-platform content strategies.
 
 ### 8. Private
 
