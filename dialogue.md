@@ -23,7 +23,7 @@ Each principle corresponds to a specific idea and are thought not to overlap wit
 13. **Sustainable**: Ensure the platform's social and technical foundations remain viable and relevant across generational timescales.
 14. **Empirical**: Rigorously justify, study and stress test every feature to ensure alignment with the *core principles*.
 15. **Transparent**: Actively expose and explain all platform mechanisms, algorithmic systems, and community processes, enabling informed user participation and control.
-16. **Governance**: Organize platform governance and development in a way that ensures consistent adherence to the *core principles*.
+16. **Independent**: Organize platform governance and development in a way that ensures consistent adherence to the *core principles* and stay independent of states and corporations interests.
 
 ## Rationale
 
@@ -61,9 +61,9 @@ This principle guides platform design through: transparent algorithms that users
 
 ### 4. Expressive
 
-The world wide web brought an unprecedented ability for people to share ideas and knowledge across the world but - as the [platform economy](https://en.wikipedia.org/wiki/Platform_economy) grew - private corporation took control over our means of communication and entertainment. These platforms not only amplify already-popular voices while making it increasingly difficult for new or niche creators to reach and grow their audience, creating a self-reinforcing cycle of visibility inequality, but they also readily comply with state censorship demands, further limiting the diversity of voices and ideas that can be expressed online.
+The world wide web brought an unprecedented ability for people to share ideas and knowledge across the world but - as the [platform economy](https://en.wikipedia.org/wiki/Platform_economy) grew - private corporations took control over our means of communication and entertainment. These platforms not only amplify already-popular voices while making it increasingly difficult for new or niche creators to reach and grow their audience, creating a self-reinforcing cycle of visibility inequality, but they also readily comply with state censorship demands, further limiting the diversity of voices and ideas that can be expressed online.
 
-To follow the expressive principle means to provide diverse peoples ways to express, publish, share and sustain creative work. It includes hosting dissident voices. This involves supporting creators, making tools and resources that help them initiate their creative work, find their core audience and opening multiple paths to sustainable content creation. We recognize that different creators serve different valuable purposes - from specialized knowledge sharing to mass entertainment - and all deserve fair opportunities to find and grow their audience.
+To follow the expressive principle means to provide diverse peoples ways to express, publish, share and sustain creative work. It includes hosting dissident voices. This involves supporting creators, making tools and resources that help them initiate their creative work, find their core audience and open multiple paths to sustainable content creation.
 
 This isn't about limiting successful creators or forcing equality of outcomes. Rather, it means ensuring that success comes from genuine audience connection and content quality rather than algorithmic bias. The goal is to create multiple viable paths to sustainable content creation, where both niche creators serving specific communities and broadly popular voices can thrive.
 
@@ -73,19 +73,17 @@ In practice this comes down to handling various content formats (from text artic
 
 Traditional social platforms tend to concentrate power in the hands of platform owners and their algorithms, leaving users and communities with little say in how their spaces are governed. Even when platforms offer community moderation tools, these are often limited and can be overridden by corporate decisions driven by profit motives rather than community needs.
 
-Democratic organization means creating spaces where communities can effectively self-govern and make collective decisions. This requires not just voting mechanisms, but comprehensive tools for discussion, deliberation, consensus-building, and transparent decision-making. The platform must support various forms of democratic governance - from direct democracy to representative systems - while keeping processes clear and accessible to all participants.
+Democratic organization means creating spaces where communities can effectively self-govern and make collective decisions. This requires not just voting mechanisms, but comprehensive tools for discussion, investigation, deliberation, consensus-building, and transparent decision-making. The platform must support various forms of democratic governance - from direct democracy to representative systems - while keeping processes clear and accessible to all participants.
 
 This isn't about forcing every group to use the same democratic model. Rather, it's about making democratic organization more efficient and accessible than centralized control. Communities should be able to choose and evolve their governance structures while maintaining transparency and accountability to their members.
 
-This principle guides platform design through multiple channels: built-in tools for proposals and voting, structured discussion spaces for deliberation, transparent record-keeping of decisions and their rationales, and flexible permission systems that communities can adapt to their needs. These mechanisms help make collective decision-making as natural and efficient as individual action.
+This principle guides platform design through multiple channels: built-in tools for proposals and voting, structured discussion spaces for investigation and deliberation, transparent record-keeping of decisions and their rationales, and flexible permission systems that communities can adapt to their needs. These mechanisms help make collective decision-making as natural and efficient as individual action.
 
 ### 6. Accessible
 
--- todo: improve writing style but the content is there
+Large segments of the population are excluded of the online discourse through various barriers: expensive devices or data plans, complex interfaces that assume technical literacy, designs that don't work with assistive technologies, content available only in majority languages, poor internet access or non [net neutral](https://en.wikipedia.org/wiki/Net_neutrality) internet providers. This creates digital divides that reinforce existing social inequalities and limit the internet's potential for inclusive dialogue and collective action.
 
-Traditional digital platforms often exclude large segments of the population through various barriers: expensive devices or data plans, complex interfaces that assume technical literacy, designs that don't work with assistive technologies, content available only in majority languages, or features that require high-speed internet connections. This creates digital divides that reinforce existing social inequalities and limit the platform's potential for inclusive dialogue and collective action.
-
-Making a platform truly accessible means considering every feature through multiple lenses:
+Making a social platform truly accessible means considering every feature through multiple lenses:
 
 - Technical: Works on low-end devices and slow/intermittent connections
 - Economic: Free to use with minimal hardware requirements
@@ -94,9 +92,9 @@ Making a platform truly accessible means considering every feature through multi
 - Linguistic: Available in multiple languages with clear paths for community translation
 - Educational: Usable regardless of technical literacy or formal education level
 
-This isn't about dumbing down features or limiting capabilities for advanced users. Rather, it's about thoughtful progressive enhancement where core functionality remains available to everyone while additional features gracefully adapt to available resources and capabilities. The platform should provide multiple ways to accomplish tasks, with clear documentation and help systems that accommodate different learning styles and backgrounds.
+This isn't about dumbing down features or limiting capabilities. Rather, it's about thoughtful development thinking every functionality from the start to be nice to use for everyone.
 
-This principle guides platform design through multiple channels: responsive interfaces that work across device types, offline-first architecture that handles poor connectivity, built-in translation tools, context-sensitive help systems, and careful attention to accessibility standards. These mechanisms ensure that no one is unnecessarily excluded from participating in the platform's community and benefits.
+This principle guides platform design through multiple channels: responsive interfaces that work across device types, offline-first architecture that handles poor connectivity, built-in translation tools, context-sensitive help systems, and careful attention to accessibility standards. These mechanisms ensure that no one is excluded from participating in the platform's community.
 
 ### 7. Attractive
 
@@ -152,7 +150,7 @@ Transparency means users can understand how the platform works, from algorithms 
 
 This understanding enables meaningful user participation and control.
 
-### 16. Governance
+### 16. Independence
 
 Consistent governance ensures the platform stays true to its principles over time. This requires clear processes for decision-making, conflict resolution, and adaptation to new challenges.
 
