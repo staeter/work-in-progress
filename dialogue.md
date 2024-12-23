@@ -8,7 +8,7 @@ Some of these core principles might be idealistic, unreachable or even a bit vag
 
 Each principle corresponds to a specific idea and are thought not to overlap with others. The principles 1-2 are philosophical, 3-7 social, 8-12 technical and 13-16 methodological. Apart from these groupings, they are sorted in no particular order. The numbers are only there for referencing sake.
 
-1. **Respectful**: Foster goodwill, empathy, openness and constructive communication.
+1. **Humanizing**: Foster goodwill, empathy, openness and constructive communication.
 2. **Optimistic**: Build confidence in our collective ability to overcome current challenges and shape better futures through human ingenuity.
 3. **Empowering**: Entrust people with control over their digital environment and support them with appropriate tools.
 4. **Expressive**: Provide spaces for creative expression and knowledge sharing and embrace diverse voices and experiences.
@@ -29,11 +29,11 @@ Each principle corresponds to a specific idea and are thought not to overlap wit
 
 In this section we detail every principle, we express its underlying rationale, what it is, what it isn't and some practical implications.
 
-### 1. Respectful
+### 1. Humanizing
 
-Divide and conquer is an infamous method of ruling and the individualism that is built in the heart of our society helps enormously with that task. Its easy to make people fight one an other based on whichever difference exist between them. We want to build bridges and have spaces for people to dialogue with one an other.
+When we interact online, we tend to forget that there are human beings on the other side of the screen. This distance makes it easier to ignore others' humanity, leading to behaviors we would rarely engage in face-to-face: going from simple carelessness to harassment and public shaming. These toxic behaviors isolates peoples, encourages stale interactions and deepens social divisions. We want to build bridges and have spaces for people to dialogue with one another.
 
-Being respectful means fostering an environment where people feel safe to express themselves and engage with others constructively. This goes beyond basic politeness - it requires actively designing systems that encourage empathy, mutual understanding, and good faith communication.
+Humanizing means fostering an environment where people feel safe to express themselves and engage with others constructively. This goes beyond basic politeness - it requires actively designing systems that encourage empathy, mutual understanding, and good faith communication.
 
 This doesn't mean avoiding hard or violent topics, nor does it mean abolishing debate or disagreement. It simply means to make ones best effort to reach the other, try to understand their point of view and progress from there.
 
@@ -134,7 +134,7 @@ This principle guides both technical architecture and governance structures.
 
 ### 12. Modular
 
-No platform is neutral. Its design constrains what gets expressed and its algorithms serves as an editorial line. Every medium has implicitly or explicitly stated goals and philosophies. We stated those in the *respectful*, *optimistic*, *purposeful* and *democratic* principles. As much as the dev team strives for those goals we also do not believe they will always get it right nor adapted to every single specific case.
+No platform is neutral. Its design constrains what gets expressed and its algorithms serves as an editorial line. Every medium has implicitly or explicitly stated goals and philosophies. We stated those in the *humanizing*, *optimistic*, *purposeful* and *democratic* principles. As much as the dev team strives for those goals we also do not believe they will always get it right nor adapted to every single specific case.
 
 Modularity enables community-driven development while maintaining security. This requires careful API design and sandboxing to allow customization without compromising the platform's integrity.
 
@@ -183,7 +183,7 @@ The platform's name has to:
 
 - This is the current chosen name
 - Pros:
-  - Reflects the *respectful*, *expressive*, *collaborative* and *democratic* principles
+  - Reflects the *humanizing*, *expressive*, *collaborative* and *democratic* principles
   - Is easy to pronounce and has the same meaning in many languages
   - There is a clear social aspect making it sensible to label a social network
 - Cons:
