@@ -118,7 +118,11 @@ Strong encryption protects all communications by default, clear interfaces help 
 
 ### 9. Resilient
 
-Resilience means the platform keeps working even under adverse conditions - from network issues to active attempts at censorship. This requires careful distributed systems design and robust fallback mechanisms.
+Traditional social platforms are vulnerable to disruption - whether from technical failures, corporate decisions, or state intervention. A single point of failure in their centralized infrastructure can cut off millions of users from their communities and communications. More concerning still, authoritarian governments can easily pressure these platforms to censor content, block access, or hand over user data, effectively silencing entire populations with a single decision.
+
+Being resilient means ensuring the platform keeps working even under adverse conditions. This requires both technical and social resilience - from maintaining basic functionality during network outages to preserving community connections during targeted disruption attempts. The platform should be able to adapt and recover from failures, route around censorship, and maintain essential services even when parts of the system are compromised or blocked.
+
+Build the app as [local-first software](https://www.inkandswitch.com/local-first/), communicate between devices using [disruption-tolerant networking](https://en.wikipedia.org/wiki/Delay-tolerant_networking) and use [cooperative storage](https://en.wikipedia.org/wiki/Cooperative_storage_cloud) for long term storage. These mechanisms ensure communities can stay connected and functional even when facing technical or political disruption.
 
 ### 10. Safe
 
