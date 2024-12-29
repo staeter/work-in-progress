@@ -125,9 +125,11 @@ Build the app's communications as a trustless peer to peer distributed system wi
 
 ### 10. Safe
 
-Safety requires protecting users from both technical and social threats. This means secure systems, clear community standards, and tools for managing unwanted contact or content.
+In many parts of the world, expressing certain views or identities online can lead to real-world persecution. Journalists, whistle-blowers, activists, minorities, and ordinary peoples face harassment, job loss, imprisonment, or worse when their online activities are traced back to them. Traditional platforms not only fail to protect vulnerable users, but often actively cooperate with oppressive entities by providing user data or implementing automated surveillance systems that can be weaponized against their users.
 
-This is especially crucial for users in repressive environments who need protection from surveillance and retaliation.
+Being safe means ensuring users can communicate without fear of identification or retribution, particularly in repressive environments. This requires strong online anonymity and untraceability, protections against online harassment and exposure as well as undetectability by [network sniffing](https://en.wikipedia.org/wiki/Sniffing_attack) and [spyware](https://en.wikipedia.org/wiki/Spyware). The platform should provide tools and practices that help users maintain their safety while still enabling meaningful participation in their communities.
+
+Strong anonymity by default protect user identities, content warnings and filtering tools help users avoid unwanted exposure, reporting mechanisms enable communities to protect themselves against harassment and safety documentation helps users understand risks and best practices. The platform's security has to be heavily tested and be impervious against spoofing attacks. Ideally the app should also be [polymorphic](https://en.wikipedia.org/wiki/Polymorphic_code) to avoid detection by spyware and it should be able to disguise its communications in order to be unrecognizable by anyone tapping the network.
 
 ### 11. Modular
 
