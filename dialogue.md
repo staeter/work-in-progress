@@ -1,12 +1,10 @@
 # Dialogue
 
-This document is a first attempt at defining the requirements of Dialogue, a social network for the future of humanity. We states our goals and build toward an extensive list of requirements.
+This document is a first attempt at defining the requirements of Dialogue, a new platform redefining the role of online social networks. We states our goals and build toward an extensive list of requirements.
 
 ## Core Principles
 
-Some of these core principles might be idealistic, unreachable or even a bit vague but they serve as a north star. Every requirement and every feature has to be justified and can be debated relative to these principles.
-
-Each principle corresponds to a specific idea and are thought not to overlap with others. The principles 1-2 are philosophical, 3-7 social, 8-12 technical and 13-16 methodological. Apart from these groupings, they are sorted in no particular order. The numbers are only there for referencing sake.
+These core principles serve as a north star, every requirement and every feature has to be justified and can be debated relative to these principles.
 
 1. **Humanizing**: Foster goodwill, empathy, openness and constructive communication.
 2. **Optimistic**: Build confidence in our collective ability to overcome current challenges and shape better futures through human ingenuity.
@@ -18,12 +16,13 @@ Each principle corresponds to a specific idea and are thought not to overlap wit
 8. **Private**: Guarantee personal data sovereignty and communication confidentiality.
 9. **Resilient**: Maintain platform availability even under state-level interdiction.
 10. **Safe**: Ensure users can communicate without fear of identification or retribution even in repressive environments.
-11. **Distributed**: Share computing and storage resources across devices to minimize environmental impact and ensure network independence.
-12. **Modular**: Support community-driven development with a secure framework making every interface and algorithm customizable.
+11. **Modular**: Support community-driven development with a secure framework making every interface and algorithm customizable.
+12. **Independent**: Organize platform architecture and governance in a way that ensures independence from state and corporate interests in order to stay true to the *core principles*.
 13. **Sustainable**: Ensure the platform's social and technical foundations remain viable and relevant across generational timescales.
 14. **Empirical**: Rigorously justify, study and stress test every feature to ensure alignment with the *core principles*.
 15. **Transparent**: Actively expose and explain all platform mechanisms, algorithmic systems, and community processes, enabling informed user participation and control.
-16. **Independent**: Organize platform governance and development in a way that ensures consistent adherence to the *core principles* and stay independent of states and corporations interests.
+
+Each principle corresponds to a specific idea and are thought not to overlap with others. The principles 1-2 are philosophical, 3-7 social, 8-11 technical and 12-15 methodological. Apart from these groupings, they are sorted in no particular order. The numbers are only there for referencing sake.
 
 ## Rationale
 
@@ -98,7 +97,7 @@ Responsive interfaces that work across device types, offline-first architecture 
 
 ### 7. Attractive
 
-One of the internet's greatest achievements has been helping people maintain meaningful connections across time and distance - old friends finding each other again and families staying close despite living continents apart. But this only works when people can actually find each other. A social network needs to attract and retain enough users to make these connections possible, otherwise even the best features become meaningless in an empty space.
+One of the internet's greatest achievements has been helping people maintain meaningful connections across time and distance - old friends finding each other again and families staying close despite living continents apart. But this only works when people can actually find each other on a platform. A social network needs to attract and retain enough users to make these connections possible, otherwise even the best features become meaningless in an empty space.
 
 Being attractive means designing features and mechanisms that give people genuine reasons to join and stay on the platform. This requires both understanding what brings real value to users' lives - whether that's reconnecting with old friends, finding communities that share their interests, or discovering new perspectives - and creating sustainable growth mechanisms that benefit both users and creators. The platform should grow through authentic utility, meaningful interactions, and positive feedback loops that align everyone's interests.
 
@@ -118,11 +117,11 @@ Strong encryption protects all communications by default, clear interfaces help 
 
 ### 9. Resilient
 
-Traditional social platforms are vulnerable to disruption - whether from technical failures, corporate decisions, or state intervention. A single point of failure in their centralized infrastructure can cut off millions of users from their communities and communications. More concerning still, authoritarian governments can easily pressure these platforms to censor content, block access, or hand over user data, effectively silencing entire populations with a single decision.
+Traditional social platforms are vulnerable to disruption - whether from technical failures, corporate decisions, or state intervention. A single point of failure in their centralized infrastructure can cut off millions of users from their communities. More concerning still, governments can easily pressure these platforms to censor content, block access, or hand over user data, effectively silencing entire populations with a single decision.
 
-Being resilient means ensuring the platform keeps working even under adverse conditions. This requires both technical and social resilience - from maintaining basic functionality during network outages to preserving community connections during targeted disruption attempts. The platform should be able to adapt and recover from failures, route around censorship, and maintain essential services even when parts of the system are compromised or blocked.
+Being resilient means ensuring the platform keeps working even under adverse conditions. This requires both technical and social resilience - from maintaining basic functionality during network outages to preserving the platform's governance during targeted disruption attempts. The platform should be able to adapt and recover from failures, help users route around censorship, and maintain essential services even when parts of the network are compromised or blocked.
 
-Build the app as [local-first software](https://www.inkandswitch.com/local-first/), communicate between devices using [disruption-tolerant networking](https://en.wikipedia.org/wiki/Delay-tolerant_networking) and use [cooperative storage](https://en.wikipedia.org/wiki/Cooperative_storage_cloud) for long term storage. These mechanisms ensure communities can stay connected and functional even when facing technical or political disruption.
+Build the app's communications as a trustless peer to peer distributed system with no cental node. Follow the best practices in [disruption-tolerant networking](https://en.wikipedia.org/wiki/Delay-tolerant_networking). Structure data as [conflict-free replicated data type](https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type) and propose [cooperative storage](https://en.wikipedia.org/wiki/Cooperative_storage_cloud) to duplicate data across users' devices. Keep the interfaces as functional as possible even without network access. This principle also has implications for the platform's governance. The core developers' team should be organized with resilience in mind as its members might be pressured or even be missing.
 
 ### 10. Safe
 
@@ -130,19 +129,31 @@ Safety requires protecting users from both technical and social threats. This me
 
 This is especially crucial for users in repressive environments who need protection from surveillance and retaliation.
 
-### 11. Distributed
-
-Distribution of resources helps ensure both technical resilience and environmental sustainability. This means designing systems that efficiently share computing and storage loads across the network.
-
-This principle guides both technical architecture and governance structures.
-
-### 12. Modular
+### 11. Modular
 
 No platform is neutral. Its design constrains what gets expressed and its algorithms serves as an editorial line. Every medium has implicitly or explicitly stated goals and philosophies. We stated those in the *humanizing*, *optimistic*, *purposeful* and *democratic* principles. As much as the dev team strives for those goals we also do not believe they will always get it right nor adapted to every single specific case.
 
 Modularity enables community-driven development while maintaining security. This requires careful API design and sandboxing to allow customization without compromising the platform's integrity.
 
 This principle supports both technical extensibility and social adaptability.
+
+### 12. Independent
+
+Distribution of resources helps ensure both technical resilience and environmental sustainability. This means designing systems that efficiently share computing and storage loads across the network.
+
+This principle guides both technical architecture and governance structures.
+
+Consistent governance ensures the platform stays true to its principles over time. This requires clear processes for decision-making, conflict resolution, and adaptation to new challenges.
+
+This principle guides both technical and community management structures.
+
+The dev team are the initiators of the platform's culture. They have to be the prime examples of its principles and their behavior towards the rest of the community has to reflect that.
+
+Both in the architecture and the governance Dialogue has to stay independent from corporate and state interests in order to fulfil the other core principles.
+
+In terms of architecture this means the use of [cooperative storage](https://en.wikipedia.org/wiki/Cooperative_storage_cloud) and [distributed artificial intelligence](https://en.wikipedia.org/wiki/Distributed_artificial_intelligence)
+
+Stay independent from the profit motive. Money is a tool needed to build the platform, it should never be confused with its goal.
 
 ### 13. Sustainable
 
@@ -161,14 +172,6 @@ This principle keeps development grounded in reality rather than assumptions.
 Transparency means users can understand how the platform works, from algorithms to governance. This requires clear documentation, open source code, and explicit explanation of automated systems.
 
 This understanding enables meaningful user participation and control.
-
-### 16. Independent
-
-Consistent governance ensures the platform stays true to its principles over time. This requires clear processes for decision-making, conflict resolution, and adaptation to new challenges.
-
-This principle guides both technical and community management structures.
-
-The dev team are the initiators of the platform's culture. They have to be the prime examples of its principles and their behavior towards the rest of the community has to reflect that.
 
 ## Requirements and Justifications
 

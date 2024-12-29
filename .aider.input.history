@@ -669,3 +669,19 @@
 
 # 2024-12-23 22:29:26.299396
 +/ask ok none of those. Lets skip this paragraph and write the practical implications of the resilient principle
+
+# 2024-12-28 11:31:57.639216
++/ask Here is what I have for the resilient principle "Traditional social platforms are vulnerable to disruption - whether from technical failures, corporate decisions, or state intervention. A single point of failure in their centralized infrastructure can cut off millions of users from their communities. More concerning still, governments can easily pressure these platforms to censor content, block access, or hand over user data, effectively silencing entire populations with a single decision.
++
++Being resilient means ensuring the platform keeps working even under adverse conditions. This requires both technical and social resilience - from maintaining basic functionality during network outages to preserving the platform's governance during targeted disruption attempts. The platform should be able to adapt and recover from failures, help users route around censorship, and maintain essential services even when parts of the network are compromised or blocked.
++
++Build the app as [local-first software](https://www.inkandswitch.com/local-first/) and communicate between devices using [disruption-tolerant networking](https://en.wikipedia.org/wiki/Delay-tolerant_networking). These mechanisms ensure communities can stay connected and functional even when facing technical or political disruption." The last paragraph seems a bit handwaivy. Please read the links and only rewrite the last paragraph
+
+# 2024-12-28 11:32:02.803922
++y
+
+# 2024-12-28 11:35:18.032034
++yy
+
+# 2024-12-28 11:35:21.542325
++y
