@@ -54,7 +54,7 @@ Traditional platforms treat users as passive consumers of content and features, 
 
 Empowering means trusting users' capacity to make informed choices about their digital lives. This is about interface customization, recommendation algorithms, content filtering, interaction metrics, and information presentation. Users should understand how these systems affect their behavior and have meaningful ways to adjust or replace them to align with their own purposes and values.
 
-This isn't about overwhelming users with technical complexity, nor about removing helpful defaults or making the platform less engaging. Rather, it's about respecting users' autonomy and supporting their growth from passive consumers to active participants who understand and control their digital environment. The platform should make visible the mechanisms that guide behavior and provide tools to modify them according to personal values and goals.
+This principle is about respecting users' autonomy and supporting their growth from passive consumers to active participants who understand and control their digital environment. The platform should make visible the mechanisms that guide behavior and provide tools to modify them according to personal values and goals.
 
 Transparent algorithms that users can understand and modify, usage dashboards that help users self-reflect, customizable metrics that align with personal values rather than engagement maximization, and settings to modify or disable potentially addictive features. These mechanisms help users reclaim agency over their online experience and maintain a healthy relationship with technology.
 
@@ -74,7 +74,7 @@ Traditional social platforms tend to concentrate power in the hands of platform 
 
 Democratic organization means creating spaces where communities can effectively self-govern and make collective decisions. This requires not just voting mechanisms, but comprehensive tools for discussion, investigation, deliberation, consensus-building, and transparent decision-making. The platform must support various forms of democratic governance - from direct democracy to representative systems - while keeping processes clear and accessible to all participants.
 
-This isn't about forcing every group to use the same democratic model. Rather, it's about making democratic organization more efficient and accessible than centralized control. Communities should be able to choose and evolve their governance structures while maintaining transparency and accountability to their members.
+The democratic principle isn't about forcing every group to use the same democratic model. Rather, it's about making democratic organization more efficient and accessible than centralized control. Communities should be able to choose and evolve their governance structures while maintaining transparency and accountability to their members.
 
 Built-in tools for proposals and voting, structured discussion spaces for investigation and deliberation, transparent record-keeping of decisions and their rationales, and flexible permission systems that communities can adapt to their needs. These mechanisms help make collective decision-making as natural and efficient as individual action.
 
@@ -91,7 +91,7 @@ Making a social platform truly accessible means considering every feature throug
 - Linguistic: Available in multiple languages with clear paths for community translation
 - Educational: Usable regardless of technical literacy or formal education level
 
-This isn't about dumbing down features or limiting capabilities. Rather, it's about thoughtful development thinking every functionality from the start to be nice to use for everyone.
+Being accessible is about thoughtful development. We have to think every functionality from the start to be nice and easy to use for everyone.
 
 Responsive interfaces that work across device types, offline-first architecture that handles poor connectivity, built-in translation tools, context-sensitive help systems, and careful attention to accessibility standards. These mechanisms ensure that no one is excluded from participating in the platform's community.
 
@@ -101,7 +101,7 @@ One of the internet's greatest achievements has been helping people maintain mea
 
 Being attractive means designing features and mechanisms that give people genuine reasons to join and stay on the platform. This requires both understanding what brings real value to users' lives - whether that's reconnecting with old friends, finding communities that share their interests, or discovering new perspectives - and creating sustainable growth mechanisms that benefit both users and creators. The platform should grow through authentic utility, meaningful interactions, and positive feedback loops that align everyone's interests.
 
-This isn't about using dark patterns, artificial virality, or manipulative engagement tactics to drive growth. Rather, it's about creating genuine value that makes people want to join and stay. The platform should grow through word-of-mouth and demonstrated utility, not through exploiting psychological vulnerabilities or creating artificial urgency.
+We want to avoid using dark patterns, artificial virality, or manipulative engagement tactics to drive growth. Rather, being attractive is about creating genuine value that makes people want to join and stay. The platform should grow through word-of-mouth and demonstrated utility, not through exploiting psychological vulnerabilities or creating artificial urgency.
 
 Building trust through genuine collaboration with creators and users is key to enable the best advertisement there is: word of mouth. In order to get there we need to support creators and users success through community building tools and sustainable revenue models, and to foster a co-building relationship where their feedback shapes the platform's evolution. To reach new user bases platform-funded and crowdfunded exclusive content can attract new audiences and creators can introduce their communities to the platform through cross-platform content strategies.
 
@@ -111,7 +111,7 @@ Traditional social platforms treat user data as a commodity to be exploited - se
 
 Privacy means giving users genuine control over their data and communications. This extends beyond basic settings to fundamental control over where data is stored, who can access it, and how it's used. Users should understand what data they're generating, have meaningful choices about its storage and sharing, and trust that their private communications remain truly private through strong encryption and transparent security measures.
 
-This isn't about making all content completely private or preventing any form of sharing. Rather, it's about ensuring users have real control and understanding of their privacy choices. The platform should make it easy to share safely when desired while maintaining strong privacy by default and protecting users from accidental exposure.
+The aim isn't for all content to be completely private. Rather, it's about ensuring users have real control and understanding of who gets access to which piece of data. The platform should make it easy to share safely when desired while maintaining strong privacy by default and protecting users from accidental exposure.
 
 Strong encryption protects all communications by default, clear interfaces help users understand and control their privacy settings, they get to decide where to store their data, transparent documentation explains how data is stored and processed and granular sharing controls let users decide exactly what to share with whom. These mechanisms ensure users maintain genuine sovereignty over their data while making safe sharing straightforward when desired.
 
