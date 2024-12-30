@@ -697,3 +697,27 @@
 
 # 2024-12-29 09:17:51.066630
 +/ask Ok we're gonna skip this paragraph. Lets write the last one. List concrete things that can be done by the platform in order to implement this principle
+
+# 2024-12-29 12:57:55.401243
++/ask Lets go over the modular principle. Write the first paragraph contextualizing the principle.
+
+# 2024-12-29 13:08:29.817257
++/ask Ok now the second paragraph on what the modular principle means
+
+# 2024-12-29 13:27:38.078146
++/ask next paragraph on what the modular principle isn't
+
+# 2024-12-29 13:28:23.624850
++/ask still not the right content
+
+# 2024-12-30 10:13:28.075325
++/ask Ok I got this piece of text "Modularity enables community-driven development without compromising the other *core principles*. It requires careful API design and sandboxing to allow customization without compromising the platform's values. This principle doesn't cover the whole codebase as the program's protocols and architecture have to stay unified but it should cover all things that have an impact on the way users interact with one an other. From recommendation algorithms to interface layouts, from content moderation tools to interaction metrics, communities should be able to adapt or replace components to match their specific needs and values." but I don't like its structure. List its essencial ideas and write it anew to see if you can do better
+
+# 2024-12-30 10:24:41.910858
++/ask lets write the last paragraph on the practical implications of the modular principle. There is an idea I want to find there that hasn't been stated yet which is that we need a space where packages are shared and discussed openly and that that space might also serve to build up the core platform as some packages get very successful they might be integreted as defaults.
+
+# 2024-12-30 10:26:05.069393
++/ask you always start with "This principle guides platform design through multiple channels: " please provide some variation in your phrasing
+
+# 2024-12-30 10:27:21.895023
++/ask first rewrite the modular one you just proposed we'll see for the others later on

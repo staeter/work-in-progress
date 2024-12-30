@@ -22,7 +22,7 @@ These core principles serve as a north star, every requirement and every feature
 14. **Empirical**: Rigorously justify, study and stress test every feature to ensure alignment with the *core principles*.
 15. **Transparent**: Actively expose and explain all platform mechanisms, algorithmic systems, and community processes, enabling informed user participation and control.
 
-Each principle corresponds to a specific idea and are thought not to overlap with others. The principles 1-2 are philosophical, 3-7 social, 8-11 technical and 12-15 methodological. Apart from these groupings, they are sorted in no particular order. The numbers are only there for referencing sake.
+Each principle corresponds to a specific idea and are thought not to overlap with others. The principles 1-3 are philosophical, 4-7 social, 8-11 technical and 12-15 methodological. Apart from these groupings, they are sorted in no particular order. The numbers are only there for referencing sake.
 
 ## Rationale
 
@@ -133,11 +133,11 @@ Strong anonymity by default protect user identities, content warnings and filter
 
 ### 11. Modular
 
-No platform is neutral. Its design constrains what gets expressed and its algorithms serves as an editorial line. Every medium has implicitly or explicitly stated goals and philosophies. We stated those in the *humanizing*, *optimistic*, *purposeful* and *democratic* principles. As much as the dev team strives for those goals we also do not believe they will always get it right nor adapted to every single specific case.
+No platform is neutral - its design inherently shapes what gets expressed and how people interact. From recommendation algorithms that determine what content gets seen, to interface choices that guide behavior, to moderation systems that define acceptable speech - every technical choice embodies specific values and priorities. While we strive to align these choices with our *core principles*, we recognize that no single implementation can serve all communities' needs or adapt to every contexts.
 
-Modularity enables community-driven development while maintaining security. This requires careful API design and sandboxing to allow customization without compromising the platform's integrity.
+Modularity enables communities to adapt how they interact with the platform while maintaining its fundamental integrity. Through carefully designed APIs and secure sandboxing, communities can customize their experience - from recommendation algorithms to interface layouts, from moderation tools to interaction metrics - all while the platform's core architecture and protocols remain unified and secure. This allows each community to shape their environment according to their specific needs and values without compromising the platform's other *core principles* (with the exception of the three philosophical principles which only relate to default options).
 
-This principle supports both technical extensibility and social adaptability.
+The platform realizes this principle through secure APIs for safe extension development, sandboxed environments that protect core functionality and a dedicated space where communities share and discuss their custom packages. As extensions prove their value through widespread adoption and community vetting, they can be considered for integration into the platform's default offering, creating a pathway for community-driven evolution of the core platform itself.
 
 ### 12. Independent
 
