@@ -26,7 +26,7 @@ Each principle corresponds to a specific idea and are thought not to overlap wit
 
 ## Rationale
 
-In this section we detail every principle, we express its underlying rationale, what it is, what it isn't and some practical implications.
+In this section we detail every principle, we express its underlying rationale, what it is, what it isn't and some practical implications. The important part here is to convey Dialogue's general intent.
 
 ### 1. Humanizing
 
@@ -36,7 +36,7 @@ Humanizing means fostering an environment where people feel safe to express them
 
 This doesn't mean avoiding hard or violent topics, nor does it mean abolishing debate or disagreement. It simply means to make ones best effort to reach the other, try to understand their point of view and progress from there.
 
-Community guidelines and content creation tutorials can encourage empathetic communication, default platform metrics can track and highlight constructive interactions rather than inflammatory ones, default recommender systems can show diverse perspectives and default interface can prompt users to reconsider harmful messages before publishing. These mechanisms help shape a culture where seeking to understand others becomes as natural as expressing oneself.
+Community guidelines and content creation tutorials can encourage empathetic communication, default platform metrics can track and highlight constructive interactions rather than inflammatory ones, default recommender systems can show diverse perspectives to break information bubbles and default interfaces can prompt users to reconsider harmful messages before publishing. These mechanisms help shape a culture where seeking to understand others becomes as natural as expressing oneself.
 
 ### 2. Optimistic
 
@@ -76,7 +76,7 @@ Democratic organization means creating spaces where communities can effectively 
 
 The democratic principle isn't about forcing every group to use the same democratic model. Rather, it's about making democratic organization more efficient and accessible than centralized control. Communities should be able to choose and evolve their governance structures while maintaining transparency and accountability to their members.
 
-Built-in tools for proposals and voting, structured discussion spaces for investigation and deliberation, transparent record-keeping of decisions and their rationales, and flexible permission systems that communities can adapt to their needs. These mechanisms help make collective decision-making as natural and efficient as individual action.
+Built-in tools for proposals and voting, structured discussion spaces for investigation and deliberation, tools for collaborative work, transparent record-keeping of decisions and their rationales, and flexible permission systems that communities can adapt to their needs. These mechanisms help make collective decision-making and organizing as fast and more efficient as centralized systems.
 
 ### 6. Accessible
 
@@ -85,10 +85,10 @@ Large segments of the population are excluded of the online discourse through va
 Making a social platform truly accessible means considering every feature through multiple lenses:
 
 - Technical: Works on low-end devices and slow/intermittent connections
-- Economic: Free to use with minimal hardware requirements
+- Economical: Free to use with minimal hardware requirements
 - Cultural: Respects and accommodates different cultural norms and practices
 - Physical: Compatible with assistive technologies and follows accessibility standards
-- Linguistic: Available in multiple languages with clear paths for community translation
+- Linguistical: Available in multiple languages with clear paths for community translation
 - Educational: Usable regardless of technical literacy or formal education level
 
 Being accessible is about thoughtful development. We have to think every functionality from the start to be nice and easy to use for everyone.
@@ -281,6 +281,41 @@ Real human social networks tend to be densely interconnected, whereas bot accoun
 An organization can then use this network to validate identity. It could only consider votes entered by accounts with multiple trust connections to other members for instance.
 
 -- Look at [web of trust](https://en.wikipedia.org/wiki/Web_of_trust).
+
+### Governance
+
+Governance might be the most difficult challenge of all. We have to take it very seriously as this is the deciding factor on weather the platform keeps upholding its *core principles* or weather it ends up steering in an unfavorable direction.
+
+The governance of the platform must:
+
+- Prevent state or corporate interests infiltrating the deciding bodies (*independent*)
+- Reject opportunistic people from important roles to keep the platform on track with its *core principles*
+- Keep the development process going even under state level interdiction and repression (*resilient*)
+- Decision are taken publicly and have to be justified relative to the *core principles* (*transparent*)
+- Functioning and decisions have to absolutely avoid unnecessary complexity and be comprehensible to non experts (*accessible*)
+- Rigorously test and observe the outcomes of each decision (*empirical*)
+- Able to quickly adapt to fix pressing issues (*sustainable*)
+- Embodies the *humanistic* and *optimistic* principles
+- Is under the control of involved users but also defend the interests of users that aren't able to involve themselves in the same way (*democratic*)
+- Changes to the core principles have to be difficult enough for the project not to stere off course and easy enough for them not to become obsolete (*sustainable*)
+
+#### Benevolent Dictatorship
+
+- As the project is in its very infancy, this is the current mode of governance.
+- Pros:
+  - Decisions are taken quickly
+  - Will follow the intent of the person who initiated the project
+- Cons:
+  - Simple to pressure a single person
+  - Isn't impervious to bus accidents
+  - Biased by the leader's socio-economic status
+
+#### Open Democracy
+
+- Cons:
+  - Very hard to avoid [Sybil attacks](https://en.wikipedia.org/wiki/Sybil_attack)
+  - Not implicated users are very likely to take poorly informed decisions
+  - Organized interest groups might have oversized weight
 
 ## Notes
 
