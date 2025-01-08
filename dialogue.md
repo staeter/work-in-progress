@@ -79,7 +79,7 @@ This isn't about creating a centralized truth authority or enforcing a single pe
 
 The platform realizes this principle through several complementary mechanisms. For gathering and verifying information, it provides geotagged and timestamped content that can be cross-referenced between witnesses, along with collaborative investigation tools to connect related pieces of evidence. For ensuring coverage quality, reputation systems track journalistic integrity while a suite of tools helps balance coverage priorities: statistical comparisons show how coverage frequency matches real-world occurrence, impact assessment tools measure the scope and duration of effects, communities can define and weight different impact factors, and contextual presentation highlights trends rather than isolated incidents. Together, these mechanisms support rigorous collective journalism that reflects real-world significance rather than entertainment value.
 
-### 5. Democratic
+### 6. Democratic
 
 Traditional social platforms tend to concentrate power in the hands of platform owners and their algorithms, leaving users and communities with little say in how their spaces are governed. Even when platforms offer community moderation tools, these are often limited and can be overridden by corporate decisions driven by profit motives rather than community needs.
 
@@ -89,7 +89,7 @@ The democratic principle isn't about forcing every group to use the same democra
 
 Built-in tools for proposals and voting, structured discussion spaces for investigation and deliberation, tools for collaborative work, transparent record-keeping of decisions and their rationales, and flexible permission systems that communities can adapt to their needs. These mechanisms help make collective decision-making and organizing as fast and more efficient as centralized systems.
 
-### 6. Accessible
+### 7. Accessible
 
 Large segments of the population are excluded of the online discourse through various barriers: expensive devices or data plans, complex interfaces that assume technical literacy, designs that don't work with assistive technologies, content available only in majority languages, poor internet access or non [net neutral](https://en.wikipedia.org/wiki/Net_neutrality) internet providers. This creates digital divides that reinforce existing social inequalities and limit the internet's potential for inclusive dialogue and collective action.
 
@@ -106,7 +106,7 @@ Being accessible is about thoughtful development. We have to think every functio
 
 Responsive interfaces that work across device types, offline-first architecture that handles poor connectivity, built-in translation tools, context-sensitive help systems, and careful attention to accessibility standards. These mechanisms ensure that no one is excluded from participating in the platform's community.
 
-### 7. Attractive
+### 8. Attractive
 
 One of the internet's greatest achievements has been helping people maintain meaningful connections across time and distance - old friends finding each other again and families staying close despite living continents apart. But this only works when people can actually find each other on a platform. A social network needs to attract and retain enough users to make these connections possible, otherwise even the best features become meaningless in an empty space.
 
@@ -116,7 +116,7 @@ We want to avoid using dark patterns, artificial virality, or manipulative engag
 
 Building trust through genuine collaboration with creators and users is key to enable the best advertisement there is: word of mouth. In order to get there we need to support creators and users success through community building tools and sustainable revenue models, and to foster a co-building relationship where their feedback shapes the platform's evolution. To reach new user bases platform-funded and crowdfunded exclusive content can attract new audiences and creators can introduce their communities to the platform through cross-platform content strategies.
 
-### 8. Private
+### 9. Private
 
 Traditional social platforms treat user data as a commodity to be exploited - selling it to advertisers, training AI models without consent, sharing it with third parties, and readily handing it over to state surveillance. This creates a situation where every interaction, every connection, and every piece of content becomes potential leverage against users, whether for commercial manipulation or state control. Even "private" messages and closed groups are ultimately accessible to platform owners and their partners.
 
@@ -126,7 +126,7 @@ The aim isn't for all content to be completely private. Rather, it's about ensur
 
 Strong encryption protects all communications by default, clear interfaces help users understand and control their privacy settings, they get to decide where to store their data, transparent documentation explains how data is stored and processed and granular sharing controls let users decide exactly what to share with whom. These mechanisms ensure users maintain genuine sovereignty over their data while making safe sharing straightforward when desired.
 
-### 9. Resilient
+### 10. Resilient
 
 Traditional social platforms are vulnerable to disruption - whether from technical failures, corporate decisions, or state intervention. A single point of failure in their centralized infrastructure can cut off millions of users from their communities. More concerning still, governments can easily pressure these platforms to censor content, block access, or hand over user data, effectively silencing entire populations with a single decision.
 
@@ -134,7 +134,7 @@ Being resilient means ensuring the platform keeps working even under adverse con
 
 Build the app's communications as a trustless peer to peer distributed system with no cental node. Follow the best practices in [disruption-tolerant networking](https://en.wikipedia.org/wiki/Delay-tolerant_networking). Structure data as [conflict-free replicated data type](https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type) and propose [cooperative storage](https://en.wikipedia.org/wiki/Cooperative_storage_cloud) to duplicate data across users' devices. Keep the interfaces as functional as possible even without network access. This principle also has implications for the platform's governance. The core developers' team should be organized with resilience in mind as its members might be pressured or even be missing.
 
-### 10. Safe
+### 11. Safe
 
 In many parts of the world, expressing certain views or identities online can lead to real-world persecution. Journalists, whistle-blowers, activists, minorities, and ordinary peoples face harassment, job loss, imprisonment, or worse when their online activities are traced back to them. Traditional platforms not only fail to protect vulnerable users, but often actively cooperate with oppressive entities by providing user data or implementing automated surveillance systems that can be weaponized against their users.
 
@@ -142,7 +142,7 @@ Being safe means ensuring users can communicate without fear of identification o
 
 Strong anonymity by default protect user identities, content warnings and filtering tools help users avoid unwanted exposure, reporting mechanisms enable communities to protect themselves against harassment and safety documentation helps users understand risks and best practices. The platform's security has to be heavily tested and be impervious against spoofing attacks. Ideally the app should also be [polymorphic](https://en.wikipedia.org/wiki/Polymorphic_code) to avoid detection by spyware and it should be able to disguise its communications in order to be unrecognizable by anyone tapping the network.
 
-### 11. Modular
+### 12. Modular
 
 No platform is neutral - its design inherently shapes what gets expressed and how people interact. From recommendation algorithms that determine what content gets seen, to interface choices that guide behavior, to moderation systems that define acceptable speech - every technical choice embodies specific values and priorities. While we strive to align these choices with our *core principles*, we recognize that no single implementation can serve all communities' needs or adapt to every contexts.
 
@@ -150,7 +150,7 @@ Modularity enables communities to adapt how they interact with the platform whil
 
 The platform realizes this principle through secure APIs for safe extension development, sandboxed environments that protect core functionality and a dedicated space where communities share and discuss their custom packages. As extensions prove their value through widespread adoption and community vetting, they can be considered for integration into the platform's default offering, creating a pathway for community-driven evolution of the core platform itself.
 
-### 12. Independent
+### 13. Independent
 
 Most social platforms are beholden to corporate interests and vulnerable to state control. Whether through profit motives driving harmful engagement tactics, advertisers influencing content policies, or governments demanding user data and censorship compliance, these dependencies fundamentally compromise platforms' ability to serve their users' interests. The result is a social media landscape where neither users nor platform operators can maintain genuine autonomy in pursuing their stated values and goals.
 
@@ -173,19 +173,19 @@ In terms of architecture this means the use of [cooperative storage](https://en.
 
 Stay independent from the profit motive. Money is a tool needed to build the platform, it should never be confused with its goal.
 
-### 13. Sustainable
+### 14. Sustainable
 
 Long-term sustainability requires attention to both technical and social foundations. This means choosing stable technologies, building maintainable systems, and creating governance structures that can evolve.
 
 This principle helps evaluate every decision's long-term implications.
 
-### 14. Empirical
+### 15. Empirical
 
 Rigorous testing helps ensure features actually serve their intended purposes. This means gathering data (while respecting privacy), studying outcomes, and adjusting based on evidence.
 
 This principle keeps development grounded in reality rather than assumptions.
 
-### 15. Transparent
+### 16. Transparent
 
 Transparency means users can understand how the platform works, from algorithms to governance. This requires clear documentation, open source code, and explicit explanation of automated systems.
 
