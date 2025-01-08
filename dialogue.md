@@ -23,7 +23,7 @@ These core principles serve as a north star, every requirement and every feature
 15. **Empirical**: Rigorously justify, study and stress test every feature to ensure alignment with the *core principles*.
 16. **Transparent**: Actively expose and explain all platform mechanisms, algorithmic systems, and community processes, enabling informed user participation and control.
 
-Each principle corresponds to a specific idea and are thought not to overlap with others. The principles 1-3 are philosophical, 4-7 social, 8-11 technical and 12-15 methodological. Apart from these groupings, they are sorted in no particular order. The numbers are only there for referencing sake.
+Each principle corresponds to a specific idea and are thought not to overlap with others. The principles 1-3 are philosophical, 4-8 social, 9-12 technical and 13-16 methodological. Apart from these groupings, they are sorted in no particular order. The numbers are only there for referencing sake.
 
 ## Rationale
 
