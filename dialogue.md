@@ -9,18 +9,19 @@ These core principles serve as a north star, every requirement and every feature
 1. **Humanizing**: Foster goodwill, empathy, openness and constructive communication.
 2. **Optimistic**: Build confidence in our collective ability to overcome current challenges and shape better futures through human ingenuity.
 3. **Empowering**: Entrust people with control over their digital environment and support them with appropriate tools.
-4. **Expressive**: Provide spaces for creative expression and knowledge sharing and embrace diverse voices and experiences.
-5. **Democratic**: Make collective and democratic organizing and decision-making more efficient than centralized systems.
-6. **Accessible**: Ensure accessibility no matter the technical knowledge, the economical status, the cultural background, the physical disabilities, the language or the literacy.
-7. **Attractive**: Has compelling reasons for people and communities to join, stay and grow with the platform enabling [network effects](https://en.wikipedia.org/wiki/Network_effect).
-8. **Private**: Guarantee personal data sovereignty and communication confidentiality.
-9. **Resilient**: Maintain platform availability even under state-level interdiction.
-10. **Safe**: Ensure users can communicate without fear of identification or retribution even in repressive environments.
-11. **Modular**: Support community-driven development with a secure framework making every interface and algorithm customizable.
-12. **Independent**: Organize platform architecture and governance in a way that ensures independence from state and corporate interests in order to stay true to the *core principles*.
-13. **Sustainable**: Ensure the platform's social and technical foundations remain viable and relevant across generational timescales.
-14. **Empirical**: Rigorously justify, study and stress test every feature to ensure alignment with the *core principles*.
-15. **Transparent**: Actively expose and explain all platform mechanisms, algorithmic systems, and community processes, enabling informed user participation and control.
+4. **Expressive**: Provide spaces and tools for creative expression and knowledge sharing and embrace diverse voices and experiences.
+5. **Informative**: Create community-driven systems for news gathering, investigation, and proportional reporting.
+6. **Democratic**: Make collective and democratic organizing and decision-making more efficient than centralized systems.
+7. **Accessible**: Ensure accessibility no matter the technical knowledge, the economical status, the cultural background, the physical disabilities, the language or the literacy.
+8. **Attractive**: Has compelling reasons for people and communities to join, stay and grow with the platform enabling [network effects](https://en.wikipedia.org/wiki/Network_effect).
+9. **Private**: Guarantee personal data sovereignty and communication confidentiality.
+10. **Resilient**: Maintain platform availability even under state-level interdiction.
+11. **Safe**: Ensure users can communicate without fear of identification or retribution even in repressive environments.
+12. **Modular**: Support community-driven development with a secure framework making every interface and algorithm customizable.
+13. **Independent**: Organize platform architecture and governance in a way that ensures independence from state and corporate interests in order to stay true to the *core principles*.
+14. **Sustainable**: Ensure the platform's social and technical foundations remain viable and relevant across generational timescales.
+15. **Empirical**: Rigorously justify, study and stress test every feature to ensure alignment with the *core principles*.
+16. **Transparent**: Actively expose and explain all platform mechanisms, algorithmic systems, and community processes, enabling informed user participation and control.
 
 Each principle corresponds to a specific idea and are thought not to overlap with others. The principles 1-3 are philosophical, 4-7 social, 8-11 technical and 12-15 methodological. Apart from these groupings, they are sorted in no particular order. The numbers are only there for referencing sake.
 
@@ -67,6 +68,16 @@ To follow the expressive principle means to provide diverse peoples ways to expr
 This isn't about limiting successful creators or forcing equality of outcomes. Rather, it means ensuring that success comes from genuine audience connection and content quality rather than algorithmic bias. The goal is to create multiple viable paths to sustainable content creation, where both niche creators serving specific communities and broadly popular voices can thrive.
 
 In practice this comes down to handling various content formats (from text articles to long-form video passing by digital comics), having discovery pages for each of them recommending content based on a variety of metrics and algorithms. To make content production sustainable the platform may integrate crowd funding systems and a page to connect creators and advertisers.
+
+### 5. Informative
+
+Traditional media outlets have consolidated into massive conglomerates whose coverage inevitably aligns with their owners' interests. Meanwhile, social platforms shape public perception through algorithmic amplification that prioritizes engagement over impact. This creates distorted views of reality - sensationalizing certain events while overlooking others that might challenge corporate interests, amplifying extreme voices while marginalizing nuanced perspectives. The result is a media landscape where even basic facts become contested territory and where the real significance of events gets lost in a flood of decontextualized content.
+
+Being informative means providing community-driven systems for gathering, verifying, sharing and contextualizing news. This first requires tools for information gathering, sourcing, cross-referencing, investigation and communication. It must follow a strict deontology that might get enforced via a reputation system to help establish facts and maintain high journalistic standards.
+
+This isn't about creating a centralized truth authority or enforcing a single perspective. Rather, it's about providing tools and processes that help communities collectively investigate and document events while maintaining high standards of evidence and verification. The goal is to enable rigorous collaborative journalism without creating new gatekeepers or compromising the diversity of viewpoints.
+
+The platform realizes this principle through several complementary mechanisms. For gathering and verifying information, it provides geotagged and timestamped content that can be cross-referenced between witnesses, along with collaborative investigation tools to connect related pieces of evidence. For ensuring coverage quality, reputation systems track journalistic integrity while a suite of tools helps balance coverage priorities: statistical comparisons show how coverage frequency matches real-world occurrence, impact assessment tools measure the scope and duration of effects, communities can define and weight different impact factors, and contextual presentation highlights trends rather than isolated incidents. Together, these mechanisms support rigorous collective journalism that reflects real-world significance rather than entertainment value.
 
 ### 5. Democratic
 
@@ -140,6 +151,11 @@ Modularity enables communities to adapt how they interact with the platform whil
 The platform realizes this principle through secure APIs for safe extension development, sandboxed environments that protect core functionality and a dedicated space where communities share and discuss their custom packages. As extensions prove their value through widespread adoption and community vetting, they can be considered for integration into the platform's default offering, creating a pathway for community-driven evolution of the core platform itself.
 
 ### 12. Independent
+
+Most social platforms are beholden to corporate interests and vulnerable to state control. Whether through profit motives driving harmful engagement tactics, advertisers influencing content policies, or governments demanding user data and censorship compliance, these dependencies fundamentally compromise platforms' ability to serve their users' interests. The result is a social media landscape where neither users nor platform operators can maintain genuine autonomy in pursuing their stated values and goals.
+
+Independence means ensuring the platform can stay true to its *core principles* over time, resisting both corporate capture and state control. This requires technical autonomy through distributed architecture and cooperative infrastructure, as well as organizational independence through sustainable funding models and democratic governance. The platform must be structured to maintain its values and mission even under pressure, protecting both its technical systems and the people maintaining them from coercion or compromise.
+
 
 Distribution of resources helps ensure both technical resilience and environmental sustainability. This means designing systems that efficiently share computing and storage loads across the network.
 
@@ -262,11 +278,18 @@ A programming language is an user interface as well as a model for thinking
 
 ### Integrated Development Environment
 
-We need a bunch of graphical tools for making the programming experience as smooth as possible
+Many developers have to coordinate their work in order to build this gargantuan project. A great integrated development environment is needed for them to find their way in one an other code.
 
-- Layout editor
+### Graphical Interface Design Tool
 
-The Elm architecture (time machine, ...).
+Good interface design is key to every *social core principles* and having the right tooling is key in order to fulfil the complex requirements they imply. This tools aims at integrating the designers and developers workflows in an efficient way.
+
+- Single source of truth for the design system, layout and animations
+- Intuitive for designers
+- The design should automatically generate code and have a simple interface for developers to integrate with
+- All of the design has to be under designer control with the least amount of coding knowledge needed
+- Ensure each interface works on any screen format
+- Enforce accessibility
 
 ### Identity verification
 
@@ -281,6 +304,12 @@ Real human social networks tend to be densely interconnected, whereas bot accoun
 An organization can then use this network to validate identity. It could only consider votes entered by accounts with multiple trust connections to other members for instance.
 
 -- Look at [web of trust](https://en.wikipedia.org/wiki/Web_of_trust).
+
+### Default Recommendation System
+
+-- wip
+
+everyone doesn't need to give the same credence to everyone else. Give more credence to people close to you and to people you support the work. Explicitly recommend content to people around you.
 
 ### Governance
 

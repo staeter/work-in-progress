@@ -724,3 +724,64 @@
 
 # 2024-12-31 11:45:32.724516
 +/ask lets go to the independent principle. As you can see in the current mess I've grouped in its rationale, I combined the distributed principle into it. So this principle really covers political independence from both states and corporations. This impiles both technical and organizational independence as well as everything that is needed to protect that independence on the long term
+
+# 2024-12-31 15:08:42.079264
++/ask we won't write the third paragraph. The most important is that the platform stays aligned with its original intent and core principles
+
+# 2024-12-31 15:24:03.111796
++/ask we won't write the third paragraph. The most important is that the platform stays aligned with its original intent and core principles. the independent principle is needed for that reason. Your other points are correct though. please write the first paragraph
+
+# 2024-12-31 15:28:27.209913
++/ask lets write the second paragraph
+
+# 2024-12-31 15:30:20.375697
++/ask ok now last paragraph on the concrete implementation
+
+# 2025-01-06 14:03:32.393714
++n
+
+# 2025-01-06 14:05:41.149795
++/add dialogue.md
+
+# 2025-01-06 14:05:47.360210
++/read-only .aider.chat.history.md
+
+# 2025-01-06 14:07:36.235208
++/ask I would like to add back a Collaborative principle. Can you look at the chat history and describe what it was about
+
+# 2025-01-06 14:16:13.669074
++/ask there is one more aspect I'd like to add which is a collaborative news network. The overlap isn't complete as expressive is more about sharing and expressing onself and democratic more about organizing/voting etc. Here Collaborative is really about encouraging people to work together to collect information and structure it. Its more akin to what wikipedia is doing where expressive is closer to youtube and democratic is more decision making and political organizing. Can you write multiple propositions for the sentence that presents collaborative in the core principles section of dialogue.md
+
+# 2025-01-06 14:19:03.830341
++/ask actually it should probably be called informative for the crowd news aspect of it
+
+# 2025-01-06 14:26:17.224500
++/ask write the first paragraph only
+
+# 2025-01-06 14:28:34.365412
++/ask you should touch on the private ownership of media and the fact that they form huge media conglomerate that often defend the interests of their owners
+
+# 2025-01-06 14:32:11.265316
++/ask I only removed the "and fragmenting information across paywalled platforms." part but this is really good. Lets write the second paragraph on What this principle means in practice
+
+# 2025-01-08 16:08:23.121166
++/ask the geotagged and timestamed videos is a possible way to collectively gather information, it is an implementation of the principle so it should be found in the last paragraph not in this one. Here is what I settled on for the second paragraph "Being informative means providing community-driven systems for gathering, verifying, sharing and contextualizing news. This first requires tools for information gathering, sourcing, cross-referencing, investigation and communication. It must follow a strict deontology that might get enforced via a reputation system to help establish facts and maintain high journalistic standards." Now lets write the third that is aimed at avoiding misconseptions about this principle
+
+# 2025-01-08 16:09:47.300134
++/ask This should be about the inforative principle
+
+# 2025-01-08 16:11:46.395023
++/ask That is good. Write the last paragraph describing possible concrete implementations of this principle
+
+# 2025-01-08 16:12:48.302231
++Write the last paragraph describing possible concrete impleme
++ntations of the informative principle. Your previous proposition doesn't cover that topic
+
+# 2025-01-08 16:17:03.571685
++/ask "impact metrics help balance coverage priorities" This is way too vague. Are there concrete existing examples of this idea? If not, what are possible solutions to this problem?
+
+# 2025-01-08 16:20:42.451506
++/ask these four approaches seems really pertinant to me. Integrate them in a concize manner into the paragraph you initially proposed for the informative principle
+
+# 2025-01-08 16:26:18.061284
++/ask your proposition is really good in terms of content but is literarily poor. Propose a more fluid way of presenting this information and try to gain as mutch readability as possible
