@@ -6,7 +6,7 @@ This document is a first attempt at defining the requirements of Dialogue, a new
 
 These core principles serve as a north star, every requirement and every feature has to be justified and can be debated relative to these principles.
 
-1. **Humanizing**: Foster goodwill, empathy, openness and constructive communication.
+1. **Empathic**: Support users physical and mental wellbeing and foster goodwill, empathy, openness and constructive communication.
 2. **Optimistic**: Build confidence in our collective ability to overcome current challenges and shape better futures through human ingenuity.
 3. **Empowering**: Entrust people with control over their digital environment and support them with appropriate tools.
 4. **Expressive**: Provide spaces and tools for creative expression and knowledge sharing and embrace diverse voices and experiences.
@@ -14,7 +14,7 @@ These core principles serve as a north star, every requirement and every feature
 6. **Democratic**: Make collective and democratic organizing and decision-making more efficient than centralized systems.
 7. **Accessible**: Ensure accessibility no matter the technical knowledge, the economical status, the cultural background, the physical disabilities, the language or the literacy.
 8. **Attractive**: Has compelling reasons for people and communities to join, stay and grow with the platform enabling [network effects](https://en.wikipedia.org/wiki/Network_effect).
-9. **Private**: Guarantee personal data sovereignty and communication confidentiality.
+9.  **Private**: Guarantee personal data sovereignty and communication confidentiality.
 10. **Resilient**: Maintain platform availability even under state-level interdiction.
 11. **Safe**: Ensure users can communicate without fear of identification or retribution even in repressive environments.
 12. **Modular**: Support community-driven development with a secure framework making every interface and algorithm customizable.
@@ -29,11 +29,11 @@ Each principle corresponds to a specific idea and are thought not to overlap wit
 
 In this section we detail every principle, we express its underlying rationale, what it is, what it isn't and some practical implications. The important part here is to convey Dialogue's general intent.
 
-### 1. Humanizing
+### 1. Empathic
 
 When we interact online, we tend to forget that there are human beings on the other side of the screen. This distance makes it easier to ignore others' humanity, leading to behaviors we would rarely engage in face-to-face: going from simple carelessness to harassment and public shaming. These toxic behaviors isolates peoples, encourages stale interactions and deepens social divisions. We want to build bridges and have spaces for people to dialogue with one another.
 
-Humanizing means fostering an environment where people feel safe to express themselves and engage with others constructively. This goes beyond basic politeness - it requires actively designing systems that encourage empathy, mutual understanding, and good faith communication.
+Being empathic means fostering an environment where people feel safe to express themselves and engage with others constructively. This goes beyond basic politeness - it requires actively designing systems that encourage empathy, mutual understanding, good faith communication and that supports users mental and physical wellbeing.
 
 This doesn't mean avoiding hard or violent topics, nor does it mean abolishing debate or disagreement. It simply means to make ones best effort to reach the other, try to understand their point of view and progress from there.
 
@@ -154,7 +154,7 @@ The platform realizes this principle through secure APIs for safe extension deve
 
 Most social platforms are beholden to corporate interests and vulnerable to state control. Whether through profit motives driving harmful engagement tactics, advertisers influencing content policies, or governments demanding user data and censorship compliance, these dependencies fundamentally compromise platforms' ability to serve their users' interests. The result is a social media landscape where neither users nor platform operators can maintain genuine autonomy in pursuing their stated values and goals.
 
-Independence means ensuring the platform can stay true to its *core principles* over time, resisting both corporate capture and state control. This requires technical autonomy through distributed architecture and cooperative infrastructure, as well as organizational independence through sustainable funding models and democratic governance. The platform must be structured to maintain its values and mission even under pressure, protecting both its technical systems and the people maintaining them from coercion or compromise.
+Independence means ensuring the platform can stay true to its *core principles* over time, resisting both corporate capture and state control. This requires technical autonomy through distributed architecture and cooperative infrastructure, organizational independence and sustainable funding models.
 
 
 Distribution of resources helps ensure both technical resilience and environmental sustainability. This means designing systems that efficiently share computing and storage loads across the network.
@@ -208,7 +208,7 @@ The platform's name has to:
 
 - This is the current chosen name
 - Pros:
-  - Reflects the *humanizing*, *expressive*, *collaborative* and *democratic* principles
+  - Reflects the *empathic*, *expressive*, *collaborative* and *democratic* principles
   - Is easy to pronounce and has the same meaning in many languages
   - There is a clear social aspect making it sensible to label a social network
 - Cons:
