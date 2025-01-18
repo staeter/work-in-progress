@@ -4,27 +4,27 @@ Humanity has gained mastery over nature but its social organization is still sub
 
 This new socio-economic organization of society must be built by the masses voluntarily governing themselves. It therefore has to go beyond national boundaries, welcome humanity's intrinsic diversity and defend a positivist view of liberty. Thereby arises the need for tools of large scale collective organizing able to support the advent of such political order.
 
-Building this platform is a humongous task that can only be completed with the coordination of a large pool of engineers, programers and designers. This document is a first attempt at clarifying the requirements in order to structure and orient everyone's work toward a clear and unified goal.
+Building this social network is a humongous task that can only be completed with the coordination of a large pool of engineers, programers, designers, journalists and other content creators. This document is a first attempt at clarifying the requirements in order to structure and orient everyone's work toward a clear and unified goal.
 
 ## Core Principles
 
 These core principles describe the general goals of the project and serve as its north star. Every requirement and every feature has to be justified and can be debated relative to these principles.
 
 1. **Empathic**: Support users physical and mental wellbeing and foster goodwill, empathy, openness and constructive communication.
-2. **Optimistic**: Build confidence in our collective ability to overcome current challenges and shape better futures through human ingenuity.
+2. **Optimistic**: Build confidence in our collective ability to overcome current challenges and shape better futures through human ingenuity and collective action.
 3. **Empowering**: Entrust people with control over their digital environment and support them with appropriate tools.
 4. **Expressive**: Provide spaces and tools for creative expression and knowledge sharing and embrace diverse voices and experiences.
 5. **Informative**: Create community-driven systems for news gathering, investigation, and proportional reporting.
-6. **Democratic**: Make collective and democratic organizing and decision-making more efficient than centralized systems.
+6. **Democratic**: Make collective and democratic organizing and decision-making more efficient and accessible than centralized systems.
 7. **Accessible**: Ensure accessibility no matter the technical knowledge, the economical status, the cultural background, the physical disabilities, the language or the literacy.
 8. **Attractive**: Has compelling reasons for people and communities to join, stay and grow with the platform enabling [network effects](https://en.wikipedia.org/wiki/Network_effect).
 9. **Private**: Guarantee personal data sovereignty and communication confidentiality.
-10. **Resilient**: Maintain platform availability even under state-level interdiction.
+10. **Resilient**: Maintain platform availability and usability even under state-level interdiction.
 11. **Safe**: Ensure users can communicate without fear of identification or retribution even in repressive environments.
 12. **Modular**: Support community-driven development with a secure framework making every interface and algorithm customizable.
 13. **Independent**: Organize platform architecture and governance in a way that ensures independence from state and corporate interests in order to stay true to the *core principles*.
 14. **Sustainable**: Ensure the platform's social and technical foundations remain viable and relevant across generational timescales.
-15. **Empirical**: Rigorously justify, study and stress test every feature to ensure alignment with the *core principles*.
+15. **Empirical**: Rigorously justify, study and stress test every feature to ensure its functioning truly matches its intent.
 16. **Transparent**: Actively expose and explain all platform mechanisms, algorithmic systems, and community processes, enabling informed user participation and control.
 
 Each principle corresponds to a specific idea and are thought not to overlap with others. The principles 1-3 are philosophical, 4-8 social, 9-12 technical and 13-16 methodological. Apart from these groupings, they are sorted in no particular order. The numbers are only there for referencing sake.
@@ -75,13 +75,13 @@ In practice this comes down to handling various content formats (from text artic
 
 ### 5. Informative
 
-Traditional media outlets have consolidated into massive conglomerates whose coverage inevitably aligns with their owners' interests. Meanwhile, social platforms shape public perception through algorithmic amplification that prioritizes engagement over impact. This creates distorted views of reality - sensationalizing certain events while overlooking others that might challenge corporate interests, amplifying extreme voices while marginalizing nuanced perspectives. The result is a media landscape where even basic facts become contested territory and where the real significance of events gets lost in a flood of decontextualized content.
+Traditional media outlets have consolidated into massive conglomerates whose coverage inevitably aligns with their owners' interests. Meanwhile, social platforms shape public perception through algorithmic amplification that prioritizes engagement over truthfulness. This creates distorted views of reality - sensationalizing certain events while overlooking others, amplifying extreme voices while marginalizing nuanced perspectives. The result is a media landscape where even basic facts become contested territory and where the real significance of events gets lost in a flood of decontextualized content.
 
-Being informative means providing community-driven systems for gathering, verifying, sharing and contextualizing news. This first requires tools for information gathering, sourcing, cross-referencing, investigation and communication. It must follow a strict deontology that might get enforced via a reputation system to help establish facts and maintain high journalistic standards.
+Being informative means providing community-driven systems for gathering, verifying, sharing and contextualizing news. This first requires tools for information gathering, sourcing, cross-referencing, investigation and communication. No news covering is truly neutral and being informative also is about making the ideology underlying the presented facts explicit and to contrast it with the way it is presented through different ideological lenses.
 
-This isn't about creating a centralized truth authority or enforcing a single perspective. Rather, it's about providing tools and processes that help communities collectively investigate and document events while maintaining high standards of evidence and verification. The goal is to enable rigorous collaborative journalism without creating new gatekeepers or compromising the diversity of viewpoints.
+This isn't about creating a centralized truth authority or enforcing a single perspective. Rather, it's about providing tools and processes that help communities collectively investigate and document events and encourage them to look across the isle and have a fair view of the opposing perspectives. The goal is to enable rigorous collaborative journalism without creating new gatekeepers or compromising the diversity of viewpoints.
 
-The platform realizes this principle through several complementary mechanisms. For gathering and verifying information, it provides geotagged and timestamped content that can be cross-referenced between witnesses, along with collaborative investigation tools to connect related pieces of evidence. For ensuring coverage quality, reputation systems track journalistic integrity while a suite of tools helps balance coverage priorities: statistical comparisons show how coverage frequency matches real-world occurrence, impact assessment tools measure the scope and duration of effects, communities can define and weight different impact factors, and contextual presentation highlights trends rather than isolated incidents. Together, these mechanisms support rigorous collective journalism that reflects real-world significance rather than entertainment value.
+The platform realizes this principle through several complementary mechanisms. For gathering and verifying information, it provides geotagged and timestamped content that can be cross-referenced between witnesses, along with collaborative investigation tools to connect related pieces of evidence. For ensuring coverage quality, reputation systems track journalistic integrity while a suite of tools helps balance coverage priorities: statistical comparisons show how coverage frequency matches real-world occurrence, impact assessment tools measure the scope and duration of effects, communities can define and weight different impact factors, and contextual presentation highlights trends rather than isolated incidents. Default user's interface contrasts their news viewed through different ideological lenses. Together, these mechanisms support rigorous collective journalism that reflects real-world significance and diversity of opinions rather than entertainment value.
 
 ### 6. Democratic
 
