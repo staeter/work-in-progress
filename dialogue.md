@@ -1,10 +1,14 @@
 # Dialogue
 
-This document is a first attempt at defining the requirements of Dialogue, a new platform redefining the role of online social networks. We states our goals and build toward an extensive list of requirements.
+Humanity has gained mastery over nature but its social organization is still subordinated to individualistic short term interests. Deep systemic changes are needed for humanity to gain conscious control over its future and overcome the quagmires threatening it.
+
+This new socio-economic organization of society must be built by the masses voluntarily governing themselves. It therefore has to go beyond national boundaries, welcome humanity's intrinsic diversity and defend a positivist view of liberty. Thereby arises the need for tools of large scale collective organizing able to support the advent of such political order.
+
+Building this platform is a humongous task that can only be completed with the coordination of a large pool of engineers, programers and designers. This document is a first attempt at clarifying the requirements in order to structure and orient everyone's work toward a clear and unified goal.
 
 ## Core Principles
 
-These core principles serve as a north star, every requirement and every feature has to be justified and can be debated relative to these principles.
+These core principles describe the general goals of the project and serve as its north star. Every requirement and every feature has to be justified and can be debated relative to these principles.
 
 1. **Empathic**: Support users physical and mental wellbeing and foster goodwill, empathy, openness and constructive communication.
 2. **Optimistic**: Build confidence in our collective ability to overcome current challenges and shape better futures through human ingenuity.
@@ -14,7 +18,7 @@ These core principles serve as a north star, every requirement and every feature
 6. **Democratic**: Make collective and democratic organizing and decision-making more efficient than centralized systems.
 7. **Accessible**: Ensure accessibility no matter the technical knowledge, the economical status, the cultural background, the physical disabilities, the language or the literacy.
 8. **Attractive**: Has compelling reasons for people and communities to join, stay and grow with the platform enabling [network effects](https://en.wikipedia.org/wiki/Network_effect).
-9.  **Private**: Guarantee personal data sovereignty and communication confidentiality.
+9. **Private**: Guarantee personal data sovereignty and communication confidentiality.
 10. **Resilient**: Maintain platform availability even under state-level interdiction.
 11. **Safe**: Ensure users can communicate without fear of identification or retribution even in repressive environments.
 12. **Modular**: Support community-driven development with a secure framework making every interface and algorithm customizable.
@@ -350,11 +354,21 @@ The governance of the platform must:
 
 Various notes and precisions about this document.
 
+### Is the systemic change described in the introduction even possible?
+
+-- wip
+
+The current socio-economic system - capitalism - is only 300 years old which is ridiculous when compared to the 300,000 years modern humans have been around. Like organisms, societies evolve, they adapt to external threats and iteratively transform to solve their internal contradictions.
+
+Moreover, the seeds are planted: On one hand, we inherited productive capabilities able to provide for everyone's needs enabling their participation to the political process. On the other, our transport and communication capabilities literally shrunk the scale of our planet and give us the opportunity to meet and discuss across continents.
+
+We made this statement to clarify the intention behind the project but even if you believe such a deep political transformation of society to be impossible, a tool like Dialogue has many immediate positive impacts and is worth pursuing for its own sake. ...[give some concrete examples]...
+
 ### On our use of LLMs
 
-Parts of this document have been written in cooperation with a LLM and similar tools will likely be used to implement the platform.
+Parts of this document have been written in collaboration with a LLM and similar tools will likely be used to implement the platform.
 
-We recognize the way these algorithms have been trained in problematic ways using data without author's acknowledgement and poorly paid labor for data labeling. Though we also believe LLMs are useful tools that can be used for human emancipation. A hammer can break a skull but it mey also serve to build bridges, houses and hospitals. In other words, deleterious conditions that produced that hammer may be changed with the help of that very hammer. This reasoning works as much for LLMs as for textile factories and mining industries.
+We recognize that these algorithms have been trained in problematic ways using data without author's acknowledgement and poorly paid labor for data labeling. Though we also believe LLMs are useful tools that can be used for human emancipation. A hammer can break a skull but it mey also serve to build bridges, houses and hospitals. In other words, the deleterious conditions that produced that hammer may be changed with the help of that very hammer. This reasoning works as much for LLMs as for textile factories and mining industries.
 
 In terms of content originality, we do not attempt to be especially original or novel. Our main aim is to express ideas and develop techniques to bring them to life. No matter who or what expresses those ideas as long as they match our thoughts and needs.
 
