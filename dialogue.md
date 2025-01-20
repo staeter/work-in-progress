@@ -1,8 +1,8 @@
 # Dialogue
 
-Humanity has gained mastery over nature but its social organization is still subordinated to individualistic short term interests. Deep systemic changes are needed for humanity to gain conscious control over its future and overcome the quagmires threatening it.
+Through sciences and technologies, humanity has gained mastery over nature but its social organization is still subordinated to individualistic short term interests. Deep systemic changes are needed for humanity to gain conscious control over its future and overcome the quagmires threatening it.
 
-This new socio-economic organization of society must be built by the masses voluntarily governing themselves. It therefore has to go beyond national boundaries, welcome humanity's intrinsic diversity and defend a positivist view of liberty. Thereby arises the need for tools of large scale collective organizing able to support the advent of such political order.
+This new socio-economic organization of society must be built by the masses voluntarily governing themselves. It therefore has to go beyond national boundaries, welcome humanity's intrinsic diversity and defend a positivist view of liberty. Thereby arises the need for tools enabling large scale collective organizing and decision making able to support the advent of such political order.
 
 Building this social network is a humongous task that can only be completed with the coordination of a large pool of engineers, programers, designers, journalists and other content creators. This document is a first attempt at clarifying the requirements in order to structure and orient everyone's work toward a clear and unified goal.
 
@@ -15,7 +15,7 @@ These core principles describe the general goals of the project and serve as its
 3. **Empowering**: Entrust people with control over their digital environment and support them with appropriate tools.
 4. **Expressive**: Provide spaces and tools for creative expression and knowledge sharing and embrace diverse voices and experiences.
 5. **Informative**: Create community-driven systems for news gathering, investigation, and proportional reporting.
-6. **Democratic**: Make collective and democratic organizing and decision-making more efficient and accessible than centralized systems.
+6. **Democratic**: Make bottom up, collective and democratic organizing and decision-making more efficient and accessible than centralized systems.
 7. **Accessible**: Ensure accessibility no matter the technical knowledge, the economical status, the cultural background, the physical disabilities, the language or the literacy.
 8. **Attractive**: Has compelling reasons for people and communities to join, stay and grow with the platform enabling [network effects](https://en.wikipedia.org/wiki/Network_effect).
 9. **Private**: Guarantee personal data sovereignty and communication confidentiality.
@@ -87,7 +87,9 @@ The platform realizes this principle through several complementary mechanisms. F
 
 Traditional social platforms tend to concentrate power in the hands of platform owners and their algorithms, leaving users and communities with little say in how their spaces are governed. Even when platforms offer community moderation tools, these are often limited and can be overridden by corporate decisions driven by profit motives rather than community needs.
 
-Democratic organization means creating spaces where communities can effectively self-govern and make collective decisions. This requires not just voting mechanisms, but comprehensive tools for discussion, investigation, deliberation, consensus-building, and transparent decision-making. The platform must support various forms of democratic governance - from direct democracy to representative systems - while keeping processes clear and accessible to all participants.
+This is also true at a wider scale in corporate and political environment where power is centralized in the hands of the wealthy. Dialogue wants to be a space for the masses to organize, struggle against oppression and decide collectively what future they want to craft for humanity.
+
+Democratic organization means creating spaces where communities can effectively self-govern and make collective decisions. This requires not just voting mechanisms, but comprehensive tools for discussion, investigation, deliberation, consensus-building, and transparent decision-making. The platform must support various forms of democratic governance - from direct democracy to representative systems - while keeping processes clear and accessible to all participants. The different communities and organizations have to be able to take joint decisions, make joint statements and coordinate through the platform.
 
 The democratic principle isn't about forcing every group to use the same democratic model. Rather, it's about making democratic organization more efficient and accessible than centralized control. Communities should be able to choose and evolve their governance structures while maintaining transparency and accountability to their members.
 
@@ -356,23 +358,45 @@ Various notes and precisions about this document.
 
 ### Is the systemic change described in the introduction even possible?
 
--- wip
-
 The current socio-economic system - capitalism - is only 300 years old which is ridiculous when compared to the 300,000 years modern humans have been around. Like organisms, societies evolve, they adapt to external threats and iteratively transform to solve their internal contradictions.
 
 Moreover, the seeds are planted: On one hand, we inherited productive capabilities able to provide for everyone's needs enabling their participation to the political process. On the other, our transport and communication capabilities literally shrunk the scale of our planet and give us the opportunity to meet and discuss across continents.
 
-We made this statement to clarify the intention behind the project but even if you believe such a deep political transformation of society to be impossible, a tool like Dialogue has many immediate positive impacts and is worth pursuing for its own sake. ...[give some concrete examples]...
+We made this statement to clarify the intention behind the project but even if you believe such a deep political transformation of society to be impossible, a tool like Dialogue has many immediate positive impacts and is worth pursuing for its own sake. Every *core principle* might individually be a good reason for someone to want to build and support it.
+
+### Will the far-right be using Dialogue to their advantage?
+
+The core values of the far right are fundamentally centered around creating hierarchies between people and to violently oppress those who they deem as lesser humans. Those are fundamentally opposed to many of the platform's *core principles* and - as such - we strongly reject their perspective. We know the far right short and aggressive messaging to be very viral on online platforms and they will surely attempt to invade every spaces and prevent constructive dialogue to happen.
+
+-- wip : feels unclear and insufficient but I've got to complete more of the requirements first
+
+Online public spaces are hard to defend but good moderation does prevent harmful messaging to be spread. We aim at structuring and confining information based on ideology which will confine their messaging within a given ideological space that can be visited and interacted with but would be compartmented from the others where those ideologies are inappropriate it easy for people to explore other perspectives without being invaded by disruptive uninformed interventions.
+
+Far right groups will probably enjoy the privacy of the platform and its tools to organize but they are already welcomed and supported by the mainstream media and private social platforms. They do not need one more space for them to use. That is not the case for human rights activists, investigative journalists, feminist groups, whistle blowers and other radical left movements which get increasingly rejected. Those groups will be able to keep communicating and organizing on Dialogue even under heavy state and corporate repression
 
 ### On our use of LLMs
 
 Parts of this document have been written in collaboration with a LLM and similar tools will likely be used to implement the platform.
 
-We recognize that these algorithms have been trained in problematic ways using data without author's acknowledgement and poorly paid labor for data labeling. Though we also believe LLMs are useful tools that can be used for human emancipation. A hammer can break a skull but it mey also serve to build bridges, houses and hospitals. In other words, the deleterious conditions that produced that hammer may be changed with the help of that very hammer. This reasoning works as much for LLMs as for textile factories and mining industries.
+We recognize that these algorithms have been trained in problematic ways using data without author's acknowledgement and poorly paid labor for data labeling. This kind of recognition can equally be given to the manner the computers and servers internet is built on have been assembled and their materials mined.
 
-In terms of content originality, we do not attempt to be especially original or novel. Our main aim is to express ideas and develop techniques to bring them to life. No matter who or what expresses those ideas as long as they match our thoughts and needs.
+We believe LLMs as much as any other tool can be used for human emancipation. A hammer can break a skull but it mey also serve to build bridges, houses and hospitals. In other words, the deleterious conditions that produced that hammer may be changed with the help of that very hammer. This reasoning works as much for LLMs as for textile factories and mining industries.
+
+In terms of content originality, we do not attempt to be especially original or novel. Our main aim is to express ideas and develop techniques to bring them to life. No matter who or what expresses those ideas as long as they correspond to our thoughts and needs.
 
 We have made the writing process transparent by sharing the dialogue's history. It can be found in the `.aider.chat.history.md` file.
+
+### Our view on intellectual property
+
+-- wip
+
+Intellectual property is an important concept that makes it possible for people to be paid and receive social recognition for their creative and intellectual work. Though we strongly defend this version of intellectual property, we also reject absolutely the way this notion is used to privatize knowledge and turn it into merchandise to be sold and gatekeeped by large multinational corporations.
+
+We provide software to be used by people to share content
+
+- like people who code the torrent client and protocol we are not responsible for the files shared and hosted by the users
+- though we will do what we can for content creators to get due recognition and pay for their work
+- and we will absolutely try to spread revenue amongst small creators enabling them to live from their work instead of concentrating it in the hands of a few larger ones that either turn into corporations or are already produced by one
 
 ## Legacy and wip Text
 
