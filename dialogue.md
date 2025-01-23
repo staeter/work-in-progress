@@ -15,9 +15,9 @@ These core principles describe the general goals of the project and serve as its
 3. **Empowering**: Entrust people with control over their digital environment and support them with appropriate tools.
 4. **Expressive**: Provide spaces and tools for creative expression and knowledge sharing and embrace diverse voices and experiences.
 5. **Informative**: Create community-driven systems for news gathering, investigation, and proportional reporting.
-6. **Democratic**: Make bottom up, collective and democratic organizing and decision-making more efficient and accessible than centralized systems.
-7. **Accessible**: Ensure accessibility no matter the technical knowledge, the economical status, the cultural background, the physical disabilities, the language or the literacy.
-8. **Attractive**: Has compelling reasons for people and communities to join, stay and grow with the platform enabling [network effects](https://en.wikipedia.org/wiki/Network_effect).
+6. **Democratic**: Make bottom up, collective human organizing and decision-making more efficient and accessible than centralized systems.
+7. **Accessible**: Ensure accessibility to as many people as possible by considering technical knowledge, economical status, cultural background, physical disabilities, language and literacy.
+8. **Attractive**: Has compelling reasons for people and communities to join, stay and grow with the platform.
 9. **Private**: Guarantee personal data sovereignty and communication confidentiality.
 10. **Resilient**: Maintain platform availability and usability even under state-level interdiction.
 11. **Safe**: Ensure users can communicate without fear of identification or retribution even in repressive environments.
@@ -27,7 +27,7 @@ These core principles describe the general goals of the project and serve as its
 15. **Empirical**: Rigorously justify, study and stress test every feature to ensure its functioning truly matches its intent.
 16. **Transparent**: Actively expose and explain all platform mechanisms, algorithmic systems, and community processes, enabling informed user participation and control.
 
-Each principle corresponds to a specific idea and are thought not to overlap with others. The principles 1-3 are philosophical, 4-8 social, 9-12 technical and 13-16 methodological. Apart from these groupings, they are sorted in no particular order. The numbers are only there for referencing sake.
+The principles 1-3 are philosophical, 4-8 social, 9-12 technical and 13-16 methodological. Apart from these groupings, they are sorted in no particular order. The numbers are only there for referencing sake.
 
 ## Rationale
 
@@ -37,7 +37,7 @@ In this section we detail every principle, we express its underlying rationale, 
 
 When we interact online, we tend to forget that there are human beings on the other side of the screen. This distance makes it easier to ignore others' humanity, leading to behaviors we would rarely engage in face-to-face: going from simple carelessness to harassment and public shaming. These toxic behaviors isolates peoples, encourages stale interactions and deepens social divisions. We want to build bridges and have spaces for people to dialogue with one another.
 
-Being empathic means fostering an environment where people feel safe to express themselves and engage with others constructively. This goes beyond basic politeness - it requires actively designing systems that encourage empathy, mutual understanding, good faith communication and that supports users mental and physical wellbeing.
+Being empathic means fostering an environment where people feel safe to express themselves and engage with others constructively. This goes beyond basic politeness - it requires actively designing systems that encourage empathy, honesty, mutual understanding, good faith communication and that supports users mental and physical wellbeing.
 
 This doesn't mean avoiding hard or violent topics, nor does it mean abolishing debate or disagreement. It simply means to make ones best effort to reach the other, try to understand their point of view and progress from there.
 
@@ -197,6 +197,22 @@ Transparency means users can understand how the platform works, from algorithms 
 
 This understanding enables meaningful user participation and control.
 
+## Balancing Core principles
+
+Each principle corresponds to a specific idea and are thought not to overlap with others but they might compete with one an other when it comes to practical implementation. The aim really is to find the best of both worlds whenever possible and to get to a good equilibrium between the two when they fundamentally contradict one an other. In this section we discuss some of them.
+
+### Complexity vs Accessibility
+
+Complexity grows quickly when designing systems. Giving complete control over the interface to the user (*empowering*) might make those really complex to use and understand. The processes able to parse and structure information (*informative*) might be extremely complex.
+
+-- wip
+
+### Privacy vs Openness
+
+A lot of usage data has to be available in order to build good recommender systems (*expressive*). Privacy entails anonymity which makes it hard to discriminate bots and causes a lack of individual accountability (*empathic*, *democratic* and *informative*).
+
+-- wip
+
 ## Requirements and Justifications
 
 Here we propose a set of requirements that we justify in regards to the platform's core principles. We start every section with a wish list of features that would ideally be present. We then provide a list of possible solutions, their pros and cons.
@@ -226,11 +242,50 @@ The platform's name has to:
 - Pros:
   - Reflects the *distributed*, *resilient*, *distributed* and *sustainable* principles
   - The fact that it is a social network is explicitly stated
-  - Is enthusiastic about the future (*progressive*)
+  - Is enthusiastic about the future (*optimistic*)
 - Cons:
   - Quite long and difficult to pronounce for non english speakers
   - Its acronym isn't natural to read
   - Might be seen as piggy backing on the [IPFS](https://ipfs.tech/) ecosystem especially as it might not be built on top of it
+
+### Dialogue Fund
+
+Dialogue Fund is the non profit that gathers the various sources of revenue and redistributes them between the content creators and the developers that push the platform forward. It is a non profit that keeps its income and redistribution completely transparent to the public.
+
+### Dialogue Fund Governance
+
+Governance might be the most difficult challenge of all. We have to take it very seriously as this is the deciding factor on weather the platform keeps upholding its *core principles* or weather it ends up steering in an unfavorable direction.
+
+The governance of the platform must:
+
+- Prevent state or corporate interests infiltrating the deciding bodies (*independent*)
+- Reject opportunistic people from important roles to keep the platform on track with its *core principles*
+- Keep the development process going even under state level interdiction and repression (*resilient*)
+- Decision are taken publicly and have to be justified relative to the *core principles* (*transparent*)
+- Functioning and decisions have to absolutely avoid unnecessary complexity and be comprehensible to non experts (*accessible*)
+- Rigorously test and observe the outcomes of each decision (*empirical*)
+- Able to quickly adapt to fix pressing issues (*sustainable*)
+- Embodies the *humanistic* and *optimistic* principles
+- Is under the control of involved users but also defend the interests of users that aren't able to involve themselves in the same way (*democratic*)
+- Changes to the core principles have to be difficult enough for the project not to stere off course and easy enough for them not to become obsolete (*sustainable*)
+
+#### Benevolent Dictatorship
+
+- As the project is in its very infancy, this is the current mode of governance.
+- Pros:
+  - Decisions are taken quickly
+  - Will follow the intent of the person who initiated the project
+- Cons:
+  - Simple to pressure a single person
+  - Isn't impervious to bus accidents
+  - Biased by the leader's socio-economic status
+
+#### Open Democracy
+
+- Cons:
+  - Very hard to avoid [Sybil attacks](https://en.wikipedia.org/wiki/Sybil_attack)
+  - Not implicated users are very likely to take poorly informed decisions
+  - Organized interest groups might have oversized weight
 
 ### Programming Language
 
@@ -272,11 +327,14 @@ A programming language is an user interface as well as a model for thinking
   - A single datatype represents all possible side effects
     - It can be extended or shrunk based on the access we want to give to the sub program
 - Can be translated in various languages (*accessible*)
-- Has collaborative editing tools (*collaborative*)
 
 #### Elm
 
-[Elm](https://elm-lang.org/) is
+[Elm](https://elm-lang.org/)
+
+#### Gren
+
+[Gren](https://gren-lang.org/)
 
 #### Bend
 
@@ -317,40 +375,40 @@ An organization can then use this network to validate identity. It could only co
 
 everyone doesn't need to give the same credence to everyone else. Give more credence to people close to you and to people you support the work. Explicitly recommend content to people around you.
 
-### Governance
+### Multiformat
 
-Governance might be the most difficult challenge of all. We have to take it very seriously as this is the deciding factor on weather the platform keeps upholding its *core principles* or weather it ends up steering in an unfavorable direction.
+The platform has to handle many different media formats (*expressive*).
 
-The governance of the platform must:
+- each format has to
+  - have a specific data structure
+  - have an interface for the user to interact with it
+  - have a set of metrics that can be used by recommender systems
 
-- Prevent state or corporate interests infiltrating the deciding bodies (*independent*)
-- Reject opportunistic people from important roles to keep the platform on track with its *core principles*
-- Keep the development process going even under state level interdiction and repression (*resilient*)
-- Decision are taken publicly and have to be justified relative to the *core principles* (*transparent*)
-- Functioning and decisions have to absolutely avoid unnecessary complexity and be comprehensible to non experts (*accessible*)
-- Rigorously test and observe the outcomes of each decision (*empirical*)
-- Able to quickly adapt to fix pressing issues (*sustainable*)
-- Embodies the *humanistic* and *optimistic* principles
-- Is under the control of involved users but also defend the interests of users that aren't able to involve themselves in the same way (*democratic*)
-- Changes to the core principles have to be difficult enough for the project not to stere off course and easy enough for them not to become obsolete (*sustainable*)
+### P2P Networking
 
-#### Benevolent Dictatorship
+Servers are a single point of failure that can easily be shut down by the cloud companies or the states. Organic peer to peer communication on the other hand is much harder to affect as every device of the network must get disconnected from the rest in order to shot down the service.
 
-- As the project is in its very infancy, this is the current mode of governance.
-- Pros:
-  - Decisions are taken quickly
-  - Will follow the intent of the person who initiated the project
-- Cons:
-  - Simple to pressure a single person
-  - Isn't impervious to bus accidents
-  - Biased by the leader's socio-economic status
+#### LibP2P
 
-#### Open Democracy
+[LibP2P](https://libp2p.io/) is an open source networking library that has a very flexible transport layer with protocol multiplexing. According to their website it is the simplest solution for global scale peer-to-peer networking and includes support for pub-sub message passing, distributed hash tables, NAT hole punching and browser-to-browser direct communication. It is still under active development but is used in production in many large scale contexts.
 
-- Cons:
-  - Very hard to avoid [Sybil attacks](https://en.wikipedia.org/wiki/Sybil_attack)
-  - Not implicated users are very likely to take poorly informed decisions
-  - Organized interest groups might have oversized weight
+### Collaborative Storage Cloud
+
+[Collaborative storage cloud](https://en.wikipedia.org/wiki/Cooperative_storage_cloud)
+
+### Payment Method
+
+Payment methods have to be available in order to finance the work of content creators, pay compensations on the collaborative storage cloud.
+
+- the *Dialogue Fund* will provide content crowd funding (*accessible* and *sustainable*)
+- payments in filecoin will be possible independently of that service (*resilient*)
+- the *Dialogue Fund* might provide filecoin exchange (*accessible* and *sustainable*)
+
+### Architecture
+
+In order to articulate all perviously cited systems we need a clear architecture.
+
+- Must enable interface and algorithmic modularity by providing specific api for the different variations of these systems to be integrated through
 
 ## Notes
 
