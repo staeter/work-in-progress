@@ -160,36 +160,31 @@ The platform realizes this principle through secure APIs for safe extension deve
 
 Most social platforms are beholden to corporate interests and vulnerable to state control. Whether through profit motives driving harmful engagement tactics, advertisers influencing content policies, or governments demanding user data and censorship compliance, these dependencies fundamentally compromise platforms' ability to serve their users' interests. The result is a social media landscape where neither users nor platform operators can maintain genuine autonomy in pursuing their stated values and goals.
 
-Independence means ensuring the platform can stay true to its *core principles* over time, resisting both corporate capture and state control. This requires technical autonomy through distributed architecture and cooperative infrastructure, organizational independence and sustainable funding models.
+Independence implies the strong rejection of the profit motive in general and opportunism amongst the people involved. Money has to be used only as a tool needed to build the platform but it must never be confused with the final goal. It is needed to ensure the platform stays true to its *core principles* and to resist both corporate capture and state control.
 
+Systems have to share [computing](https://en.wikipedia.org/wiki/Distributed_artificial_intelligence) and [storage](https://en.wikipedia.org/wiki/Cooperative_storage_cloud) loads across all users devices to avoid dependency to any cloud provider. This also lower the maintenance costs and limits the dependency on revenue sources. The source of revenue have to be varied and preferably come from the users who have the most interest in upholding the *core principles*. The org must not grow dependent on any other source of revenue - like advertisement or subsidies - as they may be used to pressure the org if it grows too dependent on them.
 
-Distribution of resources helps ensure both technical resilience and environmental sustainability. This means designing systems that efficiently share computing and storage loads across the network.
-
-This principle guides both technical architecture and governance structures.
-
-Consistent governance ensures the platform stays true to its principles over time. This requires clear processes for decision-making, conflict resolution, and adaptation to new challenges.
-
-This principle guides both technical and community management structures.
-
-The dev team are the initiators of the platform's culture. They have to be the prime examples of its principles and their behavior towards the rest of the community has to reflect that.
-
-Both in the architecture and the governance Dialogue has to stay independent from corporate and state interests in order to fulfil the other core principles.
-
-In terms of architecture this means the use of [cooperative storage](https://en.wikipedia.org/wiki/Cooperative_storage_cloud) and [distributed artificial intelligence](https://en.wikipedia.org/wiki/Distributed_artificial_intelligence)
-
-Stay independent from the profit motive. Money is a tool needed to build the platform, it should never be confused with its goal.
+To prevent opportunism amongst the peoples involved in the org, salaries have to be limited even for key people and those with conflict of interests have to be severely rejected. Peoples have to show significant investment into the project before they can take part in the decision process. A fund have to be prepared in case members of the organization get intimidated or pressured.
 
 ### 14. Sustainable
 
-Long-term sustainability requires attention to both technical and social foundations. This means choosing stable technologies, building maintainable systems, and creating governance structures that can evolve.
+In the rapidly evolving landscape of technology and social platforms, many projects face challenges in maintaining their relevance and functionality over time. Often, platforms are built with short-term growth goals in mind, leading to technical debt and a lack of consideration for the social and ecological impacts. To ensure long-term viability and continued alignment with user needs, sustainability must be a core consideration from the outset.
 
-This principle helps evaluate every decision's long-term implications.
+Sustainability involves creating a platform that remains viable and relevant across generational timescales. This means choosing stable technologies, building maintainable systems, and establishing governance structures that can evolve with the community's needs. It means that every technical and architectural decision have to be taken with a long term perspective.
+
+It is not about making rigid choices or avoiding new technologies and ideas. It is about the flexibility and adaptability to changing circumstances. Bold technical choices can be made if they are shown to closely match the *core principles*.
+
+Systems should be designed for easy maintenance and scalability, with clear documentation and modular architecture to facilitate updates and improvements. Governance structures should be flexible, allowing for community input and adaptation to new circumstances. Feedback loops that identify areas for improvement have to be thought out to ensure the platform continues to meet user needs and remains aligned with its core principles over time.
 
 ### 15. Empirical
 
-Rigorous testing helps ensure features actually serve their intended purposes. This means gathering data (while respecting privacy), studying outcomes, and adjusting based on evidence.
+In the development of social platforms, assumptions about user behavior and feature effectiveness can lead to misguided decisions and unintended consequences. Without a rigorous approach to testing and validation, platforms risk implementing features that do not serve their intended purposes or align with their initial aim. An empirical approach is essential to ensure that platform development is grounded in reality and evidence.
 
-This principle keeps development grounded in reality rather than assumptions.
+The empirical principle emphasizes the importance of data-driven decision-making and rigorous testing. It involves gathering quantitative data (while respecting user privacy) but also qualitative feedbacks to study the concrete outcomes and to make adjustments based on evidence. This approach ensures that features and changes are evaluated for their actual impact, allowing the platform to evolve in a way that truly benefits its users.
+
+Empirical does not mean relying solely on quantitative data or ignoring qualitative insights. It is not about reducing user experiences to mere numbers or metrics. Instead, it involves a balanced approach that considers both quantitative and qualitative data, ensuring a comprehensive understanding of user interactions and platform dynamics.
+
+To implement the empirical principle, the platform should establish robust mechanisms for data collection and analysis that is based on user agreement. A/B testing, user feedback loops, and pilot programs can be used to evaluate new features and changes. Regular reviews of platform performance and user satisfaction should inform ongoing development. By fostering a culture of continuous learning and adaptation, the platform can ensure that its evolution is guided by real-world evidence and user needs.
 
 ### 16. Transparent
 
@@ -248,11 +243,13 @@ The platform's name has to:
   - Its acronym isn't natural to read
   - Might be seen as piggy backing on the [IPFS](https://ipfs.tech/) ecosystem especially as it might not be built on top of it
 
-### Dialogue Fund
+### Dialogue Org
 
-Dialogue Fund is the non profit that gathers the various sources of revenue and redistributes them between the content creators and the developers that push the platform forward. It is a non profit that keeps its income and redistribution completely transparent to the public.
+Dialogue Org is the non profit that gathers the various sources of revenue and redistributes them between the content creators and the developers that push the platform forward. It is a non profit that keeps its income and redistribution completely transparent to the public.
 
-### Dialogue Fund Governance
+This organization is the initiator of the platform's culture and its members have to be the prime examples of its principles. Their behavior towards the rest of the community has to reflect that.
+
+### Dialogue Org Governance
 
 Governance might be the most difficult challenge of all. We have to take it very seriously as this is the deciding factor on weather the platform keeps upholding its *core principles* or weather it ends up steering in an unfavorable direction.
 
@@ -400,9 +397,9 @@ Servers are a single point of failure that can easily be shut down by the cloud 
 
 Payment methods have to be available in order to finance the work of content creators, pay compensations on the collaborative storage cloud.
 
-- the *Dialogue Fund* will provide content crowd funding (*accessible* and *sustainable*)
+- the *Dialogue Org* will provide content crowd funding (*accessible* and *sustainable*)
 - payments in filecoin will be possible independently of that service (*resilient*)
-- the *Dialogue Fund* might provide filecoin exchange (*accessible* and *sustainable*)
+- the *Dialogue Org* might provide filecoin exchange (*accessible* and *sustainable*)
 
 ### Architecture
 
