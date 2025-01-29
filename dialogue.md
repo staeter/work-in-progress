@@ -204,7 +204,7 @@ Complexity grows quickly when designing systems. Giving complete control over th
 
 ### Privacy vs Openness
 
-A lot of usage data has to be available in order to build good recommender systems (*expressive*). Privacy entails anonymity which makes it hard to discriminate bots and causes a lack of individual accountability (*empathic*, *democratic* and *informative*).
+A lot of usage data has to be available in order to build good recommender systems (*expressive*). Privacy entails anonymity which makes it hard to discriminate bots and causes a lack of individual accountability (*empathic*, *democratic* and *informative*). It also hinders the ability to gather usage data that can inform the platform's development (*empirical*).
 
 -- wip
 
