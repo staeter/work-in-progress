@@ -407,6 +407,27 @@ In order to articulate all perviously cited systems we need a clear architecture
 
 - Must enable interface and algorithmic modularity by providing specific api for the different variations of these systems to be integrated through
 
+#### Key Concepts / Ontology
+
+- Person : Specifically describes a human user.
+- Bot : Computer program interacting with the platform. It may gather data and/or publish *content*.
+- Sybil : Computer program pretending to be a human user.
+- Org : Group of *people* organizing together. They have aims, rules and policies that describe their goal, their decision mechanisms and their moderation policies.
+- Entity : Anything that interacts with the app. This covers *bots*, *people* and *orgs*.
+- Auth : Data structure describing which *entities* get to access and/or *interact* in specific ways with a given piece of *content*. All *content* except for public one is encrypted and needs to be signed by an *entity* having the proper *auth*.
+- Signature : Cryptographic signature ensuring the authenticity of the piece of data. Every *content* and *interaction* have to be signed.
+
+- Content : Piece of content matching a specific *format*. It might reference some other *content*. This covers all qualitative data.
+- Format : Standard structure of *content* data, metadata and presentation material (miniature, description, etc.). This might cover things like articles, posts, long form video, short vertical video, music, podcast, book, comment, vote, etc.
+- Interaction : Way a *person* can interact with a specific piece of *content*. Might be likes, views, reactions, modifications, etc. They only represent quantitative data.
+
+- Component : Piece of interface serving a specific purpose.
+- Design : Set of parameters that can be edited by the *person* which decides on the aesthetic and usability of *components*. It describes dark and light mode colors, font sizes, weather assisting tools are needed, etc.
+
+- Metric : Some meaningful information extracted from the pile of raw data by a deterministic algorithm. It may measure the amount of views a piece of *content* got while avoiding to count *sybils*, it might measure how much a specific *person* enjoyed a piece of *content* or extract keywords representing the topic it covered.
+- Recommendation : List of *content* organized by an algorithm through various criterions to a specific *person*. It tries to predict which *content* a given *person* would want to access next based on various *metrics* and the *content* that the *person* may be currently reading/watching.
+- Discovery : *Component* presenting the *content* selected by different *recommendation* systems for the *person* to search through.
+
 ## Notes
 
 Various notes and precisions about this document.
