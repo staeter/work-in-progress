@@ -409,27 +409,41 @@ In order to articulate all perviously cited systems we need a clear architecture
 
 #### Key Concepts / Ontology
 
+Organizing :
+
+- Entity : Anything that interacts with the app. This covers *bots*, *people* and *orgs*.
 - Person : Specifically describes a human user.
 - Bot : Computer program interacting with the platform. It may gather data and/or publish *content*.
 - Sybil : Computer program pretending to be a human user.
-- Org : Group of *people* organizing together. They have aims, rules and policies that describe their goal, their decision mechanisms and their moderation policies.
-- Entity : Anything that interacts with the app. This covers *bots*, *people* and *orgs*.
-- Auth : Data structure describing which *entities* get to access and/or *interact* in specific ways with a given piece of *content*. All *content* except for public one is encrypted and needs to be signed by an *entity* having the proper *auth*. Entities that have reading rights on the content are the only ones to receive the decryption key.
-- Signature : Cryptographic signature ensuring the authenticity of the piece of data. Every *content* and *interaction* have to be signed.
+- Org : Group of *entities* organizing together. They have an *aim*, *processes* and a *record*. It might be publicly visible or private in which case only its *members* know it exists. *Members* may share *content* internally.
+- Member : *Entity* that is part of an *org*.
+- Aim : Piece of text describing the goals, intended purposes and general orientation of an *org*. The introduction and the *core principles* together form *Dialogue Org*'s *aim*.
+- Action : Different actions can be taken by an *org*. This mey be internal *content* moderation, *content* publication and management, modifications of the *aim*, *member* acceptance and exclusion, *role* edition, granting and removal, modifications of *processes*, etc.
+- Process : Methods and criterions by which *action* can be taken within an *org*. The mechanisms mey include direct voting, temporary role granting through voting or [sortition](https://en.wikipedia.org/wiki/Sortition), committee deliberation, etc. Its functioning has to be *transparent* to every *member*.
+- Record : List of every *action* taken.
+- Role : *Members* hold different *roles* within an *org* that charge them with some responsibilities and may grants them the right to take a specific *actions*. A piece of text describes the expected behavior of the holder.
 
-- Content : Piece of content matching a specific *format*. It might reference some other *content*. This covers all qualitative data.
-- Format : Standard structure of *content* data, metadata and presentation material (miniature, description, etc.). This might cover things like articles, posts, long form video, short vertical video, music, podcast, book, comment, vote, etc.
-- Interaction : Way a *person* can interact with a specific piece of *content*. Might be likes, views, reactions, modifications, etc. They only represent quantitative data.
-- Groupings : *Format* that groups other *contents* together. This might be photo or music albums, playlists, reading lists, etc.
+Publishing :
+
+- Content : Piece of content matching a specific *format*. It is owned by an *entity* which is the only one able to modify its *auth* data.
+- Format : Standard structure of *content* data, metadata and presentation material (miniature, description, etc.). This might cover things like articles, posts, long form video, short vertical video, music, podcast, book, comment, etc.
+- Interaction : Way a *person* can interact with a specific piece of *content*. Might be likes, views, reactions, votes, modifications, etc. They only represent quantitative data.
+- Groupings : *Format* that groups other *contents* together. This might be photo or music albums, playlists, reading lists, feeds, etc.
+- Auth : Data structure describing which *entities* get to access and/or *interact* in specific ways with a given piece of *content*. All *content* except for public one is encrypted. *Entities* that have reading rights on the content are the only ones to receive the decryption key.
+- Ownership : Every piece of *content* is owned by an *entity* which is the only one able to modify its *auth*. *Content* is *owned* by its initial emitter but can be transferred to a different *entity*.
+- Signature : Cryptographic signature ensuring the authenticity of the piece of data. Every *content* and *interaction* have to be signed. Different kinds of [group signatures](https://en.wikipedia.org/wiki/Group_signature) mey be used in the case of *org* signatures.
+
+Interfaces :
 
 - Component : Piece of interface serving a specific purpose.
 - Layout : Piece of interface organizing various *components* on the screen. It may then itself be used as a *component*.
 - Page : *Layout* covering the whole screen that has a specific url/address.
 - Design : Set of parameters that can be edited by the *person* which decides on the aesthetic and usability of *components* and *layouts*. It describes dark and light mode colors, font sizes, weather assisting tools are needed, etc.
 
+Presenting :
+
 - Metric : Some meaningful information extracted from the pile of raw data by a deterministic algorithm. It may measure the amount of views a piece of *content* got while avoiding to count *sybils*, it might measure how much a specific *person* enjoyed a piece of *content* or extract keywords representing the topic it covered.
 - Recommendation : List of *content* organized by an algorithm through various criterions to a specific *person*. It tries to predict which *content* the given *person* would want to access next based on various *metrics* and based on the *content* that the *person* may be currently reading/watching.
-
 - Presentation : *Page* enabling a *person* to read/watch and *interact* with a piece of *content*.
 - Miniature : *Component* presenting a piece of *content* that enable the *person* to access its *page* or add it to various content *groupings*.
 - Discovery : *Layout* presenting the *miniatures* of *contents* selected by different *recommendation* systems for the *person* to search through.
