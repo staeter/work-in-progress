@@ -83,6 +83,8 @@ This isn't about creating a centralized truth authority or enforcing a single pe
 
 The platform realizes this principle through several complementary mechanisms. For gathering and verifying information, it provides geotagged and timestamped content that can be cross-referenced between witnesses, along with collaborative investigation tools to connect related pieces of evidence. For ensuring coverage quality, reputation systems track journalistic integrity while a suite of tools helps balance coverage priorities: statistical comparisons show how coverage frequency matches real-world occurrence, impact assessment tools measure the scope and duration of effects, communities can define and weight different impact factors, and contextual presentation highlights trends rather than isolated incidents. Default user's interface contrasts their news viewed through different ideological lenses. Together, these mechanisms support rigorous collective journalism that reflects real-world significance and diversity of opinions rather than entertainment value.
 
+-- wip : add peer review before publishing content
+
 ### 6. Democratic
 
 Traditional social platforms tend to concentrate power in the hands of platform owners and their algorithms, leaving users and communities with little say in how their spaces are governed. Even when platforms offer community moderation tools, these are often limited and can be overridden by corporate decisions driven by profit motives rather than community needs.
@@ -415,19 +417,19 @@ Organizing :
 - Person : Specifically describes a human user.
 - Bot : Computer program interacting with the platform. It may gather data and/or publish *content*.
 - Sybil : Computer program pretending to be a human user.
-- Org : Group of *entities* organizing together. They have an *aim*, *processes* and a *record*. It might be publicly visible or private in which case only its *members* know it exists. *Members* may share *content* internally.
+- Org : Group of *entities* organizing together. They have an *aim*, *processes* and a *record*. It might be publicly visible or private in which case only its *members* and some other authorized *entities* know it exists. *Members* may share *content* internally.
 - Member : *Entity* that is part of an *org*.
 - Aim : Piece of text describing the goals, intended purposes and general orientation of an *org*. The introduction and the *core principles* together form *Dialogue Org*'s *aim*.
 - Action : Different actions can be taken by an *org*. This mey be internal *content* moderation, *content* publication and management, modifications of the *aim*, *member* acceptance and exclusion, *role* edition, granting and removal, modifications of *processes*, etc.
-- Process : Methods and criterions by which *action* can be taken within an *org*. The mechanisms mey include direct voting, temporary role granting through voting or [sortition](https://en.wikipedia.org/wiki/Sortition), committee deliberation, etc. Its functioning has to be *transparent* to every *member*.
-- Record : List of every *action* taken.
+- Process : Methods and criterions by which *action* can be taken within an *org*. The mechanisms mey include direct voting, temporary *role* granting through [sortition](https://en.wikipedia.org/wiki/Sortition), committee deliberation, etc. Its functioning has to be transparent to every *member*.
+- Record : List of every *action* taken and the *entities* responsible. Each has an [IPLD](https://ipld.io/) reference.
 - Role : *Members* hold different *roles* within an *org* that charge them with some responsibilities and may grants them the right to take a specific *actions*. A piece of text describes the expected behavior of the holder.
 
 Publishing :
 
-- Content : Piece of content matching a specific *format*. It is owned by an *entity* which is the only one able to modify its *auth* data.
+- Content : Piece of content matching a specific *format*. It is owned by an *entity* which is the only one able to modify its *auth* data. Each has an [IPLD](https://ipld.io/) reference.
 - Format : Standard structure of *content* data, metadata and presentation material (miniature, description, etc.). This might cover things like articles, posts, long form video, short vertical video, music, podcast, book, comment, etc.
-- Interaction : Way a *person* can interact with a specific piece of *content*. Might be likes, views, reactions, votes, modifications, etc. They only represent quantitative data.
+- Interaction : Way a *person* can interact with a specific piece of *content*. Might be likes, views, reactions, votes, modifications, etc. They only represent quantitative data and each has an [IPLD](https://ipld.io/) reference.
 - Groupings : *Format* that groups other *contents* together. This might be photo or music albums, playlists, reading lists, feeds, etc.
 - Auth : Data structure describing which *entities* get to access and/or *interact* in specific ways with a given piece of *content*. All *content* except for public one is encrypted. *Entities* that have reading rights on the content are the only ones to receive the decryption key.
 - Ownership : Every piece of *content* is owned by an *entity* which is the only one able to modify its *auth*. *Content* is *owned* by its initial emitter but can be transferred to a different *entity*.
@@ -447,6 +449,12 @@ Presenting :
 - Presentation : *Page* enabling a *person* to read/watch and *interact* with a piece of *content*.
 - Miniature : *Component* presenting a piece of *content* that enable the *person* to access its *page* or add it to various content *groupings*.
 - Discovery : *Layout* presenting the *miniatures* of *contents* selected by different *recommendation* systems for the *person* to search through.
+
+### Reputation System
+
+Reputation is relative. It varies from one domain to an other (a reputable mathematician might be really dumb when speaking about sociology) and from one ideology to the next (politicians often caricature opposing perspectives). In the same way they are many ways to to measure it, from youtube views to facebook likes passing by citation counts on scientific papers, each will emphasize different values and aims.
+
+- Reputation Orgs are *orgs* that define, measure and enforce a specific reputation index.
 
 ## Notes
 
@@ -494,7 +502,7 @@ We provide software to be used by people to share content
 - though we will do what we can for content creators to get due recognition and pay for their work
 - and we will absolutely try to spread revenue amongst small creators enabling them to live from their work instead of concentrating it in the hands of a few larger ones that either turn into corporations or are already produced by one
 
-## Legacy and wip Text
+## Legacy text
 
 ### Pro-Social Behavior
 
@@ -535,16 +543,6 @@ We provide software to be used by people to share content
 ### Local First and Fully Distributed
 
 The app has to function as [local first software](https://www.inkandswitch.com/local-first/) so that it stays up even under heavy network partitioning.
-
-**Principles**:
-
-- Keep the primary copy of the data on the local device.
-- Synchronize data across all of the user's devices.
-- Works fine without an Internet connection.
-- Support real-time collaboration.
-- Downloadable from any other user's device.
-- Users can take part in a [cooperative storage cloud](https://en.wikipedia.org/wiki/Cooperative_storage_cloud) for long term storage.
-- Users can take part in cooperative [distributed computing](https://en.wikipedia.org/wiki/Distributed_computing) in order to run algorithms that are too heavy to function locally.
 
 **Useful Inspirations**:
 
@@ -620,7 +618,6 @@ The shopping list is long and we will need a lot of resources to get there.
 - Consulting for companies and non profits that would like to function in a democratic fashion and would benefit by integrating Dialogue into their organization.
 - User's donations under a set threshold to avoid large donators getting leverage.
 
-
 ## Design Ideas
 
 - Detect aggressive or hurtful writing in a post or comment and prompt the user to think about the people that message might hurt before posting it online.
@@ -630,11 +627,10 @@ The shopping list is long and we will need a lot of resources to get there.
 - Different versions of the interface can be provided as extensions.
 - Translation algorithms can be provided as extensions and hosted on the user's devices.
 
-
 ## Existing Propositions
 
 > I want to review a lot more existing social media in order to pull inspiration. Here is a set that will be interesting to review:
-> Mastodon, Matrix, Secure Scuttlebutt (SSB), Aether, Lemmy, Discord, Signal, Telegram, Slack, WhatsApp, Reddit, YouTube, Instagram, Facebook, Snapchat, TikTok, LinkedIn, Twitter/X, WeChat, Twitch, Medium, BeReal, Clubhluse
+> Mastodon, Matrix, Secure Scuttlebutt (SSB), Aether, Lemmy, Discord, Signal, Telegram, Slack, WhatsApp, Reddit, YouTube, Instagram, Facebook, Snapchat, TikTok, LinkedIn, Twitter/X, WeChat, Twitch, Medium, BeReal, Clubhluse, Revolt, BlueSky
 
 ### Nebula
 
