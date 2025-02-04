@@ -4,7 +4,7 @@ module Ordt exposing (..)
 
 This implementation comes from [this blogpost](http://archagon.net/blog/2018/03/24/data-laced-with-history/).
 
-You will need this module only if you want to implement your own custom ORDT.
+This module should only be used to implement custom ORDTs. You might want to use an `elm-review` rule to enforce this.
 
 -}
 
@@ -29,7 +29,9 @@ type AtomUid
         }
 
 
-{-| Unique identifier for a copy of the data structure
+{-| Unique identifier for a copy of the data structure.
+
+NB: This uid should never be shared even amongst different data structures.
 -}
 type CopyUid
     = CopyUid UUID
@@ -45,8 +47,8 @@ type Ordt op
         , now : LogicalTime
 
         -- Weave : retrieve data in O(n) but retrieve specific Atom in O(n)
-        -- root is the initial atom and the causalTree points every cause to its effects
-        , root : AtomUid
+        -- original copy at logical time zero is the initial atom and the causalTree points every cause to its effects
+        , originalCopy : CopyUid
         , causalTree : GDict AtomUid (GDict AtomUid op)
 
         -- Yarn : retrieve specific Atom in O(1) but data in O(n^2)
@@ -70,25 +72,24 @@ type Ordt op
 type Weft
     = Weft (GDict CopyUid LogicalTime)
 
+new : Generator (Ordt op)
+new =
+    Random.map init newCopyUid
 
-empty : Generator (Ordt op)
-empty =
-    Random.map
-        (\copyUid ->
-            { copyUid = CopyUid copyUid
-            , now = LogicalTime.zero
-            , root =
-                { logicalTime = LogicalTime.zero
-                , copyUid = CopyUid copyUid
-                }
-                    |> AtomUid
-            , causalTree = GDict.empty
-            , atoms = GDict.empty
-            }
-                |> Ordt
-        )
-        UUID.generator
 
+newCopyUid : Generator CopyUid
+newCopyUid =
+    Random.map CopyUid UUID.generator
+
+init : CopyUid -> Ordt op
+init copyUid_ =
+    { copyUid = copyUid_
+    , now = LogicalTime.zero
+    , originalCopy = copyUid_
+    , causalTree = GDict.empty
+    , atoms = GDict.empty
+    }
+        |> Ordt
 
 isEmpty : Ordt op -> Bool
 isEmpty (Ordt { causalTree }) =
@@ -97,8 +98,25 @@ isEmpty (Ordt { causalTree }) =
 
 root : Ordt op -> AtomUid
 root (Ordt ordt) =
-    ordt.root
+    { logicalTime = LogicalTime.zero
+    , copyUid = ordt.originalCopy
+    }
+        |> AtomUid
 
+copyUid : Ordt op -> CopyUid
+copyUid (Ordt ordt) =
+    ordt.copyUid
+
+{-| builds the ordt from its copyUid, its root and a list of atoms.
+Returns nothing if any atomUid is invalid (not unique, disconnected from root, caused by a higher logical time or root isn't at logical time zero).
+-}
+build : CopyUid -> AtomUid -> List ( AtomUid, op ) -> Maybe (Ordt op)
+build copyUid_ root_ log =
+    Debug.todo "Ordt.build"
+
+toLog : Ordt op -> List ( AtomUid, op )
+toLog (Ordt ordt) =
+    Debug.todo "Ordt.toLog"
 
 {-| Merge two ORDTs having the same root.
 Keep the copyUid of the second.
@@ -106,13 +124,13 @@ Return Nothing if the roots are different.
 -}
 merge : Ordt op -> Ordt op -> Maybe (Ordt op)
 merge (Ordt a) (Ordt b) =
-    if a.root /= b.root then
+    if a.originalCopy /= b.originalCopy then
         Nothing
 
     else
         { copyUid = b.copyUid
         , now = LogicalTime.max a.now b.now
-        , root = b.root
+        , originalCopy = b.originalCopy
         , causalTree =
             List.foldl
                 (\( id, ops ) ->
@@ -127,9 +145,9 @@ merge (Ordt a) (Ordt b) =
                 (GDict.toList b.causalTree)
         , atoms =
             List.foldl
-                (\( copyUid, atoms ) ->
+                (\( copyUid_, atoms ) ->
                     GDict.update copyUidToComparable
-                        copyUid
+                        copyUid_
                         (Maybe.map (GDict.union atoms)
                             >> Maybe.withDefault atoms
                             >> Just
@@ -165,7 +183,7 @@ insertAfter cause op (Ordt ordt) =
         | now = logicalTime
         , causalTree =
             GDict.update atomUidToComparable
-                ordt.root
+                cause
                 (Maybe.map (GDict.insert atomUidToComparable atomUid op)
                     >> Maybe.withDefault (GDict.singleton atomUidToComparable atomUid op)
                     >> Just
@@ -206,8 +224,8 @@ type alias GDict k v =
 
 
 atomUidToComparable : AtomUid -> List Int
-atomUidToComparable (AtomUid { logicalTime, copyUid }) =
-    LogicalTime.toComparable logicalTime :: copyUidToComparable copyUid
+atomUidToComparable (AtomUid atomUid) =
+    LogicalTime.toComparable atomUid.logicalTime :: copyUidToComparable atomUid.copyUid
 
 
 copyUidToComparable : CopyUid -> List Int

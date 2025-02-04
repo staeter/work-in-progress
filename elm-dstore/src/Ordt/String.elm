@@ -2,7 +2,7 @@ module Ordt.String exposing (..)
 
 import DiffBy
 import GDict
-import Ordt exposing (AtomUid, Ordt(..))
+import Ordt exposing (AtomUid, Ordt(..), CopyUid)
 import Random exposing (Generator)
 
 
@@ -16,13 +16,16 @@ type Op
     = InsertLeft Char
     | Tombstone
 
+
 type alias DString =
     Ordt Op
 
 
 weave : DString -> String
-weave (Ordt { root, causalTree }) =
+weave ((Ordt { causalTree }) as ordt) =
     let
+        root = Ordt.root ordt
+
         findAndFilterTombstones : List ( AtomUid, Op ) -> ( Bool, List ( AtomUid, Op ) )
         findAndFilterTombstones ops =
             List.foldl
@@ -67,18 +70,12 @@ weave (Ordt { root, causalTree }) =
 
 
 {-| Create a DString from a string.
-It returns a generator because a UUID is needed for the copyUid
+
+The generator is needed to for the copyUid to be unique
 -}
-fromString : String -> Generator (DString)
+fromString : String -> Generator DString
 fromString str =
-    Random.map
-        (\ordt ->
-            Ordt.insertSeriesAfter
-                (Ordt.root ordt)
-                (List.map InsertLeft <| List.reverse <| String.toList str)
-                ordt
-        )
-        Ordt.empty
+    Random.map (\copyUid -> build copyUid str) Ordt.newCopyUid
 
 
 {-| count the amount of chars in the string -}
@@ -191,4 +188,17 @@ toList (Ordt ordt) =
                 )
                 branches
     in
-    traverseTree ordt.root []
+    traverseTree (Ordt.root (Ordt ordt)) []
+
+
+{-| This should only be used to design custom ORDTs containing DStrings -}
+build : CopyUid -> String -> DString
+build copyUid str =
+    let
+        ordt =
+            Ordt.init copyUid
+    in
+    Ordt.insertSeriesAfter
+        (Ordt.root ordt)
+        (List.map InsertLeft <| List.reverse <| String.toList str)
+        ordt
