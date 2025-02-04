@@ -2,7 +2,7 @@ module Ordt.String exposing (..)
 
 import DiffBy
 import GDict
-import Ordt exposing (Atom, AtomUid, GDict, Ordt(..))
+import Ordt exposing (AtomUid, Ordt(..))
 import Random exposing (Generator)
 
 
@@ -16,8 +16,11 @@ type Op
     = InsertLeft Char
     | Tombstone
 
+type alias DString =
+    Ordt Op
 
-weave : Ordt Op -> String
+
+weave : DString -> String
 weave (Ordt { root, causalTree }) =
     let
         findAndFilterTombstones : List ( AtomUid, Op ) -> ( Bool, List ( AtomUid, Op ) )
@@ -63,55 +66,45 @@ weave (Ordt { root, causalTree }) =
     traverseTree root ""
 
 
-fromString : String -> Generator (Ordt Op)
+{-| Create a DString from a string.
+It returns a generator because a UUID is needed for the copyUid
+-}
+fromString : String -> Generator (DString)
 fromString str =
     Random.map
         (\ordt ->
             Ordt.insertSeriesAfter
                 (Ordt.root ordt)
-                (List.map InsertLeft <| String.toList str)
+                (List.map InsertLeft <| List.reverse <| String.toList str)
                 ordt
         )
         Ordt.empty
 
 
-length : Ordt Op -> Int
-length (Ordt { causalTree }) =
-    let
-        countChars : GDict AtomUid Op -> Int
-        countChars branches =
-            List.foldl
-                (\( _, op ) acc ->
-                    case op of
-                        Tombstone ->
-                            { acc | tombstone = True }
-
-                        InsertLeft _ ->
-                            { acc | count = acc.count + 1 }
-                )
-                { tombstone = False, count = 0 }
-                (GDict.toList branches)
-                |> (\{ tombstone, count } ->
-                        count
-                            - (if tombstone then
-                                1
-
-                               else
-                                0
-                              )
-                   )
-    in
+{-| count the amount of chars in the string -}
+count : DString -> Int
+count (Ordt { atoms }) =
     List.foldl
-        (\( _, branches ) acc ->
-            acc + countChars branches
+        (\( _, atomsByLogicalTime ) acc ->
+            List.foldl
+                (\ ( _, atom) acc_ ->
+                    case atom.operation of
+                        InsertLeft _ ->
+                            acc_ + 1
+
+                        Tombstone ->
+                            acc_ - 1
+                )
+                acc
+                (GDict.toList atomsByLogicalTime)
         )
         0
-        (GDict.toList causalTree)
+        (GDict.toList atoms)
 
 
 {-| make the diff between the string and the ordt and insert changes into the ordt
 -}
-insertDiff : String -> Ordt Op -> Ordt Op
+insertDiff : String -> DString -> DString
 insertDiff str ordt =
     let
         changes =
@@ -155,7 +148,7 @@ insertDiff str ordt =
     recursiveUpdate changes [] ordt
 
 
-toList : Ordt Op -> List ( AtomUid, Char )
+toList : DString -> List ( AtomUid, Char )
 toList (Ordt ordt) =
     let
         findAndFilterTombstones : List ( AtomUid, Op ) -> ( Bool, List ( AtomUid, Op ) )

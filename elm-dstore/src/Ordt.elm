@@ -40,17 +40,28 @@ type CopyUid
 type Ordt op
     = Ordt
         { copyUid : CopyUid
+
+        -- highest logical time currently in the ORDT
         , now : LogicalTime
 
         -- Weave : retrieve data in O(n) but retrieve specific Atom in O(n)
+        -- root is the initial atom and the causalTree points every cause to its effects
         , root : AtomUid
         , causalTree : GDict AtomUid (GDict AtomUid op)
 
         -- Yarn : retrieve specific Atom in O(1) but data in O(n^2)
+        -- atoms is a map of all atoms by copyUid
         , atoms : GDict CopyUid (GDict LogicalTime (Atom op))
 
         -- Cache : lazy evaluation
         -- , cache : Maybe data
+        --
+        -- UUIDs are 4 ints long and are duplicated for every atom and each atom is stored twice in the causalTree and in the atoms table. This gets heavy quick.
+        -- The idea here is to replace those heavy UUIDs with a single int and store the correspondence in the Ordt
+        -- , shortMapping : GBiDict CopyUid ShortCopyUid
+        --
+        -- We also want to store a prolly tree of the atoms to get fast diffs and improve syncing between clients
+        -- see https://www.youtube.com/watch?v=X8nAdx1G-Cs
         }
 
 
