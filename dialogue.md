@@ -4,20 +4,20 @@ Through sciences and technologies, humanity has gained mastery over nature but i
 
 This new socio-economic organization of society must be built by the masses voluntarily governing themselves. It therefore has to go beyond national boundaries, welcome humanity's intrinsic diversity and defend a positivist view of liberty. Thereby arises the need for tools enabling large scale collective organizing and decision making able to support the advent of such political order.
 
-Building this social network is a humongous task that can only be completed with the coordination of a large pool of engineers, programers, designers, journalists and other content creators. This document is a first attempt at clarifying the requirements in order to structure and orient everyone's work toward a clear and unified goal.
+Building this [decentralized](https://hypha.coop/dripline/debate-over-dweb-vs-web3/) social network is a humongous task that can only be completed with the coordination of a large pool of engineers, programers, designers, journalists and other content creators. This document is a first attempt at clarifying the requirements in order to structure and orient everyone's work toward a clear and unified goal.
 
 ## Core Principles
 
 These core principles describe the general goals of the project and serve as its north star. Every requirement and every feature has to be justified and can be debated relative to these principles.
 
-1. **Empathic**: Support users physical and mental wellbeing and foster goodwill, empathy, openness and constructive communication.
-2. **Optimistic**: Build confidence in our collective ability to overcome current challenges and shape better futures through human ingenuity and collective action.
+1. **Empathic**: Support peoples physical and mental wellbeing, foster honesty, empathy, inclusiveness and constructive communication.
+2. **Optimistic**: Is confident in our collective ability to overcome current challenges and shape better futures through human ingenuity and collective action.
 3. **Empowering**: Entrust people with control over their digital environment and support them with appropriate tools.
 4. **Expressive**: Provide spaces and tools for creative expression and knowledge sharing and embrace diverse voices and experiences.
 5. **Informative**: Create community-driven systems for news gathering, investigation, and proportional reporting.
-6. **Democratic**: Make bottom up, collective human organizing and decision-making more efficient and accessible than centralized systems.
+6. **Democratic**: Make bottom up, collective human organizing and decision-making more efficient and accessible than centralized systems both at small and large scales.
 7. **Accessible**: Ensure accessibility to as many people as possible by considering technical knowledge, economical status, cultural background, physical disabilities, language and literacy.
-8. **Attractive**: Has compelling reasons for people and communities to join, stay and grow with the platform.
+8. **Attractive**: Bring local and online communities onboard by implementing win win mechanisms and focusing on their concrete needs.
 9. **Private**: Guarantee personal data sovereignty and communication confidentiality.
 10. **Resilient**: Maintain platform availability and usability even under state-level interdiction.
 11. **Safe**: Ensure users can communicate without fear of identification or retribution even in repressive environments.
@@ -245,13 +245,15 @@ The platform's name has to:
   - Its acronym isn't natural to read
   - Might be seen as piggy backing on the [IPFS](https://ipfs.tech/) ecosystem especially as it might not be built on top of it
 
-### Dialogue Org
+### Dialogue Open Collective (OC)
 
-Dialogue Org is the non profit that gathers the various sources of revenue and redistributes them between the content creators and the developers that push the platform forward. It is a non profit that keeps its income and redistribution completely transparent to the public.
+Dialogue OC is the non profit that gathers the various sources of revenue and redistributes them between the content creators and the developers that push the platform forward. It keeps its incomes and redistribution completely transparent to the public.
+
+It may or may not be part of the [Open Collective](https://opencollective.com/) ecosystem but their philosophies have much in common.
 
 This organization is the initiator of the platform's culture and its members have to be the prime examples of its principles. Their behavior towards the rest of the community has to reflect that.
 
-### Dialogue Org Governance
+### Dialogue OC Governance
 
 Governance might be the most difficult challenge of all. We have to take it very seriously as this is the deciding factor on weather the platform keeps upholding its *core principles* or weather it ends up steering in an unfavorable direction.
 
@@ -329,11 +331,11 @@ A programming language is an user interface as well as a model for thinking
 
 #### Elm
 
-[Elm](https://elm-lang.org/)
+[Elm](https://elm-lang.org/) has the best compiler messages and maintainability around.
 
 #### Gren
 
-[Gren](https://gren-lang.org/)
+[Gren](https://gren-lang.org/) is an evolution of Elm which adds quite a few niceties.
 
 #### Bend
 
@@ -399,9 +401,9 @@ Servers are a single point of failure that can easily be shut down by the cloud 
 
 Payment methods have to be available in order to finance the work of content creators, pay compensations on the collaborative storage cloud.
 
-- the *Dialogue Org* will provide content crowd funding (*accessible* and *sustainable*)
+- the *Dialogue OC* will provide content crowd funding (*accessible* and *sustainable*)
 - payments in filecoin will be possible independently of that service (*resilient*)
-- the *Dialogue Org* might provide filecoin exchange (*accessible* and *sustainable*)
+- the *Dialogue OC* might provide filecoin exchange (*accessible* and *sustainable*)
 
 ### Architecture
 
@@ -411,50 +413,71 @@ In order to articulate all perviously cited systems we need a clear architecture
 
 #### Key Concepts / Ontology
 
+Users :
+
+- **Entity** : Anything that interacts with the app. This covers *bots*, *people* and *orgs*.
+- **Person** : Specifically describes a human user.
+- **Bot** : Computer program interacting with the platform. It may gather data and/or publish *content*.
+- **Sybil** : Computer program pretending to be a *person*.
+- **Org** : Group of *entities* organizing together. They have an *aim*, *processes* and a *record*. It might be publicly visible or private in which case only its *members* and some other authorized *entities* know it exists. *Members* may share *content* internally.
+- **Device** : Hardware *device* interacting with various parts of the platform.
+- **Legal Entity** : *Entity* having a legal existence outside of the platform. It might be a company, an ONG, an individual, a state, an institution, etc.
+- **Server** : *Device* providing storage and replication of *entities* encrypted data. A *person* might setup its own *server* or use one provided by a *legal entity*. They must be able to switch or leave *servers* at any time.
+- **Fiscal Host** : *Legal entity* which holds different *entities*’s funds in their bank account and enable them to receive and spend money. This concept corresponds to [Open Collective's fiscal hosts](https://docs.opencollective.com/help/fiscal-hosts/fiscal-hosts).
+
+Relationships :
+
+- **Acknowledgement** : An *entity* may *acknowledge* an other and recognize some aspect of that *entity*. That might be its existence or its legitimacy. It may correspond to a state recognizing the legitimacy of an other or the existence of a human being through an id card. It may also correspond to a *person* recognizing the legitimacy of an institution.
+- **Contact** : Two *peoples* can connect to one an other as *contacts*. This contact has to be done in person by scanning a qr code from one device to the other. This might also be considered as an *acknowledgement* between humans of their mutual physical existence. This is a key notion for avoiding *sybils*.
+- **Friendship** : *Contacts* that trust one an other may link as *friends*. Their devices will sore one an other's encrypted data. They will also permit account retrieval in case all of one *person*'s devices have been lost or stolen.
+- **Circle** : A *entity* may group its *acknowledged entities* into *circles* it wants to share *content* with. A *circle* may correspond to a group of friends or family. Those groupings are only known by the *entity* sharing the *content*.
+- **Block** : A *person* may hide all *content owned* by an other *entity* by *blocking* it.
+
 Organizing :
 
-- Entity : Anything that interacts with the app. This covers *bots*, *people* and *orgs*.
-- Person : Specifically describes a human user.
-- Bot : Computer program interacting with the platform. It may gather data and/or publish *content*.
-- Sybil : Computer program pretending to be a human user.
-- Org : Group of *entities* organizing together. They have an *aim*, *processes* and a *record*. It might be publicly visible or private in which case only its *members* and some other authorized *entities* know it exists. *Members* may share *content* internally.
-- Member : *Entity* that is part of an *org*.
-- Aim : Piece of text describing the goals, intended purposes and general orientation of an *org*. The introduction and the *core principles* together form *Dialogue Org*'s *aim*.
-- Action : Different actions can be taken by an *org*. This mey be internal *content* moderation, *content* publication and management, modifications of the *aim*, *member* acceptance and exclusion, *role* edition, granting and removal, modifications of *processes*, etc.
-- Process : Methods and criterions by which *action* can be taken within an *org*. The mechanisms mey include direct voting, temporary *role* granting through [sortition](https://en.wikipedia.org/wiki/Sortition), committee deliberation, etc. Its functioning has to be transparent to every *member*.
-- Record : List of every *action* taken and the *entities* responsible. Each has an [IPLD](https://ipld.io/) reference.
-- Role : *Members* hold different *roles* within an *org* that charge them with some responsibilities and may grants them the right to take a specific *actions*. A piece of text describes the expected behavior of the holder.
+- **Member** : *Entity* that is part of an *org*.
+- **Aim** : Piece of text describing the goals, intended purposes and general orientation of an *org*. The introduction and the *core principles* together form *Dialogue OC*'s *aim*.
+- **Action** : Different actions can be taken by an *org*. This mey be internal *content* moderation, *content* publication and management, modifications of the *aim*, *member* acceptance and exclusion, *role* edition, granting and removal, modifications of *processes*, etc.
+- **Process** : Methods and criterions by which *action* can be taken within an *org*. The mechanisms mey include direct voting, temporary *role* granting through [sortition](https://en.wikipedia.org/wiki/Sortition), committee deliberation, etc. Its functioning has to be transparent to every *member*.
+- **Record** : List of every *action* taken and the *entities* responsible.
+- **Role** : *Members* hold different *roles* within an *org* that charge them with some responsibilities and may grants them the right to take a specific *actions*. A piece of text describes the expected behavior of the holder.
 
 Publishing :
 
-- Content : Piece of content matching a specific *format*. It is owned by an *entity* which is the only one able to modify its *auth* data. Each has an [IPLD](https://ipld.io/) reference.
-- Format : Standard structure of *content* data, metadata and presentation material (miniature, description, etc.). This might cover things like articles, posts, long form video, short vertical video, music, podcast, book, comment, etc.
-- Interaction : Way a *person* can interact with a specific piece of *content*. Might be likes, views, reactions, votes, modifications, etc. They only represent quantitative data and each has an [IPLD](https://ipld.io/) reference.
-- Groupings : *Format* that groups other *contents* together. This might be photo or music albums, playlists, reading lists, feeds, etc.
-- Auth : Data structure describing which *entities* get to access and/or *interact* in specific ways with a given piece of *content*. All *content* except for public one is encrypted. *Entities* that have reading rights on the content are the only ones to receive the decryption key.
-- Ownership : Every piece of *content* is owned by an *entity* which is the only one able to modify its *auth*. *Content* is *owned* by its initial emitter but can be transferred to a different *entity*.
-- Signature : Cryptographic signature ensuring the authenticity of the piece of data. Every *content* and *interaction* have to be signed. Different kinds of [group signatures](https://en.wikipedia.org/wiki/Group_signature) mey be used in the case of *org* signatures.
+- **Content** : Piece of content matching a specific *format*. It is owned by an *entity* which is the only one able to modify its *auth*. Each has an [IPLD](https://ipld.io/) reference.
+- **Format** : Standard structure of *content* data, metadata and presentation material (miniature, description, etc.). This might cover things like articles, posts, long form video, short vertical video, music, podcast, book, comment, etc.
+- **Interaction** : Specific kind of *content* describing the way a *person* interacted with an other piece of *content*. Might be likes, views, reactions, votes, modifications, etc.
+- **Auth** : Piece of data describing which *entities* get to access and/or *interact* in specific ways with a given piece of *content*. All *content* except for public one is encrypted. *Entities* that have reading rights on the content are the only ones to receive the decryption key and all editions made by non authorized *entities* are simply ignored.
+- **Ownership** : Every piece of *content* is owned by an *entity* which is the only one able to modify its *auth*. *Content* is *owned* by its initial emitter but can be transferred to a different *entity*. The *content* will be stored and kept online by the *owner*'s own *devices* and the *owner*'s *friends devices*. In the context of an *org*, its *owned content* gets stored on its own *servers* and/or on its *members devices*.
+- **Signature** : Cryptographic signature ensuring the authenticity of the piece of data. Every *content* and *interaction* have to be signed. Different kinds of [group signatures](https://en.wikipedia.org/wiki/Group_signature) mey be used in the case of *org* signatures.
+- **Pinning** : A *person* might decide to *pin content* they do not *own* on one or more of its *devices*. Those *devices* will then store the *content* and keep it available online. *Pinned* data isn't stored on *friends devices*.
 
 Interfaces :
 
-- Component : Piece of interface serving a specific purpose.
-- Layout : Piece of interface organizing various *components* on the screen. It may then itself be used as a *component*.
-- Page : *Layout* covering the whole screen that has a specific url/address.
-- Design : Set of parameters that can be edited by the *person* which decides on the aesthetic and usability of *components* and *layouts*. It describes dark and light mode colors, font sizes, weather assisting tools are needed, etc.
+- **Component** : Piece of interface serving a specific purpose.
+- **Layout** : Piece of interface organizing various *components* on the screen. It may then itself be used as a *component*.
+- **Page** : *Layout* covering the whole screen that has a specific url/address.
+- **Design** : Set of parameters that can be edited by the *person* which decides on the aesthetic and usability of *components* and *layouts*. It describes dark and light mode colors, font sizes, weather assisting tools are needed, etc.
 
 Presenting :
 
-- Metric : Some meaningful information extracted from the pile of raw data by a deterministic algorithm. It may measure the amount of views a piece of *content* got while avoiding to count *sybils*, it might measure how much a specific *person* enjoyed a piece of *content* or extract keywords representing the topic it covered.
-- Recommendation : List of *content* organized by an algorithm through various criterions to a specific *person*. It tries to predict which *content* the given *person* would want to access next based on various *metrics* and based on the *content* that the *person* may be currently reading/watching.
-- Presentation : *Page* enabling a *person* to read/watch and *interact* with a piece of *content*.
-- Miniature : *Component* presenting a piece of *content* that enable the *person* to access its *page* or add it to various content *groupings*.
-- Discovery : *Layout* presenting the *miniatures* of *contents* selected by different *recommendation* systems for the *person* to search through.
+- **Metric** : Some meaningful information extracted from the pile of raw data by a deterministic algorithm. It may measure the amount of views a piece of *content* got while avoiding to count *sybils*, it might measure how much a specific *person* enjoyed a piece of *content*, extract keywords representing the topic it covered, track an *entity* journalistic accuracy or scientific rigor, etc. It is designed and *owned* by an *entity*.
+- **Recommendation** : List of *content* organized by an algorithm through various criterions to a specific *person*. It tries to predict which *content* the given *person* would want to access next based on various *metrics* and based on the *content* that the *person* may be currently reading/watching.
+- **Presentation** : *Page* enabling a *person* to read/watch and *interact* with a piece of *content*.
+- **Miniature** : *Component* presenting a piece of *content* that enable the *person* to access its *page* or add it to various content *groupings*.
+- **Discovery** : *Layout* presenting the *miniatures* of *contents* selected by different *recommendation* systems for the *person* to search through.
 
-### Reputation System
+##### Metrics
 
-Reputation is relative. It varies from one domain to an other (a reputable mathematician might be really dumb when speaking about sociology) and from one ideology to the next (politicians often caricature opposing perspectives). In the same way they are many ways to to measure it, from youtube views to facebook likes passing by citation counts on scientific papers, each will emphasize different values and aims.
+Lets describe more in detail what a *metric* might be. Most *metrics* come down to tracking a user's various forms of reputation.
 
-- Reputation Orgs are *orgs* that define, measure and enforce a specific reputation index.
+Reputation is relative. It varies from one domain to an other (a reputable mathematician might be really dumb when speaking about sociology) and from one ideology to the next (politicians often caricature opposing perspectives). In the same way they are many ways to to measure it : from youtube views to facebook likes passing by citation counts on scientific papers. Each will emphasize different values and aims.
+
+##### Belief System
+
+-- wip : just an idea right now
+
+A *person* can describe its beliefs which can serve to find *content* that questions those beliefs. This mechanism might push users to deepen their understanding of the world. *Content* would describe which belief it tries to change and be evaluated on its ability to change *peoples* beliefs.
 
 ## Notes
 
@@ -500,7 +523,7 @@ We provide software to be used by people to share content
 
 - like people who code the torrent client and protocol we are not responsible for the files shared and hosted by the users
 - though we will do what we can for content creators to get due recognition and pay for their work
-- and we will absolutely try to spread revenue amongst small creators enabling them to live from their work instead of concentrating it in the hands of a few larger ones that either turn into corporations or are already produced by one
+- and we will champion small creators enabling them to live from their work instead of concentrating it in the hands of a few larger ones that either turn into corporations or are already produced by one
 
 ## Legacy text
 
@@ -630,7 +653,7 @@ The shopping list is long and we will need a lot of resources to get there.
 ## Existing Propositions
 
 > I want to review a lot more existing social media in order to pull inspiration. Here is a set that will be interesting to review:
-> Mastodon, Matrix, Secure Scuttlebutt (SSB), Aether, Lemmy, Discord, Signal, Telegram, Slack, WhatsApp, Reddit, YouTube, Instagram, Facebook, Snapchat, TikTok, LinkedIn, Twitter/X, WeChat, Twitch, Medium, BeReal, Clubhluse, Revolt, BlueSky
+> Mastodon, Matrix, Secure Scuttlebutt (SSB), Aether, Lemmy, Discord, Signal, Telegram, Slack, WhatsApp, Reddit, YouTube, Instagram, Facebook, Snapchat, TikTok, LinkedIn, Twitter/X, WeChat, Twitch, Medium, BeReal, Clubhouse, Revolt, BlueSky, Keet
 
 ### Nebula
 
