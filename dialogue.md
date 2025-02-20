@@ -1,33 +1,33 @@
 # Dialogue
 
-Through sciences and technologies, humanity has gained mastery over nature but its social organization is still subordinated to individualistic short term interests. Deep systemic changes are needed for humanity to gain conscious control over its future and overcome the quagmires threatening it.
+Through sciences and technologies, humanity has gained mastery over nature but its social organization is still subordinated to individualistic short term interests. Deep systemic changes are needed for humanity to gain conscious control over its future and overcome self destructive mechanisms of capitalism.
 
 This new socio-economic organization of society must be built by the masses voluntarily governing themselves. It therefore has to go beyond national boundaries, welcome humanity's intrinsic diversity and defend a positivist view of liberty. Thereby arises the need for tools enabling large scale collective organizing and decision making able to support the advent of such political order.
 
-Building this [decentralized](https://hypha.coop/dripline/debate-over-dweb-vs-web3/) social network is a humongous task that can only be completed with the coordination of a large pool of engineers, programers, designers, journalists and other content creators. This document is a first attempt at clarifying the requirements in order to structure and orient everyone's work toward a clear and unified goal.
+Building such [decentralized](https://hypha.coop/dripline/debate-over-dweb-vs-web3/) social network is a humongous task that can only be completed with the coordination of a large pool of engineers, programers, designers, journalists, content creators and more. This document is a first attempt at clarifying the requirements in order to structure and orient everyone's work toward a clear and unified goal.
 
 ## Core Principles
 
-These core principles describe the general goals of the project and serve as its north star. Every requirement and every feature has to be justified and can be debated relative to these principles.
+This first section introduces the *core principles* we believe are needed for *Dialogue* to fulfill its goal.
 
 1. **Empathic**: Support peoples physical and mental wellbeing, foster honesty, empathy, inclusiveness and constructive communication.
-2. **Optimistic**: Is confident in our collective ability to overcome current challenges and shape better futures through human ingenuity and collective action.
+2. **Optimistic**: Builds confidence in our collective ability to overcome current challenges and shape better futures through human ingenuity and collective action.
 3. **Empowering**: Entrust people with control over their digital environment and support them with appropriate tools.
 4. **Expressive**: Provide spaces and tools for creative expression and knowledge sharing and embrace diverse voices and experiences.
 5. **Informative**: Create community-driven systems for news gathering, investigation, and proportional reporting.
-6. **Democratic**: Make bottom up, collective human organizing and decision-making more efficient and accessible than centralized systems both at small and large scales.
-7. **Accessible**: Ensure accessibility to as many people as possible by considering technical knowledge, economical status, cultural background, physical disabilities, language and literacy.
+6. **Democratic**: Make bottom up, collective human organizing and decision-making more efficient and accessible than centralized systems both at local and global scales.
+7. **Accessible**: Ensure accessibility and ease of use to the largest amount of people possible by considering technical knowledge, economical status, cultural background, physical and mental disabilities, language, literacy and every other possibly hindering factor.
 8. **Attractive**: Bring local and online communities onboard by implementing win win mechanisms and focusing on their concrete needs.
 9. **Private**: Guarantee personal data sovereignty and communication confidentiality.
 10. **Resilient**: Maintain platform availability and usability even under state-level interdiction.
 11. **Safe**: Ensure users can communicate without fear of identification or retribution even in repressive environments.
-12. **Modular**: Support community-driven development with a secure framework making every interface and algorithm customizable.
-13. **Independent**: Organize platform architecture and governance in a way that ensures independence from state and corporate interests in order to stay true to the *core principles*.
+12. **Modular**: Support community-driven development by building every interface and algorithm as replaceable components.
+13. **Autonomous**: Organize platform architecture and governance in a way that can resist possible coercion from states or multinational corporations.
 14. **Sustainable**: Ensure the platform's social and technical foundations remain viable and relevant across generational timescales.
 15. **Empirical**: Rigorously justify, study and stress test every feature to ensure its functioning truly matches its intent.
 16. **Transparent**: Actively expose and explain all platform mechanisms, algorithmic systems, and community processes, enabling informed user participation and control.
 
-The principles 1-3 are philosophical, 4-8 social, 9-12 technical and 13-16 methodological. Apart from these groupings, they are sorted in no particular order. The numbers are only there for referencing sake.
+The principles 1-3 are more philosophical, 4-8 social, 9-12 technical and 13-16 methodological. Apart from these groupings, they are sorted in no particular order. The numbers are only there for referencing sake.
 
 ## Rationale
 
@@ -47,9 +47,9 @@ Community guidelines and content creation tutorials can encourage empathetic com
 
 In times of global challenges and systemic crises, it's easy to fall into doom scrolling and cynicism. This constant exposure to problems without solutions creates a paralyzing feedback loop: seeing no examples of positive change makes it harder to believe in or work toward solutions, which in turn means fewer positive examples for others.
 
-Building confidence in our collective ability to overcome current challenges means breaking this cycle. This comes by sharing practical experiences and organizing to create new ones. When people see concrete examples of progress being made or being fought for, taking that first step toward engagement becomes possible.
+Building confidence in our collective ability to overcome current challenges means breaking this cycle. It comes by being enthusiastic about the future, sharing practical experiences and organizing to create the changes we want. When others see that change is possible, taking that first step toward engagement becomes possible.
 
-This doesn't mean ignoring problems or promoting blind optimism. It simply means maintaining faith in human ingenuity and working towards concrete solutions. The platform should encourage content creators users stay informed about challenges while emphasizing where action can be taken and positive change happens or is being fought for.
+This doesn't mean ignoring problems, promoting blind optimism or deluding oneself on what is possible. It simply means maintaining faith in human ingenuity and working towards concrete solutions. The platform should encourage content creators users stay informed about challenges while emphasizing where action can be taken and positive change happens or is being fought for.
 
 Community guidelines and content creation tutorials can encourage solution-focused storytelling, default platform metrics can track and highlight constructive engagement rather than just reach, and default recommendation systems can be designed to balance problem awareness with solution-finding initiatives. These mechanisms help shape a culture where sharing progress and celebrating small wins becomes as natural as identifying challenges.
 
@@ -103,12 +103,12 @@ Large segments of the population are excluded of the online discourse through va
 
 Making a social platform truly accessible means considering every feature through multiple lenses:
 
-- Technical: Works on low-end devices and slow/intermittent connections
-- Economical: Free to use with minimal hardware requirements
-- Cultural: Respects and accommodates different cultural norms and practices
-- Physical: Compatible with assistive technologies and follows accessibility standards
-- Linguistical: Available in multiple languages with clear paths for community translation
-- Educational: Usable regardless of technical literacy or formal education level
+- Technical: Nice to use for every level of technical literacy, providing shortcuts for experts and helpers for beginners.
+- Economical: Works on low-end devices with slow/intermittent connections.
+- Cultural: Adapt interfaces and symbols for them to be understood in different cultural contexts.
+- Disabilities: Follows the best web accessibility standards and have tools for community and automated, audio and video content transcription.
+- Lingual: Available in most languages with tools for community and automated content translation.
+- Literacy: Illustrate every button and menu for them to be usable by analphabet and illiterate peoples.
 
 Being accessible is about thoughtful development. We have to think every functionality from the start to be nice and easy to use for everyone.
 
@@ -158,11 +158,11 @@ Modularity enables communities to adapt how they interact with the platform whil
 
 The platform realizes this principle through secure APIs for safe extension development, sandboxed environments that protect core functionality and a dedicated space where communities share and discuss their custom packages. As extensions prove their value through widespread adoption and community vetting, they can be considered for integration into the platform's default offering, creating a pathway for community-driven evolution of the core platform itself.
 
-### 13. Independent
+### 13. Autonomous
 
 Most social platforms are beholden to corporate interests and vulnerable to state control. Whether through profit motives driving harmful engagement tactics, advertisers influencing content policies, or governments demanding user data and censorship compliance, these dependencies fundamentally compromise platforms' ability to serve their users' interests. The result is a social media landscape where neither users nor platform operators can maintain genuine autonomy in pursuing their stated values and goals.
 
-Independence implies the strong rejection of the profit motive in general and opportunism amongst the people involved. Money has to be used only as a tool needed to build the platform but it must never be confused with the final goal. It is needed to ensure the platform stays true to its *core principles* and to resist both corporate capture and state control.
+Being autonomous implies the strong rejection of the profit motive in general and opportunism amongst the people involved. Money has to be used only as a tool needed to build the platform but it must never be confused with the final goal. It is needed to ensure the platform stays true to its *core principles* and to resist both corporate capture and state control.
 
 Systems have to share [computing](https://en.wikipedia.org/wiki/Distributed_artificial_intelligence) and [storage](https://en.wikipedia.org/wiki/Cooperative_storage_cloud) loads across all users devices to avoid dependency to any cloud provider. This also lower the maintenance costs and limits the dependency on revenue sources. The source of revenue have to be varied and preferably come from the users who have the most interest in upholding the *core principles*. The org must not grow dependent on any other source of revenue - like advertisement or subsidies - as they may be used to pressure the org if it grows too dependent on them.
 
@@ -200,7 +200,7 @@ Each principle corresponds to a specific idea and are thought not to overlap wit
 
 ### Complexity vs Accessibility
 
-Complexity grows quickly when designing systems. Giving complete control over the interface to the user (*empowering*) might make those really complex to use and understand. The processes able to parse and structure information (*informative*) might be extremely complex.
+Complexity grows quickly when designing systems. Giving complete control over the interface to the user (*empowering* and *modular*) might make those really complex to use and understand. The processes able to parse and structure information (*informative*) might also become quite complex.
 
 -- wip
 
@@ -210,9 +210,16 @@ A lot of usage data has to be available in order to build good recommender syste
 
 -- wip
 
+### Modularity vs Safety, Resiliency and Accessibility
+
+-- wip
+
+The programming language, its framework and tools have to enforce the best practices in terms of documentation, code clarity, interface accessibility, testability and security.
+
 ## Requirements and Justifications
 
 Here we propose a set of requirements that we justify in regards to the platform's core principles. We start every section with a wish list of features that would ideally be present. We then provide a list of possible solutions, their pros and cons.
+
 
 ### Platform's Name
 
@@ -259,7 +266,7 @@ Governance might be the most difficult challenge of all. We have to take it very
 
 The governance of the platform must:
 
-- Prevent state or corporate interests infiltrating the deciding bodies (*independent*)
+- Prevent state or corporate interests infiltrating the deciding bodies (*autonomous*)
 - Reject opportunistic people from important roles to keep the platform on track with its *core principles*
 - Keep the development process going even under state level interdiction and repression (*resilient*)
 - Decision are taken publicly and have to be justified relative to the *core principles* (*transparent*)
