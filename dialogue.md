@@ -8,9 +8,9 @@ Building such decentralized social network is a humongous task that can only be 
 
 ## Contribute
 
-The current priority is to complete this document, to clarify its concepts and to start designing the platform's architecture. The best way for you to contribute is to send your remarks as a *GitHub* issue or sending them directly to me.
+The current priority is to complete this document, to clarify its concepts and to start designing the platform's architecture. The best way for you to contribute is to send your remarks and suggestions as a *GitHub* issue or sending them directly to me.
 
-Ideas that lack clarity - especially for people with no technical background - are of interest. Many technical aspects are lacking as this document is work in progress but please inform me on any consideration that I might be missing. There is no dumb remarks as long as they are stated in a respectful manner.
+Spotting ideas that lack clarity or words that need explanation - especially for people with no technical background - is of interest. Many technical aspects are lacking as this document is work in progress but please inform me about any consideration that I might be missing. There is no dumb remarks as long as they are stated in a respectful manner.
 
 ## Core Principles
 
@@ -20,9 +20,9 @@ This section introduces the *core principles* we believe are needed for *Dialogu
 2. **Optimistic**: Builds confidence in our collective ability to overcome current challenges and shape better futures through human ingenuity and collective action.
 3. **Empowering**: Entrust people with control over their digital environment and support them with appropriate tools.
 4. **Expressive**: Provide spaces and tools for creative expression and knowledge sharing and embrace diverse voices and experiences.
-5. **Informative**: Create community-driven systems for news gathering, investigation, and proportional reporting.
+5. **Informative**: Create community-driven systems for news gathering, investigation and reporting that highlights biasses.
 6. **Democratic**: Make bottom up, collective human organizing and decision-making more efficient and accessible than centralized systems both at local and global scales.
-7. **Accessible**: Ensure accessibility and ease of use to the largest amount of people possible by considering technical knowledge, economical status, cultural background, physical and mental disabilities, language, literacy and every other possibly hindering factor.
+7. **Accessible**: Ensure accessibility and ease of use to the largest amount of people possible by considering their technical knowledge, economical status, cultural background, physical and mental disabilities, language, literacy and every other possibly hindering factor.
 8. **Attractive**: Bring local and online communities onboard by implementing win win mechanisms and focusing on their concrete needs.
 9. **Private**: Guarantee personal data sovereignty and communication confidentiality.
 10. **Resilient**: Maintain platform availability and usability even in places where it has been outlawed.
@@ -83,7 +83,7 @@ In practice this comes down to handling various content formats (from text artic
 
 Traditional media outlets have consolidated into massive conglomerates whose coverage inevitably aligns with their owners' interests. Meanwhile, social platforms shape public perception through algorithmic amplification that prioritizes engagement over truthfulness. This creates distorted views of reality - sensationalizing certain events while overlooking others, amplifying extreme voices while marginalizing nuanced perspectives. The result is a media landscape where even basic facts become contested territory and where the real significance of events gets lost in a flood of decontextualized content.
 
-Being informative means providing community-driven systems for gathering, verifying, sharing and contextualizing news. This first requires tools for information gathering, sourcing, cross-referencing, investigation and communication. No news covering is truly neutral and being informative also is about making the ideology underlying the presented facts explicit and to contrast it with the way it is presented through different ideological lenses.
+Being informative means providing [community-driven systems](https://en.wikipedia.org/wiki/Citizen_journalism) for gathering, verifying, sharing and contextualizing news. This first requires tools for information gathering, sourcing, cross-referencing, investigation and communication. No news covering is truly neutral and being informative also is about making the ideology underlying the presented facts explicit and to contrast it with the way it is presented through different ideological lenses.
 
 This isn't about creating a centralized truth authority or enforcing a single perspective. Rather, it's about providing tools and processes that help communities collectively investigate and document events and encourage them to look across the isle and have a fair view of the opposing perspectives. The goal is to enable rigorous collaborative journalism without creating new gatekeepers or compromising the diversity of viewpoints.
 
@@ -115,6 +115,7 @@ Making a social platform truly accessible means considering every feature throug
 - Disabilities: Follows the best web accessibility standards and have tools for community and automated, audio and video content transcription.
 - Lingual: Available in most languages with tools for community and automated content translation.
 - Literacy: Illustrate every button and menu for them to be usable by analphabet and illiterate peoples.
+- Other: This list is non exhaustive and other factors that might hinder the platform's accessibility should be considered.
 
 Being accessible is about thoughtful development. We have to think every functionality from the start to be nice and easy to use for everyone.
 
@@ -234,7 +235,7 @@ The platform's name has to:
 - Correspond to what it is: a social network
 - Have a meaning that mirrors the platform's *core principles*
 - Be readable and pronounceable in a large amount of languages (*accessible*)
-- Be memorable (*attractive*)
+- Be memorable and findable (*attractive*)
 
 #### Dialogue
 
@@ -296,21 +297,24 @@ The governance of the platform must:
 
 #### Open Democracy
 
+There is no tooling adapted to manage this yet as we are trying to build them.
+
+- Pros:
+  - Doesn't depend on a single person
 - Cons:
-  - Very hard to avoid [Sybil attacks](https://en.wikipedia.org/wiki/Sybil_attack)
-  - Not implicated users are very likely to take poorly informed decisions
-  - Organized interest groups might have oversized weight
+  - People with little implication into the project are likely to take poorly informed decisions
+  - Organized interest groups might take an oversized weight
 
-### Programming Language
+### Programming Toolset
 
-A programming language is an user interface as well as a model for thinking
+A programming language in and of itself is an user interface that serves as a model for thinking and describing processes. We often think of programming languages as things in and of themselves but their compilers, IDEs, and tools in general take a huge role in the process of development. As it is a social process, this thinking can be extended to the blogs, forums and articles that are also part of the programming toolset.
+
+All of it guides development in many ways and has to be thoughtfully designed to fulfill the aims of the project.
 
 - Easy to learn and master (*accessible*)
-  - Great beginner resources
-  - Serve as a great introduction to programming
+  - Great beginner resources aimed at non technical peoples
   - Minimize the amount of core concepts
-  - Easy to read and to express
-    - This is successful when [syntactic sugar](https://en.wikipedia.org/wiki/Syntactic_sugar) becomes redundant
+  - Easy to read and to express (avoids [syntactic sugar](https://en.wikipedia.org/wiki/Syntactic_sugar))
   - Single threaded code
   - Consistent interfaces across devices
 - Easy to review and maintain (*sustainable*)
@@ -328,9 +332,16 @@ A programming language is an user interface as well as a model for thinking
 - Joins developer and designer's work
   - The code is the single source of truth
   - GUI enables designers to edit view code
+    - Single source of truth for the design system, layout and animations
+    - Intuitive for designers
+    - The design should automatically generate code and have a simple interface for developers to integrate with
+    - All of the design has to be under designer control with the least amount of coding knowledge needed
+    - Ensure each interface works on any screen format
+    - Enforce good accessibility practices
 - Built for distributed architecture (*distributed*)
   - [ORDT](http://archagon.net/blog/2018/03/24/data-laced-with-history/) as first class citizen
   - Enable distributed computations for heavy algorithms
+  - Integrates peer to peer protocols
 - Run and compile on most devices with low network availability (*accessible*)
   - Parallelize program at compile time
   - Tiny bundle size
@@ -344,7 +355,7 @@ A programming language is an user interface as well as a model for thinking
 
 #### Elm
 
-[Elm](https://elm-lang.org/) has the best compiler messages and maintainability around.
+[Elm](https://elm-lang.org/) has the best compiler messages and maintainability around. It has a very young ecosystem which comes with drawbacks as it lacks many libraries and tools that can be found in main stream languages.
 
 #### Gren
 
@@ -352,22 +363,11 @@ A programming language is an user interface as well as a model for thinking
 
 #### Bend
 
-[Bend](https://higherorderco.com/) seems great at compile time parallelization.
+[Bend](https://higherorderco.com/) seems great at compile time parallelization. [HVM](https://github.com/HigherOrderCO/HVM) it is built on might become a compilation target for Elm.
 
-### Integrated Development Environment
+#### Pear
 
-Many developers have to coordinate their work in order to build this gargantuan project. A great integrated development environment is needed for them to find their way in one an other code.
-
-### Graphical Interface Design Tool
-
-Good interface design is key to every *social core principles* and having the right tooling is key in order to fulfil the complex requirements they imply. This tools aims at integrating the designers and developers workflows in an efficient way.
-
-- Single source of truth for the design system, layout and animations
-- Intuitive for designers
-- The design should automatically generate code and have a simple interface for developers to integrate with
-- All of the design has to be under designer control with the least amount of coding knowledge needed
-- Ensure each interface works on any screen format
-- Enforce accessibility
+[Pear](https://docs.pears.com/guides/getting-started) is a nice framework for building and distributing p2p apps.
 
 ### Identity verification
 
@@ -389,28 +389,27 @@ An organization can then use this network to validate identity. It could only co
 
 everyone doesn't need to give the same credence to everyone else. Give more credence to people close to you and to people you support the work. Explicitly recommend content to people around you.
 
-### Multiformat
-
-The platform has to handle many different media formats (*expressive*).
-
-- each format has to
-  - have a specific data structure
-  - have an interface for the user to interact with it
-  - have a set of metrics that can be used by recommender systems
-
 ### P2P Networking
 
 Servers are a single point of failure that can easily be shut down by the cloud companies or the states. Organic peer to peer communication on the other hand is much harder to affect as every device of the network must get disconnected from the rest in order to shot down the service.
 
+-- wip : requirements are needed
+
 #### LibP2P
 
 [LibP2P](https://libp2p.io/) is an open source networking library that has a very flexible transport layer with protocol multiplexing. According to their website it is the simplest solution for global scale peer-to-peer networking and includes support for pub-sub message passing, distributed hash tables, NAT hole punching and browser-to-browser direct communication. It is still under active development but is used in production in many large scale contexts.
+
+#### Hypercore
+
+[Hypercore](https://docs.pears.com/building-blocks/hypercore) is a p2p protocol for distributing append-only logs.
 
 ### Collaborative Storage Cloud
 
 [Collaborative storage cloud](https://en.wikipedia.org/wiki/Cooperative_storage_cloud)
 
 ### Payment Method
+
+-- wip : needs to start with the requirements instead of the solutions.
 
 Payment methods have to be available in order to finance the work of content creators, pay compensations on the collaborative storage cloud.
 
@@ -431,7 +430,7 @@ The following concepts are the building blocks that articulate the various facet
 Users :
 
 - **Entity** : Anything that interacts with the app. This covers *bots*, *people* and *orgs*.
-- **Person** : Specifically describes a human user.
+- **Person** : Specifically describes a human user. We chose this specific word as we always want to remember we are talking about real peoples.
 - **Bot** : Computer program interacting with the platform. It may gather data and/or publish *content*.
 - **Sybil** : Computer program pretending to be a *person*.
 - **Org** : Group of *entities* organizing together. They have an *aim*, *processes* and a *record*. It might be publicly visible or private in which case only its *members* and some other authorized *entities* know it exists. *Members* may share *content* internally.
@@ -442,7 +441,7 @@ Users :
 
 Relationships :
 
-- **Acknowledgement** : An *entity* may *acknowledge* an other and recognize some aspect of that *entity*. That might be its existence or its legitimacy. It may correspond to a state recognizing the legitimacy of an other or the existence of a human being through an id card. It may also correspond to a *person* recognizing the legitimacy of an institution.
+- **Acknowledgement** : An *entity* may *acknowledge* an other and recognize some aspect of that *entity*. That might be its existence or its legitimacy. It may correspond to a state recognizing the legitimacy of an other or the existence of a human being through an id card. It may also correspond to a *person* recognizing the legitimacy of an institution. -- wip : quite unsure about this one
 - **Contact** : Two *peoples* can connect to one an other as *contacts*. This contact has to be done in person by scanning a qr code from one device to the other. This might also be considered as an *acknowledgement* between humans of their mutual physical existence. This is a key notion for avoiding *sybils*.
 - **Friendship** : *Contacts* that trust one an other may link as *friends*. Their devices will sore one an other's encrypted data. They will also permit account retrieval in case all of one *person*'s devices have been lost or stolen.
 - **Circle** : A *entity* may group its *acknowledged entities* into *circles* it wants to share *content* with. A *circle* may correspond to a group of friends or family. Those groupings are only known by the *entity* sharing the *content*.
