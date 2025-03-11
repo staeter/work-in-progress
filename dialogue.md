@@ -1,8 +1,8 @@
 # Dialogue
 
-Through sciences and technologies, humanity has gained mastery over nature but its social organization is still subordinated to individualistic short term interests. Deep systemic changes are needed for humanity to gain conscious control over its future and overcome self destructive mechanisms of capitalism.
+Through sciences and technologies, humanity has gained mastery over nature but its social organization is still subordinated to individualistic short term interests. Deep systemic changes are needed for humanity to gain conscious control over its future and overcome the self destructive mechanisms of capitalism.
 
-This new socio-economic organization of society must be built by the masses voluntarily governing themselves. It therefore has to go beyond national boundaries, welcome humanity's intrinsic diversity and defend a positivist view of liberty. Thereby arises the need for tools enabling local and global collective organizing and decision making able to support the peoples that fight for justice and equity all over the world and to serve as the software infrastructure for those new political systems.
+This new socio-economic organization of society must be built by the masses voluntarily governing themselves. It therefore has to go beyond national boundaries, welcome humanity's intrinsic diversity and defend a positivist view of liberty. Thereby arises the need for tools enabling local and global collective organizing and decision making able to support the peoples that fight for justice and equity all over the world and to serve as the software infrastructure for new political systems.
 
 Building such decentralized social network is a humongous task that can only be completed with the coordination of a large pool of engineers, programers, designers, journalists, content creators and more. This document is a first attempt at clarifying its requirements in order to structure and orient everyone's work toward a clear and unified goal.
 
@@ -33,9 +33,278 @@ This section introduces the *core principles* we believe are needed for *Dialogu
 15. **Empirical**: Rigorously justify, study and stress test every feature to ensure its functioning truly matches its intent.
 16. **Transparent**: Actively expose and explain all platform mechanisms, algorithmic systems, and community processes, enabling informed user participation and control.
 
-The principles are sorted in no particular order. The numbers are only there for referencing sake.
+The principles are sorted in no particular order. The numbers are only there for referencing sake. See the [rationale section](#core-principles-rationale) for a detailed description of each principle.
 
-## Rationale
+## Requirements
+
+Here we build up a set of requirements. Each has to describe which *core principle* it aims to fulfill and describe the reasoning justifying it if unclear. The quality of a requirement comes from its clarity, concision, completeness, consistency, correctness, and concreteness. They also need to be classified either as *critical*, *important* or *desirable*.
+
+We group the requirements into different *systems*. We aim to minimize their size and interdependency. For each *system*, we describe one or more *plans* we could follow to get it to a complete state. The pros and cons of each *plan* are then evaluated based on the uncertainties surrounding it, the expected costs, the peoples and communities that could get involved and the amount of work required.
+
+### Platform's Name
+
+The platform's name has to:
+
+- Correspond to what it is: a social network
+- Have a meaning that mirrors the platform's *core principles*
+- Be readable and pronounceable in a large amount of languages (*accessible*)
+- Be memorable and findable (*attractive*)
+
+#### Dialogue
+
+- This is the current chosen name
+- Pros:
+  - Reflects the *empathic*, *expressive*, *collaborative* and *democratic* principles
+  - Is easy to pronounce and has the same meaning in many languages
+  - There is a clear social aspect making it sensible to label a social network
+- Cons:
+  - Probably won't get `dialogue.net`
+  - SEO might be complicated
+
+#### Inter Planetary Social Network (IPSN)
+
+- Pros:
+  - Reflects the *distributed*, *resilient*, *distributed* and *sustainable* principles
+  - The fact that it is a social network is explicitly stated
+  - Is enthusiastic about the future (*optimistic*)
+- Cons:
+  - Quite long and difficult to pronounce for non english speakers
+  - Its acronym isn't natural to read
+  - Might be seen as piggy backing on the [IPFS](https://ipfs.tech/) ecosystem especially as it might not be built on top of it
+
+### Core Organization
+
+*Dialogue Open Collective* (OC) will be the legal entity that is in charge of gathering various sources of revenue and distributing them to the various peoples that are building its infrastructure and content.
+
+It may or may not be part of the [Open Collective](https://opencollective.com/) ecosystem but their philosophies have much in common.
+
+This organization is the initiator of the platform's culture and its members have to be the prime examples of its principles. Their behavior towards the rest of the community has to reflect that.
+
+#### Governance
+
+Governance might be the most difficult challenge of all. We have to take it very seriously as this is the deciding factor on weather the platform keeps upholding its *core principles* or weather it ends up steering in an unfavorable direction.
+
+The governance of the platform must:
+
+- Prevent state or corporate interests infiltrating the deciding bodies (*autonomous*)
+- Reject opportunistic people from important roles to keep the platform on track with its *core principles*
+- Keep the development process going even under state level interdiction and repression (*resilient*)
+- Decision are taken publicly and have to be justified relative to the *core principles* (*transparent*)
+- Functioning and decisions have to absolutely avoid unnecessary complexity and be comprehensible to non experts (*accessible*)
+- Rigorously test and observe the outcomes of each decision (*empirical*)
+- Able to quickly adapt to fix pressing issues (*sustainable*)
+- Embodies the *humanistic* and *optimistic* principles
+- Is under the control of involved users but also defend the interests of users that aren't able to involve themselves in the same way (*democratic*)
+- Changes to the core principles have to be difficult enough for the project not to stere off course and easy enough for them not to become obsolete (*sustainable*)
+
+##### Benevolent Dictatorship
+
+- As the project is in its very infancy, this is the current mode of governance but the aim is for this to only be temporary.
+- Pros:
+  - Decisions are taken quickly
+  - Will follow the intent of the person who initiated the project
+- Cons:
+  - Simple to pressure a single person
+  - Isn't impervious to bus accidents
+  - Biased by the leader's socio-economic status
+
+##### Open Democracy
+
+There is no tooling adapted to manage this yet as we are trying to build them.
+
+- Pros:
+  - Doesn't depend on a single person
+- Cons:
+  - People with little implication into the project are likely to take poorly informed decisions
+  - Organized interest groups might take an oversized weight
+
+### Programming Toolset
+
+A programming language in and of itself is an user interface that serves as a model for thinking and describing processes. We often think of programming languages as things in and of themselves but their compilers, IDEs, and tools in general take a huge role in the process of development. As it is a social process, this thinking can be extended to the blogs, forums and articles that are also part of the programming toolset.
+
+All of it guides development in many ways and has to be thoughtfully designed to fulfill the aims of the project.
+
+- Easy to learn and master (*accessible*)
+  - Great beginner resources aimed at non technical peoples
+  - Minimize the amount of core concepts
+  - Easy to read and to express (avoids [syntactic sugar](https://en.wikipedia.org/wiki/Syntactic_sugar))
+  - Single threaded code
+  - Consistent interfaces across devices
+- Easy to review and maintain (*sustainable*)
+  - Enforces good practice through language design and compiler errors
+  - Human readable and helpful compilation error messages
+  - Compiler enforce good documentation practices
+  - When it compiles it works except for mathematically untraceable issues
+  - No implicit behavior
+  - Strongly typed
+  - Enables metaprograming for analysis and automated review
+  - Compiler and tooling written in its own language
+  - Has clear and uniform naming conventions
+  - Standard formatting enforced by the compiler
+  - Standard formatting avoids indentation pyramids
+- Joins developer and designer's work
+  - The code is the single source of truth
+  - GUI enables designers to edit view code
+    - Single source of truth for the design system, layout and animations
+    - Intuitive for designers
+    - The design should automatically generate code and have a simple interface for developers to integrate with
+    - All of the design has to be under designer control with the least amount of coding knowledge needed
+    - Ensure each interface works on any screen format
+    - Enforce good accessibility practices
+- Built for distributed architecture (*distributed*)
+  - [ORDT](http://archagon.net/blog/2018/03/24/data-laced-with-history/) as first class citizen
+  - Enable distributed computations for heavy algorithms
+  - Integrates peer to peer protocols
+- Run and compile on most devices with low network availability (*accessible*)
+  - Parallelize program at compile time
+  - Tiny bundle size
+  - Be [local first](https://www.inkandswitch.com/local-first/)
+  - Fast compilation
+- Sandboxed (*modular*)
+  - Functions have no side effects
+  - A single datatype represents all possible side effects
+    - It can be extended or shrunk based on the access we want to give to the sub program
+- Can be translated in various languages (*accessible*)
+- Always a single source of truth (*sustainable*)
+  - The code and its documentation is the reference for the communication protocols
+
+#### Programming Language
+
+##### Elm
+
+[Elm](https://elm-lang.org/) has the best compiler messages and maintainability around. It has a very young ecosystem which comes with drawbacks as it lacks many libraries and tools that can be found in main stream languages but the language is stable and complete for its intended use case (web app frontend).
+
+##### Gren
+
+[Gren](https://gren-lang.org/) started as a fork of Elm. It adds quite a few quality of life improvements and is made for full stack apps building on a Node backend. Contrary to Elm and Roc they are building their primary compiler in Gren itself which unifies the tooling in a single language.
+
+##### Roc
+
+[Roc](https://www.roc-lang.org/) is a language inspired by Elm that adds a very useful abstraction of platforms and wants packages to have IDE integration. Its syntax tends to be more familiar to people coming from mainstream programming languages. It still is in full development and will take some time before being stable enough for use in production.
+
+##### Bend
+
+[Bend](https://higherorderco.com/) is great at compile time parallelization. There is discussion for [HVM](https://github.com/HigherOrderCO/HVM) (which Bend is built onto) to become a compilation target for Elm.
+
+#### P2P Networking
+
+Servers are a single point of failure that can easily be shut down by the cloud companies or the states. Organic peer to peer communication on the other hand is much harder to affect as every device of the network must get disconnected from the rest in order to shot down the service.
+
+-- wip : requirements are needed
+
+##### LibP2P
+
+[LibP2P](https://libp2p.io/) is an open source networking library that has a very flexible transport layer with protocol multiplexing. According to their website it is the simplest solution for global scale peer-to-peer networking and includes support for pub-sub message passing, distributed hash tables, NAT hole punching and browser-to-browser direct communication. It is still under active development but is used in production in multiple large scale contexts.
+
+##### Pear
+
+[Pear](https://docs.pears.com/guides/getting-started) is a framework built on Electron made for building and distributing p2p apps.
+
+##### Socket
+
+[Socket](https://socketsupply.co/guides/) is a light framework for building native apps on any platform that integrates a [delay-tolerant networking](https://en.wikipedia.org/wiki/Delay-tolerant_networking#Security_issues) library for p2p pub-sub communication.
+
+### Architecture
+
+In order to articulate all perviously cited systems we need a clear architecture.
+
+- Must enable interface and algorithmic modularity by providing specific api for the different variations of these systems to be integrated through
+
+#### Key Concepts / Ontology
+
+The following concepts are the building blocks that articulate the various facets of the platform.
+
+Users :
+
+- **Entity** : Anything that interacts with the app. This covers *bots*, *people* and *orgs*.
+- **Person** : Specifically describes a human user. We chose this word as we want to highlight the fact that we are designing and coding for real peoples.
+- **Bot** : Computer program interacting with the platform.
+- **Sybil** : Computer program pretending to be a *person*.
+- **Org** : Group of *entities* organizing together. They have an *aim*, *processes* and a *record*. It might be publicly visible or private in which case only its *members* and some other authorized *entities* know it exists. *Members* may share *content* internally.
+- **Device** : Hardware *device* interacting with various parts of the platform.
+- **Legal Entity** : *Entity* having a legal existence outside of the platform. It might be a company, an ONG, an individual, a state, an institution, etc.
+- **Server** : *Device* providing storage and replication of *entities* encrypted data. A *person* might setup its own *server* or use one provided by a *legal entity*. They must be able to switch or leave *servers* at any time.
+- **Fiscal Host** : *Legal entity* which holds different *entities*’s funds in their bank account and enable them to receive and spend money. This concept corresponds to [Open Collective's fiscal hosts](https://docs.opencollective.com/help/fiscal-hosts/fiscal-hosts).
+- **Authn** : Every *device* has one or more authenticated *peoples*.
+
+Relationships :
+
+- **Acknowledgement** : An *entity* may *acknowledge* an other and recognize some aspect of that *entity*. That might be its existence or its legitimacy. It may correspond to a state recognizing the legitimacy of an other or the existence of a human being through an id card. It may also correspond to a *person* recognizing the legitimacy of an institution. -- wip : quite unsure about this one
+- **Contact** : Two *peoples* can connect to one an other as *contacts*. This contact has to be done in person by scanning a qr code from one device to the other. This might also be considered as an *acknowledgement* between humans of their mutual physical existence. This is a key notion for avoiding *sybils*.
+- **Friendship** : *Contacts* that trust one an other may link as *friends*. Their devices will sore one an other's encrypted data. They will also permit account retrieval in case all of one *person*'s devices have been lost or stolen.
+- **Circle** : A *entity* may group its *acknowledged entities* into *circles* it wants to share *content* with. A *circle* may correspond to a group of friends or family. Those groupings are only known by the *entity* sharing the *content*.
+- **Block** : A *person* may hide all *content owned* by an other *entity* by *blocking* it.
+
+Organizing :
+
+- **Member** : *Entity* that is part of an *org*.
+- **Aim** : Piece of text describing the goals, intended purposes and general orientation of an *org*. The introduction and the *core principles* together form *Dialogue OC*'s *aim*.
+- **Action** : Different actions can be taken by an *org*. This mey be internal *content* moderation, *content* publication and management, modifications of the *aim*, *member* acceptance and exclusion, *role* edition, granting and removal, modifications of *processes*, etc.
+- **Process** : Methods and criterions by which *action* can be taken within an *org*. The mechanisms mey include direct voting, temporary *role* granting through [sortition](https://en.wikipedia.org/wiki/Sortition), committee deliberation, etc. Its functioning has to be transparent to every *member*.
+- **Record** : List of every *action* taken and the *entities* responsible.
+- **Role** : *Members* hold different *roles* within an *org* that charge them with some responsibilities and may grants them the right to take a specific *actions*. A piece of text describes the expected behavior of the holder.
+
+Publishing :
+
+- **Content** : Piece of content matching a specific *format*. Each has an [IPLD](https://ipld.io/) reference.
+- **Interaction** : Way a *person* can interact with a piece of *content*. Might be likes, views, reactions, votes, modifications, pinning, claps, agreement slider, shares, comments, etc.
+- **Format** : Standard structure of *content* data, metadata, presentation material (miniature, description, etc.) and available *interactions*. This might cover things like articles, posts, long form videos, short vertical videos, live streaming, songs, podcasts, books, comments, playlists, chats, etc.
+- **Authz** : Piece of data describing which *entities* get to access and/or *interact* in specific ways with a given piece of *content*. All *content* that is not public is encrypted. *Entities* that have reading rights on the content are the only ones to receive the decryption key and all editions made by non authorized *entities* are simply ignored. *Authz* stands for authorization and must not be mixed with *authn* that stands for authentication instead.
+- **Ownership** : Every piece of *content* is owned by an *entity* which is the only one able to modify its *authz*. *Content* is *owned* by its initial emitter but can be transferred to a different *entity*. The *content* will be stored and kept online by the *owner*'s own *devices* and the *owner*'s *friends devices*. In the context of an *org*, its *owned content* gets stored on its own *servers* and/or on its *members devices*.
+- **Signature** : Cryptographic signature ensuring the authenticity of the piece of data. Every *content* and *interaction* have to be signed. Different kinds of [group signatures](https://en.wikipedia.org/wiki/Group_signature) mey be used in the case of *org* signatures.
+- **Pinning** : A *person* might decide to *pin content* they do not *own* on one or more of its *devices*. Those *devices* will then store the *content* and keep it available online. *Pinned* data isn't stored on *friends devices*.
+
+Interfaces :
+
+- **Component** : Piece of interface serving a specific purpose.
+- **Layout** : Piece of interface organizing various *components* on the screen. It may then itself be used as a *component*.
+- **Page** : *Layout* covering the whole screen that has a specific url/address.
+- **Design** : Set of parameters that can be edited by the *person* which decides on the aesthetic and usability of *components* and *layouts*. It describes dark and light mode colors, font sizes, weather assisting tools are needed, etc.
+
+Presenting :
+
+- **Metric** : Some meaningful information extracted from the pile of raw data by a deterministic algorithm. It may measure the amount of views a piece of *content* got while avoiding to count *sybils*, it might measure how much a specific *person* enjoyed a piece of *content*, extract keywords representing the topic it covered, track an *entity* journalistic accuracy or scientific rigor, etc. It is designed and *owned* by an *entity*.
+- **Recommendation** : List of *content* organized by an algorithm through various criterions to a specific *person*. It tries to predict which *content* the given *person* would want to access next based on various *metrics* and based on the *content* that the *person* may be currently reading/watching.
+- **Presentation** : *Page* enabling a *person* to read/watch and *interact* with a piece of *content*.
+- **Miniature** : *Component* presenting a piece of *content* that enable the *person* to access its *page* or add it to various content *groupings*.
+- **Discovery** : *Layout* presenting the *miniatures* of *contents* selected by different *recommendation* systems for the *person* to search through.
+
+#### Identity verification
+
+Online group decision-making often requires some level of identity verification to avoid [Sybil attacks](https://en.wikipedia.org/wiki/Sybil_attack).
+
+##### The social graph of trust
+
+One solution is to build a physical proof of personhood network where users meet in person and establish verified connections by scanning QR codes on each other's devices. This creates a social graph of trust that maintains privacy while making bot accounts detectable through network analysis.
+
+Real human social networks tend to be densely interconnected, whereas bot accounts typically show suspicious patterns: few connections to verified humans, clustering through single gateway users, and unnatural network growth. While bad actors could attempt to verify bot accounts, their suspicious connection patterns would make them identifiable. The system becomes more robust as legitimate human connections accumulate, making it increasingly difficult to fake human-like network patterns at scale.
+
+An organization can then use this network to validate identity. It could only consider votes entered by accounts with multiple trust connections to other members for instance.
+
+-- Look at [web of trust](https://en.wikipedia.org/wiki/Web_of_trust).
+
+#### Default Recommendation System
+
+-- wip
+
+everyone doesn't need to give the same credence to everyone else. Give more credence to people close to you and to people you support the work. Explicitly recommend content to people around you.
+
+#### Collaborative Storage Cloud
+
+[Collaborative storage cloud](https://en.wikipedia.org/wiki/Cooperative_storage_cloud)
+
+#### Resource Management and Payment Methods
+
+-- wip : needs to start with the requirements instead of the solutions.
+
+Payment methods have to be available in order to finance the work of content creators, pay compensations on the collaborative storage cloud.
+
+- the *Dialogue OC* will provide content crowd funding (*accessible* and *sustainable*)
+- *orgs* will have tooling to track money and equipments that is held by different *members* on their behalf (*resilient*)
+- payments in cryptocurrency will be possible independently of that service (*resilient*)
+- the *Dialogue OC* might provide cryptocurrency exchange (*accessible* and *sustainable*)
+
+## Core Principles' Rationale
 
 In this section we detail every principle, we express its underlying rationale, what it is, what it isn't and some practical implications. The important part here is to convey Dialogue's general intent.
 
@@ -203,7 +472,7 @@ This understanding enables meaningful user participation and control.
 
 ## Balancing Core principles
 
-Each principle corresponds to a specific idea and are thought not to overlap with others but they might compete with one an other when it comes to practical implementation. The aim really is to find the best of both worlds whenever possible and to get to a good equilibrium between the two when they fundamentally contradict one an other. In this section we discuss some of them.
+Each principle corresponds to a specific idea and are thought not to overlap with others but they might compete with one an other when it comes to practical implementation. The aim really is to find the best of both worlds whenever possible and to get to a good equilibrium between the two when they fundamentally contradict one an other. In this section we discuss some of those tensions.
 
 ### Complexity vs Accessibility
 
@@ -223,277 +492,7 @@ A lot of usage data has to be available in order to build good recommender syste
 
 The programming language, its framework and tools have to enforce the best practices in terms of documentation, code clarity, interface accessibility, testability and security.
 
-## Requirements and Justifications
-
-Here we propose a set of requirements that we justify in regards to the platform's core principles. We start every section with a wish list of features that would ideally be present. We then provide a list of possible solutions, their pros and cons.
-
-
-### Platform's Name
-
-The platform's name has to:
-
-- Correspond to what it is: a social network
-- Have a meaning that mirrors the platform's *core principles*
-- Be readable and pronounceable in a large amount of languages (*accessible*)
-- Be memorable and findable (*attractive*)
-
-#### Dialogue
-
-- This is the current chosen name
-- Pros:
-  - Reflects the *empathic*, *expressive*, *collaborative* and *democratic* principles
-  - Is easy to pronounce and has the same meaning in many languages
-  - There is a clear social aspect making it sensible to label a social network
-- Cons:
-  - Probably won't get `dialogue.net`
-  - SEO might be complicated
-
-#### Inter Planetary Social Network (IPSN)
-
-- Pros:
-  - Reflects the *distributed*, *resilient*, *distributed* and *sustainable* principles
-  - The fact that it is a social network is explicitly stated
-  - Is enthusiastic about the future (*optimistic*)
-- Cons:
-  - Quite long and difficult to pronounce for non english speakers
-  - Its acronym isn't natural to read
-  - Might be seen as piggy backing on the [IPFS](https://ipfs.tech/) ecosystem especially as it might not be built on top of it
-
-### Dialogue Open Collective (OC)
-
-Dialogue OC is the non profit that gathers the various sources of revenue and redistributes them between the content creators and the developers that push the platform forward. It keeps its incomes and redistribution completely transparent to the public.
-
-It may or may not be part of the [Open Collective](https://opencollective.com/) ecosystem but their philosophies have much in common.
-
-This organization is the initiator of the platform's culture and its members have to be the prime examples of its principles. Their behavior towards the rest of the community has to reflect that.
-
-### Dialogue OC Governance
-
-Governance might be the most difficult challenge of all. We have to take it very seriously as this is the deciding factor on weather the platform keeps upholding its *core principles* or weather it ends up steering in an unfavorable direction.
-
-The governance of the platform must:
-
-- Prevent state or corporate interests infiltrating the deciding bodies (*autonomous*)
-- Reject opportunistic people from important roles to keep the platform on track with its *core principles*
-- Keep the development process going even under state level interdiction and repression (*resilient*)
-- Decision are taken publicly and have to be justified relative to the *core principles* (*transparent*)
-- Functioning and decisions have to absolutely avoid unnecessary complexity and be comprehensible to non experts (*accessible*)
-- Rigorously test and observe the outcomes of each decision (*empirical*)
-- Able to quickly adapt to fix pressing issues (*sustainable*)
-- Embodies the *humanistic* and *optimistic* principles
-- Is under the control of involved users but also defend the interests of users that aren't able to involve themselves in the same way (*democratic*)
-- Changes to the core principles have to be difficult enough for the project not to stere off course and easy enough for them not to become obsolete (*sustainable*)
-
-#### Benevolent Dictatorship
-
-- As the project is in its very infancy, this is the current mode of governance.
-- Pros:
-  - Decisions are taken quickly
-  - Will follow the intent of the person who initiated the project
-- Cons:
-  - Simple to pressure a single person
-  - Isn't impervious to bus accidents
-  - Biased by the leader's socio-economic status
-
-#### Open Democracy
-
-There is no tooling adapted to manage this yet as we are trying to build them.
-
-- Pros:
-  - Doesn't depend on a single person
-- Cons:
-  - People with little implication into the project are likely to take poorly informed decisions
-  - Organized interest groups might take an oversized weight
-
-### Programming Toolset
-
-A programming language in and of itself is an user interface that serves as a model for thinking and describing processes. We often think of programming languages as things in and of themselves but their compilers, IDEs, and tools in general take a huge role in the process of development. As it is a social process, this thinking can be extended to the blogs, forums and articles that are also part of the programming toolset.
-
-All of it guides development in many ways and has to be thoughtfully designed to fulfill the aims of the project.
-
-- Easy to learn and master (*accessible*)
-  - Great beginner resources aimed at non technical peoples
-  - Minimize the amount of core concepts
-  - Easy to read and to express (avoids [syntactic sugar](https://en.wikipedia.org/wiki/Syntactic_sugar))
-  - Single threaded code
-  - Consistent interfaces across devices
-- Easy to review and maintain (*sustainable*)
-  - Enforces good practice through language design and compiler errors
-  - Human readable and helpful compilation error messages
-  - Compiler enforce good documentation practices
-  - When it compiles it works except for mathematically untraceable issues
-  - No implicit behavior
-  - Strongly typed
-  - Enables metaprograming for analysis and automated review
-  - Compiler and tooling written in its own language
-  - Has clear and uniform naming conventions
-  - Standard formatting enforced by the compiler
-  - Standard formatting avoids indentation pyramids
-- Joins developer and designer's work
-  - The code is the single source of truth
-  - GUI enables designers to edit view code
-    - Single source of truth for the design system, layout and animations
-    - Intuitive for designers
-    - The design should automatically generate code and have a simple interface for developers to integrate with
-    - All of the design has to be under designer control with the least amount of coding knowledge needed
-    - Ensure each interface works on any screen format
-    - Enforce good accessibility practices
-- Built for distributed architecture (*distributed*)
-  - [ORDT](http://archagon.net/blog/2018/03/24/data-laced-with-history/) as first class citizen
-  - Enable distributed computations for heavy algorithms
-  - Integrates peer to peer protocols
-- Run and compile on most devices with low network availability (*accessible*)
-  - Parallelize program at compile time
-  - Tiny bundle size
-  - Be [local first](https://www.inkandswitch.com/local-first/)
-  - Fast compilation
-- Sandboxed (*modular*)
-  - Functions have no side effects
-  - A single datatype represents all possible side effects
-    - It can be extended or shrunk based on the access we want to give to the sub program
-- Can be translated in various languages (*accessible*)
-
-#### Elm
-
-[Elm](https://elm-lang.org/) has the best compiler messages and maintainability around. It has a very young ecosystem which comes with drawbacks as it lacks many libraries and tools that can be found in main stream languages.
-
-#### Gren
-
-[Gren](https://gren-lang.org/) is an evolution of Elm which adds quite a few niceties.
-
-#### Bend
-
-[Bend](https://higherorderco.com/) seems great at compile time parallelization. [HVM](https://github.com/HigherOrderCO/HVM) it is built on might become a compilation target for Elm.
-
-#### Pear
-
-[Pear](https://docs.pears.com/guides/getting-started) is a nice framework for building and distributing p2p apps.
-
-### Identity verification
-
-Online group decision-making often requires some level of identity verification to avoid [Sybil attacks](https://en.wikipedia.org/wiki/Sybil_attack).
-
-#### The social graph of trust
-
-One solution is to build a physical proof of personhood network where users meet in person and establish verified connections by scanning QR codes on each other's devices. This creates a social graph of trust that maintains privacy while making bot accounts detectable through network analysis.
-
-Real human social networks tend to be densely interconnected, whereas bot accounts typically show suspicious patterns: few connections to verified humans, clustering through single gateway users, and unnatural network growth. While bad actors could attempt to verify bot accounts, their suspicious connection patterns would make them identifiable. The system becomes more robust as legitimate human connections accumulate, making it increasingly difficult to fake human-like network patterns at scale.
-
-An organization can then use this network to validate identity. It could only consider votes entered by accounts with multiple trust connections to other members for instance.
-
--- Look at [web of trust](https://en.wikipedia.org/wiki/Web_of_trust).
-
-### Default Recommendation System
-
--- wip
-
-everyone doesn't need to give the same credence to everyone else. Give more credence to people close to you and to people you support the work. Explicitly recommend content to people around you.
-
-### P2P Networking
-
-Servers are a single point of failure that can easily be shut down by the cloud companies or the states. Organic peer to peer communication on the other hand is much harder to affect as every device of the network must get disconnected from the rest in order to shot down the service.
-
--- wip : requirements are needed
-
-#### LibP2P
-
-[LibP2P](https://libp2p.io/) is an open source networking library that has a very flexible transport layer with protocol multiplexing. According to their website it is the simplest solution for global scale peer-to-peer networking and includes support for pub-sub message passing, distributed hash tables, NAT hole punching and browser-to-browser direct communication. It is still under active development but is used in production in many large scale contexts.
-
-#### Hypercore
-
-[Hypercore](https://docs.pears.com/building-blocks/hypercore) is a p2p protocol for distributing append-only logs.
-
-### Collaborative Storage Cloud
-
-[Collaborative storage cloud](https://en.wikipedia.org/wiki/Cooperative_storage_cloud)
-
-### Payment Method
-
--- wip : needs to start with the requirements instead of the solutions.
-
-Payment methods have to be available in order to finance the work of content creators, pay compensations on the collaborative storage cloud.
-
-- the *Dialogue OC* will provide content crowd funding (*accessible* and *sustainable*)
-- payments in filecoin will be possible independently of that service (*resilient*)
-- the *Dialogue OC* might provide filecoin exchange (*accessible* and *sustainable*)
-
-### Architecture
-
-In order to articulate all perviously cited systems we need a clear architecture.
-
-- Must enable interface and algorithmic modularity by providing specific api for the different variations of these systems to be integrated through
-
-#### Key Concepts / Ontology
-
-The following concepts are the building blocks that articulate the various facets of the platform.
-
-Users :
-
-- **Entity** : Anything that interacts with the app. This covers *bots*, *people* and *orgs*.
-- **Person** : Specifically describes a human user. We chose this specific word as we always want to remember we are talking about real peoples.
-- **Bot** : Computer program interacting with the platform. It may gather data and/or publish *content*.
-- **Sybil** : Computer program pretending to be a *person*.
-- **Org** : Group of *entities* organizing together. They have an *aim*, *processes* and a *record*. It might be publicly visible or private in which case only its *members* and some other authorized *entities* know it exists. *Members* may share *content* internally.
-- **Device** : Hardware *device* interacting with various parts of the platform.
-- **Legal Entity** : *Entity* having a legal existence outside of the platform. It might be a company, an ONG, an individual, a state, an institution, etc.
-- **Server** : *Device* providing storage and replication of *entities* encrypted data. A *person* might setup its own *server* or use one provided by a *legal entity*. They must be able to switch or leave *servers* at any time.
-- **Fiscal Host** : *Legal entity* which holds different *entities*’s funds in their bank account and enable them to receive and spend money. This concept corresponds to [Open Collective's fiscal hosts](https://docs.opencollective.com/help/fiscal-hosts/fiscal-hosts).
-
-Relationships :
-
-- **Acknowledgement** : An *entity* may *acknowledge* an other and recognize some aspect of that *entity*. That might be its existence or its legitimacy. It may correspond to a state recognizing the legitimacy of an other or the existence of a human being through an id card. It may also correspond to a *person* recognizing the legitimacy of an institution. -- wip : quite unsure about this one
-- **Contact** : Two *peoples* can connect to one an other as *contacts*. This contact has to be done in person by scanning a qr code from one device to the other. This might also be considered as an *acknowledgement* between humans of their mutual physical existence. This is a key notion for avoiding *sybils*.
-- **Friendship** : *Contacts* that trust one an other may link as *friends*. Their devices will sore one an other's encrypted data. They will also permit account retrieval in case all of one *person*'s devices have been lost or stolen.
-- **Circle** : A *entity* may group its *acknowledged entities* into *circles* it wants to share *content* with. A *circle* may correspond to a group of friends or family. Those groupings are only known by the *entity* sharing the *content*.
-- **Block** : A *person* may hide all *content owned* by an other *entity* by *blocking* it.
-
-Organizing :
-
-- **Member** : *Entity* that is part of an *org*.
-- **Aim** : Piece of text describing the goals, intended purposes and general orientation of an *org*. The introduction and the *core principles* together form *Dialogue OC*'s *aim*.
-- **Action** : Different actions can be taken by an *org*. This mey be internal *content* moderation, *content* publication and management, modifications of the *aim*, *member* acceptance and exclusion, *role* edition, granting and removal, modifications of *processes*, etc.
-- **Process** : Methods and criterions by which *action* can be taken within an *org*. The mechanisms mey include direct voting, temporary *role* granting through [sortition](https://en.wikipedia.org/wiki/Sortition), committee deliberation, etc. Its functioning has to be transparent to every *member*.
-- **Record** : List of every *action* taken and the *entities* responsible.
-- **Role** : *Members* hold different *roles* within an *org* that charge them with some responsibilities and may grants them the right to take a specific *actions*. A piece of text describes the expected behavior of the holder.
-
-Publishing :
-
-- **Content** : Piece of content matching a specific *format*. It is owned by an *entity* which is the only one able to modify its *auth*. Each has an [IPLD](https://ipld.io/) reference.
-- **Format** : Standard structure of *content* data, metadata and presentation material (miniature, description, etc.). This might cover things like articles, posts, long form video, short vertical video, music, podcast, book, comment, etc.
-- **Interaction** : Specific kind of *content* describing the way a *person* interacted with an other piece of *content*. Might be likes, views, reactions, votes, modifications, etc.
-- **Auth** : Piece of data describing which *entities* get to access and/or *interact* in specific ways with a given piece of *content*. All *content* except for public one is encrypted. *Entities* that have reading rights on the content are the only ones to receive the decryption key and all editions made by non authorized *entities* are simply ignored.
-- **Ownership** : Every piece of *content* is owned by an *entity* which is the only one able to modify its *auth*. *Content* is *owned* by its initial emitter but can be transferred to a different *entity*. The *content* will be stored and kept online by the *owner*'s own *devices* and the *owner*'s *friends devices*. In the context of an *org*, its *owned content* gets stored on its own *servers* and/or on its *members devices*.
-- **Signature** : Cryptographic signature ensuring the authenticity of the piece of data. Every *content* and *interaction* have to be signed. Different kinds of [group signatures](https://en.wikipedia.org/wiki/Group_signature) mey be used in the case of *org* signatures.
-- **Pinning** : A *person* might decide to *pin content* they do not *own* on one or more of its *devices*. Those *devices* will then store the *content* and keep it available online. *Pinned* data isn't stored on *friends devices*.
-
-Interfaces :
-
-- **Component** : Piece of interface serving a specific purpose.
-- **Layout** : Piece of interface organizing various *components* on the screen. It may then itself be used as a *component*.
-- **Page** : *Layout* covering the whole screen that has a specific url/address.
-- **Design** : Set of parameters that can be edited by the *person* which decides on the aesthetic and usability of *components* and *layouts*. It describes dark and light mode colors, font sizes, weather assisting tools are needed, etc.
-
-Presenting :
-
-- **Metric** : Some meaningful information extracted from the pile of raw data by a deterministic algorithm. It may measure the amount of views a piece of *content* got while avoiding to count *sybils*, it might measure how much a specific *person* enjoyed a piece of *content*, extract keywords representing the topic it covered, track an *entity* journalistic accuracy or scientific rigor, etc. It is designed and *owned* by an *entity*.
-- **Recommendation** : List of *content* organized by an algorithm through various criterions to a specific *person*. It tries to predict which *content* the given *person* would want to access next based on various *metrics* and based on the *content* that the *person* may be currently reading/watching.
-- **Presentation** : *Page* enabling a *person* to read/watch and *interact* with a piece of *content*.
-- **Miniature** : *Component* presenting a piece of *content* that enable the *person* to access its *page* or add it to various content *groupings*.
-- **Discovery** : *Layout* presenting the *miniatures* of *contents* selected by different *recommendation* systems for the *person* to search through.
-
-##### Metrics
-
-Lets describe more in detail what a *metric* might be. Most *metrics* come down to tracking a user's various forms of reputation.
-
-Reputation is relative. It varies from one domain to an other (a reputable mathematician might be really dumb when speaking about sociology) and from one ideology to the next (politicians often caricature opposing perspectives). In the same way they are many ways to to measure it : from youtube views to facebook likes passing by citation counts on scientific papers. Each will emphasize different values and aims.
-
-##### Belief System
-
--- wip : just an idea right now
-
-A *person* can describe its beliefs which can serve to find *content* that questions those beliefs. This mechanism might push users to deepen their understanding of the world. *Content* would describe which belief it tries to change and be evaluated on its ability to change *peoples* beliefs.
-
-## Notes
+## Miscellaneous Notes
 
 Various notes and precisions about this document.
 
@@ -527,6 +526,12 @@ In terms of content originality, we do not attempt to be especially original or 
 
 We have made the writing process transparent by sharing the dialogue's history. It can be found in the `.aider.chat.history.md` file.
 
+### Our take on cryptocurrencies
+
+Since the appearance of Bitcoin in 2008, cryptocurrencies and other NFTs have become a heaven for both scammers and speculators.
+
+-- wip : fuck cryptobros, huge variations of value but might still be useful for online transaction when legal means of online payment are failing.
+
 ### Our view on intellectual property
 
 -- wip
@@ -538,6 +543,17 @@ We provide software to be used by people to share content
 - like people who code the torrent client and protocol we are not responsible for the files shared and hosted by the users
 - though we will do what we can for content creators to get due recognition and pay for their work
 - and we will champion small creators enabling them to live from their work instead of concentrating it in the hands of a few larger ones that either turn into corporations or are already produced by one
+
+### Our specific notion of interoperability
+
+interoperable but in very specific ways /
+transparent also means interoperable /
+evergreen design architecture /
+possible breaking changes /
+useful for attractive /
+but might break secure, safe and/or private /
+keep control within Dialogue /
+might be needed for governance
 
 ## Legacy text
 
@@ -667,7 +683,7 @@ The shopping list is long and we will need a lot of resources to get there.
 ## Existing Propositions
 
 > I want to review a lot more existing social media in order to pull inspiration. Here is a set that will be interesting to review:
-> Mastodon, Matrix, Secure Scuttlebutt (SSB), Aether, Lemmy, Discord, Signal, Telegram, Slack, WhatsApp, Reddit, YouTube, Instagram, Facebook, Snapchat, TikTok, LinkedIn, Twitter/X, WeChat, Twitch, Medium, BeReal, Clubhouse, Revolt, BlueSky, Keet
+> Mastodon, Matrix, Secure Scuttlebutt (SSB), Aether, Lemmy, Discord, Signal, Telegram, Slack, WhatsApp, Reddit, YouTube, Instagram, Facebook, Snapchat, TikTok, LinkedIn, Twitter/X, WeChat, Twitch, Medium, BeReal, Clubhouse, Revolt, BlueSky, Keet, campfirechat
 
 ### Nebula
 
@@ -687,17 +703,20 @@ Nebula is a video-on-demand streaming service provider. Launched by the Standard
 - Creators can hardly have dissenting stances to the collective. Second thought leaving the platform might be an example of this.
 - The profitability of the company also is a constraint on creators political stances as the sponsors and partners could pressure Nebula.
 
-## Notes
+#### Architecture
 
-Various notes and precisions about this document.
+##### Metrics
 
-### About interoperability
+Lets describe more in detail what a *metric* might be. Most *metrics* come down to tracking a user's various forms of reputation.
 
-interoperable but in very specific ways /
-transparent also means interoperable /
-evergreen design architecture /
-possible breaking changes /
-useful for attractive /
-but might break secure, safe and/or private /
-keep control within Dialogue /
-might be needed for governance
+Reputation is relative. It varies from one domain to an other (a reputable mathematician might be really dumb when speaking about sociology) and from one ideology to the next (politicians often caricature opposing perspectives). In the same way they are many ways to to measure it : from youtube views to facebook likes passing by citation counts on scientific papers. Each will emphasize different values and aims.
+
+##### Belief System
+
+-- wip : just an idea right now
+
+A *person* can describe its beliefs which can serve to find *content* that questions those beliefs. This mechanism might push users to deepen their understanding of the world. *Content* would describe which belief it tries to change and be evaluated on its ability to change *peoples* beliefs.
+
+##### Interactions
+
+Claps (similar to medium's applause), Favorite (select the 6 best contents of the year), Pin (pin content on your devices to duplicate it and keep it online), Opinion (agree-disagree slider), Flag (flag different characteristics of the content like violent, hateful, poorly researched, etc.), Share (share the link).
