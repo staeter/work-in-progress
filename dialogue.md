@@ -2,7 +2,7 @@
 
 Through sciences and technologies, humanity has gained mastery over nature but its social organization is still subordinated to individualistic short term interests. Deep systemic changes are needed for humanity to gain conscious control over its future and overcome the self destructive mechanisms of capitalism.
 
-This new socio-economic organization of society must be built by the masses voluntarily governing themselves. It therefore has to go beyond national boundaries, welcome humanity's intrinsic diversity and defend a positivist view of liberty. Thereby arises the need for tools enabling local and global collective organizing and decision making able to support the peoples that fight for justice and equity all over the world and to serve as the software infrastructure for new political systems.
+This new socio-economic organization of society must be built by the masses voluntarily governing themselves. It therefore has to go beyond national boundaries, welcome humanity's intrinsic diversity and defend a positivist view of liberty. Thereby arises the need for tools enabling local and global collective organizing and decision making able to support artists, journalists and political activists, to enable them to function in repressive environments and revolutionary periods and to serve as the software infrastructure for upcoming worker's led democracies.
 
 Building such decentralized social network is a humongous task that can only be completed with the coordination of a large pool of engineers, programers, designers, journalists, content creators and more. This document is a first attempt at clarifying its requirements in order to structure and orient everyone's work toward a clear and unified goal.
 
@@ -10,7 +10,7 @@ Building such decentralized social network is a humongous task that can only be 
 
 The current priority is to complete this document, to clarify its concepts and to start designing the platform's architecture. The best way for you to contribute is to send your remarks and suggestions as a *GitHub* issue or sending them directly to me.
 
-Spotting ideas that lack clarity or words that need explanation - especially for people with no technical background - is of interest. Many technical aspects are lacking as this document is work in progress but please inform me about any consideration that I might be missing. There is no dumb remarks as long as they are stated in a respectful manner.
+Spotting ideas that lack clarity or words that need explanation - especially for people with no technical background - is of interest. Many technical aspects are lacking as this document is work in progress but please inform us about any consideration that we might be missing. There is no dumb remarks as long as they are stated in a respectful manner.
 
 ## Core Principles
 
@@ -37,9 +37,9 @@ The principles are sorted in no particular order. The numbers are only there for
 
 ## Requirements
 
-Here we build up a set of requirements. Each has to describe which *core principle* it aims to fulfill and describe the reasoning justifying it if unclear. The quality of a requirement comes from its clarity, concision, completeness, consistency, correctness, and concreteness. They also need to be classified either as *critical*, *important* or *desirable*.
+Here we build up a set of requirements. They are classified either as *critical*, *important* or *desirable*. We also state which *core principle* each aims to fulfill. The reasoning justifying their prioritization and expected impacts has to be described if not self evident. The quality of a requirement comes from its clarity, concision, completeness, consistency, correctness, concreteness, specificity and actionability.
 
-We group the requirements into different *systems*. We aim to minimize their size and interdependency. For each *system*, we describe one or more *plans* we could follow to get it to a complete state. The pros and cons of each *plan* are then evaluated based on the uncertainties surrounding it, the expected costs, the peoples and communities that could get involved and the amount of work required. We also indicate which plan is currently *favored*.
+We group requirements into different *systems*. We aim to minimize their size and interdependency. For each *system*, we describe one or more *plans* we could follow to get it to a complete state. The pros and cons of each *plan* are then evaluated based on the uncertainties surrounding it, the expected costs, the peoples and communities that could get involved and the amount of work required. We also indicate which plan is currently *favored*.
 
 ### Name
 
@@ -76,15 +76,15 @@ Governance might be the most difficult challenge of all. We have to take it very
 | 1. | Decisions are always justified relative to the platform's goal and *core principles*. | *sustainable* | *critical* |
 | 2. | People are trained to constantly adapt their structures and processes to changing circumstances. | *resilient* and *sustainable* | *critical* |
 | 3. | Processes and decisions are expressed in an comprehensive manner to the public. | *accessible* and *transparent* | *important* |
-| 4. | Prevent state or corporate interests infiltrating and/or taking over deciding bodies. | *independent* | *critical* |
-| 5. | The development process is resilient to state level interdiction and repression. | *resilient* | *desirable* |
+| 4. | Prevent state or corporate interests from infiltrating and/or taking over deciding bodies. | *independent* | *critical* |
+| 5. | The development processes and infrastructure are resilient to state level interdiction and repression. | *resilient* | *desirable* |
 | 6. | The concrete effects of every decision have to be evaluated, compared to its intent and corrected in case of misalignment. | *empirical* | *critical* |
 | 7. | Support and credit contributors to ensure their longevity and recognition. | *sustainable* | *important* |
 | 8. | Be representative of human diversity. | *empathic* | *desirable* |
 | 9. | Communicate enthusiastically over the work being done, the problems being solved and the systems being built toward. | *optimistic* and *attractive* | *desirable* |
 | 10. | Have processes to gather, answer and tackle user questions and inputs. | *empirical*, *accessible* and *sustainable* | *important* |
 | 11. | Be under the control of involved users but also defend the interests of peoples that aren't able to involve themselves in the same way. | *democratic* and *empathic* | *important* |
-| 12. | Changes to the core principles have to be difficult enough for the project not to stere off course and easy enough for them not to become obsolete. | *sustainable* | *crucial* |
+| 12. | Changes to the core principles have to be difficult enough for the project not to stere off course and easy enough for it not to become obsolete. | *sustainable* | *crucial* |
 
 -- wip
 
@@ -471,7 +471,7 @@ Transparency means users can understand how the platform works, from algorithms 
 
 This understanding enables meaningful user participation and control.
 
-## Balancing Core principles
+## Balancing Core Principles
 
 Each principle corresponds to a specific idea and are thought not to overlap with others but they might compete with one an other when it comes to practical implementation. The aim really is to find the best of both worlds whenever possible and to get to a good equilibrium between the two when they fundamentally contradict one an other. In this section we discuss some of those tensions.
 
@@ -507,7 +507,7 @@ We use this perspective as a north star guiding the project but even if you beli
 
 ### Will fascistic and terrorist groups be using Dialogue to their advantage?
 
-The core values of the far right are fundamentally centered around creating hierarchies between people and to violently oppress those who they deem as lesser humans. Religious fundamentalists of all obedience do the same based on religious beliefs. Those are fundamentally opposed to *Dialogue*'s goal and - as such - we strongly reject their ideas and methods. We know the far right short and aggressive messaging to be very viral on online platforms and they will surely attempt to invade every space and prevent constructive discussion to happen.
+The core values of the far right are fundamentally centered around creating hierarchies between people and to violently oppress those who they deem as lesser humans. Religious fundamentalists of all obedience do the same based on religious beliefs. Those are fundamentally opposed to *Dialogue*'s goal and - as such - we strongly reject their ideas and methods. We know the far right short and aggressive messaging to be very viral on online platforms and they will surely attempt to invade every space possible and prevent constructive discussion to happen.
 
 -- wip : the second paragraph feels insufficient and maybe even unrealistic but I've got to complete more of the requirements to have clearer ideas on this
 
@@ -525,7 +525,7 @@ We believe LLMs as much as any other tool can be used for human emancipation. A 
 
 In terms of content originality, we do not attempt to be especially original or novel. Our main aim is to express ideas and develop techniques to bring them to life. No matter who or what expresses those ideas as long as they correspond to our thoughts and needs.
 
-We have made the writing process transparent by sharing the dialogue's history. It can be found in the `.aider.chat.history.md` file.
+We have made the writing process transparent by sharing the chat history. It can be found in the `.aider.chat.history.md` file.
 
 ### Our take on cryptocurrencies
 
@@ -578,22 +578,6 @@ might be needed for governance
 - Content moderation is managed by the users.
 - Individuals and organizations can provide custom algorithms and metrics as extensions.
 
-### Accessible
-
-- Low technical and cultural barriers.
-- [Accessible](https://en.wikipedia.org/wiki/Computer_accessibility) to people with disabilities.
-
-### International
-
-- People should be able to communicate and organize across linguistic and national barriers.
-- The design of the interface must be adaptable for various cultural and linguistic environments.
-
-### Data Privacy
-
-- Data has to be fully encrypted and under user's informed control.
-- Defaults always protects user's privacy.
-- Users have control over where they store their data.
-
 ### Local First and Fully Distributed
 
 The app has to function as [local first software](https://www.inkandswitch.com/local-first/) so that it stays up even under heavy network partitioning.
@@ -621,20 +605,6 @@ A payment solution has to be provided as many services required for the platform
 **Useful Inspirations**:
 
 - [filecoin](https://filecoin.io/) as a cooperative storage cloud with a reward model, it also doubles as a crypto currency.
-
-### Easy to Customize
-
-Essentially everything in Dialogue has to be customizable for it to match all of its constraints.
-
-**Principles**:
-
-- The programming language used for extensions has to be easy to learn, debug and maintain.
-- GUI are provided where possible.
-- APIs accessed by extensions must be constrained enough to make code injection or the use of any other hacking methods impossible.
-
-**Useful Inspirations**:
-
-- [Elm](https://elm-lang.org/)
 
 ### Hard to Track
 
