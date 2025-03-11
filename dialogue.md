@@ -37,9 +37,9 @@ The principles are sorted in no particular order. The numbers are only there for
 
 ## Requirements
 
-Here we build up a set of requirements. They are classified either as *critical*, *important* or *desirable*. We also state which *core principle* each aims to fulfill. The reasoning justifying their prioritization and expected impacts has to be described if not self evident. The quality of a requirement comes from its clarity, concision, completeness, consistency, correctness, concreteness, specificity and actionability.
+Here we build up a set of requirements. They are classified either as *critical*, *important* or *desirable*. We also state which *core principle* each aims to fulfill. The reasoning justifying their prioritization and expected impacts has to be described if not self evident. The quality of a requirement comes from its clarity, concision, completeness, consistency, correctness, concreteness, specificity, measurability and actionability.
 
-We group requirements into different *systems*. We aim to minimize their size and interdependency. For each *system*, we describe one or more *plans* we could follow to get it to a complete state. The pros and cons of each *plan* are then evaluated based on the uncertainties surrounding it, the expected costs, the peoples and communities that could get involved and the amount of work required. We also indicate which plan is currently *favored*.
+We group requirements into different *systems*. We aim to minimize their size and interdependency. For each, we describe the *plan* we expect to follow to get the *system* to a complete state. The quality of a *plan* is evaluated based on how well it fulfills the requirements, which uncertainties it presents, how well the costs are balanced with sources of funding, which peoples and communities could be interested in contributing, how much work and time is required to attain completion.
 
 ### Name
 
@@ -49,23 +49,18 @@ We group requirements into different *systems*. We aim to minimize their size an
 | 2. | Be readable and pronounceable in a large amount of languages. | *accessible* | *important* |
 | 3. | Be memorable and findable. | *attractive* | *important* |
 
-#### Dialogue (*favored*)
+*Dialogue* is a great name that is short, that is pronounceable in many languages and that really highlights much of the philosophy behind the project.
 
 > A dialogue consists of a cross-examination of different speeches, all of which commit their author. It is not about imposing a cognitive point of view, a perspective or reference. Each word transmitted in communication seeks to be decoded and received by the recipient, then to signify something that has meaning in their own existence. Dialogue calls for the actors of communication to be transformed in their being, in complete freedom. Active listening, sincere humility and mutual respect are therefore necessary. A successful dialogue produces a diagnosis integrating all the arguments of the participants and a conclusion in which they all agree. - *paraphrasing french wikipedia*
 
-**Pros** :
+The *plan* is to fully own that name, build a visual identity around it and get a cheap domain names such as `dialogue-crowd.net`, `dialogue-crowd.media` or `dialogue-social.media`. We will be able to buy a more ideal domain names such as `dialogue.net` and `dialogue.media` as the project gains traction and funding.
 
-1. The notion of dialogue has a clear social aspect, it reflects really well the idea that people are here to listen to one an other (*empathic*), exchange thoughts and ideas (*expressive*), find contradictions in their differing view points (*informative* and *empirical*) and collaborate toward possible solutions (*optimistic* and *democratic*).
-2. This name also is easy to pronounce and has the same meaning in many languages.
-3. It isn't widely used online and a quick search mostly lists dictionaries so it might also be a good name for SEO.
-
-**Cons** :
-
-The `dialogue.net`(registered but unused) and `dialogue.media` (6600$ on [porkbun](porkbun.com)) domains will be expensive to get but are unused as of now.
-
-**Plan** :
-
-Initially we will use a cheaper domain names like `mass-dialogue.net` or `crowd-dialogue.net`. As the development gets more traction, we might make a crowdfunding in order to buy the ideal domain names.
+| ref | weight | impact |
+| --: | ------ | ------ |
+| req1 | +++ | The notion of dialogue has a clear social aspect, it reflects really well the idea that people are here to listen to one an other (*empathic*), exchange thoughts and ideas (*expressive*), find contradictions in their differing view points (*informative* and *empirical*) and collaborate toward possible solutions (*optimistic* and *democratic*). |
+| req2 | ++ | This name also is easy to pronounce and has the same meaning in many languages. |
+| req3 | + | It isn't widely used online and a quick search mostly lists dictionaries so it might also be a good name for SEO. Also the ideal domains are unused as of now. |
+| cost | - | The `dialogue.net`(registered but unused) and `dialogue.media` (6600$ on [porkbun](porkbun.com)) domains are quite expensive. |
 
 ### Governance
 
@@ -75,7 +70,7 @@ Governance might be the most difficult challenge of all. We have to take it very
 | --: | ----------- | -------- | -------- |
 | 1. | Decisions are always justified relative to the platform's goal and *core principles*. | *sustainable* | *critical* |
 | 2. | People are trained to constantly adapt their structures and processes to changing circumstances. | *resilient* and *sustainable* | *critical* |
-| 3. | Processes and decisions are expressed in an comprehensive manner to the public. | *accessible* and *transparent* | *important* |
+| 3. | Funding, processes and decisions are expressed publicly in a complete and comprehensive manner. | *accessible* and *transparent* | *important* |
 | 4. | Prevent state or corporate interests from infiltrating and/or taking over deciding bodies. | *independent* | *critical* |
 | 5. | The development processes and infrastructure are resilient to state level interdiction and repression. | *resilient* | *desirable* |
 | 6. | The concrete effects of every decision have to be evaluated, compared to its intent and corrected in case of misalignment. | *empirical* | *critical* |
@@ -86,38 +81,15 @@ Governance might be the most difficult challenge of all. We have to take it very
 | 11. | Be under the control of involved users but also defend the interests of peoples that aren't able to involve themselves in the same way. | *democratic* and *empathic* | *important* |
 | 12. | Changes to the core principles have to be difficult enough for the project not to stere off course and easy enough for it not to become obsolete. | *sustainable* | *crucial* |
 
+We start as a temporary benevolent dictatorship. even though it is a very fragile and centralized mode of organization, it ensures alignment with the project initial intent. Our perspective is to use the organizational tools of *dialogue* to progressively transfer governance to its most dedicated contributors.
+
 -- wip
 
-*Dialogue Open Collective* (OC) will be the legal entity that is in charge of gathering various sources of revenue and distributing them to the various peoples that are building its infrastructure and content.
+The governing board are the initiators of the platform's culture and its members have to be the prime examples of its *core principles*. Their behavior towards the rest of the community sets the tone and the spirit of the platform. This is a crucial responsibility.
 
-It may or may not be part of the [Open Collective](https://opencollective.com/) ecosystem but their philosophies have much in common.
+Opportunism has to be strongly rejected to avoid the corporatisation happening in many non profits such a Wikipedia or Mozilla where board members progressively increase their salaries and hoarding their organization's resources.
 
-This organization is the initiator of the platform's culture and its members have to be the prime examples of its principles. Their behavior towards the rest of the community has to reflect that.
-
-The governance of the platform must:
-
-Reject opportunistic people from important roles to keep the platform on track with its *core principles*
-
-##### Benevolent Dictatorship
-
-- As the project is in its very infancy, this is the current mode of governance but the aim is for this to only be temporary.
-- Pros:
-  - Decisions are taken quickly
-  - Will follow the intent of the person who initiated the project
-- Cons:
-  - Simple to pressure a single person
-  - Isn't impervious to bus accidents
-  - Biased by the leader's socio-economic status
-
-##### Open Democracy
-
-There is no tooling adapted to manage this yet as we are trying to build them.
-
-- Pros:
-  - Doesn't depend on a single person
-- Cons:
-  - People with little implication into the project are likely to take poorly informed decisions
-  - Organized interest groups might take an oversized weight
+For now though, we are too early in the platform's development to clearly sketch out any clear *plan*. We can learn form [Open Collective](https://opencollective.com/) in terms of managing funds. Many political and journalistic organizations such as [Wikileaks](https://wikileaks.org/) also have a lot to teach us in terms of functioning in illegality.
 
 ### Programming Toolset
 
@@ -505,9 +477,9 @@ Moreover, the seeds are planted: On one hand, we inherited productive capabiliti
 
 We use this perspective as a north star guiding the project but even if you believe such a deep political transformation of society to be impossible, a tool like *Dialogue* has many immediate positive impacts and is worth pursuing for its own sake. Every *core principle* might individually be a good reason for someone to want to build and support it.
 
-### Will fascistic and terrorist groups be using Dialogue to their advantage?
+### Will fascist, terrorist and criminal organizations be using Dialogue to their advantage?
 
-The core values of the far right are fundamentally centered around creating hierarchies between people and to violently oppress those who they deem as lesser humans. Religious fundamentalists of all obedience do the same based on religious beliefs. Those are fundamentally opposed to *Dialogue*'s goal and - as such - we strongly reject their ideas and methods. We know the far right short and aggressive messaging to be very viral on online platforms and they will surely attempt to invade every space possible and prevent constructive discussion to happen.
+The core values of the far right are fundamentally centered around creating hierarchies between people and to violently oppress those who they deem as lesser humans. Religious fundamentalists of all obedience do the same based on religious beliefs. Organized crime is different as it does not have any moral apart form its crushing thirst for money. Those are fundamentally opposed to *Dialogue*'s goal and - as such - we strongly reject their ideas and methods. We know the far right short and aggressive messaging to be very viral on online platforms and they will surely attempt to invade every space possible and prevent constructive discussion to happen.
 
 -- wip : the second paragraph feels insufficient and maybe even unrealistic but I've got to complete more of the requirements to have clearer ideas on this
 
@@ -654,7 +626,7 @@ The shopping list is long and we will need a lot of resources to get there.
 ## Existing Propositions
 
 > I want to review a lot more existing social media in order to pull inspiration. Here is a set that will be interesting to review:
-> Mastodon, Matrix, Secure Scuttlebutt (SSB), Aether, Lemmy, Discord, Signal, Telegram, Slack, WhatsApp, Reddit, YouTube, Instagram, Facebook, Snapchat, TikTok, LinkedIn, Twitter/X, WeChat, Twitch, Medium, BeReal, Clubhouse, Revolt, BlueSky, Keet, campfirechat
+> Mastodon, Matrix, Secure Scuttlebutt (SSB), Aether, Lemmy, Discord, Signal, Telegram, Slack, WhatsApp, Reddit, YouTube, Instagram, Facebook, Snapchat, TikTok, LinkedIn, Twitter/X, WeChat, Twitch, Medium, BeReal, Clubhouse, Revolt, BlueSky, Keet, campfirechat, zulip, stack overflow
 
 ### Nebula
 
