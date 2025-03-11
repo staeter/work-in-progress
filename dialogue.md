@@ -19,8 +19,8 @@ This section introduces the *core principles* we believe are needed for *Dialogu
 1. **Empathic**: Support peoples physical and mental wellbeing, foster honesty, empathy, inclusiveness and constructive communication.
 2. **Optimistic**: Builds confidence in our collective ability to overcome current challenges and shape better futures through human ingenuity and collective action.
 3. **Empowering**: Entrust people with control over their digital environment and support them with appropriate tools.
-4. **Expressive**: Provide spaces and tools for creative expression and knowledge sharing and embrace diverse voices and experiences.
-5. **Informative**: Create community-driven systems for news gathering, investigation and reporting that highlights biasses.
+4. **Expressive**: Provide spaces and tools for collaborative content production, creative expression, public discourse and knowledge sharing.
+5. **Informative**: Create community-driven systems for news gathering, investigation and reporting able to highlights biasses.
 6. **Democratic**: Make bottom up, collective human organizing and decision-making more efficient and accessible than centralized systems both at local and global scales.
 7. **Accessible**: Ensure accessibility and ease of use to the largest amount of people possible by considering their technical knowledge, economical status, cultural background, physical and mental disabilities, language, literacy and every other possibly hindering factor.
 8. **Attractive**: Bring local and online communities onboard by implementing win win mechanisms and focusing on their concrete needs.
@@ -28,7 +28,7 @@ This section introduces the *core principles* we believe are needed for *Dialogu
 10. **Resilient**: Maintain platform availability and usability even in places where it has been outlawed.
 11. **Safe**: Ensure users can communicate without fear of identification or retribution even in repressive environments.
 12. **Modular**: Support community-driven development by building every interface and algorithm as replaceable components.
-13. **Autonomous**: Organize platform architecture and governance in a way that can resist and survive possible coercion from states or multinational corporations.
+13. **Independent**: Organize platform architecture and governance in a way that can resist and survive possible coercion from states or multinational corporations.
 14. **Sustainable**: Ensure the platform's social and technical foundations remain viable and relevant across generational timescales.
 15. **Empirical**: Rigorously justify, study and stress test every feature to ensure its functioning truly matches its intent.
 16. **Transparent**: Actively expose and explain all platform mechanisms, algorithmic systems, and community processes, enabling informed user participation and control.
@@ -39,40 +39,54 @@ The principles are sorted in no particular order. The numbers are only there for
 
 Here we build up a set of requirements. Each has to describe which *core principle* it aims to fulfill and describe the reasoning justifying it if unclear. The quality of a requirement comes from its clarity, concision, completeness, consistency, correctness, and concreteness. They also need to be classified either as *critical*, *important* or *desirable*.
 
-We group the requirements into different *systems*. We aim to minimize their size and interdependency. For each *system*, we describe one or more *plans* we could follow to get it to a complete state. The pros and cons of each *plan* are then evaluated based on the uncertainties surrounding it, the expected costs, the peoples and communities that could get involved and the amount of work required.
+We group the requirements into different *systems*. We aim to minimize their size and interdependency. For each *system*, we describe one or more *plans* we could follow to get it to a complete state. The pros and cons of each *plan* are then evaluated based on the uncertainties surrounding it, the expected costs, the peoples and communities that could get involved and the amount of work required. We also indicate which plan is currently *favored*.
 
-### Platform's Name
+### Name
 
-The platform's name has to:
+| ref | requirement | fulfills | priority |
+| --: | ----------- | -------- | -------- |
+| 1. | Have a meaning that mirrors the platform's intent and purposes. | *transparent* and *attractive* | *critical* |
+| 2. | Be readable and pronounceable in a large amount of languages. | *accessible* | *important* |
+| 3. | Be memorable and findable. | *attractive* | *important* |
 
-- Correspond to what it is: a social network
-- Have a meaning that mirrors the platform's *core principles*
-- Be readable and pronounceable in a large amount of languages (*accessible*)
-- Be memorable and findable (*attractive*)
+#### Dialogue (*favored*)
 
-#### Dialogue
+> A dialogue consists of a cross-examination of different speeches, all of which commit their author. It is not about imposing a cognitive point of view, a perspective or reference. Each word transmitted in communication seeks to be decoded and received by the recipient, then to signify something that has meaning in their own existence. Dialogue calls for the actors of communication to be transformed in their being, in complete freedom. Active listening, sincere humility and mutual respect are therefore necessary. A successful dialogue produces a diagnosis integrating all the arguments of the participants and a conclusion in which they all agree. - *paraphrasing french wikipedia*
 
-- This is the current chosen name
-- Pros:
-  - Reflects the *empathic*, *expressive*, *collaborative* and *democratic* principles
-  - Is easy to pronounce and has the same meaning in many languages
-  - There is a clear social aspect making it sensible to label a social network
-- Cons:
-  - Probably won't get `dialogue.net`
-  - SEO might be complicated
+**Pros** :
 
-#### Inter Planetary Social Network (IPSN)
+1. The notion of dialogue has a clear social aspect, it reflects really well the idea that people are here to listen to one an other (*empathic*), exchange thoughts and ideas (*expressive*), find contradictions in their differing view points (*informative* and *empirical*) and collaborate toward possible solutions (*optimistic* and *democratic*).
+2. This name also is easy to pronounce and has the same meaning in many languages.
+3. It isn't widely used online and a quick search mostly lists dictionaries so it might also be a good name for SEO.
 
-- Pros:
-  - Reflects the *distributed*, *resilient*, *distributed* and *sustainable* principles
-  - The fact that it is a social network is explicitly stated
-  - Is enthusiastic about the future (*optimistic*)
-- Cons:
-  - Quite long and difficult to pronounce for non english speakers
-  - Its acronym isn't natural to read
-  - Might be seen as piggy backing on the [IPFS](https://ipfs.tech/) ecosystem especially as it might not be built on top of it
+**Cons** :
 
-### Core Organization
+The `dialogue.net`(registered but unused) and `dialogue.media` (6600$ on [porkbun](porkbun.com)) domains will be expensive to get but are unused as of now.
+
+**Plan** :
+
+Initially we will use a cheaper domain names like `mass-dialogue.net` or `crowd-dialogue.net`. As the development gets more traction, we might make a crowdfunding in order to buy the ideal domain names.
+
+### Governance
+
+Governance might be the most difficult challenge of all. We have to take it very seriously as this is the deciding factor on weather the platform keeps upholding its *core principles* or weather it ends up steering in an unfavorable direction.
+
+| ref | requirement | fulfills | priority |
+| --: | ----------- | -------- | -------- |
+| 1. | Decisions are always justified relative to the platform's goal and *core principles*. | *sustainable* | *critical* |
+| 2. | People are trained to constantly adapt their structures and processes to changing circumstances. | *resilient* and *sustainable* | *critical* |
+| 3. | Processes and decisions are expressed in an comprehensive manner to the public. | *accessible* and *transparent* | *important* |
+| 4. | Prevent state or corporate interests infiltrating and/or taking over deciding bodies. | *independent* | *critical* |
+| 5. | The development process is resilient to state level interdiction and repression. | *resilient* | *desirable* |
+| 6. | The concrete effects of every decision have to be evaluated, compared to its intent and corrected in case of misalignment. | *empirical* | *critical* |
+| 7. | Support and credit contributors to ensure their longevity and recognition. | *sustainable* | *important* |
+| 8. | Be representative of human diversity. | *empathic* | *desirable* |
+| 9. | Communicate enthusiastically over the work being done, the problems being solved and the systems being built toward. | *optimistic* and *attractive* | *desirable* |
+| 10. | Have processes to gather, answer and tackle user questions and inputs. | *empirical*, *accessible* and *sustainable* | *important* |
+| 11. | Be under the control of involved users but also defend the interests of peoples that aren't able to involve themselves in the same way. | *democratic* and *empathic* | *important* |
+| 12. | Changes to the core principles have to be difficult enough for the project not to stere off course and easy enough for them not to become obsolete. | *sustainable* | *crucial* |
+
+-- wip
 
 *Dialogue Open Collective* (OC) will be the legal entity that is in charge of gathering various sources of revenue and distributing them to the various peoples that are building its infrastructure and content.
 
@@ -80,22 +94,9 @@ It may or may not be part of the [Open Collective](https://opencollective.com/) 
 
 This organization is the initiator of the platform's culture and its members have to be the prime examples of its principles. Their behavior towards the rest of the community has to reflect that.
 
-#### Governance
-
-Governance might be the most difficult challenge of all. We have to take it very seriously as this is the deciding factor on weather the platform keeps upholding its *core principles* or weather it ends up steering in an unfavorable direction.
-
 The governance of the platform must:
 
-- Prevent state or corporate interests infiltrating the deciding bodies (*autonomous*)
-- Reject opportunistic people from important roles to keep the platform on track with its *core principles*
-- Keep the development process going even under state level interdiction and repression (*resilient*)
-- Decision are taken publicly and have to be justified relative to the *core principles* (*transparent*)
-- Functioning and decisions have to absolutely avoid unnecessary complexity and be comprehensible to non experts (*accessible*)
-- Rigorously test and observe the outcomes of each decision (*empirical*)
-- Able to quickly adapt to fix pressing issues (*sustainable*)
-- Embodies the *humanistic* and *optimistic* principles
-- Is under the control of involved users but also defend the interests of users that aren't able to involve themselves in the same way (*democratic*)
-- Changes to the core principles have to be difficult enough for the project not to stere off course and easy enough for them not to become obsolete (*sustainable*)
+Reject opportunistic people from important roles to keep the platform on track with its *core principles*
 
 ##### Benevolent Dictatorship
 
@@ -434,11 +435,11 @@ Modularity enables communities to adapt how they interact with the platform whil
 
 The platform realizes this principle through secure APIs for safe extension development, sandboxed environments that protect core functionality and a dedicated space where communities share and discuss their custom packages. As extensions prove their value through widespread adoption and community vetting, they can be considered for integration into the platform's default offering, creating a pathway for community-driven evolution of the core platform itself.
 
-### 13. Autonomous
+### 13. Independent
 
 Most social platforms are beholden to corporate interests and vulnerable to state control. Whether through profit motives driving harmful engagement tactics, advertisers influencing content policies, or governments demanding user data and censorship compliance, these dependencies fundamentally compromise platforms' ability to serve their users' interests. The result is a social media landscape where neither users nor platform operators can maintain genuine autonomy in pursuing their stated values and goals.
 
-Being autonomous implies the strong rejection of the profit motive in general and opportunism amongst the people involved. Money has to be used only as a tool needed to build the platform but it must never be confused with the final goal. It is needed to ensure the platform stays true to its *core principles* and to resist both corporate capture and state control.
+Being independent implies the strong rejection of the profit motive in general and opportunism amongst the people involved. Money has to be used only as a tool needed to build the platform but it must never be confused with the final goal. It is needed to ensure the platform stays true to its *core principles* and to resist both corporate capture and state control.
 
 Systems have to [distribute](](https://hypha.coop/dripline/debate-over-dweb-vs-web3/)) [computing](https://en.wikipedia.org/wiki/Distributed_artificial_intelligence) and [storage](https://en.wikipedia.org/wiki/Cooperative_storage_cloud) loads across all users devices to avoid dependency to any cloud provider. This also lower the maintenance costs and limits the dependency on revenue sources. The source of revenue have to be varied and preferably come from the users who have the most interest in upholding the *core principles*. The org must not grow dependent on any other source of revenue - like advertisement or subsidies - as they may be used to pressure the org if it grows too dependent on them.
 
