@@ -37,7 +37,7 @@ The principles are sorted in no particular order. The numbers are only there for
 
 ## Requirements
 
-Here we build up a set of requirements. They are classified either as *critical*, *important* or *desirable*. We also state which *core principle* each aims to fulfill. The reasoning justifying their prioritization and expected impacts has to be described if not self evident. The quality of a requirement comes from its clarity, concision, completeness, consistency, correctness, concreteness, specificity, measurability and actionability.
+Here we build up a set of requirements. They are classified either as *critical*, *important*, *desirable* or *two sided*. We also state which *core principle* each aims to fulfill. The reasoning justifying their prioritization and expected impacts has to be described if not self evident. The quality of a requirement comes from its clarity, concision, completeness, consistency, correctness, concreteness, specificity, measurability and actionability. We write the requirements using assertive wordings.
 
 We group requirements into different *systems*. We aim to minimize their size and interdependency. For each, we describe the *plan* we expect to follow to get the *system* to a complete state. The quality of a *plan* is evaluated based on how well it fulfills the requirements, which uncertainties it presents, how well the costs are balanced with sources of funding, which peoples and communities could be interested in contributing, how much work and time is required to attain completion.
 
@@ -81,7 +81,7 @@ Governance might be the most difficult challenge of all. We have to take it very
 | 11. | Be under the control of involved users but also defend the interests of peoples that aren't able to involve themselves in the same way. | *democratic* and *empathic* | *important* |
 | 12. | Changes to the core principles have to be difficult enough for the project not to stere off course and easy enough for it not to become obsolete. | *sustainable* | *crucial* |
 
-We start as a temporary benevolent dictatorship. even though it is a very fragile and centralized mode of organization, it ensures alignment with the project initial intent. Our perspective is to use the organizational tools of *dialogue* to progressively transfer governance to its most dedicated contributors.
+We start as a temporary benevolent dictatorship. Even though it is a very fragile and centralized mode of organization, it ensures alignment with the project initial intent. Our perspective is to use the organizational tools of *dialogue* to progressively build up processes and transfer governance to its most dedicated contributors.
 
 -- wip
 
@@ -91,11 +91,32 @@ Opportunism has to be strongly rejected to avoid the corporatisation happening i
 
 For now though, we are too early in the platform's development to clearly sketch out any clear *plan*. We can learn form [Open Collective](https://opencollective.com/) in terms of managing funds. Many political and journalistic organizations such as [Wikileaks](https://wikileaks.org/) also have a lot to teach us in terms of functioning in illegality.
 
+### Programming Language
+
+A programming language in and of itself is an user interface that serves as a model for thinking and describing processes. Its design has to be thought in terms of ergonomics and modularity.
+
+| ref | requirement | fulfills | priority |
+| --: | ----------- | -------- | -------- |
+| 1. | | | |
+| 2. | Both syntax and formatting are modular. | *modular* | *desirable* |
+| 3. | Translation tables enable spoken language conversion. | *accessible* | *desirable* |
+
+The second and third requirement can be achieved by reducing the language to its abstract syntax tree (AST) and to have two functions converting code to and from its AST. Those functions could then be modified by the programmers to fit their preferences.
+
+### Compiler
+
+### Metaprogramming Tool
+
+### IDE and GUI
+
+### Package Manager
+
 ### Programming Toolset
 
-A programming language in and of itself is an user interface that serves as a model for thinking and describing processes. We often think of programming languages as things in and of themselves but their compilers, IDEs, and tools in general take a huge role in the process of development. As it is a social process, this thinking can be extended to the blogs, forums and articles that are also part of the programming toolset.
+A programming language in and of itself is an user interface that serves as a model for thinking and describing processes. We often think of programming languages as things in and of themselves but their compilers, frameworks, IDEs, and tools in general each take a huge role in their ergonomics. As software development is a social process, this thinking can be extended to the blogs, forums and articles that are also part of the programming toolset.
 
-All of it guides development in many ways and has to be thoughtfully designed to fulfill the aims of the project.
+| ref | requirement | fulfills | priority |
+| --: | ----------- | -------- | -------- |
 
 - Easy to learn and master (*accessible*)
   - Great beginner resources aimed at non technical peoples
@@ -103,6 +124,7 @@ All of it guides development in many ways and has to be thoughtfully designed to
   - Easy to read and to express (avoids [syntactic sugar](https://en.wikipedia.org/wiki/Syntactic_sugar))
   - Single threaded code
   - Consistent interfaces across devices
+  - Great programming ergonomics
 - Easy to review and maintain (*sustainable*)
   - Enforces good practice through language design and compiler errors
   - Human readable and helpful compilation error messages
