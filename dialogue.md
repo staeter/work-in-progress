@@ -16,22 +16,23 @@ Spotting ideas that lack clarity or words that need explanation - especially for
 
 This section introduces the *core principles* we believe are needed for *Dialogue* to fulfill its goal. They are fairly general but clarify the aims of the platform.
 
-1. **Empathic**: Support peoples physical and mental wellbeing, foster honesty, empathy, inclusiveness and constructive communication.
-2. **Optimistic**: Builds confidence in our collective ability to overcome current challenges and shape better futures through human ingenuity and collective action.
-3. **Empowering**: Entrust people with control over their digital environment and support them with appropriate tools.
-4. **Expressive**: Provide spaces and tools for collaborative content production, creative expression, public discourse and knowledge sharing.
-5. **Informative**: Create community-driven systems for news gathering, investigation and reporting able to highlights biasses.
-6. **Democratic**: Make bottom up, collective human organizing and decision-making more efficient and accessible than centralized systems both at local and global scales.
-7. **Accessible**: Ensure accessibility and ease of use to the largest amount of people possible by considering their technical knowledge, economical status, cultural background, physical and mental disabilities, language, literacy and every other possibly hindering factor.
-8. **Attractive**: Bring local and online communities onboard by implementing win win mechanisms and focusing on their concrete needs.
-9. **Private**: Guarantee personal data sovereignty and communication confidentiality.
-10. **Resilient**: Maintain platform availability and usability even in places where it has been outlawed.
-11. **Safe**: Ensure users can communicate without fear of identification or retribution even in repressive environments.
-12. **Modular**: Support community-driven development by building every interface and algorithm as replaceable components.
-13. **Independent**: Organize platform architecture and governance in a way that can resist and survive possible coercion from states or multinational corporations.
-14. **Sustainable**: Ensure the platform's social and technical foundations remain viable and relevant across generational timescales.
-15. **Empirical**: Rigorously justify, study and stress test every feature to ensure its functioning truly matches its intent.
-16. **Transparent**: Actively expose and explain all platform mechanisms, algorithmic systems, and community processes, enabling informed user participation and control.
+- **Empathic**: Support peoples physical and mental wellbeing, foster honesty, mutual understanding, inclusiveness and constructive communication.
+- **Assertive**: Encourages people to stand up for their own needs and values, to confront differing opinions and ideas and promote moderation in the face of domination, harassment and instrumentalization.
+- **Optimistic**: Builds confidence in our collective ability to overcome current challenges and shape better futures through human ingenuity and collective action.
+- **Empowering**: Entrust people with control over their digital environment and support them with appropriate tools.
+- **Expressive**: Provide spaces and tools for collaborative content production, creative expression, public discourse and knowledge sharing.
+- **Informative**: Create community-driven systems for news gathering, investigation and reporting able to highlights biasses and diverging opinions.
+- **Democratic**: Make bottom up, collective human organizing and decision-making more efficient and accessible than centralized systems both at local and global scales.
+- **Accessible**: Ensure accessibility and ease of use to the largest amount of people possible by considering their technical knowledge, economical status, cultural background, physical and mental disabilities, language, literacy and every other possibly hindering factor.
+- **Attractive**: Bring local and online communities onboard by implementing win win mechanisms and focusing on their concrete needs.
+- **Private**: Guarantee personal data sovereignty and communication confidentiality.
+- **Resilient**: Maintain platform availability and usability even in places where it has been outlawed.
+- **Safe**: Ensure users can communicate without fear of identification or retribution even in repressive environments.
+- **Modular**: Support community-driven development by building every interface and algorithm as replaceable components.
+- **Independent**: Organize platform architecture and governance in a way that can resist and survive possible coercion from states or multinational corporations.
+- **Sustainable**: Ensure the platform's social and technical foundations remain viable and relevant across generational timescales.
+- **Empirical**: Rigorously justify, study and stress test every feature to ensure its functioning truly matches its intent.
+- **Transparent**: Actively expose and explain all platform mechanisms, algorithmic systems, and community processes, enabling informed user participation and control.
 
 The principles are sorted in no particular order. The numbers are only there for referencing sake. See the [rationale section](#core-principles-rationale) for a detailed description of each principle.
 
@@ -55,8 +56,8 @@ We group requirements into different *systems*. We aim to minimize their size an
 
 The *plan* is to fully own that name, build a visual identity around it and get a cheap domain names such as `dialogue-crowd.net`, `dialogue-crowd.media` or `dialogue-social.media`. We will be able to buy a more ideal domain names such as `dialogue.net` and `dialogue.media` as the project gains traction and funding.
 
-| ref | weight | impact |
-| --: | ------ | ------ |
+| ref | impact | solution |
+| --: | ------ | -------- |
 | req1 | +++ | The notion of dialogue has a clear social aspect, it reflects really well the idea that people are here to listen to one an other (*empathic*), exchange thoughts and ideas (*expressive*), find contradictions in their differing view points (*informative* and *empirical*) and collaborate toward possible solutions (*optimistic* and *democratic*). |
 | req2 | ++ | This name also is easy to pronounce and has the same meaning in many languages. |
 | req3 | + | It isn't widely used online and a quick search mostly lists dictionaries so it might also be a good name for SEO. Also the ideal domains are unused as of now. |
@@ -93,15 +94,21 @@ For now though, we are too early in the platform's development to clearly sketch
 
 ### Programming Language
 
-A programming language in and of itself is an user interface that serves as a model for thinking and describing processes. Its design has to be thought in terms of ergonomics and modularity.
+A programming language in and of itself is a user interface that serves as a model for thinking and describing processes. Its design has to be thought in terms of ergonomics and modularity.
 
 | ref | requirement | fulfills | priority |
 | --: | ----------- | -------- | -------- |
-| 1. | | | |
-| 2. | Both syntax and formatting are modular. | *modular* | *desirable* |
-| 3. | Translation tables enable spoken language conversion. | *accessible* | *desirable* |
+| 1. | Minimize the amount of primitives and programming techniques needed to master the language. | *accessible* | *important* |
+| 2. | Make concrete syntax and its formatting modular. | *modular* | *desirable* |
+| 3. | Enable spoken language conversion. | *accessible* | *desirable* |
+| 4. | Constrains users to write readable, explicit, maintainable and testable code. | *sustainable* | *crucial* |
+| 5. | Enable compile time optimization and parallelization. | *accessible* | *desirable* |
+| 6. | Enable distributed computing. | *accessible*, *independent* and *sustainable* | *desirable* |
+| 7. | Enable helpful, context based autocompletion. | *accessible* | *desirable* |
 
-The second and third requirement can be achieved by reducing the language to its abstract syntax tree (AST) and to have two functions converting code to and from its AST. Those functions could then be modified by the programmers to fit their preferences.
+The second and third requirement can be achieved by reducing the language to a rich abstract syntax tree (RAST) and to have two functions converting code to and from its RAST. Those functions could then be modified by the programmers to fit their syntactic sugar, keywords and formatting preferences. We call it a *rich* abstract syntax tree because it also contains comments, errors and translation tables. Based on this, the other requirements covering syntax only concern the default syntax.
+
+### Versioning
 
 ### Compiler
 
@@ -113,7 +120,7 @@ The second and third requirement can be achieved by reducing the language to its
 
 ### Programming Toolset
 
-A programming language in and of itself is an user interface that serves as a model for thinking and describing processes. We often think of programming languages as things in and of themselves but their compilers, frameworks, IDEs, and tools in general each take a huge role in their ergonomics. As software development is a social process, this thinking can be extended to the blogs, forums and articles that are also part of the programming toolset.
+A programming language in and of itself is a user interface that serves as a model for thinking and describing processes. We often think of programming languages as things in and of themselves but their compilers, frameworks, IDEs, and tools in general each take a huge role in their ergonomics. As software development is a social process, this thinking can be extended to the blogs, forums and articles that are also part of the programming toolset.
 
 | ref | requirement | fulfills | priority |
 | --: | ----------- | -------- | -------- |
@@ -303,7 +310,7 @@ Payment methods have to be available in order to finance the work of content cre
 
 In this section we detail every principle, we express its underlying rationale, what it is, what it isn't and some practical implications. The important part here is to convey Dialogue's general intent.
 
-### 1. Empathic
+### Empathic
 
 When we interact online, we tend to forget that there are human beings on the other side of the screen. This distance makes it easier to ignore others' humanity, leading to behaviors we would rarely engage in face-to-face: going from simple carelessness to harassment and public shaming. These toxic behaviors isolates peoples, encourages stale interactions and deepens social divisions. We want to build bridges and have spaces for people to dialogue with one another.
 
@@ -313,7 +320,9 @@ This doesn't mean avoiding hard or violent topics, nor does it mean abolishing d
 
 Community guidelines and content creation tutorials can encourage empathetic communication, default platform metrics can track and highlight constructive interactions rather than inflammatory ones, default recommender systems can show diverse perspectives to break information bubbles and default interfaces can prompt users to reconsider harmful messages before publishing. These mechanisms help shape a culture where seeking to understand others becomes as natural as expressing oneself.
 
-### 2. Optimistic
+### Assertive
+
+### Optimistic
 
 In times of global challenges and systemic crises, it's easy to fall into doom scrolling and cynicism. This constant exposure to problems without solutions creates a paralyzing feedback loop: seeing no examples of positive change makes it harder to believe in or work toward solutions, which in turn means fewer positive examples for others.
 
@@ -323,7 +332,7 @@ This doesn't mean ignoring problems, promoting blind optimism or deluding onesel
 
 Community guidelines and content creation tutorials can encourage solution-focused storytelling, default platform metrics can track and highlight constructive engagement rather than just reach, and default recommendation systems can be designed to balance problem awareness with solution-finding initiatives. These mechanisms help shape a culture where sharing progress and celebrating small wins becomes as natural as identifying challenges.
 
-### 3. Empowering
+### Empowering
 
 Traditional platforms treat users as passive consumers of content and features, offering little control over their digital environment beyond superficial customization options. This creates learned helplessness where users accept whatever changes platforms impose, even when these changes work against their interests or needs. This problem is particularly visible in the [attention economy](https://en.wikipedia.org/wiki/Attention_economy) where corporations compete to grab users' attention at all costs, using invasive and addictive design practices with profound disregard for users' wants and needs.
 
@@ -333,7 +342,7 @@ This principle is about respecting users' autonomy and supporting their growth f
 
 Transparent algorithms that users can understand and modify, usage dashboards that help users self-reflect, customizable metrics that align with personal values rather than engagement maximization, and settings to modify or disable potentially addictive features. These mechanisms help users reclaim agency over their online experience and maintain a healthy relationship with technology.
 
-### 4. Expressive
+### Expressive
 
 The world wide web brought an unprecedented ability for people to share ideas and knowledge across the world but - as the [platform economy](https://en.wikipedia.org/wiki/Platform_economy) grew - private corporations took control over our means of communication and entertainment. These platforms not only amplify already-popular voices while making it increasingly difficult for new or niche creators to reach and grow their audience, creating a self-reinforcing cycle of visibility inequality, but they also readily comply with state censorship demands, further limiting the diversity of voices and ideas that can be expressed online.
 
@@ -343,7 +352,7 @@ This isn't about limiting successful creators or forcing equality of outcomes. R
 
 In practice this comes down to handling various content formats (from text articles to long-form video passing by digital comics), having discovery pages for each of them recommending content based on a variety of metrics and algorithms. To make content production sustainable the platform may integrate crowd funding systems and a page to connect creators and advertisers.
 
-### 5. Informative
+### Informative
 
 Traditional media outlets have consolidated into massive conglomerates whose coverage inevitably aligns with their owners' interests. Meanwhile, social platforms shape public perception through algorithmic amplification that prioritizes engagement over truthfulness. This creates distorted views of reality - sensationalizing certain events while overlooking others, amplifying extreme voices while marginalizing nuanced perspectives. The result is a media landscape where even basic facts become contested territory and where the real significance of events gets lost in a flood of decontextualized content.
 
@@ -355,7 +364,7 @@ The platform realizes this principle through several complementary mechanisms. F
 
 -- wip : add peer review before publishing content
 
-### 6. Democratic
+### Democratic
 
 Traditional social platforms tend to concentrate power in the hands of platform owners and their algorithms, leaving users and communities with little say in how their spaces are governed. Even when platforms offer community moderation tools, these are often limited and can be overridden by corporate decisions driven by profit motives rather than community needs.
 
@@ -367,7 +376,7 @@ The democratic principle isn't about forcing every group to use the same democra
 
 Built-in tools for proposals and voting, structured discussion spaces for investigation and deliberation, tools for collaborative work, transparent record-keeping of decisions and their rationales, and flexible permission systems that communities can adapt to their needs. These mechanisms help make collective decision-making and organizing as fast and more efficient as centralized systems.
 
-### 7. Accessible
+### Accessible
 
 Large segments of the population are excluded of the online discourse through various barriers: expensive devices or data plans, complex interfaces that assume technical literacy, designs that don't work with assistive technologies, content available only in majority languages, poor internet access or non [net neutral](https://en.wikipedia.org/wiki/Net_neutrality) internet providers. This creates digital divides that reinforce existing social inequalities and limit the internet's potential for inclusive dialogue and collective action.
 
@@ -385,7 +394,7 @@ Being accessible is about thoughtful development. We have to think every functio
 
 Responsive interfaces that work across device types, offline-first architecture that handles poor connectivity, built-in translation tools, context-sensitive help systems, and careful attention to accessibility standards. These mechanisms ensure that no one is excluded from participating in the platform's community.
 
-### 8. Attractive
+### Attractive
 
 One of the internet's greatest achievements has been helping people maintain meaningful connections across time and distance - old friends finding each other again and families staying close despite living continents apart. But this only works when people can actually find each other on a platform. A social network needs to attract and retain enough users to make these connections possible, otherwise even the best features become meaningless in an empty space.
 
@@ -395,7 +404,7 @@ We want to avoid using dark patterns, artificial virality, or manipulative engag
 
 Building trust through genuine collaboration with creators and users is key to enable the best advertisement there is: word of mouth. In order to get there we need to support creators and users success through community building tools and sustainable revenue models, and to foster a co-building relationship where their feedback shapes the platform's evolution. To reach new user bases platform-funded and crowdfunded exclusive content can attract new audiences and creators can introduce their communities to the platform through cross-platform content strategies.
 
-### 9. Private
+### Private
 
 Traditional social platforms treat user data as a commodity to be exploited - selling it to advertisers, training AI models without consent, sharing it with third parties, and readily handing it over to state surveillance. This creates a situation where every interaction, every connection, and every piece of content becomes potential leverage against users, whether for commercial manipulation or state control. Even "private" messages and closed groups are ultimately accessible to platform owners and their partners.
 
@@ -405,7 +414,7 @@ The aim isn't for all content to be completely private. Rather, it's about ensur
 
 Strong encryption protects all communications by default, clear interfaces help users understand and control their privacy settings, they get to decide where to store their data, transparent documentation explains how data is stored and processed and granular sharing controls let users decide exactly what to share with whom. These mechanisms ensure users maintain genuine sovereignty over their data while making safe sharing straightforward when desired.
 
-### 10. Resilient
+### Resilient
 
 Traditional social platforms are vulnerable to disruption - whether from technical failures, corporate decisions, or state intervention. A single point of failure in their centralized infrastructure can cut off millions of users from their communities. More concerning still, governments can easily pressure these platforms to censor content, block access, or hand over user data, effectively silencing entire populations with a single decision.
 
@@ -413,7 +422,7 @@ Being resilient means ensuring the platform keeps working even under adverse con
 
 Build the app's communications as a trustless peer to peer distributed system with no cental node. Follow the best practices in [disruption-tolerant networking](https://en.wikipedia.org/wiki/Delay-tolerant_networking). Structure data as [conflict-free replicated data type](https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type) and propose [cooperative storage](https://en.wikipedia.org/wiki/Cooperative_storage_cloud) to duplicate data across users' devices. Keep the interfaces as functional as possible even without network access. This principle also has implications for the platform's governance. The core developers' team should be organized with resilience in mind as its members might be pressured or even be missing.
 
-### 11. Safe
+### Safe
 
 In many parts of the world, expressing certain views or identities online can lead to real-world persecution. Journalists, whistle-blowers, activists, minorities, and ordinary peoples face harassment, job loss, imprisonment, or worse when their online activities are traced back to them. Traditional platforms not only fail to protect vulnerable users, but often actively cooperate with oppressive entities by providing user data or implementing automated surveillance systems that can be weaponized against their users.
 
@@ -421,7 +430,7 @@ Being safe means ensuring users can communicate without fear of identification o
 
 Strong anonymity by default protect user identities, content warnings and filtering tools help users avoid unwanted exposure, reporting mechanisms enable communities to protect themselves against harassment and safety documentation helps users understand risks and best practices. The platform's security has to be heavily tested and be impervious against spoofing attacks. Ideally the app should also be [polymorphic](https://en.wikipedia.org/wiki/Polymorphic_code) to avoid detection by spyware and it should be able to disguise its communications in order to be unrecognizable by anyone tapping the network.
 
-### 12. Modular
+### Modular
 
 No platform is neutral - its design inherently shapes what gets expressed and how people interact. From recommendation algorithms that determine what content gets seen, to interface choices that guide behavior, to moderation systems that define acceptable speech - every technical choice embodies specific values and priorities. While we strive to align these choices with our *core principles*, we recognize that no single implementation can serve all communities' needs or adapt to every contexts.
 
@@ -429,7 +438,7 @@ Modularity enables communities to adapt how they interact with the platform whil
 
 The platform realizes this principle through secure APIs for safe extension development, sandboxed environments that protect core functionality and a dedicated space where communities share and discuss their custom packages. As extensions prove their value through widespread adoption and community vetting, they can be considered for integration into the platform's default offering, creating a pathway for community-driven evolution of the core platform itself.
 
-### 13. Independent
+### Independent
 
 Most social platforms are beholden to corporate interests and vulnerable to state control. Whether through profit motives driving harmful engagement tactics, advertisers influencing content policies, or governments demanding user data and censorship compliance, these dependencies fundamentally compromise platforms' ability to serve their users' interests. The result is a social media landscape where neither users nor platform operators can maintain genuine autonomy in pursuing their stated values and goals.
 
@@ -439,7 +448,7 @@ Systems have to [distribute](](https://hypha.coop/dripline/debate-over-dweb-vs-w
 
 To prevent opportunism amongst the peoples involved in the org, salaries have to be limited even for key people and those with conflict of interests have to be severely rejected. Peoples have to show significant investment into the project before they can take part in the decision process. A fund have to be prepared in case members of the organization get intimidated or pressured.
 
-### 14. Sustainable
+### Sustainable
 
 In the rapidly evolving landscape of technology and social platforms, many projects face challenges in maintaining their relevance and functionality over time. Often, platforms are built with short-term growth goals in mind, leading to technical debt and a lack of consideration for the social and ecological impacts. To ensure long-term viability and continued alignment with user needs, sustainability must be a core consideration from the outset.
 
@@ -449,7 +458,7 @@ It is not about making rigid choices or avoiding new technologies and ideas. It 
 
 Systems should be designed for easy maintenance and scalability, with clear documentation and modular architecture to facilitate updates and improvements. Governance structures should be flexible, allowing for community input and adaptation to new circumstances. Feedback loops that identify areas for improvement have to be thought out to ensure the platform continues to meet user needs and remains aligned with its core principles over time.
 
-### 15. Empirical
+### Empirical
 
 In the development of social platforms, assumptions about user behavior and feature effectiveness can lead to misguided decisions and unintended consequences. Without a rigorous approach to testing and validation, platforms risk implementing features that do not serve their intended purposes or align with their initial aim. An empirical approach is essential to ensure that platform development is grounded in reality and evidence.
 
@@ -459,7 +468,7 @@ Empirical does not mean relying solely on quantitative data or ignoring qualitat
 
 To implement the empirical principle, the platform should establish robust mechanisms for data collection and analysis that is based on user agreement. A/B testing, user feedback loops, and pilot programs can be used to evaluate new features and changes. Regular reviews of platform performance and user satisfaction should inform ongoing development. By fostering a culture of continuous learning and adaptation, the platform can ensure that its evolution is guided by real-world evidence and user needs.
 
-### 16. Transparent
+### Transparent
 
 Transparency means users can understand how the platform works, from algorithms to governance. This requires clear documentation, open source code, and explicit explanation of automated systems.
 
@@ -501,7 +510,7 @@ We use this perspective as a north star guiding the project but even if you beli
 
 ### Will fascist, terrorist and criminal organizations be using Dialogue to their advantage?
 
-The core values of the far right are fundamentally centered around creating hierarchies between people and to violently oppress those who they deem as lesser humans. Religious fundamentalists of all obedience do the same based on religious beliefs. Organized crime is different as it does not have any moral apart form its crushing thirst for money. Those are fundamentally opposed to *Dialogue*'s goal and - as such - we strongly reject their ideas and methods. We know the far right short and aggressive messaging to be very viral on online platforms and they will surely attempt to invade every space possible and prevent constructive discussion to happen.
+The core values of the far right are fundamentally centered around creating hierarchies between people and to violently oppress those who they deem as lesser humans. Religious fundamentalists of all obedience do the same based on religious beliefs. Organized crime is different as it does not have any moral apart form its crushing thirst for money. Those are fundamentally opposed to *Dialogue*'s goal and *core principles* and - as such - we strongly reject their ideas and methods. We know the far right short and aggressive messaging to be very viral on online platforms and they will surely attempt to invade every space possible and prevent constructive discussion to happen.
 
 -- wip : the second paragraph feels insufficient and maybe even unrealistic but I've got to complete more of the requirements to have clearer ideas on this
 
