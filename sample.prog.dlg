@@ -1,0 +1,209 @@
+#!/bin/dlg []
+
+#{
+    Would write `#!/bin/dlg ["https://github.com/<git-handle>/<repo>"]` if the module was published on github.
+}
+
+# single line comment
+
+#{
+    Multi line comment handles markdown notation.
+}
+
+#{
+    # Dialogue Programming Language Sample
+
+    In this document we write some test syntax to see what would a programming language for dialogue look like.
+}
+
+# Import without and with alias. The package exposes everything under that name.
+import dlg/core
+import staeter/factorial as Factorial
+
+# List.foldl and Int.multiply come from dlg/core and Factorial.compute comes from staeter/factorial
+expect List.foldl Int.multiply 1 [1, 2, 3] == Factorial.compute 3
+
+#{
+    We use $Maybe when we are unsure to get our value. It has a $map property.
+}
+Maybe a : [ Just a, Nothing ] with {
+
+    #{
+        Documentation for Maybe.map
+    }
+    map
+        : (a -> b), Maybe a -> Maybe b
+        { func maybeA ->
+            if maybeA is Just a
+            then Just (func a)
+            else Nothing
+        }
+
+}
+
+# universal properties and use in string formatting
+expect """
+    We can reference $Maybe or ${Maybe.reference} and have it as an hyperlink in our printed text.
+    We can get its signature ${Maybe.signature} or its complete implementation:
+    ${Maybe.implementation}
+    or its documentation :
+    > ${Maybe.documentation}
+    We can unwrap its type ${Maybe.alias}, get its properties ${Maybe.properties}.
+    We can also get the expression of a value ${Maybe.map.expression} and its signature ${Maybe.map.signature}.
+    We can escape the \${Maybe} to print it as is.
+""" == """
+    We can reference [Maybe](dialogue-lang.dev/staeter/sample:-maybe) or [Maybe](dialogue-lang.dev/staeter/sample:-maybe) and have it as an hyperlink in our printed text.
+    We can get its signature `Maybe a : [ Just a, Nothing ] with { map }`, its complete implementation:
+    ```
+    #{
+        We use $Maybe when we are unsure to get our value. It has a $map property.
+    }
+    Maybe a : [ Just a, Nothing ] with {
+
+        #{
+            Documentation for Maybe.map
+        }
+        map
+            : (a -> b), Maybe a -> Maybe b
+            { func maybeA ->
+                if maybeA is Just a
+                then Just (func a)
+                else Nothing
+            }
+
+    }
+    ```
+    or its documentation :
+    > We use [Maybe](dialogue-lang.dev/staeter/sample:-maybe) when we are unsure to get our value. It has a [Maybe.map](dialogue-lang.dev/staeter/sample:-maybe.map) property.
+    We can unwrap its type `[ Just a, Nothing ]`, get its properties `{ map }`.
+    We can also get the implementation of a value `{ func maybeA -> if maybeA is Just a then Just (func a) else Nothing }` and its signature `(a -> b), Maybe a -> Maybe b`.
+    We can escape the \${Maybe} to print it as is.
+"""
+
+
+Result e a : [ Error e, Ok a ] with {
+
+    map
+        : (a -> b), Result e a -> Result e b
+        { func (Ok a) ->
+            func a |> Ok
+        | _ (Err e) ->
+            Err e
+        }
+
+    andThen
+        : (a -> Result e b), Result e a -> Result e b
+        { func, Ok a ->
+            func a
+        | _ (Err e) ->
+            Err e
+        }
+
+    mapBoth
+        : (e -> eb), (a -> b), Result e a -> Result eb b
+        { _, valueUpdater, Ok a ->
+            valueUpdater a |> Ok
+        | errorUpdater, _, Err e ->
+            errorUpdater e |> Err
+        }
+
+    #{
+        A default toString is provided for every type but it can be overwritten.
+        This is implicitly called in \${myResultValue} to turn it into a String.
+    }
+    toString
+        : Result e a -> String
+        { Ok a -> a.toString
+        | Err e -> e.toString
+        }
+
+}
+
+
+# interact with platform through effects. effects can only be instantiated in `<my-capability-name>.capability.dlg` files.
+#todo: implement something in unison/koka using abilities/effects to figure out how to properly use them
+IO {
+
+    effect StdOut
+
+    #{
+        Print to stdout.
+
+        This is an effectful function. It has a mandatory `!` to make its effect explicit when one calls it.
+        It doesn't have an expression as it is implemented in C by the platform layer.
+    }
+    print! : String -{StdOut}-> Void ;
+
+}
+
+# functions are comparable by hash
+expect { a -> String.repeat a "b" } == { String.repeat _ "b" }
+
+# record instantiation
+hw = { h = "hello", w = "world" }
+
+# call property function on String
+expect String.firstToUpper hw.h == "Hello"
+expect hw.h.firstToUpper == "Hello"
+
+# run code inline, the result will be shown by the ide or printed in terminal by the cli
+>
+
+# declare a private value
+_myPrivate : String = "You can't use me outside of the current scope."
+myPublic = "I didn't put the type here but the compiler will guess it for me."
+
+# declare ghost types
+HideAlias a : _(List a)
+HideContent : _{ cantReadMe : String, fromOutside : Int, theCurrentScope : Float }
+HideUnion : _[ Me, Neither ]
+
+# apply anonymous function
+expect { name -> "Hello " ++ name } "Billy" == "Hello Billy"
+
+#{
+    We keep track of previous versions of our House data. This is required for keeping synced apis.
+    We encourage the use of evergreen versioning but other techniques can be used for backward compatibility.
+}
+House : { keys : List Keys, roofColor : Color } with {
+
+    describe : House -> String
+        { {keys, roofColor} ->
+            "We have ${List.count keys} to our house and it has a ${Color.describe roofColor} roof."
+        }
+
+} legacy {
+
+    _V1 : { roofColor : Color, hasGarden : Bool } with {
+
+        toV2 : _V1 -> _V2
+            { { keys = [] } :+ _ }
+
+    }
+
+    _V2 : { roofColor : Color, hasGarden : Bool, keys : List Keys } with {
+
+        toV3 : _V2 -> House
+            { { hasGarden } :+ rest -> rest }
+
+        describe : _V2 -> String
+            { {keys, roofColor} ->
+                "We have ${List.count keys} to our house. It has a "
+                    ++ Color.describe roofColor
+                    ++ " roof"
+                    ++ if hasGarden then " and a beautiful garden! 🌞" else "."
+            }
+
+    }
+
+}
+
+#{
+    There are four sorts of `.dlg` files:
+    - `<my-module-name>.dlg` standard module.
+    - `<my-program-name>.prog.dlg` which describes a program that can be built with any platform providing the right capabilities.
+    - `<my-capability-name>.cap.dlg` which describes effects that a program can have.
+    - `<my-platform-name>.plat.dlg` which describes which capabilities the platform handles.
+
+    This one is a `prog.dlg` because it uses the execute `>`
+}
