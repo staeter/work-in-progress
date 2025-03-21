@@ -22,7 +22,7 @@ This section introduces the *core principles* we believe are needed for *Dialogu
 - **Empowering**: Entrust people with control over their digital environment and support them with appropriate tools.
 - **Expressive**: Provide spaces and tools for collaborative content production, creative expression, public discourse and knowledge sharing.
 - **Informative**: Create community-driven systems for news gathering, investigation and reporting able to highlights biasses and diverging opinions.
-- **Democratic**: Make bottom up, collective human organizing and decision-making more efficient and accessible than centralized systems both at local and global scales.
+- **Democratic**: Make bottom up, collective human organizing and decision-making more efficient, reliable and accessible than centralized systems both at local and global scales.
 - **Accessible**: Ensure accessibility and ease of use to the largest amount of people possible by considering their technical knowledge, economical status, cultural background, physical and mental disabilities, language, literacy and every other possibly hindering factor.
 - **Attractive**: Bring local and online communities onboard by implementing win win mechanisms and focusing on their concrete needs.
 - **Private**: Guarantee personal data sovereignty and communication confidentiality.
@@ -98,15 +98,21 @@ A programming language in and of itself is a user interface that serves as a mod
 
 | ref | requirement | fulfills | priority |
 | --: | ----------- | -------- | -------- |
-| 1. | Minimize the amount of primitives and programming techniques needed to master the language. | *accessible* | *important* |
-| 2. | Make concrete syntax and its formatting modular. | *modular* | *desirable* |
-| 3. | Enable spoken language conversion. | *accessible* | *desirable* |
-| 4. | Constrains users to write readable, explicit, maintainable and testable code. | *sustainable* | *crucial* |
-| 5. | Enable compile time optimization and parallelization. | *accessible* | *desirable* |
-| 6. | Enable distributed computing. | *accessible*, *independent* and *sustainable* | *desirable* |
-| 7. | Enable helpful, context based autocompletion. | *accessible* | *desirable* |
-
-The second and third requirement can be achieved by reducing the language to a rich abstract syntax tree (RAST) and to have two functions converting code to and from its RAST. Those functions could then be modified by the programmers to fit their syntactic sugar, keywords and formatting preferences. We call it a *rich* abstract syntax tree because it also contains comments, errors and translation tables. Based on this, the other requirements covering syntax only concern the default syntax.
+| 1. | Minimize the amount of primitives, concepts and programming techniques needed to master the language. | *accessible* | *crucial* |
+| 2. | Print explicit and helpful compiler errors to guide programmers through their refactors. | *sustainable* and *accessible* | *crucial* |
+| 3. | Minimize compilation time to shorten the development feedback loop. | *attractive*, *accessible* and *sustainable* | *crucial* |
+| 4. | Minimize the potential for making mistakes and creating bugs. | *sustainable*, *resilient* and *accessible* | *crucial* |
+| 5. | Make managed effects very explicit and controllable to minimize the potential for hiding malicious code and unintended behaviors. | *transparent*, *sustainable* and *resilient* | *crucial* |
+| 6. | Be portable to most devices and browsers. | *accessible* and *sustainable* | *crucial* |
+| 7. | Make metaprogramming simple to support tooling development, code property verification and good practice enforcement. | *sustainable*, *secure*, *attractive* and *accessible* | *important* |
+| 8. | Enable partial and complete code hot swapping even in production. | *modularity* | *crucial* |
+| 9. | Minimize barriers to testing and benchmarking any piece of code. | *sustainable* and *accessible* | *important* |
+| 10. | Enable spoken language conversion. | *accessible* | *crucial* |
+| 11. | Maximize compile time optimization and parallelization. | *accessible* | *important* |
+| 12. | Look familiar to seasoned developers. | *attractive* | *desirable* |
+| 13. | Make white-space syntactically insignificant for the language to be more resilient to copy-paste and LLM usage. | *accessible* | *desirable* |
+| 14. | Enable seem less peer to peer communication and data synchronization. | *resilient*, *independent* and *accessible* | *crucial* |
+| 15. | Encourage test driven development. | *sustainable* | *desirable* |
 
 ### Versioning
 
@@ -117,6 +123,8 @@ The second and third requirement can be achieved by reducing the language to a r
 ### IDE and GUI
 
 ### Package Manager
+
+### Teaching Material
 
 ### Programming Toolset
 
@@ -657,7 +665,7 @@ The shopping list is long and we will need a lot of resources to get there.
 ## Existing Propositions
 
 > I want to review a lot more existing social media in order to pull inspiration. Here is a set that will be interesting to review:
-> Mastodon, Matrix, Secure Scuttlebutt (SSB), Aether, Lemmy, Discord, Signal, Telegram, Slack, WhatsApp, Reddit, YouTube, Instagram, Facebook, Snapchat, TikTok, LinkedIn, Twitter/X, WeChat, Twitch, Medium, BeReal, Clubhouse, Revolt, BlueSky, Keet, campfirechat, zulip, stack overflow
+> Mastodon, Matrix, Secure Scuttlebutt (SSB), Aether, Lemmy, Discord, Signal, Telegram, Slack, WhatsApp, Reddit, YouTube, Instagram, Facebook, Snapchat, TikTok, LinkedIn, Twitter/X, WeChat, Twitch, Medium, BeReal, Clubhouse, Revolt, BlueSky, Keet, campfirechat, zulip, stack overflow, rad.live
 
 ### Nebula
 
