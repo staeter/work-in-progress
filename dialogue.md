@@ -56,8 +56,8 @@ We group requirements into different *systems*. We aim to minimize their size an
 
 The *plan* is to fully own that name, build a visual identity around it and get a cheap domain names such as `dialogue-crowd.net`, `dialogue-crowd.media` or `dialogue-social.media`. We will be able to buy a more ideal domain names such as `dialogue.net` and `dialogue.media` as the project gains traction and funding.
 
-| ref | impact | solution |
-| --: | ------ | -------- |
+| ref | impact | problem/solution |
+| --: | ------ | ---------------- |
 | req1 | +++ | The notion of dialogue has a clear social aspect, it reflects really well the idea that people are here to listen to one an other (*empathic*), exchange thoughts and ideas (*expressive*), find contradictions in their differing view points (*informative* and *empirical*) and collaborate toward possible solutions (*optimistic* and *democratic*). |
 | req2 | ++ | This name also is easy to pronounce and has the same meaning in many languages. |
 | req3 | + | It isn't widely used online and a quick search mostly lists dictionaries so it might also be a good name for SEO. Also the ideal domains are unused as of now. |
@@ -73,16 +73,20 @@ Governance might be the most difficult challenge of all. We have to take it very
 | 2. | People are trained to constantly adapt their structures and processes to changing circumstances. | *resilient* and *sustainable* | *critical* |
 | 3. | Funding, processes and decisions are expressed publicly in a complete and comprehensive manner. | *accessible* and *transparent* | *important* |
 | 4. | Prevent state or corporate interests from infiltrating and/or taking over deciding bodies. | *independent* | *critical* |
-| 5. | The development processes and infrastructure are resilient to state level interdiction and repression. | *resilient* | *desirable* |
+| 5. | The organization, its development processes and infrastructure are resilient to state level interdiction and repression. | *resilient* | *desirable* |
 | 6. | The concrete effects of every decision have to be evaluated, compared to its intent and corrected in case of misalignment. | *empirical* | *critical* |
 | 7. | Support and credit contributors to ensure their longevity and recognition. | *sustainable* | *important* |
 | 8. | Be representative of human diversity. | *empathic* | *desirable* |
 | 9. | Communicate enthusiastically over the work being done, the problems being solved and the systems being built toward. | *optimistic* and *attractive* | *desirable* |
-| 10. | Have processes to gather, answer and tackle user questions and inputs. | *empirical*, *accessible* and *sustainable* | *important* |
+| 10. | Have processes to gather, answer and tackle user questions and remarks. | *empirical*, *accessible* and *sustainable* | *important* |
 | 11. | Be under the control of involved users but also defend the interests of peoples that aren't able to involve themselves in the same way. | *democratic* and *empathic* | *important* |
-| 12. | Changes to the core principles have to be difficult enough for the project not to stere off course and easy enough for it not to become obsolete. | *sustainable* | *crucial* |
+| 12. | Changes to the core principles have to be difficult enough for the project not to stere off course and easy enough for them not to become obsolete. | *sustainable* | *crucial* |
 
-We start as a temporary benevolent dictatorship. Even though it is a very fragile and centralized mode of organization, it ensures alignment with the project initial intent. Our perspective is to use the organizational tools of *dialogue* to progressively build up processes and transfer governance to its most dedicated contributors.
+We start as a temporary benevolent dictatorship. Even though it is a very fragile and centralized mode of organization, it ensures alignment with the project's initial intent. Our perspective is to use the organizational tools of *dialogue* to progressively build up processes and transfer governance to its most dedicated contributors.
+
+| ref | impact | problem/solution |
+| --: | ------ | ---------------- |
+| unknown | -- | Which and how many people will get involved? What are their reasons? |
 
 -- wip
 
@@ -94,31 +98,38 @@ For now though, we are too early in the platform's development to clearly sketch
 
 ### Programming Language
 
-A programming language in and of itself is a user interface that serves as a model for thinking and describing processes. Its design has to be thought in terms of ergonomics and modularity.
+A programming language in and of itself is a user interface that serves as a model for thinking about and describing processes. It is one of the most basic building blocks of the platform and it has to be perfectly suited to its needs. We need fertile soil to grow a fruitful tree.
 
 | ref | requirement | fulfills | priority |
 | --: | ----------- | -------- | -------- |
 | 1. | Minimize the amount of primitives, concepts and programming techniques needed to master the language. | *accessible* | *crucial* |
-| 2. | Print explicit and helpful compiler errors to guide programmers through their refactors. | *sustainable* and *accessible* | *crucial* |
-| 3. | Minimize compilation time to shorten the development feedback loop. | *attractive*, *accessible* and *sustainable* | *crucial* |
 | 4. | Minimize the potential for making mistakes and creating bugs. | *sustainable*, *resilient* and *accessible* | *crucial* |
 | 5. | Make managed effects very explicit and controllable to minimize the potential for hiding malicious code and unintended behaviors. | *transparent*, *sustainable* and *resilient* | *crucial* |
-| 6. | Be portable to most devices and browsers. | *accessible* and *sustainable* | *crucial* |
 | 7. | Make metaprogramming simple to support tooling development, code property verification and good practice enforcement. | *sustainable*, *secure*, *attractive* and *accessible* | *important* |
 | 8. | Enable partial and complete code hot swapping even in production. | *modularity* | *crucial* |
 | 9. | Minimize barriers to testing and benchmarking any piece of code. | *sustainable* and *accessible* | *important* |
-| 10. | Enable spoken language conversion. | *accessible* | *crucial* |
+| 10. | Enable spoken language conversion. | *accessible* | *important* |
 | 11. | Maximize compile time optimization and parallelization. | *accessible* | *important* |
 | 12. | Look familiar to seasoned developers. | *attractive* | *desirable* |
 | 13. | Make white-space syntactically insignificant for the language to be more resilient to copy-paste and LLM usage. | *accessible* | *desirable* |
 | 14. | Enable seem less peer to peer communication and data synchronization. | *resilient*, *independent* and *accessible* | *crucial* |
-| 15. | Encourage test driven development. | *sustainable* | *desirable* |
+| 15. | Incorporate systems for version control, distribution and deployment to ensure maintainability. | *sustainable* and *resilient* | *crucial* |
+| 16. | Encourage good development practices such as test driven development. | *sustainable* | *desirable* |
+
+--todo: separate concerns (req15 should be in package manager)
+
+### Compiler and Interpreter
+
+| ref | requirement | fulfills | priority |
+| --: | ----------- | -------- | -------- |
+| 2. | Print explicit and helpful compiler errors to guide programmers through their refactors. | *sustainable* and *accessible* | *crucial* |
+| 3. | Minimize compilation time to shorten the development feedback loop. | *attractive*, *accessible* and *sustainable* | *crucial* |
+| 6. | Chose compilation targets to make the code portable to the largest pool of devices and browsers possible. | *accessible* and *sustainable* | *crucial* |
+| 7. | Handle translation tables to translate code from one spoken language to an other. | *accessible* | *important* |
 
 ### Versioning
 
-### Compiler
-
-### Metaprogramming Tool
+### Peer to Peer
 
 ### IDE and GUI
 
@@ -126,7 +137,7 @@ A programming language in and of itself is a user interface that serves as a mod
 
 ### Teaching Material
 
-### Programming Toolset
+### Programming Toolset (legacy)
 
 A programming language in and of itself is a user interface that serves as a model for thinking and describing processes. We often think of programming languages as things in and of themselves but their compilers, frameworks, IDEs, and tools in general each take a huge role in their ergonomics. As software development is a social process, this thinking can be extended to the blogs, forums and articles that are also part of the programming toolset.
 

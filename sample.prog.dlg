@@ -1,8 +1,4 @@
-#!/bin/dlg []
-
-#{
-    Would write `#!/bin/dlg ["https://github.com/<git-handle>/<repo>"]` if the module was published on github.
-}
+#!/bin/dialang
 
 # single line comment
 
@@ -19,14 +15,14 @@
     In this document we write some test syntax to see what would a programming language for dialogue look like.
 }
 
-# Import of specific modules from the dlg/core package. All of their content (except for the ghost _values, _Types and _[Data, Types]) gets exposed.
-import dlg/core/List
-import dlg/core/Int as CoreInt
+# Import of specific modules from the dialang/core package. All of their content (except for the ghost _values, _Types and _[Data, Types]) gets exposed.
+import dialang/core/List
+import dialang/core/Int as CoreInt
 
 # Import all of the modules from staeter/factorial and wrap them in the Factorial naming.
 import staeter/factorial as Factorial
 
-# List.foldl and CoreInt.multiply come from dlg/core package and Factorial.compute comes from staeter/factorial package
+# List.foldl and CoreInt.multiply come from dialang/core package and Factorial.compute comes from staeter/factorial package
 expect List.foldl CoreInt.multiply 1 [1, 2, 3] == Factorial.compute 3
 
 #{
@@ -87,7 +83,7 @@ Result e a : [ Error e, Ok a ] with {
 }
 
 
-# interact with platform through effects. effects can only be instantiated in `<my-capability-name>.capability.dlg` files so this code should not be here.
+# interact with platform through effects. effects can only be instantiated in `<my-capability-name>.capability.d` files so this code should not be here.
 #todo: implement something in unison/koka using abilities/effects to figure out how to properly use them
 IO : _Void capability {
 
@@ -137,13 +133,6 @@ multiLineTyped
 
         hello ++ name ++ "!"
     }
-
-# the last three instantiations are actually slightly different as they also contain their inside declarations if they haven't been ghosted
-n = "John"
-expect helloName n == "Hello John!"
-expect multiline n == "Hello John!"
-expect (multiline n).hello == "Hello "
-# expect (multiLineTyped n)._hello == "Hello " # compilation error
 
 #{
     extensible records and unions.
@@ -217,13 +206,15 @@ House : { keys : List Keys; roofColor : Color } with {
 }
 
 #{
-    There are four sorts of `.dlg` files:
-    - `<my-module-name>.dlg` standard module.
-    - `<my-program-name>.prog.dlg` which describes a program that can be built with any platform providing the right capabilities.
-    - `<my-capability-name>.cap.dlg` which describes effects that a program can have.
-    - `<my-platform-name>.plat.dlg` which describes which capabilities the platform handles.
-
-    This one is a `prog.dlg` because it uses the execute `>`
+    There are different sorts of `.d` files:
+    - `Readme.d` presents the repo's content.
+    - `Make.cli.d` is a cli that implements how the code gets run in dev/prod mode, versioned, published and pushed in production.
+    - `<my-module-name>.d` is a standard module. They only implement types, interfaces and values but do not execute any code.
+    - `<my-cli-name>.cli.d` is a cli script that can be called with `dialang <my-cli-name> arguments..`.
+    - `<my-program-name>.prog.d` is a long running program that can be built with any platform providing the capabilities it uses.
+    - `<my-rule-name>.rule.d` describes rules that are applied to the codebase, that eventually modify it and throw compile time errors.
+    - `<my-capability-name>.cap.d` contains capabilities and their effects that programs can use and platforms can implement.
+    - `<my-platform-name>.plat.c` or `<my-platform-name>.plat.h` implements the capabilities handled by the platform.
 }
 
 #{
@@ -240,7 +231,7 @@ Runtime {e} flags msg state :
 
     Start flags msg state : effect
     Exit : effect
-    Parallel msg : effect
+    Async msg : effect
     Sub feed msg : effect
     UnSub feed : effect
     Status : effect
@@ -251,7 +242,7 @@ Runtime {e} flags msg state :
     #{
         Runs the given function in parallel then runs update with the resulting msg.
     }
-    parallel : (Void -{e}-> msg) -{e, Parallel msg}-> Void
+    parallel : (Void -{e}-> msg) -{e, Async msg}-> Void
 
     #{
         Subscribe to a feed of msg. The update function is called every time a new msg arrives.
@@ -268,7 +259,7 @@ Runtime {e} flags msg state :
     }
     subscriptions : Void -> List feed
 
-    mapParallelMsg : (msgA -> msgB), (a -{e, Parallel msgA}-> b) -> (a -{e, Parallel msgB}-> b)
+    mapParallelMsg : (msgA -> msgB), (a -{e, Async msgA}-> b) -> (a -{e, Async msgB}-> b)
     mapSubMsg : (msg)
 }
 
@@ -409,6 +400,10 @@ Codec : interface {
     encode : a -> Json
     decode : Json -> Maybe a
 
+    #{
+        We can put functions in our expect. Its parameters must fulfill the Fuzz interface as it will be tested for 100 random values.
+        Here as it is an interface, the expect will only be tested for every type `where t implements Codec`.
+    }
     expect val -> val |> encode |> decode == Just val
 
 }
@@ -416,3 +411,26 @@ sendJson
     : Url, a -{Http}-> Void
     where a implements Codec
     = todo
+
+#{
+    One can extend existing types (here List comes from dialang/core/List) with new methods.
+}
+List : extend {
+
+    getAt
+        : Int -> List a -> Maybe a
+        { 0, head :+ _ ->
+            Just head
+
+        | index, _ :+ tail with index > 0 ->
+            getAt (index - 1) tail
+
+        | _, _ ->
+            Nothing
+        }
+
+}
+
+# compare and match types
+expect List.getAt.type == :{ Int -> List a -> Maybe a }
+expect Type.match :{ a : String; b : Int } :{ a : String; .. }
