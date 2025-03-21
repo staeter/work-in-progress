@@ -75,7 +75,20 @@ The generator is needed to for the copyUid to be unique
 -}
 fromString : String -> Generator DString
 fromString str =
-    Random.map (\copyUid -> build copyUid str) Ordt.newCopyUid
+    Random.map (\copyUid -> fromString_test copyUid str) Ordt.newCopyUid
+
+
+{-| This should only be used to design custom ORDTs containing DStrings -}
+fromString_test : OrdtUid -> CopyUid -> String -> DString
+fromString_test ordtUid copyUid str =
+    let
+        ordt =
+            Ordt.init copyUid
+    in
+    Ordt.insertSeriesAfter
+        (Ordt.root ordt)
+        (List.map InsertLeft <| List.reverse <| String.toList str)
+        ordt
 
 
 {-| count the amount of chars in the string -}
@@ -145,6 +158,11 @@ insertDiff str ordt =
     recursiveUpdate changes [] ordt
 
 
+insertAt : Int -> String -> DString -> DString
+insertAt index string dString =
+    Debug.todo "Ordt.String.insertAt"
+
+
 toList : DString -> List ( AtomUid, Char )
 toList (Ordt ordt) =
     let
@@ -189,16 +207,3 @@ toList (Ordt ordt) =
                 branches
     in
     traverseTree (Ordt.root (Ordt ordt)) []
-
-
-{-| This should only be used to design custom ORDTs containing DStrings -}
-build : CopyUid -> String -> DString
-build copyUid str =
-    let
-        ordt =
-            Ordt.init copyUid
-    in
-    Ordt.insertSeriesAfter
-        (Ordt.root ordt)
-        (List.map InsertLeft <| List.reverse <| String.toList str)
-        ordt
