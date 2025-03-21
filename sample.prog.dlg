@@ -8,6 +8,9 @@
 
 #{
     Multi line comment handles markdown notation.
+
+    In dialang colons (;) are exactly equivalent to new lines (\n).
+    We have three kinds of code blocks {} : record types, record values and functions.
 }
 
 #{
@@ -16,15 +19,18 @@
     In this document we write some test syntax to see what would a programming language for dialogue look like.
 }
 
-# Import without and with alias. The package exposes everything under that name.
-import dlg/core
+# Import of specific modules from the dlg/core package. All of their content (except for the ghost _values, _Types and _[Data, Types]) gets exposed.
+import dlg/core/List
+import dlg/core/Int as CoreInt
+
+# Import all of the modules from staeter/factorial and wrap them in the Factorial naming.
 import staeter/factorial as Factorial
 
-# List.foldl and Int.multiply come from dlg/core and Factorial.compute comes from staeter/factorial
-expect List.foldl Int.multiply 1 [1, 2, 3] == Factorial.compute 3
+# List.foldl and CoreInt.multiply come from dlg/core package and Factorial.compute comes from staeter/factorial package
+expect List.foldl CoreInt.multiply 1 [1, 2, 3] == Factorial.compute 3
 
 #{
-    We use $Maybe when we are unsure to get our value. It has a $map property.
+    We use $Maybe when we are unsure to get our value. It has a $map method.
 }
 Maybe a : [ Just a, Nothing ] with {
 
@@ -40,45 +46,6 @@ Maybe a : [ Just a, Nothing ] with {
         }
 
 }
-
-# universal properties and use in string formatting
-expect """
-    We can reference $Maybe or ${Maybe.reference} and have it as an hyperlink in our printed text.
-    We can get its signature ${Maybe.signature} or its complete implementation:
-    ${Maybe.implementation}
-    or its documentation :
-    > ${Maybe.documentation}
-    We can unwrap its type ${Maybe.alias}, get its properties ${Maybe.properties}.
-    We can also get the expression of a value ${Maybe.map.expression} and its signature ${Maybe.map.signature}.
-    We can escape the \${Maybe} to print it as is.
-""" == """
-    We can reference [Maybe](dialogue-lang.dev/staeter/sample:-maybe) or [Maybe](dialogue-lang.dev/staeter/sample:-maybe) and have it as an hyperlink in our printed text.
-    We can get its signature `Maybe a : [ Just a, Nothing ] with { map }`, its complete implementation:
-    ```
-    #{
-        We use $Maybe when we are unsure to get our value. It has a $map property.
-    }
-    Maybe a : [ Just a, Nothing ] with {
-
-        #{
-            Documentation for Maybe.map
-        }
-        map
-            : (a -> b), Maybe a -> Maybe b
-            { func maybeA ->
-                if maybeA is Just a
-                then Just (func a)
-                else Nothing
-            }
-
-    }
-    ```
-    or its documentation :
-    > We use [Maybe](dialogue-lang.dev/staeter/sample:-maybe) when we are unsure to get our value. It has a [Maybe.map](dialogue-lang.dev/staeter/sample:-maybe.map) property.
-    We can unwrap its type `[ Just a, Nothing ]`, get its properties `{ map }`.
-    We can also get the implementation of a value `{ func maybeA -> if maybeA is Just a then Just (func a) else Nothing }` and its signature `(a -> b), Maybe a -> Maybe b`.
-    We can escape the \${Maybe} to print it as is.
-"""
 
 
 Result e a : [ Error e, Ok a ] with {
@@ -120,11 +87,11 @@ Result e a : [ Error e, Ok a ] with {
 }
 
 
-# interact with platform through effects. effects can only be instantiated in `<my-capability-name>.capability.dlg` files.
+# interact with platform through effects. effects can only be instantiated in `<my-capability-name>.capability.dlg` files so this code should not be here.
 #todo: implement something in unison/koka using abilities/effects to figure out how to properly use them
-IO {
+IO : _Void capability {
 
-    effect StdOut
+    StdOut : effect
 
     #{
         Print to stdout.
@@ -140,14 +107,65 @@ IO {
 expect { a -> String.repeat a "b" } == { String.repeat _ "b" }
 
 # record instantiation
-hw = { h = "hello", w = "world" }
+hw = { h = "hello"; w = "world" }
 
-# call property function on String
+# call method function on a String
 expect String.firstToUpper hw.h == "Hello"
 expect hw.h.firstToUpper == "Hello"
 
 # run code inline, the result will be shown by the ide or printed in terminal by the cli
->
+> print! "Hello World!"
+
+#{
+    There are different ways to instantiate values.
+    (Note that functions are values in dialang.)
+}
+helloName = name -> "Hello ${name}!"
+explicitlyTyped : String -> String = "Hello ${_}!"
+crammed = { hello = "Hello "; hello ++ _ ++ "!" }
+
+multiline =
+    { hello = "Hello "
+
+      hello ++ _ ++ "!"
+    }
+
+multiLineTyped
+    : String -> String
+    { name ->
+        _hello = "Hello "
+
+        hello ++ name ++ "!"
+    }
+
+# the last three instantiations are actually slightly different as they also contain their inside declarations if they haven't been ghosted
+n = "John"
+expect helloName n == "Hello John!"
+expect multiline n == "Hello John!"
+expect (multiline n).hello == "Hello "
+# expect (multiLineTyped n)._hello == "Hello " # compilation error
+
+#{
+    extensible records and unions.
+    (function type is implicitly an extensible record)
+}
+doSomething
+    : [This, That, ..] -> String
+    { This -> "this"
+    | That -> "that"
+    | _ -> "other"
+    }
+
+scare : { b : String; .. } = .b
+surprise
+    : { a : String; o : String; .. } -> String
+    { { a; o } ->
+        a ++ " " ++ o
+    }
+
+me = { a = "ah"; b = "bouh"; o = "oh" }
+expect scare me == "bouh"
+expect surprise me == "ah oh"
 
 # declare a private value
 _myPrivate : String = "You can't use me outside of the current scope."
@@ -155,7 +173,7 @@ myPublic = "I didn't put the type here but the compiler will guess it for me."
 
 # declare ghost types
 HideAlias a : _(List a)
-HideContent : _{ cantReadMe : String, fromOutside : Int, theCurrentScope : Float }
+HideContent : _{ cantReadMe : String; fromOutside : Int; theCurrentScope : Float }
 HideUnion : _[ Me, Neither ]
 
 # apply anonymous function
@@ -165,29 +183,29 @@ expect { name -> "Hello " ++ name } "Billy" == "Hello Billy"
     We keep track of previous versions of our House data. This is required for keeping synced apis.
     We encourage the use of evergreen versioning but other techniques can be used for backward compatibility.
 }
-House : { keys : List Keys, roofColor : Color } with {
+House : { keys : List Keys; roofColor : Color } with {
 
     describe : House -> String
-        { {keys, roofColor} ->
+        { { keys; roofColor } ->
             "We have ${List.count keys} to our house and it has a ${Color.describe roofColor} roof."
         }
 
 } legacy {
 
-    _V1 : { roofColor : Color, hasGarden : Bool } with {
+    V1 : { roofColor : Color; hasGarden : Bool } with {
 
-        toV2 : _V1 -> _V2
-            { { keys = [] } :+ _ }
+        toV2 : V1 -> V2
+            = { keys = [] } :+ _
 
     }
 
-    _V2 : { roofColor : Color, hasGarden : Bool, keys : List Keys } with {
+    V2 : { roofColor : Color; hasGarden : Bool; keys : List Keys } with {
 
-        toV3 : _V2 -> House
-            { { hasGarden } :+ rest -> rest }
+        toV3 : V2 -> House
+            = { hasGarden } :+ rest -> rest
 
-        describe : _V2 -> String
-            { {keys, roofColor} ->
+        describe : V2 -> String
+            { { keys; roofColor } ->
                 "We have ${List.count keys} to our house. It has a "
                     ++ Color.describe roofColor
                     ++ " roof"
@@ -207,3 +225,194 @@ House : { keys : List Keys, roofColor : Color } with {
 
     This one is a `prog.dlg` because it uses the execute `>`
 }
+
+#{
+    Runs a program following the elm architecture.
+
+    When a type contains effectful functions we indicate them between {}.
+}
+Runtime {e} flags msg state :
+    { init : flags -{e}-> state
+      update : msg, state -{e}-> state
+      onExit : state -{e}-> Void
+    }
+    capability {
+
+    Start flags msg state : effect
+    Exit : effect
+    Parallel msg : effect
+    Sub feed msg : effect
+    UnSub feed : effect
+    Status : effect
+
+    start : Runtime {e} flags msg state -{e, Start flags msg state}-> Void
+    exit : Int -{Exit}-> Void
+
+    #{
+        Runs the given function in parallel then runs update with the resulting msg.
+    }
+    parallel : (Void -{e}-> msg) -{e, Parallel msg}-> Void
+
+    #{
+        Subscribe to a feed of msg. The update function is called every time a new msg arrives.
+    }
+    subscribe : feed, Decoder msg -{Sub feed msg}-> Void
+
+    #{
+        Close a subscription.
+    }
+    unSubscribe : feed -{UnSub feed}-> Void
+
+    #{
+        Pull the list of active subscriptions.
+    }
+    subscriptions : Void -> List feed
+
+    mapParallelMsg : (msgA -> msgB), (a -{e, Parallel msgA}-> b) -> (a -{e, Parallel msgB}-> b)
+    mapSubMsg : (msg)
+}
+
+Time : _{ posix : Int } capability {
+
+    Millis : Int
+
+    now : -{Runtime.Status}-> Time
+    every : Millis -{Runtime.Sub Time}-> Void
+
+}
+
+Rand : effect capability {
+
+    int : -{Rand}-> Int
+
+}
+
+# different types can't be compared
+WeirdString : String
+weirdStr : WeirdString = "hello"
+str : String = "hello"
+# expect myStr != str # compilation error
+
+# though if their structure match they can be casted
+normalWeirdString : String = weirdStr
+weirdNormalString : WeirdString = str
+weirdCopy = weirdStr
+expect weirdCopy.type == weirdStr.type
+expect str.type != weirdNormalString.type
+
+
+Codebase : {todo} capability {
+
+    Parse : effect
+    Edit : effect
+    Eval : effect
+    Publish : effect
+    UpdateSettings : effect
+
+    parse : (Codebase -> data) -{Parse}-> data
+    edit : (Codebase -> Codebase) -{Edit}-> List Error
+    declare : Declaration -{Edit}-> List Error
+
+    Value : {todo} with {
+
+        reference : Value -{Parse}-> Ref
+        type : Value -{Parse}-> Type
+        expression : Value -{Parse}-> Expression
+
+        Ref : {todo}
+
+    }
+
+    Type : [todo]
+
+    Error : [todo]
+
+    Code :
+        { source : Module.Ref
+        , range : Range
+        }
+        extend a with {
+
+        Location : { line : Int, column : Int }
+        Range : { from : Location, to : Location }
+
+        decontextualize : Code -{Parse}-> String
+
+    }
+
+    Expression : _Void with {
+
+        Ref : _{todo}
+        Tree : _[todo]
+
+        eval : Expression -> a
+
+    }
+
+    Module : { name : Name.Upper; todo } with {}
+
+    Comment : String with {todo}
+
+    Name : _Void {
+
+        Upper : _String with {todo}
+        Lower : _String with {todo}
+
+        todo
+
+    }
+
+}
+
+# applying the universal methods and use in string formatting.
+expect """
+    We can reference $Maybe or ${Maybe.reference} and have it as an hyperlink in our printed text.
+    We can get its signature ${Maybe.signature} or its complete implementation:
+    ${Maybe.implementation}
+    or its documentation :
+    > ${Maybe.documentation}
+    We can unwrap its type ${Maybe.alias}, get its methods ${Maybe.methods}.
+    We can also get the expression of a value ${Maybe.map.expression} and its type ${Maybe.map.type}.
+    We can escape the \${Maybe} to print it as is.
+""" == """
+    We can reference [Maybe](dialogue-lang.dev/staeter/sample:-maybe) or [Maybe](dialogue-lang.dev/staeter/sample:-maybe) and have it as an hyperlink in our printed text.
+    We can get its signature `Maybe a : [ Just a, Nothing ] with { map }`, its complete implementation:
+    ```
+    #{
+        We use $Maybe when we are unsure to get our value. It has a $map method.
+    }
+    Maybe a : [ Just a, Nothing ] with {
+
+        #{
+            Documentation for Maybe.map
+        }
+        map
+            : (a -> b), Maybe a -> Maybe b
+            { func maybeA ->
+                if maybeA is Just a
+                then Just (func a)
+                else Nothing
+            }
+
+    }
+    ```
+    or its documentation :
+    > We use [Maybe](dialogue-lang.dev/staeter/sample:-maybe) when we are unsure to get our value. It has a [Maybe.map](dialogue-lang.dev/staeter/sample:-maybe.map) method.
+    We can unwrap its type `[ Just a, Nothing ]`, get its methods `{ map }`.
+    We can also get the implementation of a value `{ func maybeA -> if maybeA is Just a then Just (func a) else Nothing }` and its type `(a -> b), Maybe a -> Maybe b`.
+    We can escape the \${Maybe} to print it as is.
+"""
+
+
+Codec : interface {
+
+    encode : a -> Json
+    decode : Json -> Maybe a
+
+    expect val -> val |> encode |> decode == Just val
+
+}
+sendJson
+    : Url, a -{Http}-> Void
+    where a implements Codec
+    = todo
