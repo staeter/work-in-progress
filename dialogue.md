@@ -1,10 +1,10 @@
 # Dialogue
 
-Through sciences and technologies, humanity has gained mastery over nature but its social organization is still subordinated to individualistic short term interests. Deep systemic changes are needed for humanity to gain conscious control over its future and overcome the self destructive mechanisms of capitalism.
+Through sciences and technologies, humanity has gained mastery over nature but its social organization is still subordinated to individualistic short term interests. Deep systemic changes are needed for humanity to gain conscious control over its future and overcome self destructive socio-economical mechanisms.
 
-This new socio-economic organization of society must be built by the masses voluntarily governing themselves. It therefore has to go beyond national boundaries, welcome humanity's intrinsic diversity and defend a positivist view of liberty. Thereby arises the need for tools enabling local and global collective organizing and decision making able to support artists, journalists and political activists, to enable them to function in repressive environments and revolutionary periods and to serve as the software infrastructure for upcoming worker's led democracies.
+The future organization of society will have to go beyond national boundaries, welcome humanity's intrinsic diversity and defend a positivist view of liberty. For this to be possible in practice, both economical and political processes must be voluntarily, actively and deliberately built by the self-governing masses. Thereby arises the need for software infrastructure able to catalyze, enable and empower participatory democracies in the face of systemic opposition and violent repression.
 
-Building such decentralized social network is a humongous task that can only be completed with the coordination of a large pool of engineers, programers, designers, journalists, content creators and more. This document is a first attempt at clarifying its requirements in order to structure and orient everyone's work toward a clear and unified goal.
+Building such a decentralized social network is a humongous task that can only be completed with the coordination of a large pool of engineers, programers, designers, journalists, artists and more. This document is a first attempt at clarifying its requirements in order to structure and orient everyone's work toward a clear and unified goal.
 
 ## Contribute
 
@@ -16,13 +16,14 @@ Spotting ideas that lack clarity or words that need explanation - especially for
 
 This section introduces the *core principles* we believe are needed for *Dialogue* to fulfill its goal. They are fairly general but clarify the aims of the platform.
 
-- **Empathic**: Support peoples physical and mental wellbeing, foster honesty, mutual understanding, inclusiveness and constructive communication.
+- **Empathic**: Support peoples physical and mental wellbeing, foster honesty, mutual respect and understanding, inclusiveness and constructive communication.
 - **Assertive**: Encourages people to stand up for their own needs and values, to confront differing opinions and ideas and promote moderation in the face of domination, harassment and instrumentalization.
 - **Optimistic**: Builds confidence in our collective ability to overcome current challenges and shape better futures through human ingenuity and collective action.
 - **Empowering**: Entrust people with control over their digital environment and support them with appropriate tools.
 - **Expressive**: Provide spaces and tools for collaborative content production, creative expression, public discourse and knowledge sharing.
 - **Informative**: Create community-driven systems for news gathering, investigation and reporting able to highlights biasses and diverging opinions.
 - **Democratic**: Make bottom up, collective human organizing and decision-making more efficient, reliable and accessible than centralized systems both at local and global scales.
+- **Deliberate**: Provide methods and tools for collaborative deliberation, discussion and thoughtful consideration of differing opinions.
 - **Accessible**: Ensure accessibility and ease of use to the largest amount of people possible by considering their technical knowledge, economical status, cultural background, physical and mental disabilities, language, literacy and every other possibly hindering factor.
 - **Attractive**: Bring local and online communities onboard by implementing win win mechanisms and focusing on their concrete needs.
 - **Private**: Guarantee personal data sovereignty and communication confidentiality.
